@@ -1,0 +1,10 @@
+!.gitignore
+
+
+ESP8266_NONOS_SDK/
+
+*/*
+!*/user/
+!*/driver/
+!*/include/
+*/user/.output
