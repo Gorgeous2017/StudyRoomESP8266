@@ -170,27 +170,46 @@ int32_t nb_reboot(void)
     return at.cmd((int8_t*)AT_NB_reboot, strlen(AT_NB_reboot), "OK", NULL,NULL);
 }
 
+/**
+ * @brief 查询射频是否开启
+ * 
+ * @return int32_t 
+ */
 int32_t nb_hw_detect(void)//"AT+CFUN?\r"
 {
-    return at.cmd((int8_t*)AT_NB_hw_detect, strlen(AT_NB_hw_detect), "+CFUN:1", NULL,NULL);
+    return at.cmd((int8_t*)AT_NB_hw_detect, strlen(AT_NB_hw_detect), "+CFUN:1", NULL,NULL); /* +CFUN:1：射频已经开启 */
 }
 
+/**
+ * @brief 检测接收信号的强度 RSSI
+ * 
+ * @return int32_t 
+ */
 int32_t nb_check_csq(void)
 {
     char *cmd = "AT+CSQ\r";
     return at.cmd((int8_t*)cmd, strlen(cmd), "+CSQ:", NULL,NULL);
 }
 
+/**
+ * @brief 设置 CDP（持续数据保护） 服务器，即华为IoT平台
+ * 
+ * @param host [IN] 主机地址
+ * @param port [IN] 端口号
+ * @return int32_t 
+ */
 int32_t nb_set_cdpserver(char* host, char* port)
 {
-    char *cmd = "AT+NCDP=";
-    char *cmd2 = "AT+NCDP?";
-	char *cmdNNMI = "AT+NNMI=1\r";
-    char *cmdCMEE = "AT+CMEE=1\r";
+    char *cmd = "AT+NCDP="; /*!< 设置 CDP 服务器地址指令 */
+    char *cmd2 = "AT+NCDP?"; /*!< 查询已设置的 CDP 服务器地址指令 */
+	char *cmdNNMI = "AT+NNMI=1\r"; /*!< 设置终端出现问题时自动上报指令 */
+    char *cmdCMEE = "AT+CMEE=1\r"; /*!< 设置平台发送消息过来时可以自动上报指令 */
 	//char *cmdCGP = "AT+CGPADDR";
 	char tmpbuf[128] = {0};
 	int ret = -1;
     char ipaddr[100] = {0};
+
+    /* 输入的主机地址和端口号有误时提前返回 */
     if(strlen(host) > 70 || strlen(port) > 20 || host==NULL || port == NULL)
     {
         ret = at.cmd((int8_t*)cmdNNMI, strlen(cmdNNMI), "OK", NULL,NULL);
@@ -198,6 +217,7 @@ int32_t nb_set_cdpserver(char* host, char* port)
         return ret;
     }
 
+    /* 字符串拼接，tmpbuf = AT+NCDP=host,port */
     snprintf(ipaddr, sizeof(ipaddr) - 1, "%s,%s\r", host, port);
 	snprintf(tmpbuf, sizeof(tmpbuf) - 1, "%s%s%c", cmd, ipaddr, '\r');
 
@@ -206,6 +226,7 @@ int32_t nb_set_cdpserver(char* host, char* port)
 	{
 		return ret;
 	}
+    /* 查询设置后的地址是否一致 */
 	ret = at.cmd((int8_t*)cmd2, strlen(cmd2), ipaddr, NULL,NULL);
 	//LOS_TaskDelay(1000);
 	ret = at.cmd((int8_t*)cmdNNMI, strlen(cmdNNMI), "OK", NULL,NULL);
@@ -252,24 +273,36 @@ int nb_send_str(const char* buf, int len)
 
 }
 #endif
+
+/**
+ * @brief 发送数据至平台
+ * 
+ * @param buf [IN] 需要发送的数据
+ * @param len [IN] 数据长度
+ * @return int32_t 
+ */
 int32_t nb_send_payload(const char* buf, int len)
 {
-    char *cmd1 = "AT+NMGS=";
+    char *cmd1 = "AT+NMGS="; /*!< 发送数据指令 */
     char *cmd2 = "AT+NQMGS\r";
     int ret;
     char* str = NULL;
     int curcnt = 0;
     int rbuflen;
     static int sndcnt = 0;
+
+    /* 数据异常处理 */
     if(buf == NULL || len > AT_MAX_PAYLOADLEN)
     {
         AT_LOG("payload too long");
         return -1;
     }
+
     memset(tmpbuf, 0, AT_DATA_LEN);
     memset(wbuf, 0, AT_DATA_LEN);
-    str_to_hex(buf, len, tmpbuf);
+    str_to_hex(buf, len, tmpbuf); /* 将buf的值转为十六进制存入tmpbuf中 */
     memset(rbuf, 0, AT_DATA_LEN);
+    /* 格式化字符串 AT+NMGS=len,tmpbuf  */
     snprintf(wbuf, AT_DATA_LEN,"%s%d,%s%c",cmd1,(int)len,tmpbuf,'\r');
     ret = at.cmd((int8_t*)wbuf, strlen(wbuf), "OK", NULL,NULL);
     if(ret < 0)
