@@ -307,6 +307,8 @@ int32_t nb_send_payload(const char* buf, int len)
     ret = at.cmd((int8_t*)wbuf, strlen(wbuf), "OK", NULL,NULL);
     if(ret < 0)
         return -1;
+
+    /* ？？验证已发送的数据？ */
     ret = at.cmd((int8_t*)cmd2, strlen(cmd2), "SENT=", rbuf,&rbuflen);
     if(ret < 0)
         return -1;

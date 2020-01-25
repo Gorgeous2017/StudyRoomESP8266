@@ -29,12 +29,22 @@ typedef char variant;
 
 short int Lux;
 
-#define cn_app_SET_LIGHT 0x1
-#define cn_app_SET_CURTAIN 0x2
-#define cn_app_SET_FAN 0x0
-#define cn_app_SET_AC 0x3
-#define cn_app_report_room_one_message 0x4
-#define cn_app_report_room_one_status 0x5
+/**
+ * @addtogroup DecodeMessageId
+ * @{
+ * 
+ */
+#define cn_app_SET_FAN 0x0 /*!< 风扇控制指令 */ 
+#define cn_app_SET_LIGHT 0x1 /*!< 电灯控制指令 */
+#define cn_app_SET_CURTAIN 0x2 /*!< 窗帘控制指令 */
+#define cn_app_SET_AC 0x3 /*!< 空调控制指令 */
+#define cn_app_report_room_one_message 0x4 /*!< 房间一的环境信息 */
+#define cn_app_report_room_one_status 0x5 /*!< 房间一的用电器状态信息 */
+
+/**
+ * @}
+ * 
+ */
 
 #pragma pack(1)
 
