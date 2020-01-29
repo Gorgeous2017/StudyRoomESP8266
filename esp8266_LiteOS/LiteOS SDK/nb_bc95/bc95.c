@@ -37,16 +37,10 @@
 #include "at_device/bc95.h"
 #include "at_hal.h"
 
-//#include "bc95_test.h"
-
-
-
-
 extern at_task at;
 at_adaptor_api bc95_interface;
 extern char rbuf[AT_DATA_LEN];
 extern char wbuf[AT_DATA_LEN];
-
 
 typedef struct
 {
@@ -78,57 +72,19 @@ static char *strnstr(const char *s1, const char *s2, size_t len)
 }
 #endif
 
-static int nb_alloc_sock(int socket)
-{
-    int idx;
-
-    for (uint32_t i = 0; i < MAX_SOCK_NUM; ++i)
-    {
-        if (sockinfo[i].used_flag  && (sockinfo[i].socket == socket))
-        {
-            return i;
-        }
-    }
-
-    idx  = (socket % MAX_SOCK_NUM);
-    if (!sockinfo[idx].used_flag)
-    {
-        return idx;
-    }
-
-    for (uint32_t i = 0; i < MAX_SOCK_NUM; ++i)
-    {
-        if (!sockinfo[i].used_flag)
-        {
-            return i;
-        }
-    }
-    AT_LOG("save socket fail %d", socket);
-    return MAX_SOCK_NUM;
-}
-
-static int nb_sock_to_idx(int socket)
-{
-    int idx;
-
-    idx  = (socket % MAX_SOCK_NUM);
-
-    if (sockinfo[idx].used_flag && (socket == sockinfo[idx].socket))
-    {
-        return idx;
-    }
-
-    for (uint32_t i = 0; i < MAX_SOCK_NUM; ++i)
-    {
-        if (sockinfo[i].used_flag && (socket == sockinfo[i].socket))
-        {
-            return i;
-        }
-    }
-
-    return MAX_SOCK_NUM;
-}
-
+/**
+ * @brief 将十六进制码流转换为字符串形式
+ * 
+ * @param bufin 输入的十六进制码流
+ * @param len 十六进制码流的长度
+ * @param bufout 输出的十六进制字符串
+ * @return int 
+ * 
+ * @par 示例
+ * bufin[0] = 0x01, bufin[1] = 0x02, bufin[2] = 0x03, len = 3, 则bufout = "010203"
+ * bufin[0] = 0x01, bufin[1] = 0x05, bufin[2] = 0x06, bufin[3] = 0x07, len = 4, 则bufout = "01050607"
+ * 
+ */
 int str_to_hex(const char *bufin, int len, char *bufout)
 {
     int i = 0;
@@ -143,22 +99,42 @@ int str_to_hex(const char *bufin, int len, char *bufout)
     return 0;
 }
 
+/**
+ * @brief 将字符串形式的十六进制码流转为 unsigned char 类型
+ * 
+ * @param source [IN] 从串口接收到的字符串形式的十六进制码流
+ * @param dest [OUT] 转换好的十六进制码流
+ * @param sourceLen 十六进制码流的长度
+ * 
+ * @par 示例
+ * source = "010203", sourceLen = 3, 则dest[0]=0x01, dest[1]=0x02, dest[2]=0x03
+ * source = "01050607", sourceLen = 4, 则dest[0]=0x01, dest[1]=0x05, dest[2]=0x06, dest[3]=0x07
+ */
 void HexStrToStr(const unsigned char *source, unsigned char *dest, int sourceLen)
 {
     short i;
     unsigned char highByte, lowByte;
     for (i = 0; i < sourceLen; i += 2)
     {
+        /* 将HEX的字母统一转换大小写，方便后面的字母与数字转换 */
         highByte = toupper(source[i]);
         lowByte  = toupper(source[i + 1]);
-        if (highByte > 0x39)
+        
+        /* 转换ASCII字符为所代表的十六进制数 */
+        if (highByte > 0x39) {
             highByte -= 0x37;
-        else
+        } else {
             highByte -= 0x30;
-        if (lowByte > 0x39)
+        }
+        if (lowByte > 0x39) {
             lowByte -= 0x37;
-        else
+        } else {
             lowByte -= 0x30;
+        }
+        
+        /* 高低位合并 */
+        /* 因为十六进制数的HexStr形式是由两位ASCII码来表示的，所以在 */
+        /* 将HexStr转为实际的十六进制码流时需要合并高低位 */
         dest[i / 2] = (highByte << 4) | lowByte;
     }
     return ;
@@ -245,35 +221,6 @@ int32_t nb_send_psk(char* pskid, char* psk)
     return at.cmd((int8_t*)wbuf, strlen(wbuf), "OK", NULL,NULL);
 }
 
-int32_t nb_set_no_encrypt(void)
-{
-    char* cmd = "AT+QSECSWT=0\r";
-    return at.cmd((int8_t*)cmd, strlen(cmd), "OK", NULL,NULL);
-}
-
-#ifdef WITH_SOTA
-int sota_cmd(int8_t *cmd, int32_t len, const char *suffix, char *resp_buf, int* resp_len)
-{
-    AT_LOG("sota_cmd:%s", cmd);
-    LOS_MuxPend(at.cmd_mux, LOS_WAIT_FOREVER);
-    at_transmit((uint8_t *)cmd, len, 1);
-    LOS_MuxPost(at.cmd_mux);
-
-    return AT_OK;
-
-}
-
-int nb_send_str(const char* buf, int len)
-{
-    char *cmd1 = "AT+NMGS=";
-    memset(wbuf, 0, AT_DATA_LEN);
-    memset(rbuf, 0, AT_DATA_LEN);
-    snprintf(wbuf, AT_DATA_LEN, "%s%d,%s%c",cmd1,(int)len/2,buf,'\r');
-    return sota_cmd((int8_t*)wbuf, strlen(wbuf), "OK", NULL,NULL);
-
-}
-#endif
-
 /**
  * @brief 发送数据至平台
  * 
@@ -322,12 +269,22 @@ int32_t nb_send_payload(const char* buf, int len)
     return ret;
 }
 
+/**
+ * @brief 查询已经设置的IP地址
+ * 
+ * @return int 
+ */
 int nb_query_ip(void)
 {
 	char *cmd = "AT+CGPADDR\r";
     return at.cmd((int8_t*)cmd, strlen(cmd), "+CGPADDR:0,", NULL,NULL);
 }
 
+/**
+ * @brief 查询网络状态
+ * 
+ * @return int32_t 
+ */
 int32_t nb_get_netstat(void)
 {
 	char *cmd = "AT+CGATT?\r";
@@ -364,191 +321,6 @@ static int32_t nb_cmd_with_2_suffix(const int8_t *cmd, int  len,
     return AT_OK;
 }
 
-
-int32_t nb_create_sock(int port,int proto)
-{
-	int socket;
-    int rbuflen = AT_DATA_LEN;
-	const char *cmdudp = "AT+NSOCR=DGRAM,17,";//udp
-	const char *cmdtcp = "AT+NSOCR=STREAM,6,";//tcp
-	int ret;
-    char buf[64];
-    int cmd_len;
-
-	if(proto!=17 && proto!=6)
-    {
-        AT_LOG("proto invalid!");
-        return -1;
-    }
-    memset(rbuf, 0, AT_DATA_LEN);
-
-    if (proto == 17)
-    {
-        cmd_len = snprintf(buf, sizeof(buf), "%s%d,1\r", cmdudp, port);//udp
-    }
-    else
-    {
-        cmd_len = snprintf(buf, sizeof(buf), "%s%d,1\r", cmdtcp, port);
-    }
-
-	nb_cmd_with_2_suffix((int8_t*)buf, cmd_len, "OK", "ERROR", rbuf, (uint32_t *)&rbuflen);
-	ret = sscanf(rbuf, "%d\r%s",&socket, tmpbuf);
-    if ((2 == ret) && (socket >= 0)
-        && (strnstr(tmpbuf, "OK", sizeof(tmpbuf))))
-    {
-        return socket;
-    }
-
-    AT_LOG("sscanf fail,ret=%d,socket=%d", ret, socket);
-    return -1;
-}
-
-static bool nb_is_addr_valid(const char *addr)
-{
-    const int size = 4;
-    int tmp[4];
-    int ret;
-
-    ret = sscanf(addr, "%d.%d.%d.%d", &tmp[0], &tmp[1], &tmp[2], &tmp[3]);
-    return  (size == ret);
-}
-
-int nb_decompose_str(const char* str, int *readleft, int *out_sockid)
-{
-    const char *tmp,*trans;
-    int sockid;
-    QUEUE_BUFF qbuf;
-    int ret = AT_FAILED;
-    int rlen;
-    int link_id;
-
-
-    tmp = strstr(str,",");
-    if(tmp == NULL)
-    {
-        return AT_FAILED;
-    }
-
-    sockid = chartoint(str);
-    trans = strstr(tmp+1,",");
-    if(trans == NULL)
-    {
-        return AT_FAILED;
-    }
-    strncpy(qbuf.ipaddr,tmp+1,MIN((trans-tmp),AT_DATA_LEN/2));
-    qbuf.ipaddr[trans-tmp-1] = '\0';
-    if (!nb_is_addr_valid(qbuf.ipaddr))
-    {
-        return AT_FAILED;
-    }
-
-    qbuf.port = chartoint((char*)(trans+1));
-    tmp = strstr(trans+1,",");
-    if(tmp == NULL)
-    {
-        return AT_FAILED;
-    }
-    rlen = chartoint((char*)(tmp+1));
-    if(rlen >= AT_DATA_LEN/2 || rlen < 0)
-    {
-        AT_LOG("rlen %d", rlen);
-        return AT_FAILED;
-    }
-
-    trans = strstr(tmp+1,",");
-    if(trans == NULL)
-    {
-        return AT_FAILED;
-    }
-
-    tmp = strstr(trans+1,",");
-    if (tmp == NULL)
-    {
-        return AT_FAILED;
-    }
-
-    *readleft = chartoint((char*)(tmp+1));
-
-    *out_sockid = sockid;
-
-    link_id = nb_sock_to_idx(sockid);
-    if (link_id >= MAX_SOCK_NUM)
-    {
-        AT_LOG("sockid invalid %d", sockid);
-        return AT_OK;
-    }
-
-    qbuf.addr = at_malloc(rlen);
-    if (qbuf.addr == NULL)
-    {
-        AT_LOG("at_malloc null");
-        return AT_OK;
-    }
-
-    HexStrToStr((const unsigned char*)(trans+1), qbuf.addr, (rlen)*2);
-    qbuf.len = rlen;
-
-    ret = LOS_QueueWriteCopy(at.linkid[link_id].qid, &qbuf, sizeof(qbuf), 0);
-    if (LOS_OK != ret)
-    {
-        AT_LOG("LOS_QueueWriteCopy  failed! ret %d", ret);
-        at_free(qbuf.addr);
-    }
-
-    //AT_LOG("wwww write data,qid %d, len %ld, ret %d", at.linkid[link_id].qid, qbuf.len, ret);
-
-
-    return AT_OK;
-}
-
-static void nb_close_sock(int sock)
-{
-    const char *cmd = "AT+NSOCL=";
-    char buf[64];
-    int cmd_len;
-
-	cmd_len = snprintf(buf, sizeof(buf), "%s%d\r", cmd, sock);
-	nb_cmd_with_2_suffix((int8_t*)buf, cmd_len, "OK", "ERROR", NULL,NULL);
-}
-
-
-static int nb_create_sock_link(int portnum, int *link_id)
-{
-    int ret = 0;
-    int sock;
-
-    sock = nb_create_sock(portnum, UDP_PROTO);
-	if(sock < 0)
-	{
-		AT_LOG("sock num exceeded,ret is %d", sock);
-		return AT_FAILED;
-	}
-
-    ret = nb_alloc_sock(sock);
-    if (ret >= MAX_SOCK_NUM)
-	{
-
-        AT_LOG("sock num exceeded,socket is %d", sock);
-        goto CLOSE_SOCk;
-    }
-
-    if (LOS_QueueCreate("dataQueue", 16, &at.linkid[ret].qid, 0, sizeof(QUEUE_BUFF)) != LOS_OK)
-    {
-        AT_LOG("init dataQueue failed, ret is %d!",ret);
-        goto CLOSE_SOCk;
-    }
-
-    *link_id = ret;
-    sockinfo[ret].socket = sock;
-    sockinfo[ret].used_flag = true;
-    return AT_OK;
-
-CLOSE_SOCk:
-    nb_close_sock(sock);
-
-    return AT_FAILED;
-
-}
 
 int32_t nb_bind(const int8_t * host, const int8_t *port, int32_t proto)
 {
