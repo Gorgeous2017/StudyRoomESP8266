@@ -13,8 +13,8 @@
  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __APP_STUDY_ROOM_H
-#define __APP_STUDY_ROOM_H 
+#ifndef __APP_STUDY_ROOM_H__
+#define __APP_STUDY_ROOM_H__ 
 
 /* Includes ------------------------------------------------------------------*/
 #include <stddef.h>
@@ -105,7 +105,7 @@ typedef struct
 
 /* Exported function -----------------------------------------------*/
 
-#endif /* __APP_STUDY_ROOM_H */ 
+#endif /* __APP_STUDY_ROOM_H__ */ 
 /********************************** END OF FILE *******************************/
 
 typedef unsigned char int8u;

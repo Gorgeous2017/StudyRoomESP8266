@@ -54,12 +54,8 @@
 #define UART_HW_RTS   0   //set 1: enable uart hw flow control RTS, PIN MTDO, FOR UART0
 #define UART_HW_CTS  0    //set1: enable uart hw flow contrl CTS , PIN MTCK, FOR UART0
 
-
-
-
 #define UART0   0
 #define UART1   1
-
 
 typedef enum {
     FIVE_BITS = 0x0,
@@ -221,6 +217,7 @@ void  Uart_rx_buff_enq();
 void  uart_rx_intr_enable(uint8 uart_no);
 void  uart_rx_intr_disable(uint8 uart_no);
 void uart0_tx_buffer(uint8 *buf, uint16 len);
+void uart1_tx_buffer(uint8 *buf, uint16 len);
 
 //==============================================
 #define FUNC_UART0_CTS 4

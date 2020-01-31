@@ -27,6 +27,7 @@
 #include "user_interface.h"
 
 #include "driver/uart.h"
+#include "nb_bc35.h"
 
 /******************************************************************************
  * FunctionName : user_rf_cal_sector_set
@@ -96,6 +97,8 @@ system_init_done(void)
 
 	tcp_server_init(8080);
 
+    NB_Init();
+
 }
 
 
@@ -112,7 +115,7 @@ user_init(void)
 	system_uart_de_swap();
 	UART_SetPrintPort(0);
 
-	uart_init(BIT_RATE_115200, BIT_RATE_115200);
+	uart_init(BIT_RATE_9600, BIT_RATE_9600);
 
 	//----- wifi test -----------
 	struct softap_config ap;

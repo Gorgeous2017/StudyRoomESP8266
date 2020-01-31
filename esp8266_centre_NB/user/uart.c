@@ -25,12 +25,14 @@
 #include "ets_sys.h"
 #include "osapi.h"
 #include "driver/uart.h"
-#include "osapi.h"
 #include "driver/uart_register.h"
 #include "mem.h"
 #include "os_type.h"
 
 #include "room_info.h"
+
+/* Handle message form NB module, define in nb_bc35.c */
+extern void NB_RxMsgHandler(uint8 *nb_msg );
 
 // UartDev is defined and initialized in rom code.
 extern UartDevice    UartDev;
@@ -202,6 +204,23 @@ uart0_tx_buffer(uint8 *buf, uint16 len)
 }
 
 /******************************************************************************
+ * FunctionName : uar1_tx_buffer
+ * Description  : use uart1 to transfer buffer
+ * Parameters   : uint8 *buf - point to send buffer
+ *                uint16 len - buffer len
+ * Returns      :
+*******************************************************************************/
+void ICACHE_FLASH_ATTR
+uart1_tx_buffer(uint8 *buf, uint16 len)
+{
+    uint16 i;
+    for (i = 0; i < len; i++)
+    {
+        uart_tx_one_char(UART1, buf[i]);
+    }
+}
+
+/******************************************************************************
  * FunctionName : uart0_sendStr
  * Description  : use uart0 to transfer buffer
  * Parameters   : uint8 *buf - point to send buffer
@@ -289,15 +308,16 @@ uart_test_rx()
     uint8 uart_buf[128]={0};
     uint16 len = 0;
     len = rx_buff_deq(uart_buf, 128 );
-    //tx_buff_enq(uart_buf,len);
-
+    
 	if (len > 0) {
-		if( uart_buf[0] == 0xFD ) { // sniffer uart 数据消息头
-			people = uart_buf[1];
-			os_printf("people = %d\n",people);
-		}
-	}
 
+        /* 串口接收消息回显 */
+        tx_buff_enq("MCU <<<<<< NB : ", sizeof("MCU <<<<<< NB : "));
+        tx_buff_enq(uart_buf,len);
+        tx_buff_enq("\n\n", 2);
+        
+        NB_RxMsgHandler(uart_buf);
+	}
 }
 #endif
 

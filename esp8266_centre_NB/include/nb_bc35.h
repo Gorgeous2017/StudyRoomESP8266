@@ -13,21 +13,18 @@
  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __NB_BC35_H
-#define __NB_BC35_H 
+#ifndef __NB_BC35_H__
+#define __NB_BC35_H__ 
 
 /* Includes ------------------------------------------------------------------*/
+#include "ets_sys.h"
+#include "os_type.h"
+#include "osapi.h" /* 需要用到字符串匹配和定时器函数 */
+
+#include "driver/uart.h" /* 需要用到串口接收的NB响应消息和平台下发的命令 */
 
 /* Exported typedef -----------------------------------------------------------*/
-typedef struct _socket_info_t
-{
-	int socket;
-	short localport;
-	char localip[IP_LEN];
-	short remoteport;
-	char remoteip[IP_LEN];
-	bool used_flag;
-}socket_info;//struct to save socket info
+
 
 /* Exported constants --------------------------------------------------------*/
 #define AT_MODU_NAME            "nb_neul95"
@@ -36,7 +33,6 @@ typedef struct _socket_info_t
 #define AT_NB_CLOSE_PSM		"AT+CPSMS=0\r"
 #define AT_NB_CLOSE_EDRX	"AT+CEDRXS=0,5\r"
 #define AT_NB_CGATT_ATTACH	"AT+CGATT=1\r"
-
 
 
 #define AT_NB_LINE_END 			"\r\n"
@@ -72,6 +68,14 @@ typedef struct _socket_info_t
 #define IP_LEN 16
 
 /* Exported function -----------------------------------------------*/
+void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *response_msg, uint32_t response_time_ms );
+void NB_ResponseTimerCb(void *arg);
+void NB_Init(void); 
+
+/* Handle message form NB module, call by uart rx function */
+ void NB_RxMsgHandler(uint8 *nb_msg );
+
+
 int str_to_hex(const char *bufin, int len, char *bufout);
 int32_t nb_set_cdpserver(char* host, char* port);
 int32_t nb_hw_detect(void);
@@ -87,7 +91,7 @@ int32_t nb_cmd_match(const char *buf, char* featurestr,int len);
 void nb_step(void);
 void nb_reattach(void);
 
-#endif /* __NB_BC35_H */ 
+#endif /* __NB_BC35_H__ */ 
 /********************************** END OF FILE *******************************/
 
 
