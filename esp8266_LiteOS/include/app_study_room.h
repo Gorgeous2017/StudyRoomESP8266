@@ -25,13 +25,13 @@
  * @brief 用电器类型枚举体
  * 
  */
-enum Device
+typedef enum 
 {
-	DEVICE_FAN = 0x00,	 /*!< 风扇用电器 */
+	DEVICE_FAN = 0x00,	   /*!< 风扇用电器 */
 	DEVICE_LIGHT = 0x01,   /*!< 电灯用电器 */
 	DEVICE_CUTRAIN = 0x02, /*!< 窗帘用电器 */
 	DEVICE_AC = 0x03	   /*!< 空调用电器 */
-};
+} Device;
 
 /**
  * @brief 云端下发的用电器控制信息
@@ -39,10 +39,10 @@ enum Device
  */
 typedef struct
 {
-	uint8_t deviceType; /*!< 根据messageId来区分用电器类型 */
-	uint8_t roomNo;
-	uint8_t deviceNo;
-	uint8_t deviceSwitch;
+	uint8_t deviceType; 	/*!< 根据messageId来区分用电器类型 */
+	uint8_t roomNo; 		/*!< 要控制的用电器所在房间的编号 */
+	uint8_t deviceNo;		/*!< 要控制的用电器的编号 */
+	uint8_t deviceSwitch; 	/*!< 用电器的目标状态 */
 } DeviceController;
 
 /**
