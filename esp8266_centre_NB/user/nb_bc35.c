@@ -73,9 +73,9 @@ void NB_RxMsgHandler(uint8 *nb_msg ) {
 
 			ESP_DEBUG("OK! response message parse!");
 
-			NB_Init();
-
 			response_flag = 0;
+
+			NB_Init();
 
 			return;
 
