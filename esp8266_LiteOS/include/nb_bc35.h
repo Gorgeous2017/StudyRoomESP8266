@@ -32,6 +32,13 @@ typedef struct _socket_info_t
 /* Exported constants --------------------------------------------------------*/
 #define AT_MODU_NAME            "nb_neul95"
 
+#define AT_NB_OPEN_RF		"AT+CFUN=1\r"
+#define AT_NB_CLOSE_PSM		"AT+CPSMS=0\r"
+#define AT_NB_CLOSE_EDRX	"AT+CEDRXS=0,5\r"
+#define AT_NB_CGATT_ATTACH	"AT+CGATT=1\r"
+
+
+
 #define AT_NB_LINE_END 			"\r\n"
 #define AT_NB_reboot    		"AT+NRB\r"
 #define AT_NB_hw_detect    		"AT+CFUN?\r"
@@ -39,7 +46,6 @@ typedef struct _socket_info_t
 #define AT_CMD_PREFIX           "\r\n+NNMI:"
 #define AT_DATAF_PREFIX         "+NSONMI:"
 #define CGATT                   "AT+CGATT?\r"
-#define CGATT_ATTACH            "AT+CGATT=1\r"
 #define CGATT_DEATTACH          "AT+CGATT=0\r"
 
 #define AT_LINE_END 		    "\r\n"

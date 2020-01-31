@@ -389,6 +389,70 @@ int32_t nb_send(int32_t id , const uint8_t *buf, uint32_t len)
 	return nb_sendto(id , buf, len, sockinfo[id].remoteip,(int)sockinfo[id].remoteport);
 }
 
+os_timer_t nb_response_timer;
+
+void ICACHE_FLASH_ATTR
+nb_response_timer_cb(void *arg) {
+
+	uint8 *response_msg = (uint8 *)arg;
+
+	if (0 != os_strcmp(uart_buff, response_msg)) {
+
+	}
+
+
+}
+
+void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *response_msg, uint32 response_time_ms ) {
+
+	uart1_tx_buffer(cmd, cmd_len);
+
+	os_timer_disarm(&nb_response_timer);
+	os_timer_setfn(&nb_response_timer, (os_timer_func_t *) nb_response_timer_cb, (void *)response_msg);
+	os_timer_arm(&nb_response_timer, response_time_ms, 1);
+
+}
+
+void NB_Init(void) { 
+
+	static uint8 cmd_order = 0;
+
+	switch (cmd_order) {
+
+		case 0:
+			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
+			cmd_order = 1;
+			break;
+		case 1:
+			NB_SendCmd(AT_NB_CLOSE_PSM, os_strlen(AT_NB_CLOSE_PSM), "OK",100);
+			cmd_order = 2;
+			break;
+		case 2:
+			NB_SendCmd(AT_NB_CLOSE_EDRX, os_strlen(AT_NB_CLOSE_EDRX), "OK",100);
+			cmd_order = 3;
+			break;
+		case 3:
+			NB_SendCmd(AT_NB_CGATT_ATTACH, os_strlen(AT_NB_CGATT_ATTACH), "OK",100);
+			//cmd_order = 4;
+			break;
+		case 4:
+			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
+			cmd_order = 5;
+			break;
+		case 5:
+			
+			break;
+		case 6:
+			
+			break;
+		default:
+			break;
+	}
+
+
+}
+
+
 int32_t nb_recv(int32_t id , uint8_t  *buf, uint32_t len)
 {
 	return nb_recv_timeout(id, buf, len,NULL,NULL, LOS_WAIT_FOREVER);
