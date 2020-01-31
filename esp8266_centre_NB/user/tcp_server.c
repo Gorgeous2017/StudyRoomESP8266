@@ -52,7 +52,7 @@ tcp_server_recv(void *arg, char *pdata, unsigned short len) {
 
 	// TODO:
 	os_printf("pdata = %s \n", pdata);
-	uart0_tx_buffer((uint8 *)pdata,len);
+	uart1_tx_buffer((uint8 *)pdata,len);
 }
 
 /*

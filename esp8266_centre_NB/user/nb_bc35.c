@@ -45,10 +45,16 @@ uint8 response_msg[128]; /*!< 期望接收到的响应消息 */
 
 void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg, uint32_t response_time_ms ) {
 
-	os_printf("MCU >>>>>> NB : %s", cmd);
-	uart1_tx_buffer(cmd, cmd_len);
+	uint8 at_cmd[128];
+	//os_memset(at_cmd,0,128);
 
-	os_memset(response_msg, res_msg, sizeof(res_msg));
+	os_printf("MCU >>>>>> NB : %s\n", cmd);
+
+	os_sprintf(at_cmd, "%s\r\n", cmd);
+	uart1_tx_buffer(at_cmd, cmd_len+2);
+
+	os_memcpy(response_msg, res_msg, sizeof(res_msg));
+	os_printf("response_msg is %s\n", response_msg);
 	response_flag = 1;
 
 	// os_timer_disarm(&nb_response_timer);
@@ -67,8 +73,6 @@ void NB_RxMsgHandler(uint8 *nb_msg ) {
 
 			ESP_DEBUG("OK! response message parse!");
 
-			//os_timer_disarm(&nb_response_timer);
-			//os_memset(nb_msg,0,sizeof(nb_msg))
 			NB_Init();
 
 			response_flag = 0;
