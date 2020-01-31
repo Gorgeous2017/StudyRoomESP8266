@@ -50,7 +50,7 @@ void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg, uint32_t response_tim
 
 	os_printf("MCU >>>>>> NB : %s\n", cmd);
 
-	os_sprintf(at_cmd, "%s\r\n", cmd);
+	os_sprintf(at_cmd, AT_CMD_BEGIN "%s" AT_LINE_END, cmd);
 	uart1_tx_buffer(at_cmd, cmd_len+2);
 
 	os_memcpy(response_msg, res_msg, sizeof(res_msg));
@@ -73,6 +73,7 @@ void NB_RxMsgHandler(uint8 *nb_msg ) {
 
 			ESP_DEBUG("OK! response message parse!");
 
+			os_memset(response_msg, 0, sizeof(response_msg));
 			response_flag = 0;
 
 			NB_Init();
@@ -100,36 +101,38 @@ void NB_RxMsgHandler(uint8 *nb_msg ) {
 
 void NB_Init(void) { 
 
-	static uint8 cmd_order = 0;
+	static uint8 cmd_order = 1;
 
 	ESP_DEBUG("cmd_order = %d", cmd_order);
 
 	switch (cmd_order) {
 
 		case 0:
-			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
+			NB_SendCmd("", 1, "OK",100);
 			cmd_order = 1;
 			break;
 		case 1:
-			NB_SendCmd(AT_NB_CLOSE_PSM, os_strlen(AT_NB_CLOSE_PSM), "OK",100);
+			NB_SendCmd("AT", os_strlen("AT"), "OK",100);
 			cmd_order = 2;
 			break;
 		case 2:
-			NB_SendCmd(AT_NB_CLOSE_EDRX, os_strlen(AT_NB_CLOSE_EDRX), "OK",100);
+			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
 			cmd_order = 3;
 			break;
 		case 3:
-			NB_SendCmd(AT_NB_CGATT_ATTACH, os_strlen(AT_NB_CGATT_ATTACH), "OK",100);
+			NB_SendCmd(AT_NB_CLOSE_PSM, os_strlen(AT_NB_CLOSE_PSM), "OK",100);
 			cmd_order = 4;
 			break;
 		case 4:
-			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
+			NB_SendCmd(AT_NB_CLOSE_EDRX, os_strlen(AT_NB_CLOSE_EDRX), "OK",100);
 			cmd_order = 5;
 			break;
 		case 5:
-			
+			NB_SendCmd(AT_NB_CGATT_ATTACH, os_strlen(AT_NB_CGATT_ATTACH), "OK",100);
+			cmd_order = 10;
 			break;
 		case 6:
+			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
 			NB_SendCmd("AT", os_strlen("AT"), "OK",100);
 			cmd_order = 6;
 			break;
