@@ -82,7 +82,7 @@ void ICACHE_FLASH_ATTR
 system_init_done(void)
 {
     uint8 db = 88;
-    ESP_DEBUG("debug %d, %d,%s",666,db,__FUNCTION__);
+    ESP_DEBUG("debug %d, %d",666,db);
 
 	/****  …Ë÷√dhcp  ****/
 	wifi_softap_dhcps_stop();

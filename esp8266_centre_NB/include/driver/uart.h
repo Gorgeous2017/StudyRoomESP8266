@@ -32,13 +32,15 @@
 //////////////////// uart debug fuction. add by Gump 2020.01.31 //////////////////////
 
 #define ESP_DEBUG_ON 1
-#define ESP_DEBUG(fmt, ...)                           \
-    do                                                \
-    {                                                 \
-        if (ESP_DEBUG_ON)                             \
-            os_printf("<<-ESP-DEBUG->> File:"__FILE__ \
-                   "  LINE:[%d] FUNC:%s" fmt "\n",     \
-                   __LINE__, __FUNCTION__, ##__VA_ARGS__);          \
+#define ESP_DEBUG(fmt, ...)                                 \
+    do                                                      \
+    {                                                       \
+        if (ESP_DEBUG_ON)                                   \
+            os_printf("<<-ESP-DEBUG->> File: "__FILE__      \
+                   " | FUNC: %s"                            \
+                   " | LINE:[%d] \n"                        \
+                   "             >> "fmt "\n",              \
+                   __FUNCTION__, __LINE__, ##__VA_ARGS__);  \
     } while (0)
 
 //////////////////////////////////////////////////////////////////////////////////////
