@@ -100,7 +100,7 @@ void NB_RxMsgHandler(uint8 *nb_msg ) {
 
 void NB_Init(void) { 
 
-	static uint8 cmd_order = 6;
+	static uint8 cmd_order = 0;
 
 	ESP_DEBUG("cmd_order = %d", cmd_order);
 
@@ -108,7 +108,7 @@ void NB_Init(void) {
 
 		case 0:
 			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
-			cmd_order = 0;
+			cmd_order = 1;
 			break;
 		case 1:
 			NB_SendCmd(AT_NB_CLOSE_PSM, os_strlen(AT_NB_CLOSE_PSM), "OK",100);
@@ -120,7 +120,7 @@ void NB_Init(void) {
 			break;
 		case 3:
 			NB_SendCmd(AT_NB_CGATT_ATTACH, os_strlen(AT_NB_CGATT_ATTACH), "OK",100);
-			//cmd_order = 4;
+			cmd_order = 4;
 			break;
 		case 4:
 			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
