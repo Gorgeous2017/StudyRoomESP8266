@@ -29,20 +29,6 @@
 #include "eagle_soc.h"
 #include "c_types.h"
 
-//////////////////// uart debug fuction. add by Gump 2020.01.31 //////////////////////
-
-#define ESP_DEBUG_ON 1
-#define ESP_DEBUG(fmt, ...)                           \
-    do                                                \
-    {                                                 \
-        if (ESP_DEBUG_ON)                             \
-            os_printf("<<-ESP-DEBUG->> File:"__FILE__ \
-                   "  LINE:[%d]  " fmt "\n",          \
-                   __LINE__, ##__VA_ARGS__);          \
-    } while (0)
-
-//////////////////////////////////////////////////////////////////////////////////////
-
 #define UART_TX_BUFFER_SIZE 256  //Ring buffer length of tx buffer
 #define UART_RX_BUFFER_SIZE 256 //Ring buffer length of rx buffer
 

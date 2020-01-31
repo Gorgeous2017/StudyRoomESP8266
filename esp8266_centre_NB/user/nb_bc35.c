@@ -392,23 +392,35 @@ int32_t nb_send(int32_t id , const uint8_t *buf, uint32_t len)
 os_timer_t nb_response_timer;
 
 void ICACHE_FLASH_ATTR
-nb_response_timer_cb(void *arg) {
+NB_ResponseTimerCb(void *arg) {
 
 	uint8 *response_msg = (uint8 *)arg;
 
-	if (0 != os_strcmp(uart_buff, response_msg)) {
+	//if (0 != os_strcmp(uart_buff, response_msg)) {
+	if (0 != os_strstr(uart_buff, response_msg)) {
+
+		os_timer_disarm(&nb_response_timer);
+
+		os_memset(uart_buff,0,sizeof(uart_buff))
+
+		NB_Init();
+
+		return;
+
+	} else {
+
+		return;
 
 	}
 
-
 }
 
-void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *response_msg, uint32 response_time_ms ) {
+void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *response_msg, uint32_t response_time_ms ) {
 
 	uart1_tx_buffer(cmd, cmd_len);
 
 	os_timer_disarm(&nb_response_timer);
-	os_timer_setfn(&nb_response_timer, (os_timer_func_t *) nb_response_timer_cb, (void *)response_msg);
+	os_timer_setfn(&nb_response_timer, (os_timer_func_t *) NB_ResponseTimerCb, (void *)response_msg);
 	os_timer_arm(&nb_response_timer, response_time_ms, 1);
 
 }

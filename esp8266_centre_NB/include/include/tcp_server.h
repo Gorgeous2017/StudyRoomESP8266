@@ -1,7 +1,7 @@
 /*
  * tcp_server.h
  *
- *  Created on: 2017å¹´7æœˆ3æ—¥
+ *  Created on: 2017Äê7ÔÂ3ÈÕ
  *      Author: Administrator
  */
 
@@ -10,8 +10,9 @@
 
 #include "c_types.h"
 
-/* TCP Server åˆå§‹åŒ– */
+/* TCP Server ³õÊ¼»¯ */
 extern void tcp_server_init(u32 port);
+void send2client(uint8 roomNO, char *pdata);
 
 #endif /* _TCP_SERVER_H_ */
 

@@ -16,21 +16,18 @@
 int sensor_controll_handler()
 {
 // Define data report struct, all members come from devicemodel file
-#if 1
 
-#endif
 
-	if (semp_pend(s_rcv_sync, 0x7fffffff))
-	{
-		uint8_t msgid = s_rcv_buffer[0];
-		switch (msgid)
-		{
-#if 1
-		default:
-			break;
-#endif
-		}
-	}
+	// if (semp_pend(s_rcv_sync, 0x7fffffff))
+	// {
+	// 	uint8_t msgid = s_rcv_buffer[0];
+	// 	switch (msgid)
+	// 	{
+
+	// 	default:
+	// 		break;
+	// 	}
+	// }
 }
 
 int report_data_handler()
@@ -47,14 +44,14 @@ int report_data_handler()
 /********** code area end  **********/
 
 // virtual sensor data example
-	report_room_one_message.messageId = cn_app_report_room_one_message;
+	report_room_one_message.messageId = MID_report_room_one_message;
 	report_room_one_message.peopleFlowrate = 0x1;
 	report_room_one_message.temp = 0x1;
 	report_room_one_message.humi = 0x1;
 	report_room_one_message.noise = 0x1;
 	oc_lwm2m_report((uint8_t *)&report_room_one_message, sizeof(report_room_one_message), 1000);
 
-	report_room_one_status.messageId = cn_app_report_room_one_status;
+	report_room_one_status.messageId = MID_report_room_one_status;
 	report_room_one_status.fanNum = 0x1;
 	report_room_one_status.fanStatus[0] = 9;
 	report_room_one_status.lightNum = 0x1;

@@ -66,13 +66,13 @@ typedef struct
 {
 	uint8_t messageId;		  /*!< 用电器状态信息标识符 */
 	uint8_t fanNum;			  /*!< 风扇数量 */
-	variant fanStatus[6];	 /*!< 风扇状态信息 */
+	uint8_t fanStatus[6];	 /*!< 风扇状态信息 */
 	uint8_t lightNum;		  /*!< 电灯数量 */
-	variant lightStatus[6];   /*!< 电灯状态信息 */
+	uint8_t lightStatus[6];   /*!< 电灯状态信息 */
 	uint8_t curtainNum;		  /*!< 窗帘数量 */
-	variant curtainStatus[6]; /*!< 窗帘状态信息 */
+	uint8_t curtainStatus[6]; /*!< 窗帘状态信息 */
 	uint8_t acNum;			  /*!< 空调数量 */
-	variant acStatus[6];	  /*!< 空调状态信息 */
+	uint8_t acStatus[6];	  /*!< 空调状态信息 */
 } RoomStatus;
 
 /* Exported constants --------------------------------------------------------*/

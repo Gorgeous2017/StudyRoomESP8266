@@ -28,10 +28,6 @@
 
 #include "driver/uart.h"
 
-#include "http_client.h"
-#include "user_wifi.h"
-//#include "room_info.h"
-
 /******************************************************************************
  * FunctionName : user_rf_cal_sector_set
  * Description  : SDK just reversed 4 sectors, used for rf init data and paramters.
@@ -82,22 +78,23 @@ user_rf_pre_init(void)
 {
 }
 
-
-
 void ICACHE_FLASH_ATTR
 system_init_done(void)
 {
-    //------------ 设置静态IP，用于标识房间 -----------
-	struct ip_info info;
-	wifi_station_dhcpc_stop();
-	IP4_ADDR(&info.ip, 192, 168, 4, 204);  //主要是最后一位
-	IP4_ADDR(&info.gw, 192, 168, 4, 1);
-	IP4_ADDR(&info.netmask, 255, 255, 255, 0);
-	wifi_set_ip_info(STATION_IF, &info);
+    uint8 db = 88;
+    ESP_DEBUG("debug %d, %d,%s",666,db,__FUNCTION__);
+
+	/****  设置dhcp  ****/
+	wifi_softap_dhcps_stop();
+	struct dhcps_lease dhcp_lease;
+	const char* start_ip = "192.168.4.10";
+	const char* end_ip = "192.168.4.30";
+	dhcp_lease.start_ip.addr = ipaddr_addr(start_ip);
+	dhcp_lease.end_ip.addr = ipaddr_addr(end_ip);
+	wifi_softap_set_dhcps_lease(&dhcp_lease);
 	wifi_softap_dhcps_start();
 
-	// 初始化tcp client
-	http_client_init(HOST, PORT);
+	tcp_server_init(8080);
 
 }
 
@@ -111,8 +108,23 @@ system_init_done(void)
 void ICACHE_FLASH_ATTR
 user_init(void)
 {
+
+	system_uart_de_swap();
+	UART_SetPrintPort(0);
+
 	uart_init(BIT_RATE_115200, BIT_RATE_115200);
-	user_wifi_init();
+
+	//----- wifi test -----------
+	struct softap_config ap;
+	wifi_set_opmode(SOFTAP_MODE);
+	os_memset(ap.ssid, 0, 32);
+	os_memset(ap.password, 0, 64);
+	os_memcpy(ap.ssid, "Centre",6);
+	os_memcpy(ap.password, "12345678", 8);
+	ap.authmode = AUTH_WPA_PSK;
+	ap.ssid_len = 0;
+	ap.max_connection = 4;
+	wifi_softap_set_config(&ap);
 
     // Continue to 'sniffer_system_init_done'
 	// 后续配置须系统初始化完成后才能进行

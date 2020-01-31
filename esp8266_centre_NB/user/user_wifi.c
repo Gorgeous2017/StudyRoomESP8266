@@ -9,19 +9,7 @@
 #include "http_client.h"
 #include "user_config.h"
 
-#include "room_info.h"
 #include "http_client.h"
-
-
-os_timer_t send_timer;
-
-void ICACHE_FLASH_ATTR
-send_timer_cb(void *arg) {
-	get_room_buf();
-
-	send2server(room_data_buf,6);
-
-}
 
 /*
  * function: user_set_station_config
@@ -66,18 +54,6 @@ wifi_handle_event_cb(System_Event_t *evt) {
 				IP2STR(&evt->event_info.got_ip.mask),
 				IP2STR(&evt->event_info.got_ip.gw));
 		os_printf("\n");
-
-		// TODO:
-		// USER START  ----------------------
-
-		http_client_connect();
-
-		os_timer_disarm(&send_timer);
-		os_timer_setfn(&send_timer, (os_timer_func_t *) send_timer_cb, NULL);
-		os_timer_arm(&send_timer, 2000, 1);
-
-		// USER END  ----------------------------------
-
 		break;
 	case EVENT_SOFTAPMODE_STACONNECTED:
 		os_printf("station: " MACSTR "join, AID = %d\n",

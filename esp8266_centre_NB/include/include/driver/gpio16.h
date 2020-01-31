@@ -22,21 +22,12 @@
  *
  */
 
-#ifndef __USER_CONFIG_H__
-#define __USER_CONFIG_H__
+#ifndef __GPIO16_H__
+#define __GPIO16_H__
 
-#define AP_CACHE           0
-
-#if AP_CACHE
-#define AP_CACHE_NUMBER    5
-#endif
-
-
-#define WIFI_SSID 		"Gump"
-#define WIFI_PASSWORD	"19980702"
-
-#define HOST	"192.168.4.1"
-#define PORT	8080
+void gpio16_output_conf(void);
+void gpio16_output_set(uint8 value);
+void gpio16_input_conf(void);
+uint8 gpio16_input_get(void);
 
 #endif
-
