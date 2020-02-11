@@ -145,9 +145,9 @@ void NB_Init(void) {
 /**
  * @brief 将十六进制码流转换为字符串形式
  * 
- * @param bufin 输入的十六进制码流
- * @param len 十六进制码流的长度
- * @param bufout 输出的十六进制字符串
+ * @param[in] bufin 输入的十六进制码流
+ * @param[in] len 十六进制码流的长度
+ * @param[out] bufout 输出的十六进制字符串
  * @return int 
  * 
  * @par 示例
@@ -172,9 +172,9 @@ int str_to_hex(const char *bufin, int len, char *bufout)
 /**
  * @brief 将字符串形式的十六进制码流转为 unsigned char 类型
  * 
- * @param source [IN] 从串口接收到的字符串形式的十六进制码流
- * @param dest [OUT] 转换好的十六进制码流
- * @param sourceLen 十六进制码流的长度
+ * @param[in] source  从串口接收到的字符串形式的十六进制码流
+ * @param[out] dest 转换好的十六进制码流
+ * @param[in] sourceLen 十六进制码流的长度
  * 
  * @par 示例
  * source = "010203", sourceLen = 3, 则dest[0]=0x01, dest[1]=0x02, dest[2]=0x03
@@ -240,8 +240,8 @@ void HexStrToStr(const unsigned char *source, unsigned char *dest, int sourceLen
 // /**
 //  * @brief 设置 CDP（持续数据保护） 服务器，即华为IoT平台
 //  * 
-//  * @param host [IN] 主机地址
-//  * @param port [IN] 端口号
+//  * @param[in] host  主机地址
+//  * @param[in] port  端口号
 //  * @return int32_t 
 //  */
 // int32_t nb_set_cdpserver(char* host, char* port)
@@ -294,8 +294,8 @@ void HexStrToStr(const unsigned char *source, unsigned char *dest, int sourceLen
 // /**
 //  * @brief 发送数据至平台
 //  * 
-//  * @param buf [IN] 需要发送的数据
-//  * @param len [IN] 数据长度
+//  * @param[in] buf  需要发送的数据
+//  * @param[in] len  数据长度
 //  * @return int32_t 
 //  */
 // int32_t nb_send_payload(const char* buf, int len)
