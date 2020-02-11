@@ -322,7 +322,7 @@ uart_test_rx()
 }
 #endif
 
-LOCAL void ICACHE_FLASH_ATTR ///////
+LOCAL void ICACHE_FLASH_ATTR
 uart_recvTask(os_event_t *events)
 {
     if(events->sig == 0){
