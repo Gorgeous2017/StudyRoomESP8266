@@ -39,10 +39,10 @@ typedef enum
  */
 typedef struct
 {
-	uint8_t deviceType; 	/*!< 根据messageId来区分用电器类型 */
-	uint8_t roomNo; 		/*!< 要控制的用电器所在房间的编号 */
-	uint8_t deviceNo;		/*!< 要控制的用电器的编号 */
-	uint8_t deviceSwitch; 	/*!< 用电器的目标状态 */
+	uint8 deviceType; 	/*!< 根据messageId来区分用电器类型 */
+	uint8 roomNo; 		/*!< 要控制的用电器所在房间的编号 */
+	uint8 deviceNo;		/*!< 要控制的用电器的编号 */
+	uint8 deviceSwitch; 	/*!< 用电器的目标状态 */
 } DeviceController;
 
 /**
@@ -51,11 +51,11 @@ typedef struct
  */
 typedef struct
 {
-	uint8_t messageId;		/*!< 根据messageId来区分房间号 */
-	uint8_t peopleFlowrate; /*!< 人群密度 */
-	uint8_t temp;			/*!< 环境温度 */
-	uint8_t humi;			/*!< 环境湿度 */
-	uint8_t noise;			/*!< 环境噪音 */
+	uint8 messageId;		/*!< 根据messageId来区分房间号 */
+	uint8 peopleFlowrate; /*!< 人群密度 */
+	uint8 temp;			/*!< 环境温度 */
+	uint8 humi;			/*!< 环境湿度 */
+	uint8 noise;			/*!< 环境噪音 */
 } RoomMessage;
 
 /**
@@ -64,15 +64,15 @@ typedef struct
  */
 typedef struct
 {
-	uint8_t messageId;		  /*!< 用电器状态信息标识符 */
-	uint8_t fanNum;			  /*!< 风扇数量 */
-	uint8_t fanStatus[6];	 /*!< 风扇状态信息 */
-	uint8_t lightNum;		  /*!< 电灯数量 */
-	uint8_t lightStatus[6];   /*!< 电灯状态信息 */
-	uint8_t curtainNum;		  /*!< 窗帘数量 */
-	uint8_t curtainStatus[6]; /*!< 窗帘状态信息 */
-	uint8_t acNum;			  /*!< 空调数量 */
-	uint8_t acStatus[6];	  /*!< 空调状态信息 */
+	uint8 messageId;		  /*!< 用电器状态信息标识符 */
+	uint8 fanNum;			  /*!< 风扇数量 */
+	uint8 fanStatus[6];	 /*!< 风扇状态信息 */
+	uint8 lightNum;		  /*!< 电灯数量 */
+	uint8 lightStatus[6];   /*!< 电灯状态信息 */
+	uint8 curtainNum;		  /*!< 窗帘数量 */
+	uint8 curtainStatus[6]; /*!< 窗帘状态信息 */
+	uint8 acNum;			  /*!< 空调数量 */
+	uint8 acStatus[6];	  /*!< 空调状态信息 */
 } RoomStatus;
 
 /* Exported constants --------------------------------------------------------*/
