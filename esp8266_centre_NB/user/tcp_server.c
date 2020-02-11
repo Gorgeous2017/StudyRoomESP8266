@@ -14,6 +14,9 @@
 #include "tcp_server.h"
 #include "room_info.h"
 
+/* TCP server receive handler, define in app_study_room.c */
+extren void StudyRoom_UpdataData(uint8 *msg_string);
+
 struct espconn *client[4];
 
 /*
@@ -53,6 +56,12 @@ tcp_server_recv(void *arg, char *pdata, unsigned short len) {
 	// TODO:
 	os_printf("pdata = %s \n", pdata);
 	uart1_tx_buffer((uint8 *)pdata,len);
+
+	if (pdata[0] ==  0xFE)
+	{
+		StudyRoom_UpdataData(pdata);
+	}
+	
 }
 
 /*
