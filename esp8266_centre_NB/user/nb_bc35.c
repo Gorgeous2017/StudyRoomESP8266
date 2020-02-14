@@ -43,16 +43,37 @@ NB_ResponseTimerCb(void *arg) {
 uint8 response_flag = 0; /*!< 响应消息接收标志 */
 uint8 response_msg[128]; /*!< 期望接收到的响应消息 */
 
-void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg, uint32_t response_time_ms ) {
+/**
+ * @brief 向NB模组发送指令
+ * 
+ * @details 
+ * 	1. 将指令通过串口发送给NB模组
+ *  2. 将响应消息复制到响应消息数组 response_msg[]
+ *  3. 置位响应消息接收标志 response_flag。此标志位用于给串口消息处理函数 NB_RxMsgHandler \
+ * 里的分支作判断，从而决定是否将接受的消息与响应消息作匹配。因为串口接收到的消息可能是云端\
+ * 下发的指令，所以这里面加了这个标志位。
+ * 
+ * @param[in] cmd 要发送的指令字符串
+ * @param[in] cmd_len 指令字符串长度
+ * @param[in] res_msg 期望接收到的响应消息，参见NB模组的AT指令参考手册
+ * 
+ * @todo 增加对查询指令返回的查询结果信息的处理。将采用匹配消息头和存储消息体的方法。
+ * 
+ */
+void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg) {
 
 	uint8 at_cmd[128];
 	//os_memset(at_cmd,0,128);
 
 	os_printf("MCU >>>>>> NB : %s\n", cmd);
 
+	/* 这里在命令前面加上 AT_CMD_BEGIN 是为了清除掉NB模块中可能存在的消息缓存 */
+	/* 若是在调用该函数前NB模块中缓存了一些“意料之外”的消息，这时发送的指令会连同前面的消息
+	 一同被NB模块解析，结果必然出错。所以在每次发送消息前加上了 AT_CMD_BEGIN */
 	os_sprintf(at_cmd, AT_CMD_BEGIN "%s" AT_LINE_END, cmd);
 	uart1_tx_buffer(at_cmd, cmd_len+2);
 
+	/* 拷贝响应消息到响应消息数组并置位响应标志位，等待串口串接收中断调用 */
 	os_memcpy(response_msg, res_msg, sizeof(res_msg));
 	os_printf("response_msg is %s\n", response_msg);
 	response_flag = 1;
@@ -63,6 +84,20 @@ void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg, uint32_t response_tim
 
 }
 
+/**
+ * @brief NB消息处理函数
+ * 
+ * @details 
+ * 	NB消息有以下几种类型：
+ * 	- 动作指令的执行情况。如“OK”、“ERROR”
+ * 	- 查询指令的查询结果
+ *  - 云端下发的控制命令。以“+NNMI:”为前缀
+ * 
+ * 	当NB发送消息来的时候，我们先判断在接收到这条消息之前有没有发送过指令，即判断响应标志位
+ *  response_flag是否被置位，再决定是否去匹配响应消息。
+ * 
+ * @param[in] nb_msg 串口接收到的NB消息
+ */
 void NB_RxMsgHandler(uint8 *nb_msg ) {
 
 	if (response_flag != 0 ) { /* 等待响应匹配 */
@@ -108,32 +143,32 @@ void NB_Init(void) {
 	switch (cmd_order) {
 
 		case 0:
-			NB_SendCmd("", 1, "OK",100);
+			NB_SendCmd("", 1, "OK");
 			cmd_order = 1;
 			break;
 		case 1:
-			NB_SendCmd("AT", os_strlen("AT"), "OK",100);
+			NB_SendCmd("AT", os_strlen("AT"), "OK");
 			cmd_order = 2;
 			break;
 		case 2:
-			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
+			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK");
 			cmd_order = 3;
 			break;
 		case 3:
-			NB_SendCmd(AT_NB_CLOSE_PSM, os_strlen(AT_NB_CLOSE_PSM), "OK",100);
+			NB_SendCmd(AT_NB_CLOSE_PSM, os_strlen(AT_NB_CLOSE_PSM), "OK");
 			cmd_order = 4;
 			break;
 		case 4:
-			NB_SendCmd(AT_NB_CLOSE_EDRX, os_strlen(AT_NB_CLOSE_EDRX), "OK",100);
+			NB_SendCmd(AT_NB_CLOSE_EDRX, os_strlen(AT_NB_CLOSE_EDRX), "OK");
 			cmd_order = 5;
 			break;
 		case 5:
-			NB_SendCmd(AT_NB_CGATT_ATTACH, os_strlen(AT_NB_CGATT_ATTACH), "OK",100);
+			NB_SendCmd(AT_NB_CGATT_ATTACH, os_strlen(AT_NB_CGATT_ATTACH), "OK");
 			cmd_order = 10;
 			break;
 		case 6:
-			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK",100);
-			NB_SendCmd("AT", os_strlen("AT"), "OK",100);
+			NB_SendCmd(AT_NB_OPEN_RF, os_strlen(AT_NB_OPEN_RF), "OK");
+			NB_SendCmd("AT", os_strlen("AT"), "OK");
 			cmd_order = 6;
 			break;
 		default:

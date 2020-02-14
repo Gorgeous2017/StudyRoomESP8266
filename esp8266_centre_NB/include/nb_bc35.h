@@ -68,7 +68,7 @@
 #define IP_LEN 16
 
 /* Exported function -----------------------------------------------*/
-void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *response_msg, uint32_t response_time_ms );
+void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *response_msg);
 void NB_ResponseTimerCb(void *arg);
 void NB_Init(void); 
 
