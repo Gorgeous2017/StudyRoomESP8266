@@ -44,34 +44,34 @@
 uint32 ICACHE_FLASH_ATTR
 user_rf_cal_sector_set(void)
 {
-    enum flash_size_map size_map = system_get_flash_size_map();
-    uint32 rf_cal_sec = 0;
+	enum flash_size_map size_map = system_get_flash_size_map();
+	uint32 rf_cal_sec = 0;
 
-    switch (size_map) {
-        case FLASH_SIZE_4M_MAP_256_256:
-            rf_cal_sec = 128 - 5;
-            break;
+	switch (size_map) {
+		case FLASH_SIZE_4M_MAP_256_256:
+			rf_cal_sec = 128 - 5;
+			break;
 
-        case FLASH_SIZE_8M_MAP_512_512:
-            rf_cal_sec = 256 - 5;
-            break;
+		case FLASH_SIZE_8M_MAP_512_512:
+			rf_cal_sec = 256 - 5;
+			break;
 
-        case FLASH_SIZE_16M_MAP_512_512:
-        case FLASH_SIZE_16M_MAP_1024_1024:
-            rf_cal_sec = 512 - 5;
-            break;
+		case FLASH_SIZE_16M_MAP_512_512:
+		case FLASH_SIZE_16M_MAP_1024_1024:
+			rf_cal_sec = 512 - 5;
+			break;
 
-        case FLASH_SIZE_32M_MAP_512_512:
-        case FLASH_SIZE_32M_MAP_1024_1024:
-            rf_cal_sec = 1024 - 5;
-            break;
+		case FLASH_SIZE_32M_MAP_512_512:
+		case FLASH_SIZE_32M_MAP_1024_1024:
+			rf_cal_sec = 1024 - 5;
+			break;
 
-        default:
-            rf_cal_sec = 0;
-            break;
-    }
+		default:
+			rf_cal_sec = 0;
+			break;
+	}
 
-    return rf_cal_sec;
+	return rf_cal_sec;
 }
 
 void ICACHE_FLASH_ATTR
@@ -82,10 +82,8 @@ user_rf_pre_init(void)
 void ICACHE_FLASH_ATTR
 system_init_done(void)
 {
-    uint8 db = 88;
-    ESP_DEBUG("debug %d, %d",666,db);
 
-	/****  ÉèÖÃdhcp  ****/
+	/****  è®¾ç½®dhcp  ****/
 	wifi_softap_dhcps_stop();
 	struct dhcps_lease dhcp_lease;
 	const char* start_ip = "192.168.4.10";
@@ -97,7 +95,7 @@ system_init_done(void)
 
 	tcp_server_init(8080);
 
-    NB_Init();
+	NB_Init();
 
 }
 
@@ -115,6 +113,11 @@ user_init(void)
 	system_uart_de_swap();
 	UART_SetPrintPort(0);
 
+	/*******************************************************
+	 * 
+	 * æ³¨æ„ï¼šä¸ºäº†é…åˆNBæ¨¡ç»„ï¼Œå½“å‰8266ç”¨çš„æ˜¯ï¼ï¼9600ï¼ï¼çš„æ³¢ç‰¹ç‡
+	 * 
+	 ******************************************************/
 	uart_init(BIT_RATE_9600, BIT_RATE_9600);
 
 	//----- wifi test -----------
@@ -129,8 +132,7 @@ user_init(void)
 	ap.max_connection = 4;
 	wifi_softap_set_config(&ap);
 
-    // Continue to 'sniffer_system_init_done'
-	// ºóĞøÅäÖÃĞëÏµÍ³³õÊ¼»¯Íê³Éºó²ÅÄÜ½øĞĞ
-    system_init_done_cb(system_init_done);
+	// åç»­é…ç½®é¡»ç³»ç»Ÿåˆå§‹åŒ–å®Œæˆåæ‰èƒ½è¿›è¡Œ
+	system_init_done_cb(system_init_done);
 
 }
