@@ -58,6 +58,14 @@ NB_ResponseTimerCb(void *arg) {
  * @param[in] data_str 需要上报的十六进制数据字符串
  */
 void NB_ReportData(uint8 *data_str) {
+	
+	uint8 report_buf[128];
+
+	/* 因为数据字符串是十六进制的，两个字符表示一个十六进制数，故数据长度为os_strlen(data_str)/2 */
+	os_sprintf(report_buf, AT_NB_REPORT_PREFIX "%02d,%s" , os_strlen(data_str)/2, data_str );
+
+	NB_SendCmd(report_buf, os_strlen(report_buf), NULL);
+
 }
 
 
@@ -96,9 +104,6 @@ void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg) {
 	uart1_tx_buffer(at_cmd, cmd_len+2);
 
 	/* 拷贝响应消息到响应消息数组并置位响应标志位，等待串口串接收中断调用 */
-	os_memcpy(response_msg, res_msg, sizeof(res_msg));
-	os_printf("response_msg is %s\n", response_msg);
-	response_flag = 1;
 
 	if (res_msg != NULL) {	
 		os_memcpy(response_msg, res_msg, sizeof(res_msg));
