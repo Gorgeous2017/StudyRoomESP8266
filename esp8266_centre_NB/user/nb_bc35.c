@@ -40,6 +40,28 @@ NB_ResponseTimerCb(void *arg) {
 	// }
 }
 
+
+/**
+ * @brief 上报数据到云端
+ * 
+ * @par AT Command
+ * 	AT+NMGS=数据长度,内容
+ * 
+ * 	例如：
+ * 
+ * 	发送0、1两个数据：AT+NMGS=02,0001
+ * 
+ * 	发送9、10、11、16、17、32、33七个数据：AT+NMGS=07,090A0B10112021
+ * 
+ * @note 上报数据的格式需要与IoT平台的“编解码插件”的解码顺序一致，不然上报的数据无法正确解析
+ * 
+ * @param[in] data_str 需要上报的十六进制数据字符串
+ */
+void NB_ReportData(uint8 *data_str) {
+}
+
+
+
 uint8 response_flag = 0; /*!< 响应消息接收标志 */
 uint8 response_msg[128]; /*!< 期望接收到的响应消息 */
 
@@ -49,8 +71,8 @@ uint8 response_msg[128]; /*!< 期望接收到的响应消息 */
  * @details 
  * 	1. 将指令通过串口发送给NB模组
  *  2. 将响应消息复制到响应消息数组 response_msg[]
- *  3. 置位响应消息接收标志 response_flag。此标志位用于给串口消息处理函数 NB_RxMsgHandler \
- * 里的分支作判断，从而决定是否将接受的消息与响应消息作匹配。因为串口接收到的消息可能是云端\
+ *  3. 置位响应消息接收标志 response_flag。此标志位用于给串口消息处理函数 NB_RxMsgHandler
+ * 里的分支作判断，从而决定是否将接受的消息与响应消息作匹配。因为串口接收到的消息可能是云端
  * 下发的指令，所以这里面加了这个标志位。
  * 
  * @param[in] cmd 要发送的指令字符串
