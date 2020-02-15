@@ -78,6 +78,12 @@ void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg) {
 	os_printf("response_msg is %s\n", response_msg);
 	response_flag = 1;
 
+	if (res_msg != NULL) {	
+		os_memcpy(response_msg, res_msg, sizeof(res_msg));
+		os_printf("response_msg is %s\n", response_msg);
+		response_flag = 1;
+	}
+
 	// os_timer_disarm(&nb_response_timer);
 	// os_timer_setfn(&nb_response_timer, (os_timer_func_t *) NB_ResponseTimerCb, (void *)response_msg);
 	// os_timer_arm(&nb_response_timer, response_time_ms, 1);
