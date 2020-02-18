@@ -117,13 +117,13 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 	else if (msg_string[0] == 0xFE)
 	{
 
-		StudyRoom_StatusToHex(room_status, 1, hexstr);
+		StudyRoom_StatusToHex(1, hexstr);
 		ESP_DEBUG("status now is: %s", hexstr);
 
 		*(room_status + buff[1] - 1) &= ~(buff[3] << (8 * buff[0] + buff[2]));
 		*(room_status + buff[1] - 1) |=  buff[3] << (8 * buff[0] + buff[2]);
 
-		StudyRoom_StatusToHex(room_status, 1, hexstr);
+		StudyRoom_StatusToHex(1, hexstr);
 		ESP_DEBUG("status change is: %s", hexstr);
 	}
 	
@@ -132,13 +132,12 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 /**
  * @brief 将一个房间所有用电器的状态转成 Hex 字符串
  * 
- * @param[in] status 存储用电器状态信息的数组
  * @param[in] room_no 需要转换的房间编号
  * @param[out] out_hexstr 转换后的字符串
  * 
  * @see room_status
  */
-void StudyRoom_StatusToHex(uint32 *status, uint8 room_no, uint8 *out_hexstr ) {
+void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr ) {
 
 	uint8 i,j;
 	/* 用电器状态只用一个数据位表示开关即可 */
@@ -150,8 +149,8 @@ void StudyRoom_StatusToHex(uint32 *status, uint8 room_no, uint8 *out_hexstr ) {
 		{
 			/* 先定位某个房间某一类用电器的状态，再定位具体的单个用电器状态 */
 			/* 可以结合用电器状态的“数组数据分布”来理解，参阅 room_status[] 的注释 */
-			one_status = (((*(status + room_no) >> (8 * i)) & 0x000000ff) >> j) & 0x01;
 			os_sprintf(out_hexstr+j*2, "%02X", one_status); /* 不知道这里类型转换会不会有问题 */
+			one_status = (((*(room_status + room_no) >> (8 * i)) & 0x000000ff) >> j) & 0x01;
 		}
 	}
 	
