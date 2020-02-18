@@ -27,7 +27,7 @@
 
 /*! 四个房间的环境信息 */
 /*! 用messageId来区分不同房间的上报数据，由华为IoT平台中产品的编解码插件所决定 */
-RoomMessage room_message[5] = {{0x11}, {0x12}, {0x13}, {0x14}}; 
+RoomMessage room_message[4] = {{0x11}, {0x12}, {0x13}, {0x14}}; 
 
 /**
  * @brief 四个房间的用电器状态信息
@@ -111,7 +111,7 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 	if (msg_string[0] == 0xFF)
 	{
 		/* msg_string[1] 房间编号，取值范围[1..4] */
-		os_memcpy((room_message + msg_string[1]), msg_string + 2, 4 );
+		os_memcpy((room_message + msg_string[1] - 1), msg_string + 2, 4 );
 
 	} 
 	else if (msg_string[0] == 0xFE)
