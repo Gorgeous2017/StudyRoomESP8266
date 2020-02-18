@@ -29,11 +29,11 @@
 /* Exported constants --------------------------------------------------------*/
 #define AT_MODU_NAME            "nb_neul95"
 
-#define AT_NB_OPEN_RF"AT+CFUN=1\r"
-#define AT_NB_CLOSE_PSM "AT+CPSMS=0\r"
-#define AT_NB_CLOSE_EDRX "AT+CEDRXS=0,5\r"
-#define AT_NB_CGATT_ATTACH "AT+CGATT=1\r"
-#define AT_NB_REPORT_PREFIX "AT+NMGS="
+#define AT_NB_OPEN_RF 			"AT+CFUN=1\r"
+#define AT_NB_CLOSE_PSM 		"AT+CPSMS=0\r"
+#define AT_NB_CLOSE_EDRX 		"AT+CEDRXS=0,5\r"
+#define AT_NB_CGATT_ATTACH 		"AT+CGATT=1\r"
+#define AT_NB_REPORT_PREFIX 	"AT+NMGS="
 
 
 #define AT_NB_LINE_END 			"\r\n"
