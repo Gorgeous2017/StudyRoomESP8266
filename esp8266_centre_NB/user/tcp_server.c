@@ -16,6 +16,7 @@
 
 /* TCP server receive handler, define in app_study_room.c */
 extren void StudyRoom_UpdataData(uint8 *msg_string);
+extren void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr);
 
 struct espconn *client[4];
 
@@ -51,7 +52,10 @@ tcp_server_discon_cb(void *arg) {
  */
 static void ICACHE_FLASH_ATTR
 tcp_server_recv(void *arg, char *pdata, unsigned short len) {
+
 	struct espconn *pesp_conn = arg;
+	uint8 nb_buff[128];
+
 
 	// TODO:
 	os_printf("pdata = %s \n", pdata);
@@ -60,6 +64,7 @@ tcp_server_recv(void *arg, char *pdata, unsigned short len) {
 	if (pdata[0] ==  0xFE)
 	{
 		StudyRoom_UpdataData(pdata);
+		StudyRoom_StatusToHex(pdata[1], nb_buff);
 	}
 	
 }
