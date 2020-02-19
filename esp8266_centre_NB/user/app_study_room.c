@@ -140,7 +140,7 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr ) {
 
 	uint8 i,j;
-	bool one_status /* 一个用电器的状态, 只用一个数据位表示开关即可 */
+	bool one_status; /* 一个用电器的状态, 只用一个数据位表示开关即可 */
 
 	for (i = DEVICE_FAN; i <= DEVICE_AC; i++) {
 
