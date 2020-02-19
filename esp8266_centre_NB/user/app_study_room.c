@@ -116,15 +116,16 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 	} 
 	else if (msg_string[0] == 0xFE)
 	{
+		ESP_DEBUG("msg_string: %02X %02X %02X %02X %02X %02X",msg_string[0],msg_string[1],msg_string[2],msg_string[3],msg_string[4],msg_string[5]);
 
-		StudyRoom_StatusToHex(1, hexstr);
-		ESP_DEBUG("status now is: %s", hexstr);
+		StudyRoom_StatusToHex(msg_string[1], hexstr);
+		ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
 
-		*(room_status + msg_string[1] - 1) &= ~(msg_string[4] << (8 * msg_string[2] + msg_string[3]));
-		*(room_status + msg_string[1] - 1) |=  msg_string[4] << (8 * msg_string[2] + msg_string[3]);
+		*(room_status + (msg_string[1] - 1)) &= ~(msg_string[4] << (8 * msg_string[2] + msg_string[3]));
+		*(room_status + (msg_string[1] - 1)) |=  msg_string[4] << (8 * msg_string[2] + msg_string[3]);
 
-		StudyRoom_StatusToHex(1, hexstr);
-		ESP_DEBUG("status change is: %s", hexstr);
+		StudyRoom_StatusToHex(msg_string[1], hexstr);
+		ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
 	}
 	
 }
@@ -155,6 +156,9 @@ void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr ) {
 			/* 先定位某个房间某一类用电器的状态，再定位具体的单个用电器状态 */
 			/* 可以结合用电器状态的“数组数据分布”来理解，参阅 room_status[] 的注释 */
 			one_status = (((*(room_status + room_no) >> (8 * i)) & 0x000000ff) >> j) & 0x01;
+
+			ESP_DEBUG("one_status = %02X ", one_status);
+
 			os_sprintf(out_hexstr + i*8 + j*2, "%02X", one_status); /* 不知道这里类型转换会不会有问题 */
 		}
 
