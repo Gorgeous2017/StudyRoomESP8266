@@ -226,6 +226,10 @@ void store_resp_buf(int8_t *resp_buf, const int8_t *src, uint32_t src_len, uint3
     *maxlen = copy_len;
 }
 
+/* ？？发送AT指令时会调用的回调函数？
+   为什么要声明一个新的at_listener，并把handle_data赋值给它之后再注册进监听器？
+   为什么要刷新超时时间？
+ */
 int32_t at_cmd_in_callback(const int8_t *cmd, int32_t len,
                     int32_t (*handle_data)(const int8_t *data, uint32_t len),  uint32_t timeout)
 {
@@ -292,8 +296,8 @@ int32_t at_cmd_multi_suffix(const int8_t *cmd, int  len, at_cmd_info_s *cmd_info
 
     LOS_MuxPend(at.cmd_mux, LOS_WAIT_FOREVER);
     //at_rm_timeout_nodes();
-    at_listener_list_add(&listener);
-    at_transmit((uint8_t *)cmd, len, 1);
+    at_listener_list_add(&listener); /* 注册监听器，用于监听AT指令的回复信息 */   
+    at_transmit((uint8_t *)cmd, len, 1);/* 发送AT指令 */
     LOS_MuxPost(at.cmd_mux);
 
     ret = LOS_SemPend(at.resp_sem, at.timeout);
@@ -799,7 +803,12 @@ at_config *at_get_config(void)
     return &at_user_conf;
 }
 
-
+/**
+ * @brief 根据配置进行初始化
+ * 
+ * @param config AT的配置
+ * @return int32_t 
+ */
 int32_t at_init(at_config *config)
 {
 

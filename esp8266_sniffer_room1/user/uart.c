@@ -195,7 +195,7 @@ uart1_tx_buffer(uint8 *buf, uint16 len)
     uint16 i;
     for (i = 0; i < len; i++)
     {
-    	os_delay_us(20000); // ensure LiteOS in BearPI recive the meassage
+    	//os_delay_us(20000); // ensure LiteOS in BearPI recive the meassage
     	//os_delay_ms();
     	//beacause LiteOS's Interrupt could process this char, ifn't may disapper char lose
         uart_tx_one_char(UART1, buf[i]);

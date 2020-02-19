@@ -32,8 +32,8 @@
 #endif
 
 
-#define WIFI_SSID 		"RoomOne"
-#define WIFI_PASSWORD	"ro123456"
+#define WIFI_SSID 		"Gump"
+#define WIFI_PASSWORD	"19980702"
 
 #define HOST	"192.168.4.1"
 #define PORT	8080

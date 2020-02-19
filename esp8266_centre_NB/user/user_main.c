@@ -27,10 +27,7 @@
 #include "user_interface.h"
 
 #include "driver/uart.h"
-
-#include "http_client.h"
-#include "user_wifi.h"
-//#include "room_info.h"
+#include "nb_bc35.h"
 
 /******************************************************************************
  * FunctionName : user_rf_cal_sector_set
@@ -47,34 +44,34 @@
 uint32 ICACHE_FLASH_ATTR
 user_rf_cal_sector_set(void)
 {
-    enum flash_size_map size_map = system_get_flash_size_map();
-    uint32 rf_cal_sec = 0;
+	enum flash_size_map size_map = system_get_flash_size_map();
+	uint32 rf_cal_sec = 0;
 
-    switch (size_map) {
-        case FLASH_SIZE_4M_MAP_256_256:
-            rf_cal_sec = 128 - 5;
-            break;
+	switch (size_map) {
+		case FLASH_SIZE_4M_MAP_256_256:
+			rf_cal_sec = 128 - 5;
+			break;
 
-        case FLASH_SIZE_8M_MAP_512_512:
-            rf_cal_sec = 256 - 5;
-            break;
+		case FLASH_SIZE_8M_MAP_512_512:
+			rf_cal_sec = 256 - 5;
+			break;
 
-        case FLASH_SIZE_16M_MAP_512_512:
-        case FLASH_SIZE_16M_MAP_1024_1024:
-            rf_cal_sec = 512 - 5;
-            break;
+		case FLASH_SIZE_16M_MAP_512_512:
+		case FLASH_SIZE_16M_MAP_1024_1024:
+			rf_cal_sec = 512 - 5;
+			break;
 
-        case FLASH_SIZE_32M_MAP_512_512:
-        case FLASH_SIZE_32M_MAP_1024_1024:
-            rf_cal_sec = 1024 - 5;
-            break;
+		case FLASH_SIZE_32M_MAP_512_512:
+		case FLASH_SIZE_32M_MAP_1024_1024:
+			rf_cal_sec = 1024 - 5;
+			break;
 
-        default:
-            rf_cal_sec = 0;
-            break;
-    }
+		default:
+			rf_cal_sec = 0;
+			break;
+	}
 
-    return rf_cal_sec;
+	return rf_cal_sec;
 }
 
 void ICACHE_FLASH_ATTR
@@ -82,22 +79,23 @@ user_rf_pre_init(void)
 {
 }
 
-
-
 void ICACHE_FLASH_ATTR
 system_init_done(void)
 {
-    //------------ ÉèÖÃ¾²Ì¬IP£¬ÓÃÓÚ±êÊ¶·¿¼ä -----------
-	struct ip_info info;
-	wifi_station_dhcpc_stop();
-	IP4_ADDR(&info.ip, 192, 168, 4, 204);  //Ö÷ÒªÊÇ×îºóÒ»Î»
-	IP4_ADDR(&info.gw, 192, 168, 4, 1);
-	IP4_ADDR(&info.netmask, 255, 255, 255, 0);
-	wifi_set_ip_info(STATION_IF, &info);
+
+	/****  è®¾ç½®dhcp  ****/
+	wifi_softap_dhcps_stop();
+	struct dhcps_lease dhcp_lease;
+	const char* start_ip = "192.168.4.10";
+	const char* end_ip = "192.168.4.30";
+	dhcp_lease.start_ip.addr = ipaddr_addr(start_ip);
+	dhcp_lease.end_ip.addr = ipaddr_addr(end_ip);
+	wifi_softap_set_dhcps_lease(&dhcp_lease);
 	wifi_softap_dhcps_start();
 
-	// ³õÊ¼»¯tcp client
-	http_client_init(HOST, PORT);
+	tcp_server_init(8080);
+
+	NB_Init();
 
 }
 
@@ -111,11 +109,30 @@ system_init_done(void)
 void ICACHE_FLASH_ATTR
 user_init(void)
 {
-	uart_init(BIT_RATE_115200, BIT_RATE_115200);
-	user_wifi_init();
 
-    // Continue to 'sniffer_system_init_done'
-	// ºóĞøÅäÖÃĞëÏµÍ³³õÊ¼»¯Íê³Éºó²ÅÄÜ½øĞĞ
-    system_init_done_cb(system_init_done);
+	system_uart_de_swap();
+	UART_SetPrintPort(0);
+
+	/*******************************************************
+	 * 
+	 * æ³¨æ„ï¼šä¸ºäº†é…åˆNBæ¨¡ç»„ï¼Œå½“å‰8266ç”¨çš„æ˜¯ï¼ï¼9600ï¼ï¼çš„æ³¢ç‰¹ç‡
+	 * 
+	 ******************************************************/
+	uart_init(BIT_RATE_9600, BIT_RATE_9600);
+
+	//----- wifi test -----------
+	struct softap_config ap;
+	wifi_set_opmode(SOFTAP_MODE);
+	os_memset(ap.ssid, 0, 32);
+	os_memset(ap.password, 0, 64);
+	os_memcpy(ap.ssid, "Centre",6);
+	os_memcpy(ap.password, "12345678", 8);
+	ap.authmode = AUTH_WPA_PSK;
+	ap.ssid_len = 0;
+	ap.max_connection = 4;
+	wifi_softap_set_config(&ap);
+
+	// åç»­é…ç½®é¡»ç³»ç»Ÿåˆå§‹åŒ–å®Œæˆåæ‰èƒ½è¿›è¡Œ
+	system_init_done_cb(system_init_done);
 
 }
