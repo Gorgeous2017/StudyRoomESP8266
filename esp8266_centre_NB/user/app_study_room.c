@@ -142,25 +142,25 @@ void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr ) {
 
 	uint8 i,j;
 	bool one_status; /* 一个用电器的状态, 只用一个数据位表示开关即可 */
+	uint8 *current_pos = out_hexstr; /* 指向当前 out_hexstr 位置的指针 */
 
 	for (i = DEVICE_FAN; i <= DEVICE_AC; i++) {
 
-		for(j = 0; j < DEVICE_QAUNTITY; j++) {
+		os_sprintf(current_pos, "%02X", DEVICE_QAUNTITY);
+		current_pos += 2;
 
-			if ( j == 0)
-			{
-				os_sprintf(out_hexstr + i*14 + 2 * j++, "%02X", DEVICE_QAUNTITY); /* 不知道这里类型转换会不会有问题 */
-			}
-			
+		for(j = 0; j < DEVICE_QAUNTITY; j++, current_pos += 2 ) {
 
 			/* 先定位某个房间某一类用电器的状态，再定位具体的单个用电器状态 */
 			/* 可以结合用电器状态的“数组数据分布”来理解，参阅 room_status[] 的注释 */
-			one_status = (((*(room_status + room_no) >> (8 * i)) & 0x000000ff) >> j) & 0x01;
+			one_status = (((*(room_status + room_no - 1) >> (8 * i)) & 0x000000ff) >> j) & 0x01;
 
 			//ESP_DEBUG("one_status = %02X ", one_status);
 
-			os_sprintf(out_hexstr + i*14 + j*2, "%02X", one_status); /* 不知道这里类型转换会不会有问题 */
+			os_sprintf(current_pos, "%02X", one_status); /* 不知道这里类型转换会不会有问题 */
 		}
+
+		ESP_DEBUG("out_hexstr = %s", out_hexstr);
 
 	}
 
