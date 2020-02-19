@@ -120,8 +120,8 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 		StudyRoom_StatusToHex(1, hexstr);
 		ESP_DEBUG("status now is: %s", hexstr);
 
-		*(room_status + buff[1] - 1) &= ~(buff[4] << (8 * buff[2] + buff[3]));
-		*(room_status + buff[1] - 1) |=  buff[4] << (8 * buff[2] + buff[3]);
+		*(room_status + msg_string[1] - 1) &= ~(msg_string[4] << (8 * msg_string[2] + msg_string[3]));
+		*(room_status + msg_string[1] - 1) |=  msg_string[4] << (8 * msg_string[2] + msg_string[3]);
 
 		StudyRoom_StatusToHex(1, hexstr);
 		ESP_DEBUG("status change is: %s", hexstr);
