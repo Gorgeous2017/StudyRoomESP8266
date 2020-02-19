@@ -149,7 +149,7 @@ void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr ) {
 
 			if ( j == 0)
 			{
-				os_sprintf(out_hexstr + i*8 + 2 * j++, "%02X", DEVICE_QAUNTITY); /* 不知道这里类型转换会不会有问题 */
+				os_sprintf(out_hexstr + i*14 + 2 * j++, "%02X", DEVICE_QAUNTITY); /* 不知道这里类型转换会不会有问题 */
 			}
 			
 
@@ -157,9 +157,9 @@ void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr ) {
 			/* 可以结合用电器状态的“数组数据分布”来理解，参阅 room_status[] 的注释 */
 			one_status = (((*(room_status + room_no) >> (8 * i)) & 0x000000ff) >> j) & 0x01;
 
-			ESP_DEBUG("one_status = %02X ", one_status);
+			//ESP_DEBUG("one_status = %02X ", one_status);
 
-			os_sprintf(out_hexstr + i*8 + j*2, "%02X", one_status); /* 不知道这里类型转换会不会有问题 */
+			os_sprintf(out_hexstr + i*14 + j*2, "%02X", one_status); /* 不知道这里类型转换会不会有问题 */
 		}
 
 	}
