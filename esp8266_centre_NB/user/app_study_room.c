@@ -121,8 +121,8 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 		StudyRoom_StatusToHex(msg_string[1], hexstr);
 		ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
 
-		*(room_status + (msg_string[1] - 1)) &= ~(msg_string[4] << (8 * msg_string[2] + msg_string[3]));
-		*(room_status + (msg_string[1] - 1)) |=  msg_string[4] << (8 * msg_string[2] + msg_string[3]);
+		*(room_status + (msg_string[1] - 1)) &= ~(0x01 << (8 * msg_string[2] + msg_string[3]));
+		*(room_status + (msg_string[1] - 1)) |= ((uint32)msg_string[4] << (8 * msg_string[2] + msg_string[3]));
 
 		StudyRoom_StatusToHex(msg_string[1], hexstr);
 		ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
