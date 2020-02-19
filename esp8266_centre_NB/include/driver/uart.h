@@ -38,8 +38,7 @@
         if (ESP_DEBUG_ON)                                   \
             os_printf("<<-ESP-DEBUG->> File: "__FILE__      \
                    " | FUNC: %s"                            \
-                   " | LINE:[%d] \n"                        \
-                   "             >> "fmt "\n",              \
+                   " | LINE:[%d] > " fmt "\n",              \
                    __FUNCTION__, __LINE__, ##__VA_ARGS__);  \
     } while (0)
 
