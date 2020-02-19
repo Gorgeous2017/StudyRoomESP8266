@@ -312,7 +312,7 @@ uart_test_rx()
 	if (len > 0) {
 
         /* 串口接收消息回显 */
-        tx_buff_enq("MCU <<<<<< NB : \n", sizeof("MCU <<<<<< NB : \n"));
+        tx_buff_enq("\nMCU <<<<<< NB : \n", sizeof("\nMCU <<<<<< NB : \n"));
         tx_buff_enq(uart_buf,len);
         os_printf("\n");
         //tx_buff_enq("\n\n", 2);
