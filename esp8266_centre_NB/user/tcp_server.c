@@ -15,8 +15,8 @@
 #include "room_info.h"
 
 /* TCP server receive handler, define in app_study_room.c */
-extren void StudyRoom_UpdataData(uint8 *msg_string);
-extren void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr);
+extern void StudyRoom_UpdataData(uint8 *msg_string);
+extern void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr);
 
 struct espconn *client[4];
 
