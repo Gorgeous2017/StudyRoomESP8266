@@ -17,8 +17,13 @@
 #define __APP_STUDY_ROOM_H__ 
 
 /* Includes ------------------------------------------------------------------*/
-#include <stddef.h>
-#include <stdint.h>
+// #include <stddef.h>
+// #include <stdint.h>
+#include "ets_sys.h"
+#include "os_type.h"
+
+#include "osapi.h" /* 需要用到os_sprintf */
+#include "driver/uart.h" /* 需要用到ESP_DEBUG */
 
 /* Exported typedef -----------------------------------------------------------*/
 /**
