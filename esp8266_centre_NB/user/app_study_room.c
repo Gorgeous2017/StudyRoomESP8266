@@ -14,7 +14,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "app_study_room.h"
-#include "nb_b35.h"
+#include "nb_bc35.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -148,14 +148,14 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 	} 
 	else if (msg_string[0] == 0xFE)
 	{
-		// StudyRoom_StatusToHex(msg_string[1], hexstr);
+		// StudyRoom_GetStatusHex(msg_string[1], hexstr);
 		// ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
 
 		/* 位运算 先将目标用电器位置零，再将指令赋值给目标用电器位 */
 		*(room_status + (msg_string[1] - 1)) &= ~(0x01 << (8 * msg_string[2] + msg_string[3]));
 		*(room_status + (msg_string[1] - 1)) |= ((uint32)msg_string[4] << (8 * msg_string[2] + msg_string[3]));
 
-		// StudyRoom_StatusToHex(msg_string[1], hexstr);
+		// StudyRoom_GetStatusHex(msg_string[1], hexstr);
 		// ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
 	}
 	
@@ -171,7 +171,7 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
  * 
  * @see room_status
  */
-void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr ) {
+void StudyRoom_GetStatusHex(uint8 room_no, uint8 *out_hexstr ) {
 
 	uint8 i,j;
 	bool one_status; /* 一个用电器的状态, 只用一个数据位表示开关即可 */

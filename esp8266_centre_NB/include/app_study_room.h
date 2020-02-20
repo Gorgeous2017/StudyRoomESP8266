@@ -100,7 +100,7 @@ typedef struct
 
 /* Exported function -----------------------------------------------*/
 void StudyRoom_UpdataData(uint8 *msg_string);
-void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr );
+void StudyRoom_GetStatusHex(uint8 room_no, uint8 *out_hexstr );
 
 #endif /* __APP_STUDY_ROOM_H__ */ 
 /********************************** END OF FILE *******************************/
