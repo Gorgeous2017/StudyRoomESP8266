@@ -39,12 +39,12 @@ uint8 response_msg[128]; /*!< 期望接收到的响应消息 */
  * 
  * @param[in] data_str 需要上报的十六进制数据字符串
  */
-void NB_ReportData(uint8 *data_str) {
+void NB_ReportData(uint8 mid, uint8 *data_str) {
 	
 	uint8 report_buf[128];
 
 	/* 因为数据字符串是十六进制的，两个字符表示一个十六进制数，故数据长度为os_strlen(data_str)/2 */
-	os_sprintf(report_buf, AT_NB_REPORT_PREFIX "%02d,%s" , os_strlen(data_str)/2, data_str );
+	os_sprintf(report_buf, AT_NB_REPORT_PREFIX "%02d,%02X%s" , os_strlen(data_str)/2 + 1, mid, data_str );
 
 	NB_SendCmd(report_buf, os_strlen(report_buf), NULL);
 
