@@ -42,6 +42,26 @@ typedef enum
  * @brief 云端下发的用电器控制信息
  * 
  */
+/*! @brief 编解码插件messageId枚举体 */
+typedef enum {
+
+	MID_SET_FAN					  	0x0,   /*!< 风扇控制指令 */
+	MID_SET_LIGHT				  	0x1,   /*!< 电灯控制指令 */
+	MID_SET_CURTAIN 			  	0x2,   /*!< 窗帘控制指令 */
+	MID_SET_AC					  	0x3,   /*!< 空调控制指令 */
+
+	MID_report_room_one_message		0x11,  /*!< 房间一的环境信息 */
+	MID_report_room_two_message		0x12,  /*!< 房间二的环境信息 */
+	MID_report_room_three_message	0x13,  /*!< 房间三的环境信息 */
+	MID_report_room_four_message	0x14,  /*!< 房间四的环境信息 */
+
+	MID_report_room_one_status		0x21,  /*!< 房间一的用电器状态信息 */
+	MID_report_room_two_status		0x22,  /*!< 房间二的用电器状态信息 */
+	MID_report_room_three_status	0x23,  /*!< 房间三的用电器状态信息 */
+	MID_report_room_four_status		0x24,  /*!< 房间四的用电器状态信息 */
+} DecodeMessageId
+
+/*! @brief 云端下发的用电器控制信息  */
 typedef struct
 {
 	uint8 deviceType; 	/*!< 根据messageId来区分用电器类型 */
@@ -89,31 +109,6 @@ typedef struct
 #define HUAWEI_IOT_SERVER "49.4.85.232" /*!< 华为IoT平台服务器地址 */
 #define HUAWEI_IOT_PORT "5683" /*!< LWM2M(CoAP) 无DTLS形式接入平台的端口 */
 
-/**
- * @addtogroup DecodeMessageId
- * @brief 华为IoT平台|编解码插件所用的唯一messageId，用以区分不同的平台消息
- * @{
- * 
- */
-#define MID_SET_FAN					  	0x0	  /*!< 风扇控制指令 */
-#define MID_SET_LIGHT				  	0x1	  /*!< 电灯控制指令 */
-#define MID_SET_CURTAIN 			  	0x2	  /*!< 窗帘控制指令 */
-#define MID_SET_AC					  	0x3	  /*!< 空调控制指令 */
-
-#define MID_report_room_one_message		0x11  /*!< 房间一的环境信息 */
-#define MID_report_room_two_message		0x12  /*!< 房间二的环境信息 */
-#define MID_report_room_three_message	0x13  /*!< 房间三的环境信息 */
-#define MID_report_room_four_message	0x14  /*!< 房间四的环境信息 */
-
-#define MID_report_room_one_status		0x21  /*!< 房间一的用电器状态信息 */
-#define MID_report_room_two_status		0x22  /*!< 房间二的用电器状态信息 */
-#define MID_report_room_three_status	0x23  /*!< 房间三的用电器状态信息 */
-#define MID_report_room_four_status		0x24  /*!< 房间四的用电器状态信息 */
-
-/**
- * @}
- * 
- */
 
 /* Exported function -----------------------------------------------*/
 void StudyRoom_UpdataData(uint8 *msg_string);
