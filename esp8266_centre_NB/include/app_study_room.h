@@ -57,7 +57,7 @@ typedef struct
 typedef struct
 {
 	uint8 messageId;		/*!< 根据messageId来区分房间号 */
-	uint8 peopleFlowrate; 	/*!< 人群密度 */
+	uint8 crowdDensity; 	/*!< 人群密度 */
 	uint8 temp;				/*!< 环境温度 */
 	uint8 humi;				/*!< 环境湿度 */
 	uint8 noise;			/*!< 环境噪音 */
@@ -95,23 +95,29 @@ typedef struct
  * @{
  * 
  */
-#define MID_SET_FAN 0x0					/*!< 风扇控制指令 */
-#define MID_SET_LIGHT 0x1				/*!< 电灯控制指令 */
-#define MID_SET_CURTAIN 0x2				/*!< 窗帘控制指令 */
-#define MID_SET_AC 0x3					/*!< 空调控制指令 */
-#define MID_report_room_one_message 0x4 /*!< 房间一的环境信息 */
-#define MID_report_room_one_status 0x5  /*!< 房间一的用电器状态信息 */
+#define MID_SET_FAN					  	0x0	  /*!< 风扇控制指令 */
+#define MID_SET_LIGHT				  	0x1	  /*!< 电灯控制指令 */
+#define MID_SET_CURTAIN 			  	0x2	  /*!< 窗帘控制指令 */
+#define MID_SET_AC					  	0x3	  /*!< 空调控制指令 */
+
+#define MID_report_room_one_message		0x11  /*!< 房间一的环境信息 */
+#define MID_report_room_two_message		0x12  /*!< 房间二的环境信息 */
+#define MID_report_room_three_message	0x13  /*!< 房间三的环境信息 */
+#define MID_report_room_four_message	0x14  /*!< 房间四的环境信息 */
+
+#define MID_report_room_one_status		0x21  /*!< 房间一的用电器状态信息 */
+#define MID_report_room_two_status		0x22  /*!< 房间二的用电器状态信息 */
+#define MID_report_room_three_status	0x23  /*!< 房间三的用电器状态信息 */
+#define MID_report_room_four_status		0x24  /*!< 房间四的用电器状态信息 */
 
 /**
  * @}
  * 
  */
 
-
 /* Exported function -----------------------------------------------*/
 void StudyRoom_UpdataData(uint8 *msg_string);
 void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr );
-
 
 #endif /* __APP_STUDY_ROOM_H__ */ 
 /********************************** END OF FILE *******************************/
