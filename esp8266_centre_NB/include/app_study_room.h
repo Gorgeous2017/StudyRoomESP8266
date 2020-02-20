@@ -26,10 +26,8 @@
 #include "driver/uart.h" /* 需要用到ESP_DEBUG */
 
 /* Exported typedef -----------------------------------------------------------*/
-/**
- * @brief 用电器类型枚举体
- * 
- */
+
+/*! @brief 用电器类型枚举体 */
 typedef enum 
 {
 	DEVICE_FAN = 0x00,	   /*!< 风扇用电器 */
@@ -38,10 +36,6 @@ typedef enum
 	DEVICE_AC = 0x03	   /*!< 空调用电器 */
 } Device;
 
-/**
- * @brief 云端下发的用电器控制信息
- * 
- */
 /*! @brief 编解码插件messageId枚举体 */
 typedef enum {
 
@@ -70,10 +64,7 @@ typedef struct
 	uint8 deviceSwitch; /*!< 用电器的目标状态 */
 } DeviceController;
 
-/**
- * @brief 室内环境信息结构体
- * 
- */
+/*! @brief 室内环境信息结构体  */
 typedef struct
 {
 	uint8 messageId;		/*!< 根据messageId来区分房间号 */
@@ -83,10 +74,7 @@ typedef struct
 	uint8 noise;			/*!< 环境噪音 */
 } RoomMessage;
 
-/**
- * @brief 室内用电器状态信息结构体
- * 
- */
+/*! @brief 室内用电器状态信息结构体  */
 typedef struct
 {
 	uint8 messageId;		/*!< 用电器状态信息标识符 */
