@@ -25,9 +25,37 @@
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 
-/*! 四个房间的环境信息 */
-/*! 用messageId来区分不同房间的上报数据，由华为IoT平台中产品的编解码插件所决定 */
-RoomMessage room_message[4] = {{0x11}, {0x12}, {0x13}, {0x14}}; 
+/**
+ * @brief 四个房间的环境信息
+ * 
+ * @details 
+ * 	ROOM_NO 取值范围为 [1, 4], 对应四个房间
+ * 
+ * 	- room_message[ROOM_NO - 1] = ROOM_NO对应房间的环境信息
+ * 
+ * @note
+ * 	由RoomMessage中的messageId成员来区分不同房间的上报数据，与华为IoT平台中产品的编解
+ * 码插件保持一致
+ * 
+ * @par 信息指令串
+ * 	各个子节点传输信息到主节点的通讯信息格式
+ * 
+ * 	室内环境信息指令串的信息标志位为 0xFF
+	@verbatim
+ 	------------------------------------------------------------------------------------
+ 	|        |                          BODY                                 |         |
+ 	| HEADER | ------------------------------------------------------------- | TRAILER |
+ 	|        | ROOM_NO | ENV_CROWD_DENSITY | ENV_TEMP | ENV_HUMI | ENV_NOISE |         |
+ 	------------------------------------------------------------------------------------
+ 	|  0xFF  | 1,2,3,4 |      [0,100]      |  [0,50]  |  [0,100] | [30,130]  |   0xFF  |
+	|        |         |         %         |    ℃    |    %RH   |    db     |         |
+ 	------------------------------------------------------------------------------------
+ 	@endverbatim
+ * 
+ * @see RoomMessage
+ * 
+ */
+RoomMessage room_message[4] = {{0x11}, {0x12}, {0x13}, {0x14}}; /* 赋值 */
 
 /**
  * @brief 四个房间的用电器状态信息
@@ -122,6 +150,7 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 		// StudyRoom_StatusToHex(msg_string[1], hexstr);
 		// ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
 
+		/* 位运算 先将目标用电器位置零，再将指令赋值给目标用电器位 */
 		*(room_status + (msg_string[1] - 1)) &= ~(0x01 << (8 * msg_string[2] + msg_string[3]));
 		*(room_status + (msg_string[1] - 1)) |= ((uint32)msg_string[4] << (8 * msg_string[2] + msg_string[3]));
 
