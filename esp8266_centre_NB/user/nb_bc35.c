@@ -119,14 +119,12 @@ void NB_RxMsgHandler(uint8 *nb_msg ) {
 			NB_Init();
 
 			return;
-
 		} else {
 
 			ESP_DEBUG("ERROR! response message parse failed");
 
 			return;
 		}
-
 	} else {
 
 		ESP_DEBUG("response_flag = 0");
