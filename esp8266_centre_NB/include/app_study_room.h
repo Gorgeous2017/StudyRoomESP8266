@@ -37,22 +37,22 @@ typedef enum
 } Device;
 
 /*! @brief 编解码插件messageId枚举体 */
-typedef enum {
+typedef enum
+{
+	MID_SET_FAN                   = 0x0,   /*!< 风扇控制指令 */
+	MID_SET_LIGHT                 = 0x1,   /*!< 电灯控制指令 */
+	MID_SET_CURTAIN               = 0x2,   /*!< 窗帘控制指令 */
+	MID_SET_AC                    = 0x3,   /*!< 空调控制指令 */
 
-	MID_SET_FAN					  	0x0,   /*!< 风扇控制指令 */
-	MID_SET_LIGHT				  	0x1,   /*!< 电灯控制指令 */
-	MID_SET_CURTAIN 			  	0x2,   /*!< 窗帘控制指令 */
-	MID_SET_AC					  	0x3,   /*!< 空调控制指令 */
+	MID_report_room_one_message   = 0x11,  /*!< 房间一的环境信息 */
+	MID_report_room_two_message   = 0x12,  /*!< 房间二的环境信息 */
+	MID_report_room_three_message = 0x13,  /*!< 房间三的环境信息 */
+	MID_report_room_four_message  = 0x14,  /*!< 房间四的环境信息 */
 
-	MID_report_room_one_message		0x11,  /*!< 房间一的环境信息 */
-	MID_report_room_two_message		0x12,  /*!< 房间二的环境信息 */
-	MID_report_room_three_message	0x13,  /*!< 房间三的环境信息 */
-	MID_report_room_four_message	0x14,  /*!< 房间四的环境信息 */
-
-	MID_report_room_one_status		0x21,  /*!< 房间一的用电器状态信息 */
-	MID_report_room_two_status		0x22,  /*!< 房间二的用电器状态信息 */
-	MID_report_room_three_status	0x23,  /*!< 房间三的用电器状态信息 */
-	MID_report_room_four_status		0x24  /*!< 房间四的用电器状态信息 */
+	MID_report_room_one_status    = 0x21,  /*!< 房间一的用电器状态信息 */
+	MID_report_room_two_status    = 0x22,  /*!< 房间二的用电器状态信息 */
+	MID_report_room_three_status  = 0x23,  /*!< 房间三的用电器状态信息 */
+	MID_report_room_four_status   = 0x24  /*!< 房间四的用电器状态信息 */
 } DecodeMessageId;
 
 /*! @brief 云端下发的用电器控制信息  */
@@ -100,7 +100,7 @@ typedef struct
 
 /* Exported function -----------------------------------------------*/
 void StudyRoom_UpdataData(uint8 *msg_string);
-void StudyRoom_GetStatusHex(uint8 room_no, uint8 *out_hexstr );
+uint8 * StudyRoom_GetStatusHex(uint8 room_no);
 
 #endif /* __APP_STUDY_ROOM_H__ */ 
 /********************************** END OF FILE *******************************/
