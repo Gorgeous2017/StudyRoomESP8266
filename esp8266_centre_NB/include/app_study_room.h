@@ -52,8 +52,8 @@ typedef enum {
 	MID_report_room_one_status		0x21,  /*!< 房间一的用电器状态信息 */
 	MID_report_room_two_status		0x22,  /*!< 房间二的用电器状态信息 */
 	MID_report_room_three_status	0x23,  /*!< 房间三的用电器状态信息 */
-	MID_report_room_four_status		0x24,  /*!< 房间四的用电器状态信息 */
-} DecodeMessageId
+	MID_report_room_four_status		0x24  /*!< 房间四的用电器状态信息 */
+} DecodeMessageId;
 
 /*! @brief 云端下发的用电器控制信息  */
 typedef struct
