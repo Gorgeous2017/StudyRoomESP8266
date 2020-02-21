@@ -167,14 +167,15 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
  * @note 数据格式与IoT平台的编解码插件保持一致
  * 
  * @param[in] room_no 需要转换的房间编号
- * @param[out] out_hexstr 转换后的字符串
+ * @return uint8* 转换后的字符串
  * 
  * @see room_status
  */
-void StudyRoom_GetStatusHex(uint8 room_no, uint8 *out_hexstr ) {
+uint8 * StudyRoom_GetStatusHex(uint8 room_no) {
 
 	uint8 i,j;
 	bool one_status; /* 一个用电器的状态, 只用一个数据位表示开关即可 */
+	static uint8 out_hexstr[128]; /* 转换后的字符串，必须指定成static类型才能return */
 	uint8 *current_pos = out_hexstr; /* 指向当前 out_hexstr 位置的指针 */
 
 	for (i = DEVICE_FAN; i <= DEVICE_AC; i++) {
@@ -192,9 +193,9 @@ void StudyRoom_GetStatusHex(uint8 room_no, uint8 *out_hexstr ) {
 		}
 
 		ESP_DEBUG("out_hexstr = %s", out_hexstr);
-
 	}
-	
+
+	return out_hexstr;	
 }
 
 // int sensor_controll_handler()
