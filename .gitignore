@@ -8,4 +8,5 @@ ESP8266_NONOS_SDK/
 !*/driver/
 !*/include/
 !*/LiteOS SDK/
+!*.md
 */user/.output

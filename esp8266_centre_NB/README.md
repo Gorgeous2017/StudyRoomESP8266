@@ -1,14 +1,12 @@
-@mainpage
 # ESP8266 project
 
 ## 说明文档
-[app_study_room.c](doxygen/html/app_study_room_8c.html)   
-[app_study_room.h](doxygen/html/app_study_room_8h.html)  
-[nb_bc35.c](doxygen/html/nb_bc35_8c.html)   
-[nb_bc35.h](doxygen/html/nb_bc35_8h.html)  
-[main.c](doxygen/html/main_8c.html)  
-[main.h](doxygen/html/main_8h.html)  
-
+- [app_study_room.c](doxygen/html/app__study__room_8c.html)   
+- [app_study_room.h](doxygen/html/app__study__room_8h.html)  
+- [nb_bc35.c](doxygen/html/nb__bc35_8c.html)   
+- [nb_bc35.h](doxygen/html/nb__bc35_8h.html)  
+- [user_main.c](doxygen/html/user__main_8c.html)  
+- [user_main.h](doxygen/html/user__main_8ch.html)  
 
 ## Develop Log
 ### NB模组通讯时波特率的问题
