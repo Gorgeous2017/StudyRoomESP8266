@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: ESP8266 project</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ESP8266 project </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2>说明文档</h2>
+<ul>
+<li><a href="doxygen/html/app__study__room_8c.html">app_study_room.c</a></li>
+<li><a href="doxygen/html/app__study__room_8h.html">app_study_room.h</a></li>
+<li><a href="doxygen/html/nb__bc35_8c.html">nb_bc35.c</a></li>
+<li><a href="doxygen/html/nb__bc35_8h.html">nb_bc35.h</a></li>
+<li><a href="doxygen/html/user__main_8c.html">user_main.c</a></li>
+<li><a href="doxygen/html/user__main_8ch.html">user_main.h</a></li>
+</ul>
+<h2>Develop Log</h2>
+<h3>NB模组通讯时波特率的问题</h3>
+<p>NB模组接收发送的波特率都是9600。115200的波特率会输出两段英文 “HI2115-ssb-codeloader” 之类的，后面显示不出来，因为后面的数据是9600波特率的</p>
+<p>而由于在8266工程中，我是用UART0的TX作为平常DEBUG和printf输出的，UART0的RX用于接收NB发送的消息，UART1的TX用于发送命令给NB，这就导致了必须两个串口的波特率一起改成9600才能正常通讯。</p>
+<h3>内存操作</h3>
+<p>不能只声明指针不分配内存控制。8266没有直接分配内存空间的接口，所以一般是直接声明一个数组的。 将一个字符串赋给另一个字符串要用**os_memcpy()**而不是**os_memset()**,后者是用来批量赋值的，如置零置一等。</p>
+<h3>串口通讯问题</h3>
+<p>软串口（流控口）是D8、D7,分别为TX、RX，使用**system_uart_swap()**后UART0由TX、RX口转为D8、D7。其中一定要注意， 而UART1口只能用作TX, 作为DEBUG串口。而在本仓库中，它被作为跟其他模块的通讯口。 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 五月 9日 星期六 17:59:06 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

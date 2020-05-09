@@ -1,9 +1,8 @@
 <map id="uart1_tx_buffer" name="uart1_tx_buffer">
 <area shape="rect" id="node2" href="$nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f" title="向NB模组发送指令 " alt="" coords="160,31,264,57"/>
 <area shape="rect" id="node3" href="$nb__bc35_8c.html#a400010e7ae3dbd0f364708d1cefb648f" title="上报数据到云端 " alt="" coords="312,5,424,32"/>
-<area shape="rect" id="node5" href="$nb__bc35_8c.html#a2cf1c3f67e168aee4fe9c184c9809307" title="NB_Init" alt="" coords="336,56,400,83"/>
-<area shape="rect" id="node4" href="$app__study__room_8c.html#aeb5ff6543636881258702191a4575c5f" title="StudyRoom_ReportData" alt="" coords="472,5,635,32"/>
-<area shape="rect" id="node6" href="$uart_8c.html#aeb899bf88fe84dd61c113b850c2f0a2d" title="NB消息处理函数 " alt="" coords="487,56,619,83"/>
-<area shape="rect" id="node7" href="$user__main_8c.html#a50374dadba5323609469073006ce3402" title="system_init_done" alt="" coords="491,107,615,133"/>
-<area shape="rect" id="node8" href="$user__main_8c.html#a277ffa60e88142c231a14272962e902c" title="user_init" alt="" coords="683,107,753,133"/>
+<area shape="rect" id="node4" href="$nb__bc35_8c.html#a2cf1c3f67e168aee4fe9c184c9809307" title="NB_Init" alt="" coords="336,56,400,83"/>
+<area shape="rect" id="node5" href="$uart_8c.html#aeb899bf88fe84dd61c113b850c2f0a2d" title="NB消息处理函数 " alt="" coords="472,31,604,57"/>
+<area shape="rect" id="node6" href="$user__main_8c.html#a50374dadba5323609469073006ce3402" title="system_init_done" alt="" coords="476,81,600,108"/>
+<area shape="rect" id="node7" href="$user__main_8c.html#a277ffa60e88142c231a14272962e902c" title="user_init" alt="" coords="652,81,723,108"/>
 </map>

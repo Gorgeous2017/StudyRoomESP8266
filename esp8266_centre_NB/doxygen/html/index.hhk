@@ -113,14 +113,18 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="union_event___info__u.html#aa6fbc0a8cc5ec2b9d7932a41f7c2ed93"><param name="Name" value="ap_probereqrecved"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="eagle__soc_8h.html#aec76bea9134686f44e7577edcc850fe6"><param name="Name" value="APB_CLK_FREQ"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html#ac5727665edcdaa47483c33f39f09915b"><param name="Name" value="App_GetHexData"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html"><param name="Name" value="app_study_room.c"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a3cd6865dacc6edacbaa946763af3c139"><param name="Name" value="DEVICE_QAUNTITY"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#afe9dfc553e0ab813e6c6ebf84eadbda4"><param name="Name" value="room_message"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#af4281240a4844d796fc81f8a901bf505"><param name="Name" value="room_status"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a5396ed414c286f86654ec1f285f2e3a3"><param name="Name" value="StudyRoom_GetStatusHex"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#aeb5ff6543636881258702191a4575c5f"><param name="Name" value="StudyRoom_ReportData"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a78e4c6ea13591401d74fb0eb70c84ff2"><param name="Name" value="StudyRoom_UpdataData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a5fa1ecf11babd9efb87e432e203270e4"><param name="Name" value="stDevDataReport"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a371e8b5ea1e1923003508a10950ac663"><param name="Name" value="stEnvDataReport"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a365b6545df354d8c8bd81cad9e218de5"><param name="Name" value="StudyRoom_GetDevHex"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a15e16a89ba6d9444f8f8c33e66597ca9"><param name="Name" value="StudyRoom_ReportData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#ac850956cf2cb642380a98d2ff496f7b8"><param name="Name" value="StudyRoom_UpdataDevData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a429eca2cc2a70f431f9a1fc94aa8da6c"><param name="Name" value="StudyRoom_UpdataEnvData"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html"><param name="Name" value="app_study_room.h"></OBJECT>
   <UL>
@@ -142,26 +146,30 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a47f07d8a325122540227de4aa5a33981"><param name="Name" value="int8s"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#ae712ac7a6479b38bdbb3286e80b72049"><param name="Name" value="int8u"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a0e738dbbb4ff87a71586fdd525391f48"><param name="Name" value="Lux"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a4f0740c162e397c87f3d724e3f2e367a"><param name="Name" value="MID_report_room_four_message"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a043b67e2adaf412967b0e6a8bb225ead"><param name="Name" value="MID_report_room_four_status"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a82fb40ccc5ef6a92352ea6732d76b5df"><param name="Name" value="MID_report_room_one_message"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acb16a48a146d14042825b00b93a88a01"><param name="Name" value="MID_report_room_one_status"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acf15efb165f7e22937416c224cb26025"><param name="Name" value="MID_report_room_three_message"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adfb6b42d1da93d394e86a65f308c5bea"><param name="Name" value="MID_report_room_three_status"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a976d4e8f9cf6ba73bc3026f281df0c26"><param name="Name" value="MID_report_room_two_message"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a10dd5e80156c5ce340e77ae6e57b0a0a"><param name="Name" value="MID_report_room_two_status"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a051a76e833c4c84861d70e5e8acb18b0a0011050db73a7bb18199bd0050a65e91"><param name="Name" value="MID_report_room_dev_offset"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a051a76e833c4c84861d70e5e8acb18b0a782b1de1380afc643e2ba1f88308a761"><param name="Name" value="MID_report_room_env_offset"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3abd677e50af1038d346946569bb12c316"><param name="Name" value="MID_report_room_four_dev"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a8543df0236b43759bbcf96d09bc42248"><param name="Name" value="MID_report_room_four_env"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a8ae10c8214b02d307f5b3d64cbbb66d3"><param name="Name" value="MID_report_room_one_dev"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a5e8943f725685a609c5f0cf467b5583b"><param name="Name" value="MID_report_room_one_env"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a37d23508768764b0bc0097e8bfdf86df"><param name="Name" value="MID_report_room_three_dev"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a3d6a4d97671c4888a3cffd77de647991"><param name="Name" value="MID_report_room_three_env"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3ada1c124c2aa5ab21dcc1977c84a234f4"><param name="Name" value="MID_report_room_two_dev"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a9a302bbff0a65778c8c49c677a01f2c9"><param name="Name" value="MID_report_room_two_env"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3aeae03ee2154a2cfdb0689ec435797812"><param name="Name" value="MID_SET_AC"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adf3ee842e6c4e93eb9e8fe85b434baa3"><param name="Name" value="MID_SET_CURTAIN"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3ad3174236a4be4c9064cdc0a845092f0a"><param name="Name" value="MID_SET_FAN"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a73e4a8daa29ff610d9558b2f45fe057e"><param name="Name" value="MID_SET_LIGHT"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a42b88531c5726d1eff5eff9dceaa3416"><param name="Name" value="string"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a5396ed414c286f86654ec1f285f2e3a3"><param name="Name" value="StudyRoom_GetStatusHex"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a78e4c6ea13591401d74fb0eb70c84ff2"><param name="Name" value="StudyRoom_UpdataData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a365b6545df354d8c8bd81cad9e218de5"><param name="Name" value="StudyRoom_GetDevHex"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#ac850956cf2cb642380a98d2ff496f7b8"><param name="Name" value="StudyRoom_UpdataDevData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a429eca2cc2a70f431f9a1fc94aa8da6c"><param name="Name" value="StudyRoom_UpdataEnvData"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#ab6b6e159b7e8a4beda8a00b817ed1cdb"><param name="Name" value="Swap16"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a435f0cd9c437ec78228e00639657c569"><param name="Name" value="Swap32"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a5a327f4153c03d10ec060e13915e6827"><param name="Name" value="variant"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a64ea02cf303d899f7c5a8322acac8407"><param name="Name" value="varstring"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html#a84c7149e890a46f0453ab51e1b698bdd"><param name="Name" value="App_UpdataData"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a45ceeb26d27f64b203e3fe6db7ccab14"><param name="Name" value="array"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="nb__bc35_8h.html#ac76bbf7ac0cf5291c14a52a08bceaa26"><param name="Name" value="AT_BUARDRATE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="at__custom_8h.html#a99bec7a088baa5a8c4e043ab09fb6a3f"><param name="Name" value="at_cmd_array_regist"></OBJECT>
@@ -519,6 +527,13 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_room_status.html#ac3e4786eb56d36cad2b3e0a0ee5c8f03"><param name="Name" value="curtainStatus"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_uart_device.html#ae8f01df67cbdc9fad5e8b66fd03907d6"><param name="Name" value="data_bits"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct__scaninfo.html#afd4fb1abb366f467f7e6ecaed3224795"><param name="Name" value="data_cnt"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html"><param name="Name" value="DataReportStruct"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html#ac5727665edcdaa47483c33f39f09915b"><param name="Name" value="App_GetHexData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html#a84c7149e890a46f0453ab51e1b698bdd"><param name="Name" value="App_UpdataData"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html#ab7be3cd9de4a1328aac95b294c354224"><param name="Name" value="messageId"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html#a484dee194ddda875c3346fa08b6ae939"><param name="Name" value="msg_flag"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="uart_8c.html#abddf9d52cd37589aea69c8a97255ec98"><param name="Name" value="DBG1"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="uart_8c.html#a5c788073350afe9c1b4481d6c577a6f8"><param name="Name" value="DBG2"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="uart_8c.html#a49606be7356624568932ec81c0d429f4"><param name="Name" value="DBG"></OBJECT>
@@ -1045,6 +1060,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structrst__info.html#ac2e9045f7639b9e3f8fa22c61c9e7178"><param name="Name" value="epc3"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="espconn_8h.html#a38ebb02317e4ef2562cfe771fe83ab7b"><param name="Name" value="err_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structjsonparse__state.html#a9c1c709219c1cdef2e79e2e1ada1f983"><param name="Name" value="error"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="md__r_e_a_d_m_e.html"><param name="Name" value="ESP8266 project"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="esp8266__centre___n_b_2include_2include_2json_2json_8h.html"><param name="Name" value="esp8266_centre_NB/include/include/json/json.h"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#af3a5ec24374b458e1f9e7e5fdb6c52d8"><param name="Name" value="JSON_CONTENT_TYPE"></OBJECT>
@@ -1916,8 +1932,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="eagle__soc_8h.html#af1d34aede3ee105d146bf083aed15782"><param name="Name" value="GPIO_ID_PIN"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="eagle__soc_8h.html#af35135038922845a6d424a244387db04"><param name="Name" value="GPIO_IN_ADDRESS"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="gpio_8h.html#afdbe206b3c49f019757ab09b3cf52b9c"><param name="Name" value="gpio_init"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="gpio_8h.html#a945cd29057aa09fdb8a9eaddb0fba587"><param name="Name" value="GPIO_INPUT_GET"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="gpio_8h.html#a678824698fa5936b7928c24c6cfd0a17"><param name="Name" value="gpio_input_get"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="gpio_8h.html#a945cd29057aa09fdb8a9eaddb0fba587"><param name="Name" value="GPIO_INPUT_GET"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="gpio_8h.html#ac00b56646e45ddd6f3b9631ac2f32d60"><param name="Name" value="gpio_intr_ack"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="gpio_8h.html#adaf7e9267cf08becbe0162879cf0e2b8"><param name="Name" value="gpio_intr_handler_fn_t"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="gpio_8h.html#ae83d5410f1e7bfffd36e5ccd038c35ff"><param name="Name" value="gpio_intr_handler_register"></OBJECT>
@@ -2781,7 +2797,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_event___soft_a_p_mode___sta_disconnected__t.html#a6543ba5cba82fab214f97be8bdb31961"><param name="Name" value="Event_SoftAPMode_StaDisconnected_t"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="user__interface_8h.html#ad6e69a2870c8f219cc679677af110849"><param name="Name" value="MACSTR"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="md__x_1__node_mcu__e_s_p_java__e_s_p__i_d_e__ai_thinker_i_d_e__v0_85_cygwin_home_aithinker_projecb535c3c641eb8539a6cd7f7f0149364.html"><param name="Name" value="mainpage"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="md_user_mainpage.html"><param name="Name" value="mainpage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_event___sta_mode___got___i_p__t.html#a350145f4e6edb1820ff775462f46b09f"><param name="Name" value="mask"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="nb__bc35_8h.html#aa8fcba07ec4b6d01f5b51330278f8760"><param name="Name" value="MAX_AT_USERDATA_LEN"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structsoftap__config.html#a61a561e8d37933ff484987b47d5800c9"><param name="Name" value="max_connection"></OBJECT>
@@ -2888,24 +2904,28 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structmesh__scan__para__type.html#a8e15032ba74d796a936bd9b0934356a7"><param name="Name" value="usr_scan_cb"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="group___mesh___a_p_is.html#gga73a6546355fa7461bbe09af0643c719eafc8893dffe37c367602bd732dd57277f"><param name="Name" value="MESH_WIFI_CONN"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_room_message.html#a809fd79465da35cdf07ced2ab6505f6b"><param name="Name" value="messageId"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html#ab7be3cd9de4a1328aac95b294c354224"><param name="Name" value="messageId"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html#ab7be3cd9de4a1328aac95b294c354224"><param name="Name" value="DataReportStruct"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_room_message.html#a809fd79465da35cdf07ced2ab6505f6b"><param name="Name" value="RoomMessage"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_room_status.html#ac12aa38e0b104cbdb32492bd8a1ad2f8"><param name="Name" value="RoomStatus"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a4f0740c162e397c87f3d724e3f2e367a"><param name="Name" value="MID_report_room_four_message"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a043b67e2adaf412967b0e6a8bb225ead"><param name="Name" value="MID_report_room_four_status"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a82fb40ccc5ef6a92352ea6732d76b5df"><param name="Name" value="MID_report_room_one_message"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acb16a48a146d14042825b00b93a88a01"><param name="Name" value="MID_report_room_one_status"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acf15efb165f7e22937416c224cb26025"><param name="Name" value="MID_report_room_three_message"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adfb6b42d1da93d394e86a65f308c5bea"><param name="Name" value="MID_report_room_three_status"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a976d4e8f9cf6ba73bc3026f281df0c26"><param name="Name" value="MID_report_room_two_message"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a10dd5e80156c5ce340e77ae6e57b0a0a"><param name="Name" value="MID_report_room_two_status"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a051a76e833c4c84861d70e5e8acb18b0a0011050db73a7bb18199bd0050a65e91"><param name="Name" value="MID_report_room_dev_offset"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a051a76e833c4c84861d70e5e8acb18b0a782b1de1380afc643e2ba1f88308a761"><param name="Name" value="MID_report_room_env_offset"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3abd677e50af1038d346946569bb12c316"><param name="Name" value="MID_report_room_four_dev"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a8543df0236b43759bbcf96d09bc42248"><param name="Name" value="MID_report_room_four_env"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a8ae10c8214b02d307f5b3d64cbbb66d3"><param name="Name" value="MID_report_room_one_dev"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a5e8943f725685a609c5f0cf467b5583b"><param name="Name" value="MID_report_room_one_env"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a37d23508768764b0bc0097e8bfdf86df"><param name="Name" value="MID_report_room_three_dev"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a3d6a4d97671c4888a3cffd77de647991"><param name="Name" value="MID_report_room_three_env"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3ada1c124c2aa5ab21dcc1977c84a234f4"><param name="Name" value="MID_report_room_two_dev"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a9a302bbff0a65778c8c49c677a01f2c9"><param name="Name" value="MID_report_room_two_env"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3aeae03ee2154a2cfdb0689ec435797812"><param name="Name" value="MID_SET_AC"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adf3ee842e6c4e93eb9e8fe85b434baa3"><param name="Name" value="MID_SET_CURTAIN"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3ad3174236a4be4c9064cdc0a845092f0a"><param name="Name" value="MID_SET_FAN"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a73e4a8daa29ff610d9558b2f45fe057e"><param name="Name" value="MID_SET_LIGHT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="user__interface_8h.html#afab4c6bb550b0dc38ebd42d2c81359b9a7b91e496d0001e3585332cb17fe49cd8"><param name="Name" value="MODEM_SLEEP_T"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_data_report_struct.html#a484dee194ddda875c3346fa08b6ae939"><param name="Name" value="msg_flag"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structjsontree__pair.html#aee67d8e7f805358094595402e146980f"><param name="Name" value="name"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="nb__bc35_8c.html"><param name="Name" value="nb_bc35.c"></OBJECT>
   <UL>
@@ -3936,6 +3956,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="user__interface_8h.html#a726ca809ffd3d67ab4b8476646f26635aa9d77c934ee5b916f3ff0743204f3d7a"><param name="Name" value="STATION_WRONG_PASSWORD"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="user__interface_8h.html#a4e158c2cd5ef08e52a6df46a62a1d710"><param name="Name" value="STATIONAP_MODE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_spi_flash_chip.html#ab28f4a1c4ed25115db2dc109912b4089"><param name="Name" value="status_mask"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a5fa1ecf11babd9efb87e432e203270e4"><param name="Name" value="stDevDataReport"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a371e8b5ea1e1923003508a10950ac663"><param name="Name" value="stEnvDataReport"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="driver_2uart_8h.html#a68b6c81a0e4cc772adaa5217c9b60772acbf32eb4b26daffaae7685aefb0cd8d5"><param name="Name" value="STICK_PARITY_DIS"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="driver_2uart_8h.html#a68b6c81a0e4cc772adaa5217c9b60772acbf32eb4b26daffaae7685aefb0cd8d5"><param name="Name" value="driver/uart.h"></OBJECT>
@@ -3954,18 +3976,21 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="nb__bc35_8h.html#a939b06c46f4df8afd26146bd0ab3b52e"><param name="Name" value="nb_bc35.h"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a42b88531c5726d1eff5eff9dceaa3416"><param name="Name" value="string"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a5396ed414c286f86654ec1f285f2e3a3"><param name="Name" value="StudyRoom_GetStatusHex"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a365b6545df354d8c8bd81cad9e218de5"><param name="Name" value="StudyRoom_GetDevHex"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a5396ed414c286f86654ec1f285f2e3a3"><param name="Name" value="app_study_room.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a5396ed414c286f86654ec1f285f2e3a3"><param name="Name" value="app_study_room.h"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="tcp__server_8c.html#a451ec7e7d1ce62a504aa3bb96471d103"><param name="Name" value="tcp_server.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a365b6545df354d8c8bd81cad9e218de5"><param name="Name" value="app_study_room.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a365b6545df354d8c8bd81cad9e218de5"><param name="Name" value="app_study_room.h"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#aeb5ff6543636881258702191a4575c5f"><param name="Name" value="StudyRoom_ReportData"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a78e4c6ea13591401d74fb0eb70c84ff2"><param name="Name" value="StudyRoom_UpdataData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a15e16a89ba6d9444f8f8c33e66597ca9"><param name="Name" value="StudyRoom_ReportData"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#ac850956cf2cb642380a98d2ff496f7b8"><param name="Name" value="StudyRoom_UpdataDevData"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a78e4c6ea13591401d74fb0eb70c84ff2"><param name="Name" value="app_study_room.c"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a78e4c6ea13591401d74fb0eb70c84ff2"><param name="Name" value="app_study_room.h"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="tcp__server_8c.html#a78e4c6ea13591401d74fb0eb70c84ff2"><param name="Name" value="tcp_server.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#ac850956cf2cb642380a98d2ff496f7b8"><param name="Name" value="app_study_room.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#ac850956cf2cb642380a98d2ff496f7b8"><param name="Name" value="app_study_room.h"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a429eca2cc2a70f431f9a1fc94aa8da6c"><param name="Name" value="StudyRoom_UpdataEnvData"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8c.html#a429eca2cc2a70f431f9a1fc94aa8da6c"><param name="Name" value="app_study_room.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a429eca2cc2a70f431f9a1fc94aa8da6c"><param name="Name" value="app_study_room.h"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#ab6b6e159b7e8a4beda8a00b817ed1cdb"><param name="Name" value="Swap16"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="app__study__room_8h.html#a435f0cd9c437ec78228e00639657c569"><param name="Name" value="Swap32"></OBJECT>
@@ -4032,8 +4057,6 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="tcp__server_8c.html#aad8bf32100124d8f7175f566a7f8da0d"><param name="Name" value="client"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="tcp__server_8c.html#ae445d929592b51cae5ec6356b6f76c3d"><param name="Name" value="send2room"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="tcp__server_8c.html#a451ec7e7d1ce62a504aa3bb96471d103"><param name="Name" value="StudyRoom_GetStatusHex"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="tcp__server_8c.html#a78e4c6ea13591401d74fb0eb70c84ff2"><param name="Name" value="StudyRoom_UpdataData"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="tcp__server_8c.html#a50b7b70f0249a150b6ecf12f542f2d01"><param name="Name" value="tcp_server_init"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="tcp__server_8h.html"><param name="Name" value="tcp_server.h"></OBJECT>
@@ -4077,8 +4100,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct__scaninfo.html#ad293c7da77332c8ffda6ac27b9744744"><param name="Name" value="totalpage"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="queue_8h.html#adee7bf054da0ade68bb853732c665a2b"><param name="Name" value="TRASHIT"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_rcv_msg_buff.html#a142735d44b7fefc09c930d58b5e70d4d"><param name="Name" value="TrigLvl"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="c__types_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7"><param name="Name" value="true"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="c__types_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d"><param name="Name" value="TRUE"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="c__types_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7"><param name="Name" value="true"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_uart_device.html#ab83762d1f1257fbbc3ba728520fa0231"><param name="Name" value="trx_buff"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_trx_msg_buff.html#aee542f95d3ce814656ea3bdc22460c59"><param name="Name" value="TrxBuffSize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="struct_trx_msg_buff.html"><param name="Name" value="TrxMsgBuff"></OBJECT>
