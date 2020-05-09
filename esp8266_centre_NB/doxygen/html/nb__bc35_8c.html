@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: nb_bc35.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_69f7b3b0f987cc31a767c691a7147b70.html">user</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">nb_bc35.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="nb__bc35_8h_source.html">nb_bc35.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+nb_bc35.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="nb__bc35_8c__incl.png" border="0" usemap="#nb__bc35_8c" alt=""/></div>
+<map name="nb__bc35_8c" id="nb__bc35_8c">
+<area shape="rect" id="node2" href="nb__bc35_8h.html" title="nb_bc35.h" alt="" coords="97,80,179,107"/><area shape="rect" id="node3" href="ets__sys_8h.html" title="ets_sys.h" alt="" coords="12,229,91,256"/><area shape="rect" id="node6" href="os__type_8h.html" title="os_type.h" alt="" coords="60,155,139,181"/><area shape="rect" id="node7" href="osapi_8h.html" title="osapi.h" alt="" coords="230,155,294,181"/><area shape="rect" id="node10" href="driver_2uart_8h.html" title="driver/uart.h" alt="" coords="116,229,205,256"/><area shape="rect" id="node4" href="c__types_8h.html" title="c_types.h" alt="" coords="121,304,200,331"/><area shape="rect" id="node5" href="eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="5,304,97,331"/><area shape="rect" id="node11" href="driver_2uart__register_8h.html" title="uart_register.h" alt="" coords="224,304,329,331"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a400010e7ae3dbd0f364708d1cefb648f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nb__bc35_8c.html#a400010e7ae3dbd0f364708d1cefb648f">NB_ReportData</a> (<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> mid, <a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *data_str)</td></tr>
+<tr class="memdesc:a400010e7ae3dbd0f364708d1cefb648f"><td class="mdescLeft">&#160;</td><td class="mdescRight">上报数据到云端  <a href="#a400010e7ae3dbd0f364708d1cefb648f">更多...</a><br/></td></tr>
+<tr class="separator:a400010e7ae3dbd0f364708d1cefb648f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566469396821ae4c881b7b558204f68f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a> (<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *cmd, <a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> cmd_len, <a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *res_msg)</td></tr>
+<tr class="memdesc:a566469396821ae4c881b7b558204f68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">向NB模组发送指令  <a href="#a566469396821ae4c881b7b558204f68f">更多...</a><br/></td></tr>
+<tr class="separator:a566469396821ae4c881b7b558204f68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb899bf88fe84dd61c113b850c2f0a2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nb__bc35_8c.html#aeb899bf88fe84dd61c113b850c2f0a2d">NB_RxMsgHandler</a> (<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *nb_msg)</td></tr>
+<tr class="memdesc:aeb899bf88fe84dd61c113b850c2f0a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">NB消息处理函数  <a href="#aeb899bf88fe84dd61c113b850c2f0a2d">更多...</a><br/></td></tr>
+<tr class="separator:aeb899bf88fe84dd61c113b850c2f0a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf1c3f67e168aee4fe9c184c9809307"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nb__bc35_8c.html#a2cf1c3f67e168aee4fe9c184c9809307">NB_Init</a> (void)</td></tr>
+<tr class="separator:a2cf1c3f67e168aee4fe9c184c9809307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939b06c46f4df8afd26146bd0ab3b52e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nb__bc35_8c.html#a939b06c46f4df8afd26146bd0ab3b52e">str_to_hex</a> (const char *bufin, int len, char *bufout)</td></tr>
+<tr class="memdesc:a939b06c46f4df8afd26146bd0ab3b52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将十六进制码流转换为字符串形式  <a href="#a939b06c46f4df8afd26146bd0ab3b52e">更多...</a><br/></td></tr>
+<tr class="separator:a939b06c46f4df8afd26146bd0ab3b52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356993d9737b6d3e11968d5f76448060"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nb__bc35_8c.html#a356993d9737b6d3e11968d5f76448060">HexStrToStr</a> (const unsigned char *source, unsigned char *dest, int sourceLen)</td></tr>
+<tr class="memdesc:a356993d9737b6d3e11968d5f76448060"><td class="mdescLeft">&#160;</td><td class="mdescRight">将字符串形式的十六进制码流转为 unsigned char 类型  <a href="#a356993d9737b6d3e11968d5f76448060">更多...</a><br/></td></tr>
+<tr class="separator:a356993d9737b6d3e11968d5f76448060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ae5899d940be94e4e73d8eb45011167f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nb__bc35_8c.html#ae5899d940be94e4e73d8eb45011167f1">response_flag</a> = 0</td></tr>
+<tr class="separator:ae5899d940be94e4e73d8eb45011167f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54bb5bc6dc3de1c3aced6e63dfa6b481"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a> [128]</td></tr>
+<tr class="separator:a54bb5bc6dc3de1c3aced6e63dfa6b481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><hr/>
+<dl class="section author"><dt>作者</dt><dd>Gump </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>V0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2020-01-29 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) &lt;2020&gt; &lt;HANSHAN NORMAL UNIVERSITY(CHAOZHOU)&gt; All rights Reserved. Media Recognition and Intelligent System Team</dd></dl>
+<hr/>
+</div><h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a400010e7ae3dbd0f364708d1cefb648f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NB_ReportData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td>
+          <td class="paramname"><em>mid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>data_str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>上报数据到云端 </p>
+<dl class="section user"><dt>AT Command</dt><dd>AT+NMGS=数据长度,内容</dd></dl>
+<p>例如：当编解码插件中的messageId为0x11时，</p>
+<ul>
+<li>发送0、1两个数据：AT+NMGS=03,110001</li>
+<li>发送9、10、11、16、17、32、33七个数据：AT+NMGS=08,11090A0B10112021</li>
+</ul>
+<dl class="section note"><dt>注解</dt><dd>上报数据的格式需要与IoT平台的“编解码插件”的解码顺序一致，不然上报的数据无法正确解析</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_str</td><td>需要上报的十六进制数据字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                               {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> report_buf[128];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">/* 因为数据字符串是十六进制的，两个字符表示一个十六进制数，故数据长度为os_strlen(data_str)/2 */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="osapi_8h.html#abe2ddcec42d14500c2706362e9f732e8">os_sprintf</a>(report_buf, <a class="code" href="nb__bc35_8h.html#aa55fd8c8f8e1e5f62839e8f9f8ed2458">AT_NB_REPORT_PREFIX</a> <span class="stringliteral">&quot;%02d,%02X%s&quot;</span> , <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(data_str)/2 + 1, mid, data_str );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a>(report_buf, <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(report_buf), <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="osapi_8h_html_abe2ddcec42d14500c2706362e9f732e8"><div class="ttname"><a href="osapi_8h.html#abe2ddcec42d14500c2706362e9f732e8">os_sprintf</a></div><div class="ttdeci">#define os_sprintf</div><div class="ttdef"><b>Definition:</b> osapi.h:54</div></div>
+<div class="ttc" id="nb__bc35_8c_html_a566469396821ae4c881b7b558204f68f"><div class="ttname"><a href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a></div><div class="ttdeci">void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg)</div><div class="ttdoc">向NB模组发送指令 </div><div class="ttdef"><b>Definition:</b> nb_bc35.c:70</div></div>
+<div class="ttc" id="osapi_8h_html_a07564f20970de543cfa55b055d1f6dfe"><div class="ttname"><a href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a></div><div class="ttdeci">#define os_strlen</div><div class="ttdef"><b>Definition:</b> osapi.h:43</div></div>
+<div class="ttc" id="c__types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition:</b> c_types.h:43</div></div>
+<div class="ttc" id="c__types_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> c_types.h:73</div></div>
+<div class="ttc" id="nb__bc35_8h_html_aa55fd8c8f8e1e5f62839e8f9f8ed2458"><div class="ttname"><a href="nb__bc35_8h.html#aa55fd8c8f8e1e5f62839e8f9f8ed2458">AT_NB_REPORT_PREFIX</a></div><div class="ttdeci">#define AT_NB_REPORT_PREFIX</div><div class="ttdef"><b>Definition:</b> nb_bc35.h:34</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="nb__bc35_8c_a400010e7ae3dbd0f364708d1cefb648f_cgraph.png" border="0" usemap="#nb__bc35_8c_a400010e7ae3dbd0f364708d1cefb648f_cgraph" alt=""/></div>
+<map name="nb__bc35_8c_a400010e7ae3dbd0f364708d1cefb648f_cgraph" id="nb__bc35_8c_a400010e7ae3dbd0f364708d1cefb648f_cgraph">
+<area shape="rect" id="node2" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f" title="向NB模组发送指令 " alt="" coords="165,5,269,32"/><area shape="rect" id="node3" href="driver_2uart_8h.html#a279da46b2371c1ec768cde7e525725f2" title="uart1_tx_buffer" alt="" coords="317,5,424,32"/><area shape="rect" id="node4" href="uart_8c.html#a40bca7ca9b269f93bc9f17924a38fbe0" title="uart_tx_one_char" alt="" coords="472,5,595,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="nb__bc35_8c_a400010e7ae3dbd0f364708d1cefb648f_icgraph.png" border="0" usemap="#nb__bc35_8c_a400010e7ae3dbd0f364708d1cefb648f_icgraph" alt=""/></div>
+<map name="nb__bc35_8c_a400010e7ae3dbd0f364708d1cefb648f_icgraph" id="nb__bc35_8c_a400010e7ae3dbd0f364708d1cefb648f_icgraph">
+<area shape="rect" id="node2" href="app__study__room_8c.html#aeb5ff6543636881258702191a4575c5f" title="StudyRoom_ReportData" alt="" coords="165,5,328,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a566469396821ae4c881b7b558204f68f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NB_SendCmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td>
+          <td class="paramname"><em>cmd_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>res_msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>向NB模组发送指令 </p>
+<ol type="1">
+<li>将指令通过串口发送给NB模组</li>
+</ol>
+<p>将响应消息复制到响应消息数组 response_msg[]</p>
+<ol type="1">
+<li>置位响应消息接收标志 response_flag。此标志位用于给串口消息处理函数 NB_RxMsgHandler 里的分支作判断，从而决定是否将接受的消息与响应消息作匹配。因为串口接收到的消息可能是云端 下发的指令，所以这里面加了这个标志位。</li>
+</ol>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>要发送的指令字符串 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd_len</td><td>指令字符串长度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">res_msg</td><td>期望接收到的响应消息，参见NB模组的AT指令参考手册</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">待办事项:</a></b></dt><dd>增加对查询指令返回的查询结果信息的处理。将采用匹配消息头和存储消息体的方法。</dd></dl>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                                           {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> at_cmd[128];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;MCU &gt;&gt;&gt;&gt;&gt;&gt; NB : %s\n&quot;</span>, cmd);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">/* 这里在命令前面加上 AT_CMD_BEGIN 是为了清除掉NB模块中可能存在的消息缓存 */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">/* 若是在调用该函数前NB模块中缓存了一些“意料之外”的消息，这时发送的指令会连同前面的消息</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">     一同被NB模块解析，结果必然出错。所以在每次发送消息前加上了 AT_CMD_BEGIN */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="osapi_8h.html#abe2ddcec42d14500c2706362e9f732e8">os_sprintf</a>(at_cmd, <a class="code" href="nb__bc35_8h.html#a1aa9f916961c8547818a6354f61b4b15">AT_CMD_BEGIN</a> <span class="stringliteral">&quot;%s&quot;</span> <a class="code" href="nb__bc35_8h.html#aa32caeb8581192d1d076801cf45ad2f5">AT_LINE_END</a>, cmd);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="driver_2uart_8h.html#a279da46b2371c1ec768cde7e525725f2">uart1_tx_buffer</a>(at_cmd, cmd_len+2);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">/* 拷贝响应消息到响应消息数组并置位响应标志位，等待串口串接收中断调用 */</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span> (res_msg != <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {  </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>(<a class="code" href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a>, res_msg, <span class="keyword">sizeof</span>(res_msg));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;response_msg is %s\n&quot;</span>, <a class="code" href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="nb__bc35_8c.html#ae5899d940be94e4e73d8eb45011167f1">response_flag</a> = 1;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="ttc" id="osapi_8h_html_abe2ddcec42d14500c2706362e9f732e8"><div class="ttname"><a href="osapi_8h.html#abe2ddcec42d14500c2706362e9f732e8">os_sprintf</a></div><div class="ttdeci">#define os_sprintf</div><div class="ttdef"><b>Definition:</b> osapi.h:54</div></div>
+<div class="ttc" id="driver_2uart_8h_html_a279da46b2371c1ec768cde7e525725f2"><div class="ttname"><a href="driver_2uart_8h.html#a279da46b2371c1ec768cde7e525725f2">uart1_tx_buffer</a></div><div class="ttdeci">void uart1_tx_buffer(uint8 *buf, uint16 len)</div><div class="ttdef"><b>Definition:</b> uart.c:214</div></div>
+<div class="ttc" id="nb__bc35_8c_html_a54bb5bc6dc3de1c3aced6e63dfa6b481"><div class="ttname"><a href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a></div><div class="ttdeci">uint8 response_msg[128]</div><div class="ttdef"><b>Definition:</b> nb_bc35.c:23</div></div>
+<div class="ttc" id="nb__bc35_8c_html_ae5899d940be94e4e73d8eb45011167f1"><div class="ttname"><a href="nb__bc35_8c.html#ae5899d940be94e4e73d8eb45011167f1">response_flag</a></div><div class="ttdeci">uint8 response_flag</div><div class="ttdef"><b>Definition:</b> nb_bc35.c:22</div></div>
+<div class="ttc" id="osapi_8h_html_a751d204d0c7e166a527475d79e803454"><div class="ttname"><a href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a></div><div class="ttdeci">#define os_printf</div><div class="ttdef"><b>Definition:</b> osapi.h:62</div></div>
+<div class="ttc" id="osapi_8h_html_ac5c79bf463c8eba708ea34fccc8ec7c1"><div class="ttname"><a href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a></div><div class="ttdeci">#define os_memcpy</div><div class="ttdef"><b>Definition:</b> osapi.h:36</div></div>
+<div class="ttc" id="c__types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition:</b> c_types.h:43</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a1aa9f916961c8547818a6354f61b4b15"><div class="ttname"><a href="nb__bc35_8h.html#a1aa9f916961c8547818a6354f61b4b15">AT_CMD_BEGIN</a></div><div class="ttdeci">#define AT_CMD_BEGIN</div><div class="ttdef"><b>Definition:</b> nb_bc35.h:47</div></div>
+<div class="ttc" id="c__types_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> c_types.h:73</div></div>
+<div class="ttc" id="nb__bc35_8h_html_aa32caeb8581192d1d076801cf45ad2f5"><div class="ttname"><a href="nb__bc35_8h.html#aa32caeb8581192d1d076801cf45ad2f5">AT_LINE_END</a></div><div class="ttdeci">#define AT_LINE_END</div><div class="ttdef"><b>Definition:</b> nb_bc35.h:46</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="nb__bc35_8c_a566469396821ae4c881b7b558204f68f_cgraph.png" border="0" usemap="#nb__bc35_8c_a566469396821ae4c881b7b558204f68f_cgraph" alt=""/></div>
+<map name="nb__bc35_8c_a566469396821ae4c881b7b558204f68f_cgraph" id="nb__bc35_8c_a566469396821ae4c881b7b558204f68f_cgraph">
+<area shape="rect" id="node2" href="driver_2uart_8h.html#a279da46b2371c1ec768cde7e525725f2" title="uart1_tx_buffer" alt="" coords="157,5,264,32"/><area shape="rect" id="node3" href="uart_8c.html#a40bca7ca9b269f93bc9f17924a38fbe0" title="uart_tx_one_char" alt="" coords="312,5,435,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="nb__bc35_8c_a566469396821ae4c881b7b558204f68f_icgraph.png" border="0" usemap="#nb__bc35_8c_a566469396821ae4c881b7b558204f68f_icgraph" alt=""/></div>
+<map name="nb__bc35_8c_a566469396821ae4c881b7b558204f68f_icgraph" id="nb__bc35_8c_a566469396821ae4c881b7b558204f68f_icgraph">
+<area shape="rect" id="node2" href="nb__bc35_8c.html#a400010e7ae3dbd0f364708d1cefb648f" title="上报数据到云端 " alt="" coords="157,5,269,32"/><area shape="rect" id="node4" href="nb__bc35_8c.html#a2cf1c3f67e168aee4fe9c184c9809307" title="NB_Init" alt="" coords="181,56,245,83"/><area shape="rect" id="node3" href="app__study__room_8c.html#aeb5ff6543636881258702191a4575c5f" title="StudyRoom_ReportData" alt="" coords="317,5,480,32"/><area shape="rect" id="node5" href="uart_8c.html#aeb899bf88fe84dd61c113b850c2f0a2d" title="NB消息处理函数 " alt="" coords="333,56,465,83"/><area shape="rect" id="node6" href="user__main_8c.html#a50374dadba5323609469073006ce3402" title="system_init_done" alt="" coords="337,107,461,133"/><area shape="rect" id="node7" href="user__main_8c.html#a277ffa60e88142c231a14272962e902c" title="user_init" alt="" coords="528,107,599,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb899bf88fe84dd61c113b850c2f0a2d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NB_RxMsgHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>nb_msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>NB消息处理函数 </p>
+<p>NB消息有以下几种类型：</p>
+<ul>
+<li>动作指令的执行情况。如“OK”、“ERROR”</li>
+<li>查询指令的查询结果</li>
+</ul>
+<p>云端下发的控制命令。以“+NNMI:”为前缀</p>
+<p>当NB发送消息来的时候，我们先判断在接收到这条消息之前有没有发送过指令，即判断响应标志位 response_flag是否被置位，再决定是否去匹配响应消息。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nb_msg</td><td>串口接收到的NB消息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                     {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="nb__bc35_8c.html#ae5899d940be94e4e73d8eb45011167f1">response_flag</a> != 0 ) { <span class="comment">/* 等待响应匹配 */</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="driver_2uart_8h.html#af5b6deb2bb0cd122c3384bf552dd121c">ESP_DEBUG</a>(<span class="stringliteral">&quot;response_flag = 1&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">if</span> (0 != <a class="code" href="osapi_8h.html#a51bc56747f146b58e4bbbef0f4b62230">os_strstr</a>(nb_msg, <a class="code" href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a>)) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <a class="code" href="driver_2uart_8h.html#af5b6deb2bb0cd122c3384bf552dd121c">ESP_DEBUG</a>(<span class="stringliteral">&quot;OK! response message parse!&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <a class="code" href="osapi_8h.html#a8b6e05160473ebb1f7f87ca232f87c7b">os_memset</a>(<a class="code" href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a>, 0, <span class="keyword">sizeof</span>(<a class="code" href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a>));</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <a class="code" href="nb__bc35_8c.html#ae5899d940be94e4e73d8eb45011167f1">response_flag</a> = 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <a class="code" href="nb__bc35_8c.html#a2cf1c3f67e168aee4fe9c184c9809307">NB_Init</a>();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <a class="code" href="driver_2uart_8h.html#af5b6deb2bb0cd122c3384bf552dd121c">ESP_DEBUG</a>(<span class="stringliteral">&quot;ERROR! response message parse failed&quot;</span>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <a class="code" href="driver_2uart_8h.html#af5b6deb2bb0cd122c3384bf552dd121c">ESP_DEBUG</a>(<span class="stringliteral">&quot;response_flag = 0&quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">/* 匹配下发消息前缀 */</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="comment">/* 命令下发 */</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="ttc" id="nb__bc35_8c_html_a54bb5bc6dc3de1c3aced6e63dfa6b481"><div class="ttname"><a href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a></div><div class="ttdeci">uint8 response_msg[128]</div><div class="ttdef"><b>Definition:</b> nb_bc35.c:23</div></div>
+<div class="ttc" id="nb__bc35_8c_html_ae5899d940be94e4e73d8eb45011167f1"><div class="ttname"><a href="nb__bc35_8c.html#ae5899d940be94e4e73d8eb45011167f1">response_flag</a></div><div class="ttdeci">uint8 response_flag</div><div class="ttdef"><b>Definition:</b> nb_bc35.c:22</div></div>
+<div class="ttc" id="driver_2uart_8h_html_af5b6deb2bb0cd122c3384bf552dd121c"><div class="ttname"><a href="driver_2uart_8h.html#af5b6deb2bb0cd122c3384bf552dd121c">ESP_DEBUG</a></div><div class="ttdeci">#define ESP_DEBUG(fmt,...)</div><div class="ttdef"><b>Definition:</b> driver/uart.h:35</div></div>
+<div class="ttc" id="osapi_8h_html_a8b6e05160473ebb1f7f87ca232f87c7b"><div class="ttname"><a href="osapi_8h.html#a8b6e05160473ebb1f7f87ca232f87c7b">os_memset</a></div><div class="ttdeci">#define os_memset</div><div class="ttdef"><b>Definition:</b> osapi.h:38</div></div>
+<div class="ttc" id="osapi_8h_html_a51bc56747f146b58e4bbbef0f4b62230"><div class="ttname"><a href="osapi_8h.html#a51bc56747f146b58e4bbbef0f4b62230">os_strstr</a></div><div class="ttdeci">#define os_strstr</div><div class="ttdef"><b>Definition:</b> osapi.h:46</div></div>
+<div class="ttc" id="nb__bc35_8c_html_a2cf1c3f67e168aee4fe9c184c9809307"><div class="ttname"><a href="nb__bc35_8c.html#a2cf1c3f67e168aee4fe9c184c9809307">NB_Init</a></div><div class="ttdeci">void NB_Init(void)</div><div class="ttdef"><b>Definition:</b> nb_bc35.c:140</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="nb__bc35_8c_aeb899bf88fe84dd61c113b850c2f0a2d_cgraph.png" border="0" usemap="#nb__bc35_8c_aeb899bf88fe84dd61c113b850c2f0a2d_cgraph" alt=""/></div>
+<map name="nb__bc35_8c_aeb899bf88fe84dd61c113b850c2f0a2d_cgraph" id="nb__bc35_8c_aeb899bf88fe84dd61c113b850c2f0a2d_cgraph">
+<area shape="rect" id="node2" href="nb__bc35_8c.html#a2cf1c3f67e168aee4fe9c184c9809307" title="NB_Init" alt="" coords="185,5,249,32"/><area shape="rect" id="node3" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f" title="向NB模组发送指令 " alt="" coords="297,5,401,32"/><area shape="rect" id="node4" href="driver_2uart_8h.html#a279da46b2371c1ec768cde7e525725f2" title="uart1_tx_buffer" alt="" coords="449,5,556,32"/><area shape="rect" id="node5" href="uart_8c.html#a40bca7ca9b269f93bc9f17924a38fbe0" title="uart_tx_one_char" alt="" coords="604,5,727,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2cf1c3f67e168aee4fe9c184c9809307"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NB_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                   { </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">static</span> <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> cmd_order = 1;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="driver_2uart_8h.html#af5b6deb2bb0cd122c3384bf552dd121c">ESP_DEBUG</a>(<span class="stringliteral">&quot;cmd_order = %d&quot;</span>, cmd_order);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">switch</span> (cmd_order) {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <a class="code" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a>(<span class="stringliteral">&quot;&quot;</span>, 1, <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            cmd_order = 1;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <a class="code" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a>(<span class="stringliteral">&quot;AT&quot;</span>, <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(<span class="stringliteral">&quot;AT&quot;</span>), <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            cmd_order = 2;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <a class="code" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a>(<a class="code" href="nb__bc35_8h.html#af0651b26f59b22f014ef8b9b42b2ed05">AT_NB_OPEN_RF</a>, <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(<a class="code" href="nb__bc35_8h.html#af0651b26f59b22f014ef8b9b42b2ed05">AT_NB_OPEN_RF</a>), <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            cmd_order = 3;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <a class="code" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a>(<a class="code" href="nb__bc35_8h.html#ac5d2ee5af7efada9c1703451ef038790">AT_NB_CLOSE_PSM</a>, <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(<a class="code" href="nb__bc35_8h.html#ac5d2ee5af7efada9c1703451ef038790">AT_NB_CLOSE_PSM</a>), <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            cmd_order = 4;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <a class="code" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a>(<a class="code" href="nb__bc35_8h.html#aa687010bde7f90377faee82786b2395b">AT_NB_CLOSE_EDRX</a>, <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(<a class="code" href="nb__bc35_8h.html#aa687010bde7f90377faee82786b2395b">AT_NB_CLOSE_EDRX</a>), <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            cmd_order = 5;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <a class="code" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a>(<a class="code" href="nb__bc35_8h.html#a53b06833e6fc79828555ea7bbeb2278f">AT_NB_CGATT_ATTACH</a>, <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(<a class="code" href="nb__bc35_8h.html#a53b06833e6fc79828555ea7bbeb2278f">AT_NB_CGATT_ATTACH</a>), <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            cmd_order = 10;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <a class="code" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a>(<a class="code" href="nb__bc35_8h.html#af0651b26f59b22f014ef8b9b42b2ed05">AT_NB_OPEN_RF</a>, <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(<a class="code" href="nb__bc35_8h.html#af0651b26f59b22f014ef8b9b42b2ed05">AT_NB_OPEN_RF</a>), <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <a class="code" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a>(<span class="stringliteral">&quot;AT&quot;</span>, <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(<span class="stringliteral">&quot;AT&quot;</span>), <span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            cmd_order = 6;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}</div>
+<div class="ttc" id="nb__bc35_8c_html_a566469396821ae4c881b7b558204f68f"><div class="ttname"><a href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f">NB_SendCmd</a></div><div class="ttdeci">void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg)</div><div class="ttdoc">向NB模组发送指令 </div><div class="ttdef"><b>Definition:</b> nb_bc35.c:70</div></div>
+<div class="ttc" id="driver_2uart_8h_html_af5b6deb2bb0cd122c3384bf552dd121c"><div class="ttname"><a href="driver_2uart_8h.html#af5b6deb2bb0cd122c3384bf552dd121c">ESP_DEBUG</a></div><div class="ttdeci">#define ESP_DEBUG(fmt,...)</div><div class="ttdef"><b>Definition:</b> driver/uart.h:35</div></div>
+<div class="ttc" id="osapi_8h_html_a07564f20970de543cfa55b055d1f6dfe"><div class="ttname"><a href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a></div><div class="ttdeci">#define os_strlen</div><div class="ttdef"><b>Definition:</b> osapi.h:43</div></div>
+<div class="ttc" id="nb__bc35_8h_html_aa687010bde7f90377faee82786b2395b"><div class="ttname"><a href="nb__bc35_8h.html#aa687010bde7f90377faee82786b2395b">AT_NB_CLOSE_EDRX</a></div><div class="ttdeci">#define AT_NB_CLOSE_EDRX</div><div class="ttdef"><b>Definition:</b> nb_bc35.h:32</div></div>
+<div class="ttc" id="c__types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition:</b> c_types.h:43</div></div>
+<div class="ttc" id="nb__bc35_8h_html_af0651b26f59b22f014ef8b9b42b2ed05"><div class="ttname"><a href="nb__bc35_8h.html#af0651b26f59b22f014ef8b9b42b2ed05">AT_NB_OPEN_RF</a></div><div class="ttdeci">#define AT_NB_OPEN_RF</div><div class="ttdef"><b>Definition:</b> nb_bc35.h:30</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a53b06833e6fc79828555ea7bbeb2278f"><div class="ttname"><a href="nb__bc35_8h.html#a53b06833e6fc79828555ea7bbeb2278f">AT_NB_CGATT_ATTACH</a></div><div class="ttdeci">#define AT_NB_CGATT_ATTACH</div><div class="ttdef"><b>Definition:</b> nb_bc35.h:33</div></div>
+<div class="ttc" id="nb__bc35_8h_html_ac5d2ee5af7efada9c1703451ef038790"><div class="ttname"><a href="nb__bc35_8h.html#ac5d2ee5af7efada9c1703451ef038790">AT_NB_CLOSE_PSM</a></div><div class="ttdeci">#define AT_NB_CLOSE_PSM</div><div class="ttdef"><b>Definition:</b> nb_bc35.h:31</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="nb__bc35_8c_a2cf1c3f67e168aee4fe9c184c9809307_cgraph.png" border="0" usemap="#nb__bc35_8c_a2cf1c3f67e168aee4fe9c184c9809307_cgraph" alt=""/></div>
+<map name="nb__bc35_8c_a2cf1c3f67e168aee4fe9c184c9809307_cgraph" id="nb__bc35_8c_a2cf1c3f67e168aee4fe9c184c9809307_cgraph">
+<area shape="rect" id="node2" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f" title="向NB模组发送指令 " alt="" coords="117,5,221,32"/><area shape="rect" id="node3" href="driver_2uart_8h.html#a279da46b2371c1ec768cde7e525725f2" title="uart1_tx_buffer" alt="" coords="269,5,376,32"/><area shape="rect" id="node4" href="uart_8c.html#a40bca7ca9b269f93bc9f17924a38fbe0" title="uart_tx_one_char" alt="" coords="424,5,547,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="nb__bc35_8c_a2cf1c3f67e168aee4fe9c184c9809307_icgraph.png" border="0" usemap="#nb__bc35_8c_a2cf1c3f67e168aee4fe9c184c9809307_icgraph" alt=""/></div>
+<map name="nb__bc35_8c_a2cf1c3f67e168aee4fe9c184c9809307_icgraph" id="nb__bc35_8c_a2cf1c3f67e168aee4fe9c184c9809307_icgraph">
+<area shape="rect" id="node2" href="uart_8c.html#aeb899bf88fe84dd61c113b850c2f0a2d" title="NB消息处理函数 " alt="" coords="117,5,249,32"/><area shape="rect" id="node3" href="user__main_8c.html#a50374dadba5323609469073006ce3402" title="system_init_done" alt="" coords="121,56,245,83"/><area shape="rect" id="node4" href="user__main_8c.html#a277ffa60e88142c231a14272962e902c" title="user_init" alt="" coords="297,56,368,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a939b06c46f4df8afd26146bd0ab3b52e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int str_to_hex </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>bufin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>bufout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将十六进制码流转换为字符串形式 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufin</td><td>输入的十六进制码流 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>十六进制码流的长度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">bufout</td><td>输出的十六进制字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int</dd></dl>
+<dl class="section user"><dt>示例</dt><dd>bufin[0] = 0x01, bufin[1] = 0x02, bufin[2] = 0x03, len = 3, 则bufout = "010203" bufin[0] = 0x01, bufin[1] = 0x05, bufin[2] = 0x06, bufin[3] = 0x07, len = 4, 则bufout = "01050607" </dd></dl>
+<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> == bufin || len &lt;= 0 || <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> == bufout)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">for</span>(i = 0; i &lt; len; i++)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="osapi_8h.html#abe2ddcec42d14500c2706362e9f732e8">os_sprintf</a>(bufout+i*2, <span class="stringliteral">&quot;%02X&quot;</span>, bufin[i]);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
+<div class="ttc" id="osapi_8h_html_abe2ddcec42d14500c2706362e9f732e8"><div class="ttname"><a href="osapi_8h.html#abe2ddcec42d14500c2706362e9f732e8">os_sprintf</a></div><div class="ttdeci">#define os_sprintf</div><div class="ttdef"><b>Definition:</b> osapi.h:54</div></div>
+<div class="ttc" id="c__types_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> c_types.h:73</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a356993d9737b6d3e11968d5f76448060"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HexStrToStr </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sourceLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将字符串形式的十六进制码流转为 unsigned char 类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>从串口接收到的字符串形式的十六进制码流 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dest</td><td>转换好的十六进制码流 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sourceLen</td><td>十六进制码流的长度</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section user"><dt>示例</dt><dd>source = "010203", sourceLen = 3, 则dest[0]=0x01, dest[1]=0x02, dest[2]=0x03 source = "01050607", sourceLen = 4, 则dest[0]=0x01, dest[1]=0x05, dest[2]=0x06, dest[3]=0x07 </dd></dl>
+<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">short</span> i;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> highByte, lowByte;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; sourceLen; i += 2)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="comment">/* 将HEX的字母统一转换大小写，方便后面的字母与数字转换 */</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        highByte = toupper(source[i]);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        lowByte  = toupper(source[i + 1]);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="comment">/* 转换ASCII字符为所代表的十六进制数 */</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">if</span> (highByte &gt; 0x39) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            highByte -= 0x37;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            highByte -= 0x30;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">if</span> (lowByte &gt; 0x39) {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            lowByte -= 0x37;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            lowByte -= 0x30;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="comment">/* 高低位合并 */</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="comment">/* 因为十六进制数的HexStr形式是由两位ASCII码来表示的，所以在 */</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="comment">/* 将HexStr转为实际的十六进制码流时需要合并高低位 */</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        dest[i / 2] = (highByte &lt;&lt; 4) | lowByte;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    return ;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a class="anchor" id="ae5899d940be94e4e73d8eb45011167f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> response_flag = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>响应消息接收标志 </p>
+
+</div>
+</div>
+<a class="anchor" id="a54bb5bc6dc3de1c3aced6e63dfa6b481"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> response_msg[128]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>期望接收到的响应消息 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:15 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

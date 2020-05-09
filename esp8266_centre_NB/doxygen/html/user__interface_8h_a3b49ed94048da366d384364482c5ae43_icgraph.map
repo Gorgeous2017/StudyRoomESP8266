@@ -1,0 +1,5 @@
+<map id="system_adc_read" name="system_adc_read">
+<area shape="rect" id="node2" href="$room__info_8c.html#a84ea5b1915e153434d5758aacb1dd9a8" title="get_noise" alt="" coords="179,5,257,32"/>
+<area shape="rect" id="node3" href="$room__info_8c.html#a257a96b7f4ec268562d84591539fade7" title="get_room_data" alt="" coords="305,5,413,32"/>
+<area shape="rect" id="node4" href="$room__info_8c.html#a713be88dd24941b9fc21d2217305b798" title="get_room_buf" alt="" coords="461,5,561,32"/>
+</map>

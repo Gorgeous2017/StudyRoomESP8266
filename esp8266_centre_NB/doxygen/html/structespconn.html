@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: espconn结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li class="current"><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="classes.html"><span>结构体索引</span></a></li>
+      <li><a href="functions.html"><span>成员变量</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle">
+<div class="title">espconn结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="espconn_8h_source.html">espconn.h</a>&gt;</code></p>
+<div class="dynheader">
+espconn 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structespconn__coll__graph.png" border="0" usemap="#espconn_coll__map" alt="Collaboration graph"/></div>
+<map name="espconn_coll__map" id="espconn_coll__map">
+<area shape="rect" id="node2" href="struct__esp__udp.html" title="_esp_udp" alt="" coords="5,5,84,32"/><area shape="rect" id="node3" href="struct__esp__tcp.html" title="_esp_tcp" alt="" coords="109,5,183,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:a393c997ab67360b4e17485123518595c"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="espconn_8h.html#a822c96862e04f46aff8d65cb8170b60f">espconn_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structespconn.html#a393c997ab67360b4e17485123518595c">type</a></td></tr>
+<tr class="separator:a393c997ab67360b4e17485123518595c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a613ca239a3e312e72b5a593076af30b7"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="espconn_8h.html#a27ebed6341108494ecf41ec8a7d37c4b">espconn_state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structespconn.html#a613ca239a3e312e72b5a593076af30b7">state</a></td></tr>
+<tr class="separator:a613ca239a3e312e72b5a593076af30b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb66ba2a45e0c2c7aa089619d909a335"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a579de03e9b0877ef1bb2dca5c91b46cc"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="espconn_8h.html#ae391ef757d57a723ff4033fe4e4ea394">esp_tcp</a> *&#160;&#160;&#160;<a class="el" href="structespconn.html#aecd6125e09e9abc8074ec0bc02093a0a">tcp</a></td></tr>
+<tr class="separator:a579de03e9b0877ef1bb2dca5c91b46cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a94a6637de0996844f0385a547584ce"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="espconn_8h.html#a4c758392b989c00b5d33680d02ec30e6">esp_udp</a> *&#160;&#160;&#160;<a class="el" href="structespconn.html#abf373d8dd0448b17e6062f2b3c0a4677">udp</a></td></tr>
+<tr class="separator:a4a94a6637de0996844f0385a547584ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb66ba2a45e0c2c7aa089619d909a335"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structespconn.html#afb66ba2a45e0c2c7aa089619d909a335">proto</a></td></tr>
+<tr class="separator:afb66ba2a45e0c2c7aa089619d909a335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f6cc886a70f9b844093673f2083f00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="espconn_8h.html#aede40fdf8032ec20481846db497c2d1b">espconn_recv_callback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structespconn.html#a89f6cc886a70f9b844093673f2083f00">recv_callback</a></td></tr>
+<tr class="separator:a89f6cc886a70f9b844093673f2083f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a945c23f67172f92d557a11ecf78da108"><td class="memItemLeft" align="right" valign="top"><a class="el" href="espconn_8h.html#a59ed52076e170d37bf6a7ab8bf0038c2">espconn_sent_callback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structespconn.html#a945c23f67172f92d557a11ecf78da108">sent_callback</a></td></tr>
+<tr class="separator:a945c23f67172f92d557a11ecf78da108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8df3d7d2a7153aa96ce6b022da5050ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structespconn.html#a8df3d7d2a7153aa96ce6b022da5050ab">link_cnt</a></td></tr>
+<tr class="separator:a8df3d7d2a7153aa96ce6b022da5050ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7298e6238b12e95329157f5c82f0187e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structespconn.html#a7298e6238b12e95329157f5c82f0187e">reverse</a></td></tr>
+<tr class="separator:a7298e6238b12e95329157f5c82f0187e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>A espconn descriptor </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
+<a class="anchor" id="a393c997ab67360b4e17485123518595c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="espconn_8h.html#a822c96862e04f46aff8d65cb8170b60f">espconn_type</a> espconn::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>type of the espconn (TCP, UDP) </p>
+
+</div>
+</div>
+<a class="anchor" id="a613ca239a3e312e72b5a593076af30b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="espconn_8h.html#a27ebed6341108494ecf41ec8a7d37c4b">espconn_state</a> espconn::state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>current state of the espconn </p>
+
+</div>
+</div>
+<a class="anchor" id="aecd6125e09e9abc8074ec0bc02093a0a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="espconn_8h.html#ae391ef757d57a723ff4033fe4e4ea394">esp_tcp</a>* espconn::tcp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf373d8dd0448b17e6062f2b3c0a4677"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="espconn_8h.html#a4c758392b989c00b5d33680d02ec30e6">esp_udp</a>* espconn::udp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afb66ba2a45e0c2c7aa089619d909a335"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }   espconn::proto</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a89f6cc886a70f9b844093673f2083f00"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="espconn_8h.html#aede40fdf8032ec20481846db497c2d1b">espconn_recv_callback</a> espconn::recv_callback</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A callback function that is informed about events for this espconn </p>
+
+</div>
+</div>
+<a class="anchor" id="a945c23f67172f92d557a11ecf78da108"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="espconn_8h.html#a59ed52076e170d37bf6a7ab8bf0038c2">espconn_sent_callback</a> espconn::sent_callback</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8df3d7d2a7153aa96ce6b022da5050ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> espconn::link_cnt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7298e6238b12e95329157f5c82f0187e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* espconn::reverse</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="espconn_8h_source.html">espconn.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:21 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

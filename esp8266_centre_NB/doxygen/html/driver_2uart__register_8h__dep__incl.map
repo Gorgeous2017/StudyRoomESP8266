@@ -1,0 +1,12 @@
+<map id="uart_register.h" name="uart_register.h">
+<area shape="rect" id="node2" href="$driver_2uart_8h.html" title="uart.h" alt="" coords="173,80,228,107"/>
+<area shape="rect" id="node3" href="$app__study__room_8h.html" title="app_study_room.h" alt="" coords="5,155,135,181"/>
+<area shape="rect" id="node5" href="$nb__bc35_8h.html" title="nb_bc35.h" alt="" coords="159,155,242,181"/>
+<area shape="rect" id="node8" href="$room__info_8h.html" title="room_info.h" alt="" coords="441,155,531,181"/>
+<area shape="rect" id="node4" href="$app__study__room_8c.html" title="app_study_room.c" alt="" coords="5,229,135,256"/>
+<area shape="rect" id="node6" href="$nb__bc35_8c.html" title="nb_bc35.c" alt="" coords="159,229,242,256"/>
+<area shape="rect" id="node7" href="$user__main_8c.html" title="user_main.c" alt="" coords="266,229,359,256"/>
+<area shape="rect" id="node9" href="$room__info_8c.html" title="room_info.c" alt="" coords="384,229,473,256"/>
+<area shape="rect" id="node10" href="$tcp__server_8c.html" title="tcp_server.c" alt="" coords="497,229,589,256"/>
+<area shape="rect" id="node11" href="$uart_8c.html" title="uart.c" alt="" coords="613,229,668,256"/>
+</map>

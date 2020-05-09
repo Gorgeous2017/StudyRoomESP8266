@@ -1,0 +1,11 @@
+<map id="app_study_room.c" name="app_study_room.c">
+<area shape="rect" id="node2" href="$app__study__room_8h.html" title="app_study_room.h" alt="" coords="293,80,423,107"/>
+<area shape="rect" id="node12" href="$nb__bc35_8h.html" title="nb_bc35.h" alt="" coords="186,80,269,107"/>
+<area shape="rect" id="node3" href="$ets__sys_8h.html" title="ets_sys.h" alt="" coords="237,229,316,256"/>
+<area shape="rect" id="node6" href="$os__type_8h.html" title="os_type.h" alt="" coords="253,155,332,181"/>
+<area shape="rect" id="node7" href="$osapi_8h.html" title="osapi.h" alt="" coords="407,155,471,181"/>
+<area shape="rect" id="node10" href="$driver_2uart_8h.html" title="driver/uart.h" alt="" coords="88,155,177,181"/>
+<area shape="rect" id="node4" href="$c__types_8h.html" title="c_types.h" alt="" coords="119,304,197,331"/>
+<area shape="rect" id="node5" href="$eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="225,304,317,331"/>
+<area shape="rect" id="node11" href="$driver_2uart__register_8h.html" title="uart_register.h" alt="" coords="5,229,111,256"/>
+</map>

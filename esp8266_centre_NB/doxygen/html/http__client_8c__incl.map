@@ -1,0 +1,15 @@
+<map id="http_client.c" name="http_client.c">
+<area shape="rect" id="node2" href="$ets__sys_8h.html" title="ets_sys.h" alt="" coords="20,229,99,256"/>
+<area shape="rect" id="node5" href="$os__type_8h.html" title="os_type.h" alt="" coords="59,155,137,181"/>
+<area shape="rect" id="node6" href="$osapi_8h.html" title="osapi.h" alt="" coords="199,80,263,107"/>
+<area shape="rect" id="node9" href="$mem_8h.html" title="mem.h" alt="" coords="477,80,540,107"/>
+<area shape="rect" id="node10" href="$user__interface_8h.html" title="user_interface.h" alt="" coords="338,80,453,107"/>
+<area shape="rect" id="node15" href="$espconn_8h.html" title="espconn.h" alt="" coords="565,80,647,107"/>
+<area shape="rect" id="node16" href="$http__client_8h.html" title="http_client.h" alt="" coords="31,80,125,107"/>
+<area shape="rect" id="node3" href="$c__types_8h.html" title="c_types.h" alt="" coords="215,304,293,331"/>
+<area shape="rect" id="node4" href="$eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="13,304,105,331"/>
+<area shape="rect" id="node11" href="$ip__addr_8h.html" title="ip_addr.h" alt="" coords="386,229,461,256"/>
+<area shape="rect" id="node12" href="$queue_8h.html" title="queue.h" alt="" coords="508,155,576,181"/>
+<area shape="rect" id="node13" href="$spi__flash_8h.html" title="spi_flash.h" alt="" coords="600,155,684,181"/>
+<area shape="rect" id="node14" href="$gpio_8h.html" title="gpio.h" alt="" coords="375,155,432,181"/>
+</map>

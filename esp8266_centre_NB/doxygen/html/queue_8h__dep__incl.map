@@ -1,0 +1,12 @@
+<map id="queue.h" name="queue.h">
+<area shape="rect" id="node2" href="$user__interface_8h.html" title="user_interface.h" alt="" coords="273,80,387,107"/>
+<area shape="rect" id="node3" href="$include_2room__info_8h.html" title="room_info.h" alt="" coords="5,155,95,181"/>
+<area shape="rect" id="node4" href="$room__info_8h.html" title="room_info.h" alt="" coords="119,155,208,181"/>
+<area shape="rect" id="node6" href="$tcp__server_8c.html" title="tcp_server.c" alt="" coords="207,229,299,256"/>
+<area shape="rect" id="node8" href="$http__client_8c.html" title="http_client.c" alt="" coords="283,155,377,181"/>
+<area shape="rect" id="node9" href="$user__main_8c.html" title="user_main.c" alt="" coords="401,155,494,181"/>
+<area shape="rect" id="node10" href="$user__wifi_8c.html" title="user_wifi.c" alt="" coords="518,155,601,181"/>
+<area shape="rect" id="node11" href="$mesh_8h.html" title="mesh.h" alt="" coords="625,155,691,181"/>
+<area shape="rect" id="node5" href="$room__info_8c.html" title="room_info.c" alt="" coords="15,229,104,256"/>
+<area shape="rect" id="node7" href="$uart_8c.html" title="uart.c" alt="" coords="128,229,183,256"/>
+</map>

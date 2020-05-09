@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: at_custom.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3f3aa03da80a6f543b7f052367a441a.html">ESP8266_NONOS_SDK</a></li><li class="navelem"><a class="el" href="dir_9cb0e4b91a56b7f682c398f4eec1db93.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">at_custom.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="at__custom_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * ESPRSSIF MIT License</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2016 &lt;ESPRESSIF SYSTEMS (SHANGHAI) PTE LTD&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Permission is hereby granted for use on ESPRESSIF SYSTEMS ESP8266 only, in which case,</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * it is free of charge, to any person obtaining a copy of this software and associated</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * and/or sell copies of the Software, and to permit persons to whom the Software is furnished</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * The above copyright notice and this permission notice shall be included in all copies or</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * substantial portions of the Software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef CUSTOM_AT_H_</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CUSTOM_AT_H_</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="c__types_8h.html">c_types.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structat__funcation_type.html">   30</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structat__funcation_type.html#aa3cfa0e2f2d18c684848acd2caa6173c">   32</a></span>&#160;  <span class="keywordtype">char</span> *<a class="code" href="structat__funcation_type.html#aa3cfa0e2f2d18c684848acd2caa6173c">at_cmdName</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structat__funcation_type.html#a58d106dbec2fbbe75b967d34572b1710">   33</a></span>&#160;  <a class="code" href="c__types_8h.html#aef44329758059c91c76d334e8fc09700">int8_t</a> <a class="code" href="structat__funcation_type.html#a58d106dbec2fbbe75b967d34572b1710">at_cmdLen</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structat__funcation_type.html#a7fd3c1cbfb5c3301f698da9e5bfedbae">   34</a></span>&#160;  void (*at_testCmd)(<a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> id);</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structat__funcation_type.html#a7aef3ec6010585ddf6ea01b26b8e5af8">   35</a></span>&#160;  void (*at_queryCmd)(<a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> id);</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structat__funcation_type.html#a42b4a99ad8b6510284bb7674ac4f84cd">   36</a></span>&#160;  void (*at_setupCmd)(<a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> id, <span class="keywordtype">char</span> *pPara);</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structat__funcation_type.html#abc8f4b95af14d8e0a60a46afb6a13aff">   37</a></span>&#160;  void (*at_exeCmd)(<a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> id);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}<a class="code" href="structat__funcation_type.html">at_funcationType</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="at__custom_8h.html#aa284af05c7f8de94bb410ed25052d7ca">   40</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="at__custom_8h.html#aa284af05c7f8de94bb410ed25052d7ca">at_custom_uart_rx_intr</a>)(<a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>* data,<a class="code" href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> len);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="at__custom_8h.html#af6740b08b9f62484a9b936ea0b35af5e">   42</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="at__custom_8h.html#af6740b08b9f62484a9b936ea0b35af5e">at_custom_response_func_type</a>)(<span class="keyword">const</span> <span class="keywordtype">char</span> *str);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="at__custom_8h.html#ac5e9d5f7c03239ca5829b25bf033b77b">   44</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="at__custom_8h.html#ac5e9d5f7c03239ca5829b25bf033b77b">at_fake_uart_tx_func_type</a>)(<span class="keyword">const</span> <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>*data,<a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> length);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">extern</span> <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> <a class="code" href="at__custom_8h.html#a287c4f678e0280bd81bae9e6c329fa5c">at_customLinkMax</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#a056246bcb78a47632ad1ff07f6169121">at_response_ok</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#ac88f57dd8471be070be3ff82cd81af77">at_response_error</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#af7788387d803e35d406af6f744e0f20b">at_response</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *str);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#a66b168697ab5bf73e57085dcfb31a72e">at_register_response_func</a>(<a class="code" href="at__custom_8h.html#af6740b08b9f62484a9b936ea0b35af5e">at_custom_response_func_type</a> response_func);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#a99bec7a088baa5a8c4e043ab09fb6a3f">at_cmd_array_regist</a>(<a class="code" href="structat__funcation_type.html">at_funcationType</a> *custom_at_cmd_array,<a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> cmd_num);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="at__custom_8h.html#a3f377a24af0617b0c104049b7ad6121c">at_get_next_int_dec</a>(<span class="keywordtype">char</span> **p_src,<span class="keywordtype">int</span>*result,<span class="keywordtype">int</span>* err);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<a class="code" href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> <a class="code" href="at__custom_8h.html#aa827abf503e8d9d01e53180591bceb0f">at_data_str_copy</a>(<span class="keywordtype">char</span> *p_dest, <span class="keywordtype">char</span> **p_src, <a class="code" href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> max_len);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#afe2dda700e731cb5033f2dd87ade79a8">at_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#aac68219cc0b5d3b9cdc03afbe948efda">at_port_print</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *str);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#ab5251670ab92a8af7b4cae5a9b28e3a7">at_set_custom_info</a>(<span class="keywordtype">char</span>* info);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#a0d7b743e94816dae4bb8d1ff1b22bd27">at_enter_special_state</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#a79f26f95be122182b6e35000a000e408">at_leave_special_state</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="at__custom_8h.html#a5ea9ebdad3911ff14bb7ea64c4e7f4a6">at_get_version</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keywordtype">void</span> <a class="code" href="at__custom_8h.html#a58feed3b07f4257bfc527ce518d2e898">at_register_uart_rx_intr</a>(<a class="code" href="at__custom_8h.html#aa284af05c7f8de94bb410ed25052d7ca">at_custom_uart_rx_intr</a> rx_func);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="at__custom_8h.html#a9149a8dd0ad843bc16b53c9f2fd24b9a">at_fake_uart_rx</a>(<a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>* data,<a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> length);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="at__custom_8h.html#a17e0357c426c3bbaf49877ba1b4690e0">at_fake_uart_enable</a>(<span class="keywordtype">bool</span> enable,<a class="code" href="at__custom_8h.html#ac5e9d5f7c03239ca5829b25bf033b77b">at_fake_uart_tx_func_type</a> at_fake_uart_tx_func);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="at__custom_8h.html#a2b779a6656f60d5e66af34c0c002bd40">at_set_escape_character</a>(<a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> ch);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="at__custom_8h_html_aac68219cc0b5d3b9cdc03afbe948efda"><div class="ttname"><a href="at__custom_8h.html#aac68219cc0b5d3b9cdc03afbe948efda">at_port_print</a></div><div class="ttdeci">void at_port_print(const char *str)</div><div class="ttdoc">print string to at port </div></div>
+<div class="ttc" id="at__custom_8h_html_a66b168697ab5bf73e57085dcfb31a72e"><div class="ttname"><a href="at__custom_8h.html#a66b168697ab5bf73e57085dcfb31a72e">at_register_response_func</a></div><div class="ttdeci">void at_register_response_func(at_custom_response_func_type response_func)</div><div class="ttdoc">register custom response function. </div></div>
+<div class="ttc" id="c__types_8h_html_a56f1a81c92849566ae864511088eb7e8"><div class="ttname"><a href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a></div><div class="ttdeci">int int32</div><div class="ttdef"><b>Definition:</b> c_types.h:57</div></div>
+<div class="ttc" id="at__custom_8h_html_ac5e9d5f7c03239ca5829b25bf033b77b"><div class="ttname"><a href="at__custom_8h.html#ac5e9d5f7c03239ca5829b25bf033b77b">at_fake_uart_tx_func_type</a></div><div class="ttdeci">void(* at_fake_uart_tx_func_type)(const uint8 *data, uint32 length)</div><div class="ttdef"><b>Definition:</b> at_custom.h:44</div></div>
+<div class="ttc" id="c__types_8h_html"><div class="ttname"><a href="c__types_8h.html">c_types.h</a></div></div>
+<div class="ttc" id="c__types_8h_html_aef44329758059c91c76d334e8fc09700"><div class="ttname"><a href="c__types_8h.html#aef44329758059c91c76d334e8fc09700">int8_t</a></div><div class="ttdeci">signed char int8_t</div><div class="ttdef"><b>Definition:</b> c_types.h:30</div></div>
+<div class="ttc" id="at__custom_8h_html_a5ea9ebdad3911ff14bb7ea64c4e7f4a6"><div class="ttname"><a href="at__custom_8h.html#a5ea9ebdad3911ff14bb7ea64c4e7f4a6">at_get_version</a></div><div class="ttdeci">uint32 at_get_version(void)</div><div class="ttdoc">get at version </div></div>
+<div class="ttc" id="structat__funcation_type_html"><div class="ttname"><a href="structat__funcation_type.html">at_funcationType</a></div><div class="ttdef"><b>Definition:</b> at_custom.h:30</div></div>
+<div class="ttc" id="at__custom_8h_html_a9149a8dd0ad843bc16b53c9f2fd24b9a"><div class="ttname"><a href="at__custom_8h.html#a9149a8dd0ad843bc16b53c9f2fd24b9a">at_fake_uart_rx</a></div><div class="ttdeci">uint32 at_fake_uart_rx(uint8 *data, uint32 length)</div><div class="ttdoc">notify at module that has receive data </div></div>
+<div class="ttc" id="at__custom_8h_html_ab5251670ab92a8af7b4cae5a9b28e3a7"><div class="ttname"><a href="at__custom_8h.html#ab5251670ab92a8af7b4cae5a9b28e3a7">at_set_custom_info</a></div><div class="ttdeci">void at_set_custom_info(char *info)</div><div class="ttdoc">print custom information when AT+GMR </div></div>
+<div class="ttc" id="structat__funcation_type_html_aa3cfa0e2f2d18c684848acd2caa6173c"><div class="ttname"><a href="structat__funcation_type.html#aa3cfa0e2f2d18c684848acd2caa6173c">at_funcationType::at_cmdName</a></div><div class="ttdeci">char * at_cmdName</div><div class="ttdef"><b>Definition:</b> at_custom.h:32</div></div>
+<div class="ttc" id="at__custom_8h_html_a58feed3b07f4257bfc527ce518d2e898"><div class="ttname"><a href="at__custom_8h.html#a58feed3b07f4257bfc527ce518d2e898">at_register_uart_rx_intr</a></div><div class="ttdeci">void at_register_uart_rx_intr(at_custom_uart_rx_intr rx_func)</div><div class="ttdoc">register custom uart rx interrupt function </div></div>
+<div class="ttc" id="at__custom_8h_html_a056246bcb78a47632ad1ff07f6169121"><div class="ttname"><a href="at__custom_8h.html#a056246bcb78a47632ad1ff07f6169121">at_response_ok</a></div><div class="ttdeci">void at_response_ok(void)</div><div class="ttdoc">Response &quot;OK&quot; to uart. </div></div>
+<div class="ttc" id="at__custom_8h_html_af7788387d803e35d406af6f744e0f20b"><div class="ttname"><a href="at__custom_8h.html#af7788387d803e35d406af6f744e0f20b">at_response</a></div><div class="ttdeci">void at_response(const char *str)</div><div class="ttdoc">Response string. It is equivalent to at_port_print,if not call at_register_response_func or call at_r...</div></div>
+<div class="ttc" id="c__types_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> c_types.h:28</div></div>
+<div class="ttc" id="at__custom_8h_html_a79f26f95be122182b6e35000a000e408"><div class="ttname"><a href="at__custom_8h.html#a79f26f95be122182b6e35000a000e408">at_leave_special_state</a></div><div class="ttdeci">void at_leave_special_state(void)</div></div>
+<div class="ttc" id="at__custom_8h_html_a287c4f678e0280bd81bae9e6c329fa5c"><div class="ttname"><a href="at__custom_8h.html#a287c4f678e0280bd81bae9e6c329fa5c">at_customLinkMax</a></div><div class="ttdeci">uint8 at_customLinkMax</div></div>
+<div class="ttc" id="at__custom_8h_html_a17e0357c426c3bbaf49877ba1b4690e0"><div class="ttname"><a href="at__custom_8h.html#a17e0357c426c3bbaf49877ba1b4690e0">at_fake_uart_enable</a></div><div class="ttdeci">bool at_fake_uart_enable(bool enable, at_fake_uart_tx_func_type at_fake_uart_tx_func)</div><div class="ttdoc">enable fake uart,and register fake uart tx </div></div>
+<div class="ttc" id="at__custom_8h_html_aa827abf503e8d9d01e53180591bceb0f"><div class="ttname"><a href="at__custom_8h.html#aa827abf503e8d9d01e53180591bceb0f">at_data_str_copy</a></div><div class="ttdeci">int32 at_data_str_copy(char *p_dest, char **p_src, int32 max_len)</div><div class="ttdoc">get string form at cmd line.the maybe alter pSrc </div></div>
+<div class="ttc" id="c__types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition:</b> c_types.h:43</div></div>
+<div class="ttc" id="at__custom_8h_html_a0d7b743e94816dae4bb8d1ff1b22bd27"><div class="ttname"><a href="at__custom_8h.html#a0d7b743e94816dae4bb8d1ff1b22bd27">at_enter_special_state</a></div><div class="ttdeci">void at_enter_special_state(void)</div><div class="ttdoc">if current at command is processing,you can call at_enter_special_state, then if other comamnd coming...</div></div>
+<div class="ttc" id="at__custom_8h_html_ac88f57dd8471be070be3ff82cd81af77"><div class="ttname"><a href="at__custom_8h.html#ac88f57dd8471be070be3ff82cd81af77">at_response_error</a></div><div class="ttdeci">void at_response_error(void)</div><div class="ttdoc">Response &quot;ERROR&quot; to uart. </div></div>
+<div class="ttc" id="c__types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> c_types.h:52</div></div>
+<div class="ttc" id="at__custom_8h_html_a2b779a6656f60d5e66af34c0c002bd40"><div class="ttname"><a href="at__custom_8h.html#a2b779a6656f60d5e66af34c0c002bd40">at_set_escape_character</a></div><div class="ttdeci">bool at_set_escape_character(uint8 ch)</div><div class="ttdoc">set at escape character </div></div>
+<div class="ttc" id="at__custom_8h_html_afe2dda700e731cb5033f2dd87ade79a8"><div class="ttname"><a href="at__custom_8h.html#afe2dda700e731cb5033f2dd87ade79a8">at_init</a></div><div class="ttdeci">void at_init(void)</div><div class="ttdoc">initialize at module </div></div>
+<div class="ttc" id="structat__funcation_type_html_a58d106dbec2fbbe75b967d34572b1710"><div class="ttname"><a href="structat__funcation_type.html#a58d106dbec2fbbe75b967d34572b1710">at_funcationType::at_cmdLen</a></div><div class="ttdeci">int8_t at_cmdLen</div><div class="ttdef"><b>Definition:</b> at_custom.h:33</div></div>
+<div class="ttc" id="at__custom_8h_html_af6740b08b9f62484a9b936ea0b35af5e"><div class="ttname"><a href="at__custom_8h.html#af6740b08b9f62484a9b936ea0b35af5e">at_custom_response_func_type</a></div><div class="ttdeci">void(* at_custom_response_func_type)(const char *str)</div><div class="ttdef"><b>Definition:</b> at_custom.h:42</div></div>
+<div class="ttc" id="at__custom_8h_html_a3f377a24af0617b0c104049b7ad6121c"><div class="ttname"><a href="at__custom_8h.html#a3f377a24af0617b0c104049b7ad6121c">at_get_next_int_dec</a></div><div class="ttdeci">bool at_get_next_int_dec(char **p_src, int *result, int *err)</div><div class="ttdoc">get digit form at cmd line.the maybe alter pSrc </div></div>
+<div class="ttc" id="at__custom_8h_html_aa284af05c7f8de94bb410ed25052d7ca"><div class="ttname"><a href="at__custom_8h.html#aa284af05c7f8de94bb410ed25052d7ca">at_custom_uart_rx_intr</a></div><div class="ttdeci">void(* at_custom_uart_rx_intr)(uint8 *data, int32 len)</div><div class="ttdef"><b>Definition:</b> at_custom.h:40</div></div>
+<div class="ttc" id="at__custom_8h_html_a99bec7a088baa5a8c4e043ab09fb6a3f"><div class="ttname"><a href="at__custom_8h.html#a99bec7a088baa5a8c4e043ab09fb6a3f">at_cmd_array_regist</a></div><div class="ttdeci">void at_cmd_array_regist(at_funcationType *custom_at_cmd_array, uint32 cmd_num)</div><div class="ttdoc">Task of process command or txdata. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:13 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

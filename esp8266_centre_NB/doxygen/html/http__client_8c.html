@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: http_client.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_69f7b3b0f987cc31a767c691a7147b70.html">user</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">http_client.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ets__sys_8h_source.html">ets_sys.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="os__type_8h_source.html">os_type.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="osapi_8h_source.html">osapi.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="mem_8h_source.html">mem.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="user__interface_8h_source.html">user_interface.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="espconn_8h_source.html">espconn.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="http__client_8h_source.html">http_client.h</a>&quot;</code><br/>
+<code>#include &quot;user_config.h&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+http_client.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8c__incl.png" border="0" usemap="#http__client_8c" alt=""/></div>
+<map name="http__client_8c" id="http__client_8c">
+<area shape="rect" id="node2" href="ets__sys_8h.html" title="ets_sys.h" alt="" coords="20,229,99,256"/><area shape="rect" id="node5" href="os__type_8h.html" title="os_type.h" alt="" coords="59,155,137,181"/><area shape="rect" id="node6" href="osapi_8h.html" title="osapi.h" alt="" coords="199,80,263,107"/><area shape="rect" id="node9" href="mem_8h.html" title="mem.h" alt="" coords="477,80,540,107"/><area shape="rect" id="node10" href="user__interface_8h.html" title="user_interface.h" alt="" coords="338,80,453,107"/><area shape="rect" id="node15" href="espconn_8h.html" title="espconn.h" alt="" coords="565,80,647,107"/><area shape="rect" id="node16" href="http__client_8h.html" title="http_client.h" alt="" coords="31,80,125,107"/><area shape="rect" id="node3" href="c__types_8h.html" title="c_types.h" alt="" coords="215,304,293,331"/><area shape="rect" id="node4" href="eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="13,304,105,331"/><area shape="rect" id="node11" href="ip__addr_8h.html" title="ip_addr.h" alt="" coords="386,229,461,256"/><area shape="rect" id="node12" href="queue_8h.html" title="queue.h" alt="" coords="508,155,576,181"/><area shape="rect" id="node13" href="spi__flash_8h.html" title="spi_flash.h" alt="" coords="600,155,684,181"/><area shape="rect" id="node14" href="gpio_8h.html" title="gpio.h" alt="" coords="375,155,432,181"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a33bd9daaba99ebc87dd8cb0c2e5c6670"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__client_8c.html#a33bd9daaba99ebc87dd8cb0c2e5c6670">send2server</a> (<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *pdata, <a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> len)</td></tr>
+<tr class="separator:a33bd9daaba99ebc87dd8cb0c2e5c6670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6efa2b723f1029e3bffd7fd6d7b9d164"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__client_8c.html#a6efa2b723f1029e3bffd7fd6d7b9d164">http_client_init</a> (<a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *ip, <a class="el" href="c__types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> port)</td></tr>
+<tr class="separator:a6efa2b723f1029e3bffd7fd6d7b9d164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29598b6f196d0fcf777becd3e4fdcd8a"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__client_8c.html#a29598b6f196d0fcf777becd3e4fdcd8a">http_client_connect</a> (void)</td></tr>
+<tr class="separator:a29598b6f196d0fcf777becd3e4fdcd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a9ff9e610f42e8cd1807b82d7a6ef9a4e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structespconn.html">espconn</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__client_8c.html#a9ff9e610f42e8cd1807b82d7a6ef9a4e">server</a></td></tr>
+<tr class="separator:a9ff9e610f42e8cd1807b82d7a6ef9a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a33bd9daaba99ebc87dd8cb0c2e5c6670"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> send2server </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>pdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                      {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//os_printf(&quot;pdata is: %s, lenth is %d \n&quot;,pdata,os_strlen(pdata));</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="espconn_8h.html#a6677ecbe38ce063102e4b7a733829a7f">espconn_send</a>(<a class="code" href="http__client_8c.html#a9ff9e610f42e8cd1807b82d7a6ef9a4e">server</a>, pdata, len);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="ttc" id="espconn_8h_html_a6677ecbe38ce063102e4b7a733829a7f"><div class="ttname"><a href="espconn_8h.html#a6677ecbe38ce063102e4b7a733829a7f">espconn_send</a></div><div class="ttdeci">sint8 espconn_send(struct espconn *espconn, uint8 *psent, uint16 length)</div></div>
+<div class="ttc" id="http__client_8c_html_a9ff9e610f42e8cd1807b82d7a6ef9a4e"><div class="ttname"><a href="http__client_8c.html#a9ff9e610f42e8cd1807b82d7a6ef9a4e">server</a></div><div class="ttdeci">struct espconn * server</div><div class="ttdef"><b>Definition:</b> http_client.c:16</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8c_a33bd9daaba99ebc87dd8cb0c2e5c6670_cgraph.png" border="0" usemap="#http__client_8c_a33bd9daaba99ebc87dd8cb0c2e5c6670_cgraph" alt=""/></div>
+<map name="http__client_8c_a33bd9daaba99ebc87dd8cb0c2e5c6670_cgraph" id="http__client_8c_a33bd9daaba99ebc87dd8cb0c2e5c6670_cgraph">
+<area shape="rect" id="node2" href="espconn_8h.html#a6677ecbe38ce063102e4b7a733829a7f" title="espconn_send" alt="" coords="144,5,251,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6efa2b723f1029e3bffd7fd6d7b9d164"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> http_client_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                   {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">static</span> <a class="code" href="struct__esp__tcp.html">esp_tcp</a> esptcp;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="struct__esp__tcp.html">esp_tcp</a> *pesptcp = &amp;esptcp;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="c__types_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> u32_ip = <a class="code" href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0">ipaddr_addr</a>(ip);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;http_client_init\n&quot;</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    g_ptcp_conn-&gt;<a class="code" href="structespconn.html#a393c997ab67360b4e17485123518595c">type</a> = <a class="code" href="espconn_8h.html#a822c96862e04f46aff8d65cb8170b60faf9113ca7b14a1637d2a0099367622879">ESPCONN_TCP</a>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    g_ptcp_conn-&gt;<a class="code" href="structespconn.html#a613ca239a3e312e72b5a593076af30b7">state</a> = <a class="code" href="espconn_8h.html#a27ebed6341108494ecf41ec8a7d37c4ba7dd74b008ab5d04f15ff84de4b70bf90">ESPCONN_NONE</a>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    g_ptcp_conn-&gt;<a class="code" href="structespconn.html#afb66ba2a45e0c2c7aa089619d909a335">proto</a>.<a class="code" href="structespconn.html#aecd6125e09e9abc8074ec0bc02093a0a">tcp</a> = pesptcp;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>(pesptcp-&gt;<a class="code" href="struct__esp__tcp.html#a5897411486d4a5845cebf9a18297d4dd">remote_ip</a>, &amp;u32_ip, 4); <span class="comment">//set server ip</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    pesptcp-&gt;<a class="code" href="struct__esp__tcp.html#aec114eb2d15ee20ff480edbef2fabd8e">remote_port</a> = port;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    pesptcp-&gt;<a class="code" href="struct__esp__tcp.html#aef023538162454b2b0c395fd171355ee">local_port</a> = <a class="code" href="espconn_8h.html#a8666579cda9afb8e01dff613326062c0">espconn_port</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="espconn_8h.html#a233874487e43ccdacf772e47bcd9b976">espconn_regist_connectcb</a>(g_ptcp_conn, tcp_client_connect_cb);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="ttc" id="espconn_8h_html_a27ebed6341108494ecf41ec8a7d37c4ba7dd74b008ab5d04f15ff84de4b70bf90"><div class="ttname"><a href="espconn_8h.html#a27ebed6341108494ecf41ec8a7d37c4ba7dd74b008ab5d04f15ff84de4b70bf90">ESPCONN_NONE</a></div><div class="ttdef"><b>Definition:</b> espconn.h:66</div></div>
+<div class="ttc" id="espconn_8h_html_a8666579cda9afb8e01dff613326062c0"><div class="ttname"><a href="espconn_8h.html#a8666579cda9afb8e01dff613326062c0">espconn_port</a></div><div class="ttdeci">uint32 espconn_port(void)</div></div>
+<div class="ttc" id="structespconn_html_aecd6125e09e9abc8074ec0bc02093a0a"><div class="ttname"><a href="structespconn.html#aecd6125e09e9abc8074ec0bc02093a0a">espconn::tcp</a></div><div class="ttdeci">esp_tcp * tcp</div><div class="ttdef"><b>Definition:</b> espconn.h:110</div></div>
+<div class="ttc" id="struct__esp__tcp_html_aef023538162454b2b0c395fd171355ee"><div class="ttname"><a href="struct__esp__tcp.html#aef023538162454b2b0c395fd171355ee">_esp_tcp::local_port</a></div><div class="ttdeci">int local_port</div><div class="ttdef"><b>Definition:</b> espconn.h:77</div></div>
+<div class="ttc" id="c__types_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="c__types_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> c_types.h:54</div></div>
+<div class="ttc" id="osapi_8h_html_a751d204d0c7e166a527475d79e803454"><div class="ttname"><a href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a></div><div class="ttdeci">#define os_printf</div><div class="ttdef"><b>Definition:</b> osapi.h:62</div></div>
+<div class="ttc" id="struct__esp__tcp_html_aec114eb2d15ee20ff480edbef2fabd8e"><div class="ttname"><a href="struct__esp__tcp.html#aec114eb2d15ee20ff480edbef2fabd8e">_esp_tcp::remote_port</a></div><div class="ttdeci">int remote_port</div><div class="ttdef"><b>Definition:</b> espconn.h:76</div></div>
+<div class="ttc" id="osapi_8h_html_ac5c79bf463c8eba708ea34fccc8ec7c1"><div class="ttname"><a href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a></div><div class="ttdeci">#define os_memcpy</div><div class="ttdef"><b>Definition:</b> osapi.h:36</div></div>
+<div class="ttc" id="struct__esp__tcp_html"><div class="ttname"><a href="struct__esp__tcp.html">_esp_tcp</a></div><div class="ttdef"><b>Definition:</b> espconn.h:75</div></div>
+<div class="ttc" id="espconn_8h_html_a233874487e43ccdacf772e47bcd9b976"><div class="ttname"><a href="espconn_8h.html#a233874487e43ccdacf772e47bcd9b976">espconn_regist_connectcb</a></div><div class="ttdeci">sint8 espconn_regist_connectcb(struct espconn *espconn, espconn_connect_callback connect_cb)</div></div>
+<div class="ttc" id="struct__esp__tcp_html_a5897411486d4a5845cebf9a18297d4dd"><div class="ttname"><a href="struct__esp__tcp.html#a5897411486d4a5845cebf9a18297d4dd">_esp_tcp::remote_ip</a></div><div class="ttdeci">uint8 remote_ip[4]</div><div class="ttdef"><b>Definition:</b> espconn.h:79</div></div>
+<div class="ttc" id="structespconn_html_a393c997ab67360b4e17485123518595c"><div class="ttname"><a href="structespconn.html#a393c997ab67360b4e17485123518595c">espconn::type</a></div><div class="ttdeci">enum espconn_type type</div><div class="ttdef"><b>Definition:</b> espconn.h:106</div></div>
+<div class="ttc" id="structespconn_html_a613ca239a3e312e72b5a593076af30b7"><div class="ttname"><a href="structespconn.html#a613ca239a3e312e72b5a593076af30b7">espconn::state</a></div><div class="ttdeci">enum espconn_state state</div><div class="ttdef"><b>Definition:</b> espconn.h:108</div></div>
+<div class="ttc" id="structespconn_html_afb66ba2a45e0c2c7aa089619d909a335"><div class="ttname"><a href="structespconn.html#afb66ba2a45e0c2c7aa089619d909a335">espconn::proto</a></div><div class="ttdeci">union espconn::@3 proto</div></div>
+<div class="ttc" id="ip__addr_8h_html_a13ddd6661ca792f864762dbda88585f0"><div class="ttname"><a href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0">ipaddr_addr</a></div><div class="ttdeci">uint32 ipaddr_addr(const char *cp)</div></div>
+<div class="ttc" id="espconn_8h_html_a822c96862e04f46aff8d65cb8170b60faf9113ca7b14a1637d2a0099367622879"><div class="ttname"><a href="espconn_8h.html#a822c96862e04f46aff8d65cb8170b60faf9113ca7b14a1637d2a0099367622879">ESPCONN_TCP</a></div><div class="ttdef"><b>Definition:</b> espconn.h:59</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8c_a6efa2b723f1029e3bffd7fd6d7b9d164_cgraph.png" border="0" usemap="#http__client_8c_a6efa2b723f1029e3bffd7fd6d7b9d164_cgraph" alt=""/></div>
+<map name="http__client_8c_a6efa2b723f1029e3bffd7fd6d7b9d164_cgraph" id="http__client_8c_a6efa2b723f1029e3bffd7fd6d7b9d164_cgraph">
+<area shape="rect" id="node2" href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0" title="ipaddr_addr" alt="" coords="204,5,293,32"/><area shape="rect" id="node3" href="espconn_8h.html#a8666579cda9afb8e01dff613326062c0" title="espconn_port" alt="" coords="199,56,299,83"/><area shape="rect" id="node4" href="espconn_8h.html#a233874487e43ccdacf772e47bcd9b976" title="espconn_regist_connectcb" alt="" coords="160,107,337,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a29598b6f196d0fcf777becd3e4fdcd8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> http_client_connect </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                          {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="c__types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a> rc = 0;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="espconn_8h.html#a9969873c3b8ee86a34496a5166cf8bfc">espconn_disconnect</a>(g_ptcp_conn);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    rc = <a class="code" href="espconn_8h.html#a949cd618667cea85b1b99d14b90dce7d">espconn_connect</a>(g_ptcp_conn);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;local &quot;</span><a class="code" href="ip__addr_8h.html#ac88858dbe588b82edadb33513aed16d4">IPSTR</a><span class="stringliteral">&quot;:%d\r\n&quot;</span>, <a class="code" href="ip__addr_8h.html#af488ccb181cdd5905e55ffb8bff92552">IP2STR</a>(g_ptcp_conn-&gt;<a class="code" href="structespconn.html#afb66ba2a45e0c2c7aa089619d909a335">proto</a>.<a class="code" href="structespconn.html#aecd6125e09e9abc8074ec0bc02093a0a">tcp</a>-&gt;<a class="code" href="struct__esp__tcp.html#a22605d79649b0e540798968c59be4a04">local_ip</a>),</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            g_ptcp_conn-&gt;<a class="code" href="structespconn.html#afb66ba2a45e0c2c7aa089619d909a335">proto</a>.<a class="code" href="structespconn.html#aecd6125e09e9abc8074ec0bc02093a0a">tcp</a>-&gt;<a class="code" href="struct__esp__tcp.html#aef023538162454b2b0c395fd171355ee">local_port</a>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;connect to &quot;</span><a class="code" href="ip__addr_8h.html#ac88858dbe588b82edadb33513aed16d4">IPSTR</a><span class="stringliteral">&quot;:%d rc=%d\r\n&quot;</span>,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="ip__addr_8h.html#af488ccb181cdd5905e55ffb8bff92552">IP2STR</a>(g_ptcp_conn-&gt;<a class="code" href="structespconn.html#afb66ba2a45e0c2c7aa089619d909a335">proto</a>.<a class="code" href="structespconn.html#aecd6125e09e9abc8074ec0bc02093a0a">tcp</a>-&gt;<a class="code" href="struct__esp__tcp.html#a5897411486d4a5845cebf9a18297d4dd">remote_ip</a>),</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            g_ptcp_conn-&gt;<a class="code" href="structespconn.html#afb66ba2a45e0c2c7aa089619d909a335">proto</a>.<a class="code" href="structespconn.html#aecd6125e09e9abc8074ec0bc02093a0a">tcp</a>-&gt;<a class="code" href="struct__esp__tcp.html#aec114eb2d15ee20ff480edbef2fabd8e">remote_port</a>, rc);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="ttc" id="structespconn_html_aecd6125e09e9abc8074ec0bc02093a0a"><div class="ttname"><a href="structespconn.html#aecd6125e09e9abc8074ec0bc02093a0a">espconn::tcp</a></div><div class="ttdeci">esp_tcp * tcp</div><div class="ttdef"><b>Definition:</b> espconn.h:110</div></div>
+<div class="ttc" id="struct__esp__tcp_html_aef023538162454b2b0c395fd171355ee"><div class="ttname"><a href="struct__esp__tcp.html#aef023538162454b2b0c395fd171355ee">_esp_tcp::local_port</a></div><div class="ttdeci">int local_port</div><div class="ttdef"><b>Definition:</b> espconn.h:77</div></div>
+<div class="ttc" id="osapi_8h_html_a751d204d0c7e166a527475d79e803454"><div class="ttname"><a href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a></div><div class="ttdeci">#define os_printf</div><div class="ttdef"><b>Definition:</b> osapi.h:62</div></div>
+<div class="ttc" id="struct__esp__tcp_html_aec114eb2d15ee20ff480edbef2fabd8e"><div class="ttname"><a href="struct__esp__tcp.html#aec114eb2d15ee20ff480edbef2fabd8e">_esp_tcp::remote_port</a></div><div class="ttdeci">int remote_port</div><div class="ttdef"><b>Definition:</b> espconn.h:76</div></div>
+<div class="ttc" id="espconn_8h_html_a9969873c3b8ee86a34496a5166cf8bfc"><div class="ttname"><a href="espconn_8h.html#a9969873c3b8ee86a34496a5166cf8bfc">espconn_disconnect</a></div><div class="ttdeci">sint8 espconn_disconnect(struct espconn *espconn)</div></div>
+<div class="ttc" id="ip__addr_8h_html_ac88858dbe588b82edadb33513aed16d4"><div class="ttname"><a href="ip__addr_8h.html#ac88858dbe588b82edadb33513aed16d4">IPSTR</a></div><div class="ttdeci">#define IPSTR</div><div class="ttdef"><b>Definition:</b> ip_addr.h:85</div></div>
+<div class="ttc" id="espconn_8h_html_a949cd618667cea85b1b99d14b90dce7d"><div class="ttname"><a href="espconn_8h.html#a949cd618667cea85b1b99d14b90dce7d">espconn_connect</a></div><div class="ttdeci">sint8 espconn_connect(struct espconn *espconn)</div></div>
+<div class="ttc" id="struct__esp__tcp_html_a5897411486d4a5845cebf9a18297d4dd"><div class="ttname"><a href="struct__esp__tcp.html#a5897411486d4a5845cebf9a18297d4dd">_esp_tcp::remote_ip</a></div><div class="ttdeci">uint8 remote_ip[4]</div><div class="ttdef"><b>Definition:</b> espconn.h:79</div></div>
+<div class="ttc" id="ip__addr_8h_html_af488ccb181cdd5905e55ffb8bff92552"><div class="ttname"><a href="ip__addr_8h.html#af488ccb181cdd5905e55ffb8bff92552">IP2STR</a></div><div class="ttdeci">#define IP2STR(ipaddr)</div><div class="ttdef"><b>Definition:</b> ip_addr.h:80</div></div>
+<div class="ttc" id="structespconn_html_afb66ba2a45e0c2c7aa089619d909a335"><div class="ttname"><a href="structespconn.html#afb66ba2a45e0c2c7aa089619d909a335">espconn::proto</a></div><div class="ttdeci">union espconn::@3 proto</div></div>
+<div class="ttc" id="struct__esp__tcp_html_a22605d79649b0e540798968c59be4a04"><div class="ttname"><a href="struct__esp__tcp.html#a22605d79649b0e540798968c59be4a04">_esp_tcp::local_ip</a></div><div class="ttdeci">uint8 local_ip[4]</div><div class="ttdef"><b>Definition:</b> espconn.h:78</div></div>
+<div class="ttc" id="c__types_8h_html_a151f780fb455885061d3b77ec1c90c03"><div class="ttname"><a href="c__types_8h.html#a151f780fb455885061d3b77ec1c90c03">s8</a></div><div class="ttdeci">signed char s8</div><div class="ttdef"><b>Definition:</b> c_types.h:47</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8c_a29598b6f196d0fcf777becd3e4fdcd8a_cgraph.png" border="0" usemap="#http__client_8c_a29598b6f196d0fcf777becd3e4fdcd8a_cgraph" alt=""/></div>
+<map name="http__client_8c_a29598b6f196d0fcf777becd3e4fdcd8a_cgraph" id="http__client_8c_a29598b6f196d0fcf777becd3e4fdcd8a_cgraph">
+<area shape="rect" id="node2" href="espconn_8h.html#a9969873c3b8ee86a34496a5166cf8bfc" title="espconn_disconnect" alt="" coords="188,5,329,32"/><area shape="rect" id="node3" href="espconn_8h.html#a949cd618667cea85b1b99d14b90dce7d" title="espconn_connect" alt="" coords="197,56,321,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a class="anchor" id="a9ff9e610f42e8cd1807b82d7a6ef9a4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structespconn.html">espconn</a>* server</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:15 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

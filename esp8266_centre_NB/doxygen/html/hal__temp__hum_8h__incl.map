@@ -1,0 +1,5 @@
+<map id="hal_temp_hum.h" name="hal_temp_hum.h">
+<area shape="rect" id="node3" href="$c__types_8h.html" title="c_types.h" alt="" coords="91,80,170,107"/>
+<area shape="rect" id="node4" href="$gpio_8h.html" title="gpio.h" alt="" coords="194,80,251,107"/>
+<area shape="rect" id="node5" href="$eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="275,80,367,107"/>
+</map>

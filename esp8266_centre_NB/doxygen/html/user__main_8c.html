@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: user_main.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_69f7b3b0f987cc31a767c691a7147b70.html">user</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">user_main.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ets__sys_8h_source.html">ets_sys.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="osapi_8h_source.html">osapi.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="user__interface_8h_source.html">user_interface.h</a>&quot;</code><br/>
+<code>#include &quot;driver/uart.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="nb__bc35_8h_source.html">nb_bc35.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+user_main.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__main_8c__incl.png" border="0" usemap="#user__main_8c" alt=""/></div>
+<map name="user__main_8c" id="user__main_8c">
+<area shape="rect" id="node2" href="ets__sys_8h.html" title="ets_sys.h" alt="" coords="195,229,273,256"/><area shape="rect" id="node5" href="osapi_8h.html" title="osapi.h" alt="" coords="355,155,419,181"/><area shape="rect" id="node8" href="user__interface_8h.html" title="user_interface.h" alt="" coords="437,80,551,107"/><area shape="rect" id="node15" href="nb__bc35_8h.html" title="nb_bc35.h" alt="" coords="250,80,333,107"/><area shape="rect" id="node3" href="c__types_8h.html" title="c_types.h" alt="" coords="251,304,329,331"/><area shape="rect" id="node4" href="eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="135,304,227,331"/><area shape="rect" id="node9" href="os__type_8h.html" title="os_type.h" alt="" coords="252,155,331,181"/><area shape="rect" id="node10" href="ip__addr_8h.html" title="ip_addr.h" alt="" coords="510,229,585,256"/><area shape="rect" id="node11" href="queue_8h.html" title="queue.h" alt="" coords="545,155,613,181"/><area shape="rect" id="node12" href="spi__flash_8h.html" title="spi_flash.h" alt="" coords="637,155,721,181"/><area shape="rect" id="node13" href="gpio_8h.html" title="gpio.h" alt="" coords="745,155,803,181"/><area shape="rect" id="node16" href="driver_2uart_8h.html" title="driver/uart.h" alt="" coords="81,229,171,256"/><area shape="rect" id="node17" href="driver_2uart__register_8h.html" title="uart_register.h" alt="" coords="5,304,111,331"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a7dbdcf46db8df6af1a21852dc685c407"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__main_8c.html#a7dbdcf46db8df6af1a21852dc685c407">user_rf_cal_sector_set</a> (void)</td></tr>
+<tr class="separator:a7dbdcf46db8df6af1a21852dc685c407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626b488c36ab18ee934feec61e4c3a06"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__main_8c.html#a626b488c36ab18ee934feec61e4c3a06">user_rf_pre_init</a> (void)</td></tr>
+<tr class="separator:a626b488c36ab18ee934feec61e4c3a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50374dadba5323609469073006ce3402"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__main_8c.html#a50374dadba5323609469073006ce3402">system_init_done</a> (void)</td></tr>
+<tr class="separator:a50374dadba5323609469073006ce3402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277ffa60e88142c231a14272962e902c"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__main_8c.html#a277ffa60e88142c231a14272962e902c">user_init</a> (void)</td></tr>
+<tr class="separator:a277ffa60e88142c231a14272962e902c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a7dbdcf46db8df6af1a21852dc685c407"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> user_rf_cal_sector_set </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">enum</span> <a class="code" href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2">flash_size_map</a> size_map = <a class="code" href="user__interface_8h.html#acf1ce24dbf80cacbe52bbb87b433b348">system_get_flash_size_map</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> rf_cal_sec = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">switch</span> (size_map) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2a4c0ac10cfa5e7ecc6cc95b60e0faeb70">FLASH_SIZE_4M_MAP_256_256</a>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            rf_cal_sec = 128 - 5;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2a6de4efc98763d016d92d87fb73ca8849">FLASH_SIZE_8M_MAP_512_512</a>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            rf_cal_sec = 256 - 5;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2a58eeb18a28a2904a2424ce808ed0e2a6">FLASH_SIZE_16M_MAP_512_512</a>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2a1c1807f4d5cccfdf38f15a603e7557ce">FLASH_SIZE_16M_MAP_1024_1024</a>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            rf_cal_sec = 512 - 5;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2af31f99de17734586c910bddfe8c427bf">FLASH_SIZE_32M_MAP_512_512</a>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2aa88e113314ba8a3de7fe693c1c14b9a0">FLASH_SIZE_32M_MAP_1024_1024</a>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            rf_cal_sec = 1024 - 5;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            rf_cal_sec = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> rf_cal_sec;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="ttc" id="user__interface_8h_html_a09fedddfc198c6f5b12e795d7a560de2aa88e113314ba8a3de7fe693c1c14b9a0"><div class="ttname"><a href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2aa88e113314ba8a3de7fe693c1c14b9a0">FLASH_SIZE_32M_MAP_1024_1024</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:148</div></div>
+<div class="ttc" id="user__interface_8h_html_a09fedddfc198c6f5b12e795d7a560de2af31f99de17734586c910bddfe8c427bf"><div class="ttname"><a href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2af31f99de17734586c910bddfe8c427bf">FLASH_SIZE_32M_MAP_512_512</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:146</div></div>
+<div class="ttc" id="user__interface_8h_html_acf1ce24dbf80cacbe52bbb87b433b348"><div class="ttname"><a href="user__interface_8h.html#acf1ce24dbf80cacbe52bbb87b433b348">system_get_flash_size_map</a></div><div class="ttdeci">enum flash_size_map system_get_flash_size_map(void)</div></div>
+<div class="ttc" id="user__interface_8h_html_a09fedddfc198c6f5b12e795d7a560de2"><div class="ttname"><a href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2">flash_size_map</a></div><div class="ttdeci">flash_size_map</div><div class="ttdef"><b>Definition:</b> user_interface.h:141</div></div>
+<div class="ttc" id="user__interface_8h_html_a09fedddfc198c6f5b12e795d7a560de2a1c1807f4d5cccfdf38f15a603e7557ce"><div class="ttname"><a href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2a1c1807f4d5cccfdf38f15a603e7557ce">FLASH_SIZE_16M_MAP_1024_1024</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:147</div></div>
+<div class="ttc" id="user__interface_8h_html_a09fedddfc198c6f5b12e795d7a560de2a4c0ac10cfa5e7ecc6cc95b60e0faeb70"><div class="ttname"><a href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2a4c0ac10cfa5e7ecc6cc95b60e0faeb70">FLASH_SIZE_4M_MAP_256_256</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:142</div></div>
+<div class="ttc" id="user__interface_8h_html_a09fedddfc198c6f5b12e795d7a560de2a58eeb18a28a2904a2424ce808ed0e2a6"><div class="ttname"><a href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2a58eeb18a28a2904a2424ce808ed0e2a6">FLASH_SIZE_16M_MAP_512_512</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:145</div></div>
+<div class="ttc" id="c__types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> c_types.h:52</div></div>
+<div class="ttc" id="user__interface_8h_html_a09fedddfc198c6f5b12e795d7a560de2a6de4efc98763d016d92d87fb73ca8849"><div class="ttname"><a href="user__interface_8h.html#a09fedddfc198c6f5b12e795d7a560de2a6de4efc98763d016d92d87fb73ca8849">FLASH_SIZE_8M_MAP_512_512</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:144</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__main_8c_a7dbdcf46db8df6af1a21852dc685c407_cgraph.png" border="0" usemap="#user__main_8c_a7dbdcf46db8df6af1a21852dc685c407_cgraph" alt=""/></div>
+<map name="user__main_8c_a7dbdcf46db8df6af1a21852dc685c407_cgraph" id="user__main_8c_a7dbdcf46db8df6af1a21852dc685c407_cgraph">
+<area shape="rect" id="node2" href="user__interface_8h.html#acf1ce24dbf80cacbe52bbb87b433b348" title="system_get_flash_size_map" alt="" coords="207,5,393,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a626b488c36ab18ee934feec61e4c3a06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> user_rf_pre_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a50374dadba5323609469073006ce3402"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> system_init_done </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">/****  设置dhcp  ****/</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="user__interface_8h.html#adc4b55015e0a64892d33a7d79a7627d6">wifi_softap_dhcps_stop</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">struct </span><a class="code" href="structdhcps__lease.html">dhcps_lease</a> dhcp_lease;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structdhcps__lease.html#aa1aadb847b1551b55f4ff97395892fef">start_ip</a> = <span class="stringliteral">&quot;192.168.4.10&quot;</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structdhcps__lease.html#ad0590936778621d885065eb3613b056a">end_ip</a> = <span class="stringliteral">&quot;192.168.4.30&quot;</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    dhcp_lease.start_ip.<a class="code" href="structip__addr.html#aaeb058ae88224de019d367a879adc201">addr</a> = <a class="code" href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0">ipaddr_addr</a>(start_ip);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    dhcp_lease.end_ip.addr = <a class="code" href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0">ipaddr_addr</a>(end_ip);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="user__interface_8h.html#a88284afccfb825d3b47ed45d1a6f26e2">wifi_softap_set_dhcps_lease</a>(&amp;dhcp_lease);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="user__interface_8h.html#a3955db3d72e1669492143e64f7b32775">wifi_softap_dhcps_start</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="include_2tcp__server_8h.html#a08d36694aa9c55574251d45d1bbd1328">tcp_server_init</a>(8080);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="nb__bc35_8h.html#a2cf1c3f67e168aee4fe9c184c9809307">NB_Init</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="ttc" id="nb__bc35_8h_html_a2cf1c3f67e168aee4fe9c184c9809307"><div class="ttname"><a href="nb__bc35_8h.html#a2cf1c3f67e168aee4fe9c184c9809307">NB_Init</a></div><div class="ttdeci">void NB_Init(void)</div><div class="ttdef"><b>Definition:</b> nb_bc35.c:140</div></div>
+<div class="ttc" id="user__interface_8h_html_a88284afccfb825d3b47ed45d1a6f26e2"><div class="ttname"><a href="user__interface_8h.html#a88284afccfb825d3b47ed45d1a6f26e2">wifi_softap_set_dhcps_lease</a></div><div class="ttdeci">bool wifi_softap_set_dhcps_lease(struct dhcps_lease *please)</div></div>
+<div class="ttc" id="structdhcps__lease_html_ad0590936778621d885065eb3613b056a"><div class="ttname"><a href="structdhcps__lease.html#ad0590936778621d885065eb3613b056a">dhcps_lease::end_ip</a></div><div class="ttdeci">struct ip_addr end_ip</div><div class="ttdef"><b>Definition:</b> user_interface.h:309</div></div>
+<div class="ttc" id="user__interface_8h_html_adc4b55015e0a64892d33a7d79a7627d6"><div class="ttname"><a href="user__interface_8h.html#adc4b55015e0a64892d33a7d79a7627d6">wifi_softap_dhcps_stop</a></div><div class="ttdeci">bool wifi_softap_dhcps_stop(void)</div></div>
+<div class="ttc" id="structdhcps__lease_html"><div class="ttname"><a href="structdhcps__lease.html">dhcps_lease</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:306</div></div>
+<div class="ttc" id="user__interface_8h_html_a3955db3d72e1669492143e64f7b32775"><div class="ttname"><a href="user__interface_8h.html#a3955db3d72e1669492143e64f7b32775">wifi_softap_dhcps_start</a></div><div class="ttdeci">bool wifi_softap_dhcps_start(void)</div></div>
+<div class="ttc" id="structip__addr_html_aaeb058ae88224de019d367a879adc201"><div class="ttname"><a href="structip__addr.html#aaeb058ae88224de019d367a879adc201">ip_addr::addr</a></div><div class="ttdeci">uint32 addr</div><div class="ttdef"><b>Definition:</b> ip_addr.h:31</div></div>
+<div class="ttc" id="structdhcps__lease_html_aa1aadb847b1551b55f4ff97395892fef"><div class="ttname"><a href="structdhcps__lease.html#aa1aadb847b1551b55f4ff97395892fef">dhcps_lease::start_ip</a></div><div class="ttdeci">struct ip_addr start_ip</div><div class="ttdef"><b>Definition:</b> user_interface.h:308</div></div>
+<div class="ttc" id="ip__addr_8h_html_a13ddd6661ca792f864762dbda88585f0"><div class="ttname"><a href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0">ipaddr_addr</a></div><div class="ttdeci">uint32 ipaddr_addr(const char *cp)</div></div>
+<div class="ttc" id="include_2tcp__server_8h_html_a08d36694aa9c55574251d45d1bbd1328"><div class="ttname"><a href="include_2tcp__server_8h.html#a08d36694aa9c55574251d45d1bbd1328">tcp_server_init</a></div><div class="ttdeci">void tcp_server_init(u32 port)</div><div class="ttdef"><b>Definition:</b> tcp_server.c:134</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__main_8c_a50374dadba5323609469073006ce3402_cgraph.png" border="0" usemap="#user__main_8c_a50374dadba5323609469073006ce3402_cgraph" alt=""/></div>
+<map name="user__main_8c_a50374dadba5323609469073006ce3402_cgraph" id="user__main_8c_a50374dadba5323609469073006ce3402_cgraph">
+<area shape="rect" id="node2" href="user__interface_8h.html#adc4b55015e0a64892d33a7d79a7627d6" title="wifi_softap_dhcps_stop" alt="" coords="178,5,334,32"/><area shape="rect" id="node3" href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0" title="ipaddr_addr" alt="" coords="211,56,301,83"/><area shape="rect" id="node4" href="user__interface_8h.html#a88284afccfb825d3b47ed45d1a6f26e2" title="wifi_softap_set_dhcps\l_lease" alt="" coords="181,107,331,149"/><area shape="rect" id="node5" href="user__interface_8h.html#a3955db3d72e1669492143e64f7b32775" title="wifi_softap_dhcps_start" alt="" coords="177,173,335,200"/><area shape="rect" id="node6" href="include_2tcp__server_8h.html#a08d36694aa9c55574251d45d1bbd1328" title="tcp_server_init" alt="" coords="203,224,309,251"/><area shape="rect" id="node7" href="nb__bc35_8h.html#a2cf1c3f67e168aee4fe9c184c9809307" title="NB_Init" alt="" coords="224,275,288,301"/><area shape="rect" id="node8" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f" title="向NB模组发送指令 " alt="" coords="383,275,487,301"/><area shape="rect" id="node9" href="driver_2uart_8h.html#a279da46b2371c1ec768cde7e525725f2" title="uart1_tx_buffer" alt="" coords="535,275,641,301"/><area shape="rect" id="node10" href="uart_8c.html#a40bca7ca9b269f93bc9f17924a38fbe0" title="uart_tx_one_char" alt="" coords="689,275,812,301"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__main_8c_a50374dadba5323609469073006ce3402_icgraph.png" border="0" usemap="#user__main_8c_a50374dadba5323609469073006ce3402_icgraph" alt=""/></div>
+<map name="user__main_8c_a50374dadba5323609469073006ce3402_icgraph" id="user__main_8c_a50374dadba5323609469073006ce3402_icgraph">
+<area shape="rect" id="node2" href="user__main_8c.html#a277ffa60e88142c231a14272962e902c" title="user_init" alt="" coords="177,5,248,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a277ffa60e88142c231a14272962e902c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> user_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="user__interface_8h.html#a2fe928c2d760669eaa7928b6e00c615c">system_uart_de_swap</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="driver_2uart_8h.html#a8e336ed86bda6f3d2f7699de56a9de5c">UART_SetPrintPort</a>(0);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">/*******************************************************</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">     * 注意：为了配合NB模组，当前8266用的是！！9600！！的波特率</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">     * </span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">     ******************************************************/</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="driver_2uart_8h.html#a1fdfa60721412bedfeb7be0ebc4d1700">uart_init</a>(<a class="code" href="driver_2uart_8h.html#a6e376e04a3f78e8319a5dcd9ee6d545da229729a4b6a9fd03652d40bbc8de4077">BIT_RATE_9600</a>, <a class="code" href="driver_2uart_8h.html#a6e376e04a3f78e8319a5dcd9ee6d545da229729a4b6a9fd03652d40bbc8de4077">BIT_RATE_9600</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">//----- wifi test -----------</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keyword">struct </span><a class="code" href="structsoftap__config.html">softap_config</a> ap;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb">wifi_set_opmode</a>(<a class="code" href="user__interface_8h.html#acb96f7eef62d8ede5ed20d5bb39f5d3a">SOFTAP_MODE</a>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="osapi_8h.html#a8b6e05160473ebb1f7f87ca232f87c7b">os_memset</a>(ap.ssid, 0, 32);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="osapi_8h.html#a8b6e05160473ebb1f7f87ca232f87c7b">os_memset</a>(ap.password, 0, 64);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>(ap.ssid, <span class="stringliteral">&quot;Centre&quot;</span>,6);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>(ap.password, <span class="stringliteral">&quot;12345678&quot;</span>, 8);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    ap.authmode = <a class="code" href="user__interface_8h.html#a6890e471742b46227da447debfb60641a90870da11cf3408b057beb4abf9fe1bb">AUTH_WPA_PSK</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    ap.ssid_len = 0;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    ap.max_connection = 4;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="user__interface_8h.html#a22c2108fdcadc9bf0cbfe9b642e759b7">wifi_softap_set_config</a>(&amp;ap);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">// 后续配置须系统初始化完成后才能进行</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="user__interface_8h.html#a4b39b043c2213c1e9c557df5626dcf88">system_init_done_cb</a>(<a class="code" href="user__main_8c.html#a50374dadba5323609469073006ce3402">system_init_done</a>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="ttc" id="driver_2uart_8h_html_a8e336ed86bda6f3d2f7699de56a9de5c"><div class="ttname"><a href="driver_2uart_8h.html#a8e336ed86bda6f3d2f7699de56a9de5c">UART_SetPrintPort</a></div><div class="ttdeci">void UART_SetPrintPort(uint8 uart_no)</div><div class="ttdef"><b>Definition:</b> uart.c:795</div></div>
+<div class="ttc" id="user__interface_8h_html_a2fe928c2d760669eaa7928b6e00c615c"><div class="ttname"><a href="user__interface_8h.html#a2fe928c2d760669eaa7928b6e00c615c">system_uart_de_swap</a></div><div class="ttdeci">void system_uart_de_swap(void)</div></div>
+<div class="ttc" id="osapi_8h_html_ac5c79bf463c8eba708ea34fccc8ec7c1"><div class="ttname"><a href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a></div><div class="ttdeci">#define os_memcpy</div><div class="ttdef"><b>Definition:</b> osapi.h:36</div></div>
+<div class="ttc" id="structsoftap__config_html"><div class="ttname"><a href="structsoftap__config.html">softap_config</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:283</div></div>
+<div class="ttc" id="driver_2uart_8h_html_a6e376e04a3f78e8319a5dcd9ee6d545da229729a4b6a9fd03652d40bbc8de4077"><div class="ttname"><a href="driver_2uart_8h.html#a6e376e04a3f78e8319a5dcd9ee6d545da229729a4b6a9fd03652d40bbc8de4077">BIT_RATE_9600</a></div><div class="ttdef"><b>Definition:</b> driver/uart.h:98</div></div>
+<div class="ttc" id="osapi_8h_html_a8b6e05160473ebb1f7f87ca232f87c7b"><div class="ttname"><a href="osapi_8h.html#a8b6e05160473ebb1f7f87ca232f87c7b">os_memset</a></div><div class="ttdeci">#define os_memset</div><div class="ttdef"><b>Definition:</b> osapi.h:38</div></div>
+<div class="ttc" id="user__interface_8h_html_a4b39b043c2213c1e9c557df5626dcf88"><div class="ttname"><a href="user__interface_8h.html#a4b39b043c2213c1e9c557df5626dcf88">system_init_done_cb</a></div><div class="ttdeci">void system_init_done_cb(init_done_cb_t cb)</div></div>
+<div class="ttc" id="user__interface_8h_html_a6890e471742b46227da447debfb60641a90870da11cf3408b057beb4abf9fe1bb"><div class="ttname"><a href="user__interface_8h.html#a6890e471742b46227da447debfb60641a90870da11cf3408b057beb4abf9fe1bb">AUTH_WPA_PSK</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:175</div></div>
+<div class="ttc" id="user__interface_8h_html_acb96f7eef62d8ede5ed20d5bb39f5d3a"><div class="ttname"><a href="user__interface_8h.html#acb96f7eef62d8ede5ed20d5bb39f5d3a">SOFTAP_MODE</a></div><div class="ttdeci">#define SOFTAP_MODE</div><div class="ttdef"><b>Definition:</b> user_interface.h:169</div></div>
+<div class="ttc" id="driver_2uart_8h_html_a1fdfa60721412bedfeb7be0ebc4d1700"><div class="ttname"><a href="driver_2uart_8h.html#a1fdfa60721412bedfeb7be0ebc4d1700">uart_init</a></div><div class="ttdeci">void uart_init(UartBautRate uart0_br, UartBautRate uart1_br)</div><div class="ttdef"><b>Definition:</b> uart.c:353</div></div>
+<div class="ttc" id="user__interface_8h_html_a22c2108fdcadc9bf0cbfe9b642e759b7"><div class="ttname"><a href="user__interface_8h.html#a22c2108fdcadc9bf0cbfe9b642e759b7">wifi_softap_set_config</a></div><div class="ttdeci">bool wifi_softap_set_config(struct softap_config *config)</div></div>
+<div class="ttc" id="user__interface_8h_html_a0c11c2ac27f7902a4729d3ec6a9365bb"><div class="ttname"><a href="user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb">wifi_set_opmode</a></div><div class="ttdeci">bool wifi_set_opmode(uint8 opmode)</div></div>
+<div class="ttc" id="user__main_8c_html_a50374dadba5323609469073006ce3402"><div class="ttname"><a href="user__main_8c.html#a50374dadba5323609469073006ce3402">system_init_done</a></div><div class="ttdeci">void ICACHE_FLASH_ATTR system_init_done(void)</div><div class="ttdef"><b>Definition:</b> user_main.c:83</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__main_8c_a277ffa60e88142c231a14272962e902c_cgraph.png" border="0" usemap="#user__main_8c_a277ffa60e88142c231a14272962e902c_cgraph" alt=""/></div>
+<map name="user__main_8c_a277ffa60e88142c231a14272962e902c_cgraph" id="user__main_8c_a277ffa60e88142c231a14272962e902c_cgraph">
+<area shape="rect" id="node2" href="user__interface_8h.html#a2fe928c2d760669eaa7928b6e00c615c" title="system_uart_de_swap" alt="" coords="124,5,276,32"/><area shape="rect" id="node3" href="driver_2uart_8h.html#a8e336ed86bda6f3d2f7699de56a9de5c" title="UART_SetPrintPort" alt="" coords="133,56,267,83"/><area shape="rect" id="node4" href="driver_2uart_8h.html#a1fdfa60721412bedfeb7be0ebc4d1700" title="uart_init" alt="" coords="166,107,234,133"/><area shape="rect" id="node5" href="user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb" title="wifi_set_opmode" alt="" coords="141,157,259,184"/><area shape="rect" id="node6" href="user__interface_8h.html#a22c2108fdcadc9bf0cbfe9b642e759b7" title="wifi_softap_set_config" alt="" coords="126,208,274,235"/><area shape="rect" id="node7" href="user__interface_8h.html#a4b39b043c2213c1e9c557df5626dcf88" title="system_init_done_cb" alt="" coords="127,259,273,285"/><area shape="rect" id="node8" href="user__main_8c.html#a50374dadba5323609469073006ce3402" title="system_init_done" alt="" coords="138,309,262,336"/><area shape="rect" id="node9" href="user__interface_8h.html#adc4b55015e0a64892d33a7d79a7627d6" title="wifi_softap_dhcps_stop" alt="" coords="325,171,481,197"/><area shape="rect" id="node10" href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0" title="ipaddr_addr" alt="" coords="358,221,447,248"/><area shape="rect" id="node11" href="user__interface_8h.html#a88284afccfb825d3b47ed45d1a6f26e2" title="wifi_softap_set_dhcps\l_lease" alt="" coords="328,273,477,314"/><area shape="rect" id="node12" href="user__interface_8h.html#a3955db3d72e1669492143e64f7b32775" title="wifi_softap_dhcps_start" alt="" coords="324,339,481,365"/><area shape="rect" id="node13" href="include_2tcp__server_8h.html#a08d36694aa9c55574251d45d1bbd1328" title="tcp_server_init" alt="" coords="350,389,455,416"/><area shape="rect" id="node14" href="nb__bc35_8h.html#a2cf1c3f67e168aee4fe9c184c9809307" title="NB_Init" alt="" coords="371,440,435,467"/><area shape="rect" id="node15" href="nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f" title="向NB模组发送指令 " alt="" coords="529,440,633,467"/><area shape="rect" id="node16" href="driver_2uart_8h.html#a279da46b2371c1ec768cde7e525725f2" title="uart1_tx_buffer" alt="" coords="681,440,788,467"/><area shape="rect" id="node17" href="uart_8c.html#a40bca7ca9b269f93bc9f17924a38fbe0" title="uart_tx_one_char" alt="" coords="836,440,959,467"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:18 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

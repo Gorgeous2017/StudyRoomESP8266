@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: sntp.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3f3aa03da80a6f543b7f052367a441a.html">ESP8266_NONOS_SDK</a></li><li class="navelem"><a class="el" href="dir_9cb0e4b91a56b7f682c398f4eec1db93.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">sntp.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sntp_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SNTP_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __SNTP_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="os__type_8h.html">os_type.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifdef LWIP_OPEN_SRC</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;lwip/ip_addr.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="ip__addr_8h.html">ip_addr.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="sntp_8h.html#a557f2d3fcbc53da30e4f1b51ea5842e7">sntp_get_current_timestamp</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="sntp_8h.html#a0f3864a749d3148d9bbcd43c2d8597d1">sntp_get_real_time</a>(<span class="keywordtype">long</span> t);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="c__types_8h.html#a1a6408291ee3cfd0760a61ac64084154">sint8</a> <a class="code" href="sntp_8h.html#af45ea058ad733c82ea6b3bfec2b30f57">sntp_get_timezone</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="sntp_8h.html#abdbe5ed580b63547553ded66ce2e6302">sntp_set_timezone</a>(<a class="code" href="c__types_8h.html#a1a6408291ee3cfd0760a61ac64084154">sint8</a> timezone);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sntp_8h.html#a9b300c6616de60524c85ea40bf70e2ba">sntp_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sntp_8h.html#a8119fc2d1ff7ff6eba511cc9c7167488">sntp_stop</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sntp_8h.html#af018895525f7737e46930f086c298d36">sntp_setserver</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> idx, <a class="code" href="structip__addr.html">ip_addr_t</a> *addr);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="structip__addr.html">ip_addr_t</a> <a class="code" href="sntp_8h.html#a78acab21abe390f8f32e5f9524f9cb30">sntp_getserver</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> idx);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="sntp_8h.html#ade61f40ff408a5f215b8ddea6cf348d6">sntp_setservername</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> idx, <span class="keywordtype">char</span> *<a class="code" href="http__client_8h.html#a9ff9e610f42e8cd1807b82d7a6ef9a4e">server</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="sntp_8h.html#af018cd61d135fbe810e671dba7af7197">sntp_getservername</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> idx);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="sntp_8h.html#afe7b6eae76f608a87fadc3940c5ee4f9">   66</a></span>&#160;<span class="preprocessor">#define sntp_servermode_dhcp(x)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="sntp_8h_html_a78acab21abe390f8f32e5f9524f9cb30"><div class="ttname"><a href="sntp_8h.html#a78acab21abe390f8f32e5f9524f9cb30">sntp_getserver</a></div><div class="ttdeci">ip_addr_t sntp_getserver(unsigned char idx)</div></div>
+<div class="ttc" id="structip__addr_html"><div class="ttname"><a href="structip__addr.html">ip_addr</a></div><div class="ttdef"><b>Definition:</b> ip_addr.h:30</div></div>
+<div class="ttc" id="sntp_8h_html_a557f2d3fcbc53da30e4f1b51ea5842e7"><div class="ttname"><a href="sntp_8h.html#a557f2d3fcbc53da30e4f1b51ea5842e7">sntp_get_current_timestamp</a></div><div class="ttdeci">uint32 sntp_get_current_timestamp()</div></div>
+<div class="ttc" id="sntp_8h_html_a9b300c6616de60524c85ea40bf70e2ba"><div class="ttname"><a href="sntp_8h.html#a9b300c6616de60524c85ea40bf70e2ba">sntp_init</a></div><div class="ttdeci">void sntp_init(void)</div></div>
+<div class="ttc" id="sntp_8h_html_a0f3864a749d3148d9bbcd43c2d8597d1"><div class="ttname"><a href="sntp_8h.html#a0f3864a749d3148d9bbcd43c2d8597d1">sntp_get_real_time</a></div><div class="ttdeci">char * sntp_get_real_time(long t)</div></div>
+<div class="ttc" id="sntp_8h_html_abdbe5ed580b63547553ded66ce2e6302"><div class="ttname"><a href="sntp_8h.html#abdbe5ed580b63547553ded66ce2e6302">sntp_set_timezone</a></div><div class="ttdeci">bool sntp_set_timezone(sint8 timezone)</div></div>
+<div class="ttc" id="sntp_8h_html_a8119fc2d1ff7ff6eba511cc9c7167488"><div class="ttname"><a href="sntp_8h.html#a8119fc2d1ff7ff6eba511cc9c7167488">sntp_stop</a></div><div class="ttdeci">void sntp_stop(void)</div></div>
+<div class="ttc" id="sntp_8h_html_ade61f40ff408a5f215b8ddea6cf348d6"><div class="ttname"><a href="sntp_8h.html#ade61f40ff408a5f215b8ddea6cf348d6">sntp_setservername</a></div><div class="ttdeci">void sntp_setservername(unsigned char idx, char *server)</div></div>
+<div class="ttc" id="sntp_8h_html_af018895525f7737e46930f086c298d36"><div class="ttname"><a href="sntp_8h.html#af018895525f7737e46930f086c298d36">sntp_setserver</a></div><div class="ttdeci">void sntp_setserver(unsigned char idx, ip_addr_t *addr)</div></div>
+<div class="ttc" id="os__type_8h_html"><div class="ttname"><a href="os__type_8h.html">os_type.h</a></div></div>
+<div class="ttc" id="sntp_8h_html_af018cd61d135fbe810e671dba7af7197"><div class="ttname"><a href="sntp_8h.html#af018cd61d135fbe810e671dba7af7197">sntp_getservername</a></div><div class="ttdeci">char * sntp_getservername(unsigned char idx)</div></div>
+<div class="ttc" id="c__types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> c_types.h:52</div></div>
+<div class="ttc" id="sntp_8h_html_af45ea058ad733c82ea6b3bfec2b30f57"><div class="ttname"><a href="sntp_8h.html#af45ea058ad733c82ea6b3bfec2b30f57">sntp_get_timezone</a></div><div class="ttdeci">sint8 sntp_get_timezone(void)</div></div>
+<div class="ttc" id="c__types_8h_html_a1a6408291ee3cfd0760a61ac64084154"><div class="ttname"><a href="c__types_8h.html#a1a6408291ee3cfd0760a61ac64084154">sint8</a></div><div class="ttdeci">signed char sint8</div><div class="ttdef"><b>Definition:</b> c_types.h:45</div></div>
+<div class="ttc" id="http__client_8h_html_a9ff9e610f42e8cd1807b82d7a6ef9a4e"><div class="ttname"><a href="http__client_8h.html#a9ff9e610f42e8cd1807b82d7a6ef9a4e">server</a></div><div class="ttdeci">struct espconn * server</div><div class="ttdef"><b>Definition:</b> http_client.c:16</div></div>
+<div class="ttc" id="ip__addr_8h_html"><div class="ttname"><a href="ip__addr_8h.html">ip_addr.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:14 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: user_wifi.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3cfce0f2579b93466aa86ecffbb9b24.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">user_wifi.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="user__wifi_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a0f0da933a3424aff676d54cd2378c4a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__wifi_8h.html#a0f0da933a3424aff676d54cd2378c4a7">user_set_station_config</a> (<a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *ssid, <a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *password)</td></tr>
+<tr class="separator:a0f0da933a3424aff676d54cd2378c4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871d88cd4d703f5ef75280066ccc639e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__wifi_8h.html#a871d88cd4d703f5ef75280066ccc639e">user_wifi_init</a> (void)</td></tr>
+<tr class="separator:a871d88cd4d703f5ef75280066ccc639e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a0f0da933a3424aff676d54cd2378c4a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void user_set_station_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
+          <td class="paramname"><em>ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                                {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">struct </span><a class="code" href="structstation__config.html">station_config</a> stationConf;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    stationConf.<a class="code" href="structstation__config.html#a0b6385cddba200062d6bc2adab97a184">bssid_set</a> = 0;      <span class="comment">//need  not check   MAC address of  AP</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>(&amp;stationConf.ssid, <a class="code" href="structstation__config.html#a8c7baa76a98697ca48f309f52b4c37ba">ssid</a>, 32);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>(&amp;stationConf.password, <a class="code" href="structstation__config.html#a39cc75d32aa1fb019f0be77cc20a1f8a">password</a>, 64);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="user__interface_8h.html#ab3699b2e258bf21ad6e85e4b1ec1c271">wifi_station_set_config</a>(&amp;stationConf);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="ttc" id="structstation__config_html_a8c7baa76a98697ca48f309f52b4c37ba"><div class="ttname"><a href="structstation__config.html#a8c7baa76a98697ca48f309f52b4c37ba">station_config::ssid</a></div><div class="ttdeci">uint8 ssid[32]</div><div class="ttdef"><b>Definition:</b> user_interface.h:216</div></div>
+<div class="ttc" id="structstation__config_html"><div class="ttname"><a href="structstation__config.html">station_config</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:215</div></div>
+<div class="ttc" id="user__interface_8h_html_ab3699b2e258bf21ad6e85e4b1ec1c271"><div class="ttname"><a href="user__interface_8h.html#ab3699b2e258bf21ad6e85e4b1ec1c271">wifi_station_set_config</a></div><div class="ttdeci">bool wifi_station_set_config(struct station_config *config)</div></div>
+<div class="ttc" id="osapi_8h_html_ac5c79bf463c8eba708ea34fccc8ec7c1"><div class="ttname"><a href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a></div><div class="ttdeci">#define os_memcpy</div><div class="ttdef"><b>Definition:</b> osapi.h:36</div></div>
+<div class="ttc" id="structstation__config_html_a39cc75d32aa1fb019f0be77cc20a1f8a"><div class="ttname"><a href="structstation__config.html#a39cc75d32aa1fb019f0be77cc20a1f8a">station_config::password</a></div><div class="ttdeci">uint8 password[64]</div><div class="ttdef"><b>Definition:</b> user_interface.h:217</div></div>
+<div class="ttc" id="structstation__config_html_a0b6385cddba200062d6bc2adab97a184"><div class="ttname"><a href="structstation__config.html#a0b6385cddba200062d6bc2adab97a184">station_config::bssid_set</a></div><div class="ttdeci">uint8 bssid_set</div><div class="ttdef"><b>Definition:</b> user_interface.h:218</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__wifi_8h_a0f0da933a3424aff676d54cd2378c4a7_cgraph.png" border="0" usemap="#user__wifi_8h_a0f0da933a3424aff676d54cd2378c4a7_cgraph" alt=""/></div>
+<map name="user__wifi_8h_a0f0da933a3424aff676d54cd2378c4a7_cgraph" id="user__wifi_8h_a0f0da933a3424aff676d54cd2378c4a7_cgraph">
+<area shape="rect" id="node2" href="user__interface_8h.html#ab3699b2e258bf21ad6e85e4b1ec1c271" title="wifi_station_set_config" alt="" coords="212,5,364,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__wifi_8h_a0f0da933a3424aff676d54cd2378c4a7_icgraph.png" border="0" usemap="#user__wifi_8h_a0f0da933a3424aff676d54cd2378c4a7_icgraph" alt=""/></div>
+<map name="user__wifi_8h_a0f0da933a3424aff676d54cd2378c4a7_icgraph" id="user__wifi_8h_a0f0da933a3424aff676d54cd2378c4a7_icgraph">
+<area shape="rect" id="node2" href="user__wifi_8c.html#aecdae6c972749b9141db67821f35cfd9" title="user_wifi_init" alt="" coords="212,5,308,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a871d88cd4d703f5ef75280066ccc639e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void user_wifi_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                     {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb">wifi_set_opmode</a>(<a class="code" href="user__interface_8h.html#af693eedc584e9fe0590accb170d498da">STATION_MODE</a>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="user__wifi_8c.html#a1a5a1e50fa971840da026bd002476aaf">user_set_station_config</a>(<a class="code" href="include_2user__config_8h.html#a586542b79d00e4db7e1d5a667ae83a2b">WIFI_SSID</a>, <a class="code" href="include_2user__config_8h.html#a8685d8aff7e570048090a3a51afceb07">WIFI_PASSWORD</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="user__interface_8h.html#a0c1a4454b8ef8015a3ac8d8d13e9f3f6">wifi_set_event_handler_cb</a>(<a class="code" href="user__wifi_8c.html#adb8f27992e1c21e692486725cfff3930">wifi_handle_event_cb</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="ttc" id="user__wifi_8c_html_a1a5a1e50fa971840da026bd002476aaf"><div class="ttname"><a href="user__wifi_8c.html#a1a5a1e50fa971840da026bd002476aaf">user_set_station_config</a></div><div class="ttdeci">void ICACHE_FLASH_ATTR user_set_station_config(u8 *ssid, u8 *password)</div><div class="ttdef"><b>Definition:</b> user_wifi.c:20</div></div>
+<div class="ttc" id="user__wifi_8c_html_adb8f27992e1c21e692486725cfff3930"><div class="ttname"><a href="user__wifi_8c.html#adb8f27992e1c21e692486725cfff3930">wifi_handle_event_cb</a></div><div class="ttdeci">void ICACHE_FLASH_ATTR wifi_handle_event_cb(System_Event_t *evt)</div><div class="ttdef"><b>Definition:</b> user_wifi.c:33</div></div>
+<div class="ttc" id="user__interface_8h_html_a0c1a4454b8ef8015a3ac8d8d13e9f3f6"><div class="ttname"><a href="user__interface_8h.html#a0c1a4454b8ef8015a3ac8d8d13e9f3f6">wifi_set_event_handler_cb</a></div><div class="ttdeci">void wifi_set_event_handler_cb(wifi_event_handler_cb_t cb)</div></div>
+<div class="ttc" id="include_2user__config_8h_html_a586542b79d00e4db7e1d5a667ae83a2b"><div class="ttname"><a href="include_2user__config_8h.html#a586542b79d00e4db7e1d5a667ae83a2b">WIFI_SSID</a></div><div class="ttdeci">#define WIFI_SSID</div><div class="ttdef"><b>Definition:</b> include/user_config.h:35</div></div>
+<div class="ttc" id="user__interface_8h_html_af693eedc584e9fe0590accb170d498da"><div class="ttname"><a href="user__interface_8h.html#af693eedc584e9fe0590accb170d498da">STATION_MODE</a></div><div class="ttdeci">#define STATION_MODE</div><div class="ttdef"><b>Definition:</b> user_interface.h:168</div></div>
+<div class="ttc" id="include_2user__config_8h_html_a8685d8aff7e570048090a3a51afceb07"><div class="ttname"><a href="include_2user__config_8h.html#a8685d8aff7e570048090a3a51afceb07">WIFI_PASSWORD</a></div><div class="ttdeci">#define WIFI_PASSWORD</div><div class="ttdef"><b>Definition:</b> include/user_config.h:36</div></div>
+<div class="ttc" id="user__interface_8h_html_a0c11c2ac27f7902a4729d3ec6a9365bb"><div class="ttname"><a href="user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb">wifi_set_opmode</a></div><div class="ttdeci">bool wifi_set_opmode(uint8 opmode)</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__wifi_8h_a871d88cd4d703f5ef75280066ccc639e_cgraph.png" border="0" usemap="#user__wifi_8h_a871d88cd4d703f5ef75280066ccc639e_cgraph" alt=""/></div>
+<map name="user__wifi_8h_a871d88cd4d703f5ef75280066ccc639e_cgraph" id="user__wifi_8h_a871d88cd4d703f5ef75280066ccc639e_cgraph">
+<area shape="rect" id="node2" href="user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb" title="wifi_set_opmode" alt="" coords="176,5,295,32"/><area shape="rect" id="node3" href="user__wifi_8c.html#a1a5a1e50fa971840da026bd002476aaf" title="user_set_station_config" alt="" coords="156,56,315,83"/><area shape="rect" id="node5" href="user__interface_8h.html#a0c1a4454b8ef8015a3ac8d8d13e9f3f6" title="wifi_set_event_handler_cb" alt="" coords="149,107,321,133"/><area shape="rect" id="node6" href="user__wifi_8c.html#adb8f27992e1c21e692486725cfff3930" title="wifi_handle_event_cb" alt="" coords="164,157,307,184"/><area shape="rect" id="node4" href="user__interface_8h.html#ab3699b2e258bf21ad6e85e4b1ec1c271" title="wifi_station_set_config" alt="" coords="369,56,521,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:18 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

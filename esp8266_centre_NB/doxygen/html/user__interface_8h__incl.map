@@ -1,0 +1,10 @@
+<map id="user_interface.h" name="user_interface.h">
+<area shape="rect" id="node2" href="$os__type_8h.html" title="os_type.h" alt="" coords="25,80,104,107"/>
+<area shape="rect" id="node6" href="$ip__addr_8h.html" title="ip_addr.h" alt="" coords="123,155,198,181"/>
+<area shape="rect" id="node7" href="$queue_8h.html" title="queue.h" alt="" coords="192,80,260,107"/>
+<area shape="rect" id="node9" href="$spi__flash_8h.html" title="spi_flash.h" alt="" coords="408,80,492,107"/>
+<area shape="rect" id="node10" href="$gpio_8h.html" title="gpio.h" alt="" coords="516,80,573,107"/>
+<area shape="rect" id="node3" href="$ets__sys_8h.html" title="ets_sys.h" alt="" coords="20,155,99,181"/>
+<area shape="rect" id="node4" href="$c__types_8h.html" title="c_types.h" alt="" coords="121,229,200,256"/>
+<area shape="rect" id="node5" href="$eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="5,229,97,256"/>
+</map>

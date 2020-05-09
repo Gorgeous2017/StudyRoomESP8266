@@ -1,0 +1,5 @@
+<map id="system_os_task" name="system_os_task">
+<area shape="rect" id="node2" href="$uart_8c.html#af4416966da7cba189e7998334e2a0bee" title="uart_init" alt="" coords="172,31,240,57"/>
+<area shape="rect" id="node3" href="$uart_8c.html#a15a9e8dca40ebbeea858ce8f081c06cf" title="uart_reattach" alt="" coords="288,5,387,32"/>
+<area shape="rect" id="node4" href="$user__main_8c.html#a277ffa60e88142c231a14272962e902c" title="user_init" alt="" coords="302,56,373,83"/>
+</map>

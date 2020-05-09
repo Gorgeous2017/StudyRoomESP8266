@@ -1,0 +1,7 @@
+<map id="user_wifi_init" name="user_wifi_init">
+<area shape="rect" id="node2" href="$user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb" title="wifi_set_opmode" alt="" coords="176,5,295,32"/>
+<area shape="rect" id="node3" href="$user__wifi_8c.html#a1a5a1e50fa971840da026bd002476aaf" title="user_set_station_config" alt="" coords="156,56,315,83"/>
+<area shape="rect" id="node5" href="$user__interface_8h.html#a0c1a4454b8ef8015a3ac8d8d13e9f3f6" title="wifi_set_event_handler_cb" alt="" coords="149,107,321,133"/>
+<area shape="rect" id="node6" href="$user__wifi_8c.html#adb8f27992e1c21e692486725cfff3930" title="wifi_handle_event_cb" alt="" coords="164,157,307,184"/>
+<area shape="rect" id="node4" href="$user__interface_8h.html#ab3699b2e258bf21ad6e85e4b1ec1c271" title="wifi_station_set_config" alt="" coords="369,56,521,83"/>
+</map>
