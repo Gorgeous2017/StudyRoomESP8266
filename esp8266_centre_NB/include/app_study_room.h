@@ -44,16 +44,23 @@ typedef enum
 	MID_SET_CURTAIN               = 0x2,   /*!< 窗帘控制指令 */
 	MID_SET_AC                    = 0x3,   /*!< 空调控制指令 */
 
-	MID_report_room_one_message   = 0x11,  /*!< 房间一的环境信息 */
-	MID_report_room_two_message   = 0x12,  /*!< 房间二的环境信息 */
-	MID_report_room_three_message = 0x13,  /*!< 房间三的环境信息 */
-	MID_report_room_four_message  = 0x14,  /*!< 房间四的环境信息 */
+	MID_report_room_one_env    = 0x11,  /*!< 房间一的环境信息 */
+	MID_report_room_two_env    = 0x12,  /*!< 房间二的环境信息 */
+	MID_report_room_three_env  = 0x13,  /*!< 房间三的环境信息 */
+	MID_report_room_four_env   = 0x14,  /*!< 房间四的环境信息 */
 
-	MID_report_room_one_status    = 0x21,  /*!< 房间一的用电器状态信息 */
-	MID_report_room_two_status    = 0x22,  /*!< 房间二的用电器状态信息 */
-	MID_report_room_three_status  = 0x23,  /*!< 房间三的用电器状态信息 */
-	MID_report_room_four_status   = 0x24  /*!< 房间四的用电器状态信息 */
+	MID_report_room_one_dev    = 0x21,  /*!< 房间一的用电器状态信息 */
+	MID_report_room_two_dev    = 0x22,  /*!< 房间二的用电器状态信息 */
+	MID_report_room_three_dev  = 0x23,  /*!< 房间三的用电器状态信息 */
+	MID_report_room_four_dev   = 0x24  /*!< 房间四的用电器状态信息 */
 } DecodeMessageId;
+
+
+typedef enum 
+{
+	MID_report_room_env_offset = 0x10,
+	MID_report_room_dev_offset = 0x20	
+} MessageIdOffset;
 
 /*! @brief 云端下发的用电器控制信息  */
 typedef struct
@@ -88,6 +95,15 @@ typedef struct
 	uint8 acStatus[6];	  	/*!< 空调状态信息 */
 } RoomStatus;
 
+/*! @brief 数据上报结构体 */
+typedef struct 
+{
+    uint8 msg_flag;  /*!< 消息标志位，与用户所定义的Wi-Fi传输信息指令串一致 */
+    DecodeMessageId messageId; /*!< 要上报消息的messageId */
+    void (*App_UpdataData)(void *stDataReport, uint8 *msg_string); /*!< 更新本地数据 */
+    uint8 * (*App_GetHexData)(void *stDataReport, uint8 room_no); /*!< 生成十六进制字符串格式的上报数据 */
+} DataReportStruct;
+
 /* Exported constants --------------------------------------------------------*/
 #define cn_app_bands "5,8,20"
 #define cn_app_plmn "46011";
@@ -99,8 +115,9 @@ typedef struct
 
 
 /* Exported function -----------------------------------------------*/
-void StudyRoom_UpdataData(uint8 *msg_string);
-uint8 * StudyRoom_GetStatusHex(uint8 room_no);
+void StudyRoom_UpdataDevData(void *stDataReport, uint8 *msg_string);
+void StudyRoom_UpdataEnvData(void *stDataReport, uint8 *msg_string);
+uint8 * StudyRoom_GetDevHex(void *stDataReport, uint8 room_no);
 
 #endif /* __APP_STUDY_ROOM_H__ */ 
 /********************************** END OF FILE *******************************/

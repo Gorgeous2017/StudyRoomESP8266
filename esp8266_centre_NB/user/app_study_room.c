@@ -80,7 +80,7 @@ RoomMessage room_message[4] = {{0x11}, {0x12}, {0x13}, {0x14}}; /* 赋值 */
 	|-------------------------------------------------------------- |
 	|     31..24    |     23..16    |     15..8     |      7..0     |
 	-----------------------------------------------------------------
-	| 空调用电器状态 | 窗帘用电器状态 | 电灯用电器状态 | 风扇用电器状态 |
+	| 空调用电器状态 | 窗帘用电器状态 | 电灯用电器状态 |  风扇用电器状态 |
 	- ---------------------------------------------------------------
 	@endverbatim
  * 
@@ -124,41 +124,39 @@ uint32 room_status[4];
 /**
  * @brief 更新本地数据
  * @details 
- * 	- 更新单个房间的环境信息
  * 	- 更新单个房间的单个用电器的状态
- *  - 单次调用时，环境信息和用电器状态信息不同时更新
  *  - 由各个房间的client节点发送到本节点的tcp server上，msg_string来自于tcp_server_recv()
  * 
  * @param[in] msg_string 信息指令串
- * @arg @c 0xFF 作为标志位：室内环境信息
- * @arg @c 0xFE 作为标志位：用电器状态信息
  * 
  * @see room_status
- * @see room_message
  */
-void StudyRoom_UpdataData(uint8 *msg_string) {
+void StudyRoom_UpdataDevData(void *stDataReport, uint8 *msg_string) {
 
 	uint8 hexstr[128];
 
-	if (msg_string[0] == 0xFF)
-	{
-		/* msg_string[1] 房间编号，取值范围[1..4] */
-		os_memcpy((room_message + msg_string[1] - 1), msg_string + 2, 4 );
+	/* 位运算 先将目标用电器位置零，再将指令赋值给目标用电器位 */
+	*(room_status + (msg_string[1] - 1)) &= ~(0x01 << (8 * msg_string[2] + msg_string[3]));
+	*(room_status + (msg_string[1] - 1)) |= ((uint32)msg_string[4] << (8 * msg_string[2] + msg_string[3]));
 
-	} 
-	else if (msg_string[0] == 0xFE)
-	{
-		// StudyRoom_GetStatusHex(msg_string[1], hexstr);
-		// ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
+}
 
-		/* 位运算 先将目标用电器位置零，再将指令赋值给目标用电器位 */
-		*(room_status + (msg_string[1] - 1)) &= ~(0x01 << (8 * msg_string[2] + msg_string[3]));
-		*(room_status + (msg_string[1] - 1)) |= ((uint32)msg_string[4] << (8 * msg_string[2] + msg_string[3]));
+/**
+ * @brief 更新本地数据
+ * @details 
+ * 	- 更新单个房间的环境信息
+ *  - 由各个房间的client节点发送到本节点的tcp server上，msg_string来自于tcp_server_recv()
+ * 
+ * @param[in] msg_string 信息指令串
+ * @see room_message
+ */
+void StudyRoom_UpdataEnvData(void *stDataReport, uint8 *msg_string) {
 
-		// StudyRoom_GetStatusHex(msg_string[1], hexstr);
-		// ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
-	}
-	
+	uint8 hexstr[128];
+
+	/* msg_string[1] 房间编号，取值范围[1..4] */
+	os_memcpy((room_message + msg_string[1] - 1), msg_string + 2, 4 );
+
 }
 
 /**
@@ -171,7 +169,7 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
  * 
  * @see room_status
  */
-uint8 * StudyRoom_GetStatusHex(uint8 room_no) {
+uint8 * StudyRoom_GetDevHex(void *stDataReport, uint8 room_no) {
 
 	uint8 i,j;
 	bool one_status; /* 一个用电器的状态, 只用一个数据位表示开关即可 */
@@ -198,3 +196,28 @@ uint8 * StudyRoom_GetStatusHex(uint8 room_no) {
 	return out_hexstr;	
 }
 
+// void StudyRoom_ReportData(DecodeMessageId mid, uint8 room_no, uint8 * (*get_hex)()) {
+
+// 	NB_ReportData(mid, get_hex(room_no));
+
+// }
+
+void StudyRoom_ReportData(void *stDataReport, uint8 room_no, uint8 * (*get_hex)()) {
+
+	//NB_ReportData(/* mid offset + room no */, get_hex(room_no));
+
+}
+
+DataReportStruct stEnvDataReport = {
+	.msg_flag = 0xFF,
+	.messageId = MID_report_room_one_env,
+	.App_UpdataData = StudyRoom_UpdataEnvData,
+	.App_GetHexData = StudyRoom_GetDevHex
+};
+
+DataReportStruct stDevDataReport = {
+	.msg_flag = 0xFE,
+	.messageId = MID_report_room_one_dev, /* 改成mid offset */
+	.App_UpdataData = StudyRoom_UpdataDevData,
+	.App_GetHexData = StudyRoom_GetDevHex
+};

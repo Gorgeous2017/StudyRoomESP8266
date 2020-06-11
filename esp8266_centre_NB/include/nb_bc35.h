@@ -73,8 +73,7 @@ void NB_ResponseTimerCb(void *arg);
 void NB_Init(void); 
 
 /* Handle message form NB module, call by uart rx function */
- void NB_RxMsgHandler(uint8 *nb_msg );
-
+void NB_RxMsgHandler(uint8 *nb_msg );
 
 int str_to_hex(const char *bufin, int len, char *bufout);
 int32_t nb_set_cdpserver(char* host, char* port);

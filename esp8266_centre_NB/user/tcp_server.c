@@ -13,10 +13,7 @@
 
 #include "tcp_server.h"
 #include "room_info.h"
-
-/* TCP server receive handler, define in app_study_room.c */
-extern void StudyRoom_UpdataData(uint8 *msg_string);
-extern void StudyRoom_GetStatusHex(uint8 room_no, uint8 *out_hexstr);
+#include "app_study_room.h"
 
 struct espconn *client[4];
 
@@ -63,8 +60,8 @@ tcp_server_recv(void *arg, char *pdata, unsigned short len) {
 
 	if (pdata[0] ==  0xFE)
 	{
-		StudyRoom_UpdataData(pdata);
-		StudyRoom_GetStatusHex(pdata[1], nb_buff);
+		//StudyRoom_UpdataData(pdata);
+		//StudyRoom_GetDevHex(pdata[1], nb_buff);
 	}
 	
 }
