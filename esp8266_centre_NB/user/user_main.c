@@ -82,7 +82,6 @@ user_rf_pre_init(void)
 void ICACHE_FLASH_ATTR
 system_init_done(void)
 {
-
 	/****  设置dhcp  ****/
 	wifi_softap_dhcps_stop();
 	struct dhcps_lease dhcp_lease;

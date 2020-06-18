@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: app_study_room.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3cfce0f2579b93466aa86ecffbb9b24.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">app_study_room.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ets__sys_8h_source.html">ets_sys.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="os__type_8h_source.html">os_type.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="osapi_8h_source.html">osapi.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="driver_2uart_8h_source.html">driver/uart.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+app_study_room.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="app__study__room_8h__incl.png" border="0" usemap="#app__study__room_8h" alt=""/></div>
+<map name="app__study__room_8h" id="app__study__room_8h">
+<area shape="rect" id="node2" href="ets__sys_8h.html" title="ets_sys.h" alt="" coords="12,155,91,181"/><area shape="rect" id="node5" href="os__type_8h.html" title="os_type.h" alt="" coords="60,80,139,107"/><area shape="rect" id="node6" href="osapi_8h.html" title="osapi.h" alt="" coords="230,80,294,107"/><area shape="rect" id="node9" href="driver_2uart_8h.html" title="driver/uart.h" alt="" coords="116,155,205,181"/><area shape="rect" id="node3" href="c__types_8h.html" title="c_types.h" alt="" coords="121,229,200,256"/><area shape="rect" id="node4" href="eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="5,229,97,256"/><area shape="rect" id="node10" href="driver_2uart__register_8h.html" title="uart_register.h" alt="" coords="224,229,329,256"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="app__study__room_8h__dep__incl.png" border="0" usemap="#app__study__room_8hdep" alt=""/></div>
+<map name="app__study__room_8hdep" id="app__study__room_8hdep">
+<area shape="rect" id="node2" href="app__study__room_8c.html" title="app_study_room.c" alt="" coords="5,80,135,107"/></map>
+</div>
+</div>
+<p><a href="app__study__room_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_device_controller.html">DeviceController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">云端下发的用电器控制信息  <a href="struct_device_controller.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_room_message.html">RoomMessage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">室内环境信息结构体  <a href="struct_room_message.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_room_status.html">RoomStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">室内用电器状态信息结构体  <a href="struct_room_status.html#details">更多...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ae18451075674b7b9ecb53582b4b75cbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#ae18451075674b7b9ecb53582b4b75cbf">cn_app_bands</a>&#160;&#160;&#160;&quot;5,8,20&quot;</td></tr>
+<tr class="separator:ae18451075674b7b9ecb53582b4b75cbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098bdb12f7cfd3abb2148beb925a6846"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a098bdb12f7cfd3abb2148beb925a6846">cn_app_plmn</a>&#160;&#160;&#160;&quot;46011&quot;;</td></tr>
+<tr class="separator:a098bdb12f7cfd3abb2148beb925a6846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca3d0b7b9e05ea9ab3642a0a07027f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a7ca3d0b7b9e05ea9ab3642a0a07027f0">cn_app_apn</a>&#160;&#160;&#160;&quot;1,\&quot;IP\&quot;,\&quot;HUAWEI.COM\&quot;&quot;</td></tr>
+<tr class="separator:a7ca3d0b7b9e05ea9ab3642a0a07027f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a1fc8374aa330f6f1b75e3dfc809f40"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a9a1fc8374aa330f6f1b75e3dfc809f40">HUAWEI_IOT_SERVER</a>&#160;&#160;&#160;&quot;49.4.85.232&quot;</td></tr>
+<tr class="separator:a9a1fc8374aa330f6f1b75e3dfc809f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af971c35de71bba2605f9eacf5f9202d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#af971c35de71bba2605f9eacf5f9202d6">HUAWEI_IOT_PORT</a>&#160;&#160;&#160;&quot;5683&quot;</td></tr>
+<tr class="separator:af971c35de71bba2605f9eacf5f9202d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6b6e159b7e8a4beda8a00b817ed1cdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#ab6b6e159b7e8a4beda8a00b817ed1cdb">Swap16</a>(A)&#160;&#160;&#160;((((<a class="el" href="c__types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a>)(A)&amp;0xff00) &gt;&gt; 8) | (((uint16)(A)&amp;0x00ff) &lt;&lt; 8))</td></tr>
+<tr class="separator:ab6b6e159b7e8a4beda8a00b817ed1cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435f0cd9c437ec78228e00639657c569"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a435f0cd9c437ec78228e00639657c569">Swap32</a>(A)&#160;&#160;&#160;((((<a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>)(A)&amp;0xff000000) &gt;&gt; 24) | (((uint32)(A)&amp;0x00ff0000) &gt;&gt; 8) | (((uint32)(A)&amp;0x0000ff00) &lt;&lt; 8) | (((uint32)(A)&amp;0x000000ff) &lt;&lt; 24))</td></tr>
+<tr class="separator:a435f0cd9c437ec78228e00639657c569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ae712ac7a6479b38bdbb3286e80b72049"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#ae712ac7a6479b38bdbb3286e80b72049">int8u</a></td></tr>
+<tr class="separator:ae712ac7a6479b38bdbb3286e80b72049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f07d8a325122540227de4aa5a33981"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a47f07d8a325122540227de4aa5a33981">int8s</a></td></tr>
+<tr class="separator:a47f07d8a325122540227de4aa5a33981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409a5c4bea6981c30b308684efa33f6f"><td class="memItemLeft" align="right" valign="top">typedef unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a409a5c4bea6981c30b308684efa33f6f">int16u</a></td></tr>
+<tr class="separator:a409a5c4bea6981c30b308684efa33f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee267a9cba60559d4cb811b49801f9d"><td class="memItemLeft" align="right" valign="top">typedef short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a9ee267a9cba60559d4cb811b49801f9d">int16s</a></td></tr>
+<tr class="separator:a9ee267a9cba60559d4cb811b49801f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5120e48e7abbaf2fa3a8cdbebb22a6aa"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a5120e48e7abbaf2fa3a8cdbebb22a6aa">int24u</a></td></tr>
+<tr class="separator:a5120e48e7abbaf2fa3a8cdbebb22a6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1440cf47c13a6cd47928882a523daf61"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a1440cf47c13a6cd47928882a523daf61">int24s</a></td></tr>
+<tr class="separator:a1440cf47c13a6cd47928882a523daf61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed01dfb2dd30b2a7fe41b094c616dc2b"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#aed01dfb2dd30b2a7fe41b094c616dc2b">int32s</a></td></tr>
+<tr class="separator:aed01dfb2dd30b2a7fe41b094c616dc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b88531c5726d1eff5eff9dceaa3416"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a42b88531c5726d1eff5eff9dceaa3416">string</a></td></tr>
+<tr class="separator:a42b88531c5726d1eff5eff9dceaa3416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ceeb26d27f64b203e3fe6db7ccab14"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a45ceeb26d27f64b203e3fe6db7ccab14">array</a></td></tr>
+<tr class="separator:a45ceeb26d27f64b203e3fe6db7ccab14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ea02cf303d899f7c5a8322acac8407"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a64ea02cf303d899f7c5a8322acac8407">varstring</a></td></tr>
+<tr class="separator:a64ea02cf303d899f7c5a8322acac8407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a327f4153c03d10ec060e13915e6827"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a5a327f4153c03d10ec060e13915e6827">variant</a></td></tr>
+<tr class="separator:a5a327f4153c03d10ec060e13915e6827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:adb53a8cc97236ca207c035241a5b7fb8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8">Device</a> { <a class="el" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8a73e1cb1b2b84e517f5d75bf2b8826c57">DEVICE_FAN</a> = 0x00, 
+<a class="el" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8a678e56976a53b8f41fbfcf7e45b9e6f9">DEVICE_LIGHT</a> = 0x01, 
+<a class="el" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8ac97ad427703e6573cdcdbd6d0f533e6a">DEVICE_CUTRAIN</a> = 0x02, 
+<a class="el" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8af704cd51fe515b9f2aed76cd7d824092">DEVICE_AC</a> = 0x03
+ }</td></tr>
+<tr class="memdesc:adb53a8cc97236ca207c035241a5b7fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">用电器类型枚举体  <a href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8">更多...</a><br/></td></tr>
+<tr class="separator:adb53a8cc97236ca207c035241a5b7fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f106017d0a1287cdcb58e7af2990dc3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3">DecodeMessageId</a> { <br/>
+&#160;&#160;<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3ad3174236a4be4c9064cdc0a845092f0a">MID_SET_FAN</a> = 0x0, 
+<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a73e4a8daa29ff610d9558b2f45fe057e">MID_SET_LIGHT</a> = 0x1, 
+<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adf3ee842e6c4e93eb9e8fe85b434baa3">MID_SET_CURTAIN</a> = 0x2, 
+<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3aeae03ee2154a2cfdb0689ec435797812">MID_SET_AC</a> = 0x3, 
+<br/>
+&#160;&#160;<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a82fb40ccc5ef6a92352ea6732d76b5df">MID_report_room_one_message</a> = 0x11, 
+<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a976d4e8f9cf6ba73bc3026f281df0c26">MID_report_room_two_message</a> = 0x12, 
+<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acf15efb165f7e22937416c224cb26025">MID_report_room_three_message</a> = 0x13, 
+<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a4f0740c162e397c87f3d724e3f2e367a">MID_report_room_four_message</a> = 0x14, 
+<br/>
+&#160;&#160;<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acb16a48a146d14042825b00b93a88a01">MID_report_room_one_status</a> = 0x21, 
+<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a10dd5e80156c5ce340e77ae6e57b0a0a">MID_report_room_two_status</a> = 0x22, 
+<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adfb6b42d1da93d394e86a65f308c5bea">MID_report_room_three_status</a> = 0x23, 
+<a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a043b67e2adaf412967b0e6a8bb225ead">MID_report_room_four_status</a> = 0x24
+<br/>
+ }</td></tr>
+<tr class="memdesc:a6f106017d0a1287cdcb58e7af2990dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">编解码插件messageId枚举体  <a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3">更多...</a><br/></td></tr>
+<tr class="separator:a6f106017d0a1287cdcb58e7af2990dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a78e4c6ea13591401d74fb0eb70c84ff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a78e4c6ea13591401d74fb0eb70c84ff2">StudyRoom_UpdataData</a> (<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *msg_string)</td></tr>
+<tr class="memdesc:a78e4c6ea13591401d74fb0eb70c84ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新本地数据  <a href="#a78e4c6ea13591401d74fb0eb70c84ff2">更多...</a><br/></td></tr>
+<tr class="separator:a78e4c6ea13591401d74fb0eb70c84ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5396ed414c286f86654ec1f285f2e3a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a5396ed414c286f86654ec1f285f2e3a3">StudyRoom_GetStatusHex</a> (<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> room_no)</td></tr>
+<tr class="memdesc:a5396ed414c286f86654ec1f285f2e3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">将一个房间所有用电器的状态转成 Hex 字符串  <a href="#a5396ed414c286f86654ec1f285f2e3a3">更多...</a><br/></td></tr>
+<tr class="separator:a5396ed414c286f86654ec1f285f2e3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a0e738dbbb4ff87a71586fdd525391f48"><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="app__study__room_8h.html#a0e738dbbb4ff87a71586fdd525391f48">Lux</a></td></tr>
+<tr class="separator:a0e738dbbb4ff87a71586fdd525391f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><hr/>
+<dl class="section author"><dt>作者</dt><dd>Gump </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>V0.1 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2020-01-29 </dd></dl>
+<dl class="section copyright"><dt>版权所有</dt><dd>Copyright (c) &lt;2020&gt; &lt;HANSHAN NORMAL UNIVERSITY(CHAOZHOU)&gt; All rights Reserved. Media Recognition and Intelligent System Team</dd></dl>
+<hr/>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a class="anchor" id="ae18451075674b7b9ecb53582b4b75cbf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define cn_app_bands&#160;&#160;&#160;&quot;5,8,20&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a098bdb12f7cfd3abb2148beb925a6846"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define cn_app_plmn&#160;&#160;&#160;&quot;46011&quot;;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ca3d0b7b9e05ea9ab3642a0a07027f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define cn_app_apn&#160;&#160;&#160;&quot;1,\&quot;IP\&quot;,\&quot;HUAWEI.COM\&quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9a1fc8374aa330f6f1b75e3dfc809f40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HUAWEI_IOT_SERVER&#160;&#160;&#160;&quot;49.4.85.232&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>华为IoT平台服务器地址 </p>
+
+</div>
+</div>
+<a class="anchor" id="af971c35de71bba2605f9eacf5f9202d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HUAWEI_IOT_PORT&#160;&#160;&#160;&quot;5683&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>LWM2M(CoAP) 无DTLS形式接入平台的端口 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab6b6e159b7e8a4beda8a00b817ed1cdb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Swap16</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">A</td><td>)</td>
+          <td>&#160;&#160;&#160;((((<a class="el" href="c__types_8h.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e">uint16</a>)(A)&amp;0xff00) &gt;&gt; 8) | (((uint16)(A)&amp;0x00ff) &lt;&lt; 8))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a435f0cd9c437ec78228e00639657c569"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Swap32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">A</td><td>)</td>
+          <td>&#160;&#160;&#160;((((<a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>)(A)&amp;0xff000000) &gt;&gt; 24) | (((uint32)(A)&amp;0x00ff0000) &gt;&gt; 8) | (((uint32)(A)&amp;0x0000ff00) &lt;&lt; 8) | (((uint32)(A)&amp;0x000000ff) &lt;&lt; 24))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a class="anchor" id="ae712ac7a6479b38bdbb3286e80b72049"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="app__study__room_8h.html#ae712ac7a6479b38bdbb3286e80b72049">int8u</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a47f07d8a325122540227de4aa5a33981"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="app__study__room_8h.html#a47f07d8a325122540227de4aa5a33981">int8s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a409a5c4bea6981c30b308684efa33f6f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned short <a class="el" href="app__study__room_8h.html#a409a5c4bea6981c30b308684efa33f6f">int16u</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9ee267a9cba60559d4cb811b49801f9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef short <a class="el" href="app__study__room_8h.html#a9ee267a9cba60559d4cb811b49801f9d">int16s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5120e48e7abbaf2fa3a8cdbebb22a6aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="app__study__room_8h.html#a5120e48e7abbaf2fa3a8cdbebb22a6aa">int24u</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1440cf47c13a6cd47928882a523daf61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="app__study__room_8h.html#a1440cf47c13a6cd47928882a523daf61">int24s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aed01dfb2dd30b2a7fe41b094c616dc2b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int <a class="el" href="app__study__room_8h.html#aed01dfb2dd30b2a7fe41b094c616dc2b">int32s</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a42b88531c5726d1eff5eff9dceaa3416"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="app__study__room_8h.html#a42b88531c5726d1eff5eff9dceaa3416">string</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a45ceeb26d27f64b203e3fe6db7ccab14"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="app__study__room_8h.html#a45ceeb26d27f64b203e3fe6db7ccab14">array</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64ea02cf303d899f7c5a8322acac8407"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="app__study__room_8h.html#a64ea02cf303d899f7c5a8322acac8407">varstring</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5a327f4153c03d10ec060e13915e6827"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="app__study__room_8h.html#a5a327f4153c03d10ec060e13915e6827">variant</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="adb53a8cc97236ca207c035241a5b7fb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8">Device</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用电器类型枚举体 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="adb53a8cc97236ca207c035241a5b7fb8a73e1cb1b2b84e517f5d75bf2b8826c57"></a>DEVICE_FAN</em>&#160;</td><td class="fielddoc">
+<p>风扇用电器 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="adb53a8cc97236ca207c035241a5b7fb8a678e56976a53b8f41fbfcf7e45b9e6f9"></a>DEVICE_LIGHT</em>&#160;</td><td class="fielddoc">
+<p>电灯用电器 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="adb53a8cc97236ca207c035241a5b7fb8ac97ad427703e6573cdcdbd6d0f533e6a"></a>DEVICE_CUTRAIN</em>&#160;</td><td class="fielddoc">
+<p>窗帘用电器 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="adb53a8cc97236ca207c035241a5b7fb8af704cd51fe515b9f2aed76cd7d824092"></a>DEVICE_AC</em>&#160;</td><td class="fielddoc">
+<p>空调用电器 </p>
+</td></tr>
+</table>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8a73e1cb1b2b84e517f5d75bf2b8826c57">DEVICE_FAN</a> = 0x00,     </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8a678e56976a53b8f41fbfcf7e45b9e6f9">DEVICE_LIGHT</a> = 0x01,   </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8ac97ad427703e6573cdcdbd6d0f533e6a">DEVICE_CUTRAIN</a> = 0x02, </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8af704cd51fe515b9f2aed76cd7d824092">DEVICE_AC</a> = 0x03       </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <a class="code" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8">Device</a>;</div>
+<div class="ttc" id="app__study__room_8h_html_adb53a8cc97236ca207c035241a5b7fb8ac97ad427703e6573cdcdbd6d0f533e6a"><div class="ttname"><a href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8ac97ad427703e6573cdcdbd6d0f533e6a">DEVICE_CUTRAIN</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:35</div></div>
+<div class="ttc" id="app__study__room_8h_html_adb53a8cc97236ca207c035241a5b7fb8af704cd51fe515b9f2aed76cd7d824092"><div class="ttname"><a href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8af704cd51fe515b9f2aed76cd7d824092">DEVICE_AC</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:36</div></div>
+<div class="ttc" id="app__study__room_8h_html_adb53a8cc97236ca207c035241a5b7fb8"><div class="ttname"><a href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8">Device</a></div><div class="ttdeci">Device</div><div class="ttdoc">用电器类型枚举体 </div><div class="ttdef"><b>Definition:</b> app_study_room.h:31</div></div>
+<div class="ttc" id="app__study__room_8h_html_adb53a8cc97236ca207c035241a5b7fb8a73e1cb1b2b84e517f5d75bf2b8826c57"><div class="ttname"><a href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8a73e1cb1b2b84e517f5d75bf2b8826c57">DEVICE_FAN</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:33</div></div>
+<div class="ttc" id="app__study__room_8h_html_adb53a8cc97236ca207c035241a5b7fb8a678e56976a53b8f41fbfcf7e45b9e6f9"><div class="ttname"><a href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8a678e56976a53b8f41fbfcf7e45b9e6f9">DEVICE_LIGHT</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:34</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3">DecodeMessageId</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>编解码插件messageId枚举体 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3ad3174236a4be4c9064cdc0a845092f0a"></a>MID_SET_FAN</em>&#160;</td><td class="fielddoc">
+<p>风扇控制指令 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3a73e4a8daa29ff610d9558b2f45fe057e"></a>MID_SET_LIGHT</em>&#160;</td><td class="fielddoc">
+<p>电灯控制指令 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3adf3ee842e6c4e93eb9e8fe85b434baa3"></a>MID_SET_CURTAIN</em>&#160;</td><td class="fielddoc">
+<p>窗帘控制指令 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3aeae03ee2154a2cfdb0689ec435797812"></a>MID_SET_AC</em>&#160;</td><td class="fielddoc">
+<p>空调控制指令 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3a82fb40ccc5ef6a92352ea6732d76b5df"></a>MID_report_room_one_message</em>&#160;</td><td class="fielddoc">
+<p>房间一的环境信息 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3a976d4e8f9cf6ba73bc3026f281df0c26"></a>MID_report_room_two_message</em>&#160;</td><td class="fielddoc">
+<p>房间二的环境信息 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3acf15efb165f7e22937416c224cb26025"></a>MID_report_room_three_message</em>&#160;</td><td class="fielddoc">
+<p>房间三的环境信息 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3a4f0740c162e397c87f3d724e3f2e367a"></a>MID_report_room_four_message</em>&#160;</td><td class="fielddoc">
+<p>房间四的环境信息 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3acb16a48a146d14042825b00b93a88a01"></a>MID_report_room_one_status</em>&#160;</td><td class="fielddoc">
+<p>房间一的用电器状态信息 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3a10dd5e80156c5ce340e77ae6e57b0a0a"></a>MID_report_room_two_status</em>&#160;</td><td class="fielddoc">
+<p>房间二的用电器状态信息 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3adfb6b42d1da93d394e86a65f308c5bea"></a>MID_report_room_three_status</em>&#160;</td><td class="fielddoc">
+<p>房间三的用电器状态信息 </p>
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a6f106017d0a1287cdcb58e7af2990dc3a043b67e2adaf412967b0e6a8bb225ead"></a>MID_report_room_four_status</em>&#160;</td><td class="fielddoc">
+<p>房间四的用电器状态信息 </p>
+</td></tr>
+</table>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3ad3174236a4be4c9064cdc0a845092f0a">MID_SET_FAN</a>                   = 0x0,   </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a73e4a8daa29ff610d9558b2f45fe057e">MID_SET_LIGHT</a>                 = 0x1,   </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adf3ee842e6c4e93eb9e8fe85b434baa3">MID_SET_CURTAIN</a>               = 0x2,   </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3aeae03ee2154a2cfdb0689ec435797812">MID_SET_AC</a>                    = 0x3,   </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a82fb40ccc5ef6a92352ea6732d76b5df">MID_report_room_one_message</a>   = 0x11,  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a976d4e8f9cf6ba73bc3026f281df0c26">MID_report_room_two_message</a>   = 0x12,  </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acf15efb165f7e22937416c224cb26025">MID_report_room_three_message</a> = 0x13,  </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a4f0740c162e397c87f3d724e3f2e367a">MID_report_room_four_message</a>  = 0x14,  </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acb16a48a146d14042825b00b93a88a01">MID_report_room_one_status</a>    = 0x21,  </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a10dd5e80156c5ce340e77ae6e57b0a0a">MID_report_room_two_status</a>    = 0x22,  </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adfb6b42d1da93d394e86a65f308c5bea">MID_report_room_three_status</a>  = 0x23,  </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a043b67e2adaf412967b0e6a8bb225ead">MID_report_room_four_status</a>   = 0x24  </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;} <a class="code" href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3">DecodeMessageId</a>;</div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3adfb6b42d1da93d394e86a65f308c5bea"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adfb6b42d1da93d394e86a65f308c5bea">MID_report_room_three_status</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:54</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3ad3174236a4be4c9064cdc0a845092f0a"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3ad3174236a4be4c9064cdc0a845092f0a">MID_SET_FAN</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:42</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3acb16a48a146d14042825b00b93a88a01"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acb16a48a146d14042825b00b93a88a01">MID_report_room_one_status</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:52</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3">DecodeMessageId</a></div><div class="ttdeci">DecodeMessageId</div><div class="ttdoc">编解码插件messageId枚举体 </div><div class="ttdef"><b>Definition:</b> app_study_room.h:40</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3a4f0740c162e397c87f3d724e3f2e367a"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a4f0740c162e397c87f3d724e3f2e367a">MID_report_room_four_message</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:50</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3acf15efb165f7e22937416c224cb26025"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3acf15efb165f7e22937416c224cb26025">MID_report_room_three_message</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:49</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3adf3ee842e6c4e93eb9e8fe85b434baa3"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3adf3ee842e6c4e93eb9e8fe85b434baa3">MID_SET_CURTAIN</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:44</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3a82fb40ccc5ef6a92352ea6732d76b5df"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a82fb40ccc5ef6a92352ea6732d76b5df">MID_report_room_one_message</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:47</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3a73e4a8daa29ff610d9558b2f45fe057e"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a73e4a8daa29ff610d9558b2f45fe057e">MID_SET_LIGHT</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:43</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3a10dd5e80156c5ce340e77ae6e57b0a0a"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a10dd5e80156c5ce340e77ae6e57b0a0a">MID_report_room_two_status</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:53</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3aeae03ee2154a2cfdb0689ec435797812"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3aeae03ee2154a2cfdb0689ec435797812">MID_SET_AC</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:45</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3a043b67e2adaf412967b0e6a8bb225ead"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a043b67e2adaf412967b0e6a8bb225ead">MID_report_room_four_status</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:55</div></div>
+<div class="ttc" id="app__study__room_8h_html_a6f106017d0a1287cdcb58e7af2990dc3a976d4e8f9cf6ba73bc3026f281df0c26"><div class="ttname"><a href="app__study__room_8h.html#a6f106017d0a1287cdcb58e7af2990dc3a976d4e8f9cf6ba73bc3026f281df0c26">MID_report_room_two_message</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:48</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a78e4c6ea13591401d74fb0eb70c84ff2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StudyRoom_UpdataData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>msg_string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>更新本地数据 </p>
+<ul>
+<li>更新单个房间的环境信息</li>
+<li>更新单个房间的单个用电器的状态</li>
+</ul>
+<p>单次调用时，环境信息和用电器状态信息不同时更新</p>
+<ul>
+<li>由各个房间的client节点发送到本节点的tcp server上，msg_string来自于tcp_server_recv()</li>
+</ul>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg_string</td><td>信息指令串 <ul>
+<li><code>0xFF</code> 作为标志位：室内环境信息 </li>
+<li><code>0xFE</code> 作为标志位：用电器状态信息</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="app__study__room_8c.html#af4281240a4844d796fc81f8a901bf505" title="四个房间的用电器状态信息 ">room_status</a> </dd>
+<dd>
+<a class="el" href="app__study__room_8c.html#afe9dfc553e0ab813e6c6ebf84eadbda4" title="四个房间的环境信息 ">room_message</a> </dd></dl>
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                             {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> hexstr[128];</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">if</span> (msg_string[0] == 0xFF)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">/* msg_string[1] 房间编号，取值范围[1..4] */</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>((<a class="code" href="app__study__room_8c.html#afe9dfc553e0ab813e6c6ebf84eadbda4">room_message</a> + msg_string[1] - 1), msg_string + 2, 4 );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    } </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (msg_string[0] == 0xFE)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="comment">// StudyRoom_GetStatusHex(msg_string[1], hexstr);</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">// ESP_DEBUG(&quot;status str now is: %s, num is %d&quot;, hexstr, room_status[0]);</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">/* 位运算 先将目标用电器位置零，再将指令赋值给目标用电器位 */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        *(<a class="code" href="app__study__room_8c.html#af4281240a4844d796fc81f8a901bf505">room_status</a> + (msg_string[1] - 1)) &amp;= ~(0x01 &lt;&lt; (8 * msg_string[2] + msg_string[3]));</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        *(<a class="code" href="app__study__room_8c.html#af4281240a4844d796fc81f8a901bf505">room_status</a> + (msg_string[1] - 1)) |= ((<a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>)msg_string[4] &lt;&lt; (8 * msg_string[2] + msg_string[3]));</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="comment">// StudyRoom_GetStatusHex(msg_string[1], hexstr);</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">// ESP_DEBUG(&quot;status str now is: %s, num is %d&quot;, hexstr, room_status[0]);</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="ttc" id="app__study__room_8c_html_afe9dfc553e0ab813e6c6ebf84eadbda4"><div class="ttname"><a href="app__study__room_8c.html#afe9dfc553e0ab813e6c6ebf84eadbda4">room_message</a></div><div class="ttdeci">RoomMessage room_message[4]</div><div class="ttdoc">四个房间的环境信息 </div><div class="ttdef"><b>Definition:</b> app_study_room.c:59</div></div>
+<div class="ttc" id="osapi_8h_html_ac5c79bf463c8eba708ea34fccc8ec7c1"><div class="ttname"><a href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a></div><div class="ttdeci">#define os_memcpy</div><div class="ttdef"><b>Definition:</b> osapi.h:36</div></div>
+<div class="ttc" id="app__study__room_8c_html_af4281240a4844d796fc81f8a901bf505"><div class="ttname"><a href="app__study__room_8c.html#af4281240a4844d796fc81f8a901bf505">room_status</a></div><div class="ttdeci">uint32 room_status[4]</div><div class="ttdoc">四个房间的用电器状态信息 </div><div class="ttdef"><b>Definition:</b> app_study_room.c:119</div></div>
+<div class="ttc" id="c__types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition:</b> c_types.h:43</div></div>
+<div class="ttc" id="c__types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> c_types.h:52</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5396ed414c286f86654ec1f285f2e3a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>* StudyRoom_GetStatusHex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td>
+          <td class="paramname"><em>room_no</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将一个房间所有用电器的状态转成 Hex 字符串 </p>
+<dl class="section note"><dt>注解</dt><dd>数据格式与IoT平台的编解码插件保持一致</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">room_no</td><td>需要转换的房间编号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uint8* 转换后的字符串</dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="app__study__room_8c.html#af4281240a4844d796fc81f8a901bf505" title="四个房间的用电器状态信息 ">room_status</a> </dd></dl>
+<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                              {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> i,j;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">bool</span> one_status; <span class="comment">/* 一个用电器的状态, 只用一个数据位表示开关即可 */</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">static</span> <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> out_hexstr[128]; <span class="comment">/* 转换后的字符串，必须指定成static类型才能return */</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *current_pos = out_hexstr; <span class="comment">/* 指向当前 out_hexstr 位置的指针 */</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">for</span> (i = <a class="code" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8a73e1cb1b2b84e517f5d75bf2b8826c57">DEVICE_FAN</a>; i &lt;= <a class="code" href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8af704cd51fe515b9f2aed76cd7d824092">DEVICE_AC</a>; i++) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="comment">/* 在每类用电器前面加上该类用电器的数量 */</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="osapi_8h.html#abe2ddcec42d14500c2706362e9f732e8">os_sprintf</a>(current_pos, <span class="stringliteral">&quot;%02X&quot;</span>, <a class="code" href="app__study__room_8c.html#a3cd6865dacc6edacbaa946763af3c139">DEVICE_QAUNTITY</a>);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        current_pos += 2;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">for</span>(j = 0; j &lt; <a class="code" href="app__study__room_8c.html#a3cd6865dacc6edacbaa946763af3c139">DEVICE_QAUNTITY</a>; j++, current_pos += 2 ) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="comment">/* 先定位某个房间某一类用电器的状态，再定位具体的单个用电器状态 */</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="comment">/* 可以结合用电器状态的“数组数据分布”来理解，参阅 room_status[] 的注释 */</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            one_status = (((*(<a class="code" href="app__study__room_8c.html#af4281240a4844d796fc81f8a901bf505">room_status</a> + room_no - 1) &gt;&gt; (8 * i)) &amp; 0x000000ff) &gt;&gt; j) &amp; 0x01;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <a class="code" href="osapi_8h.html#abe2ddcec42d14500c2706362e9f732e8">os_sprintf</a>(current_pos, <span class="stringliteral">&quot;%02X&quot;</span>, one_status); </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="driver_2uart_8h.html#af5b6deb2bb0cd122c3384bf552dd121c">ESP_DEBUG</a>(<span class="stringliteral">&quot;out_hexstr = %s&quot;</span>, out_hexstr);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span> out_hexstr;  </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+<div class="ttc" id="osapi_8h_html_abe2ddcec42d14500c2706362e9f732e8"><div class="ttname"><a href="osapi_8h.html#abe2ddcec42d14500c2706362e9f732e8">os_sprintf</a></div><div class="ttdeci">#define os_sprintf</div><div class="ttdef"><b>Definition:</b> osapi.h:54</div></div>
+<div class="ttc" id="app__study__room_8c_html_a3cd6865dacc6edacbaa946763af3c139"><div class="ttname"><a href="app__study__room_8c.html#a3cd6865dacc6edacbaa946763af3c139">DEVICE_QAUNTITY</a></div><div class="ttdeci">#define DEVICE_QAUNTITY</div><div class="ttdef"><b>Definition:</b> app_study_room.c:24</div></div>
+<div class="ttc" id="driver_2uart_8h_html_af5b6deb2bb0cd122c3384bf552dd121c"><div class="ttname"><a href="driver_2uart_8h.html#af5b6deb2bb0cd122c3384bf552dd121c">ESP_DEBUG</a></div><div class="ttdeci">#define ESP_DEBUG(fmt,...)</div><div class="ttdef"><b>Definition:</b> driver/uart.h:35</div></div>
+<div class="ttc" id="app__study__room_8c_html_af4281240a4844d796fc81f8a901bf505"><div class="ttname"><a href="app__study__room_8c.html#af4281240a4844d796fc81f8a901bf505">room_status</a></div><div class="ttdeci">uint32 room_status[4]</div><div class="ttdoc">四个房间的用电器状态信息 </div><div class="ttdef"><b>Definition:</b> app_study_room.c:119</div></div>
+<div class="ttc" id="app__study__room_8h_html_adb53a8cc97236ca207c035241a5b7fb8af704cd51fe515b9f2aed76cd7d824092"><div class="ttname"><a href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8af704cd51fe515b9f2aed76cd7d824092">DEVICE_AC</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:36</div></div>
+<div class="ttc" id="c__types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition:</b> c_types.h:43</div></div>
+<div class="ttc" id="app__study__room_8h_html_adb53a8cc97236ca207c035241a5b7fb8a73e1cb1b2b84e517f5d75bf2b8826c57"><div class="ttname"><a href="app__study__room_8h.html#adb53a8cc97236ca207c035241a5b7fb8a73e1cb1b2b84e517f5d75bf2b8826c57">DEVICE_FAN</a></div><div class="ttdef"><b>Definition:</b> app_study_room.h:33</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a class="anchor" id="a0e738dbbb4ff87a71586fdd525391f48"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short int Lux</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:14 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

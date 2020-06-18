@@ -1,0 +1,11 @@
+<map id="system_init_done" name="system_init_done">
+<area shape="rect" id="node2" href="$user__interface_8h.html#adc4b55015e0a64892d33a7d79a7627d6" title="wifi_softap_dhcps_stop" alt="" coords="178,5,334,32"/>
+<area shape="rect" id="node3" href="$ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0" title="ipaddr_addr" alt="" coords="211,56,301,83"/>
+<area shape="rect" id="node4" href="$user__interface_8h.html#a88284afccfb825d3b47ed45d1a6f26e2" title="wifi_softap_set_dhcps\l_lease" alt="" coords="181,107,331,149"/>
+<area shape="rect" id="node5" href="$user__interface_8h.html#a3955db3d72e1669492143e64f7b32775" title="wifi_softap_dhcps_start" alt="" coords="177,173,335,200"/>
+<area shape="rect" id="node6" href="$include_2tcp__server_8h.html#a08d36694aa9c55574251d45d1bbd1328" title="tcp_server_init" alt="" coords="203,224,309,251"/>
+<area shape="rect" id="node7" href="$nb__bc35_8h.html#a2cf1c3f67e168aee4fe9c184c9809307" title="NB_Init" alt="" coords="224,275,288,301"/>
+<area shape="rect" id="node8" href="$nb__bc35_8c.html#a566469396821ae4c881b7b558204f68f" title="向NB模组发送指令 " alt="" coords="383,275,487,301"/>
+<area shape="rect" id="node9" href="$driver_2uart_8h.html#a279da46b2371c1ec768cde7e525725f2" title="uart1_tx_buffer" alt="" coords="535,275,641,301"/>
+<area shape="rect" id="node10" href="$uart_8c.html#a40bca7ca9b269f93bc9f17924a38fbe0" title="uart_tx_one_char" alt="" coords="689,275,812,301"/>
+</map>

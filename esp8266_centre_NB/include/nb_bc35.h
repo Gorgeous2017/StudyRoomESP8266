@@ -24,8 +24,6 @@
 #include "driver/uart.h" /* 需要用到串口接收的NB响应消息和平台下发的命令 */
 
 /* Exported typedef -----------------------------------------------------------*/
-
-
 /* Exported constants --------------------------------------------------------*/
 #define AT_MODU_NAME            "nb_neul95"
 
@@ -69,6 +67,7 @@
 #define IP_LEN 16
 
 /* Exported function -----------------------------------------------*/
+void NB_ReportData(uint8 mid, uint8 *data_str);
 void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *response_msg);
 void NB_ResponseTimerCb(void *arg);
 void NB_Init(void); 

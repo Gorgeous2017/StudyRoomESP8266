@@ -1,0 +1,4 @@
+<map id="system_get_time" name="system_get_time">
+<area shape="rect" id="node2" href="$uart_8c.html#a460e7b30e59165c59ea6e4c2124085d2" title="UART_WaitTxFifoEmpty" alt="" coords="189,5,351,32"/>
+<area shape="rect" id="node3" href="$uart_8c.html#a10234052f8f75ab50480aae6e3d88634" title="UART_CheckOutputFinished" alt="" coords="176,56,364,83"/>
+</map>

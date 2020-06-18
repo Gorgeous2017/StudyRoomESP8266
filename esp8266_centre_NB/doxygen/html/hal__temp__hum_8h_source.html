@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: hal_temp_hum.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3cfce0f2579b93466aa86ecffbb9b24.html">include</a></li><li class="navelem"><a class="el" href="dir_263695494e9aec24ef4ad1507159d280.html">driver</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">hal_temp_hum.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="hal__temp__hum_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _HAL_HEMP_HUM_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _HAL_HEMP_HUM_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="c__types_8h.html">c_types.h</a>&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="gpio_8h.html">gpio.h</a>&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="eagle__soc_8h.html">eagle_soc.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/* Define your drive pin */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="hal__temp__hum_8h.html#abbe0e8a7d787e578909d9b3b7d02fdab">   10</a></span>&#160;<span class="preprocessor">#define DHT11_GPIO_PIN      5</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/* Set GPIO Direction */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="hal__temp__hum_8h.html#aa76a0baf4c786be162758e59f8c06c23">   13</a></span>&#160;<span class="preprocessor">#define DHT11_IO_IN         GPIO_DIS_OUTPUT(GPIO_ID_PIN(DHT11_GPIO_PIN))// gpio_output_set(0, 0, 0, GPIO_ID_PIN(DHT11_GPIO_PIN))不可用</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="hal__temp__hum_8h.html#abcdff6bb8f95d179a25adf394d6806a7">   15</a></span>&#160;<span class="preprocessor">#define DHT11_IO_OUT        gpio_output_set(0, 0, GPIO_ID_PIN(DHT11_GPIO_PIN), 0)</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="hal__temp__hum_8h.html#abf5a253c114775fea459ac12ac1ed664">   17</a></span>&#160;<span class="preprocessor">#define DHT11_OUT_HIGH      GPIO_OUTPUT_SET(GPIO_ID_PIN(DHT11_GPIO_PIN), 1)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="hal__temp__hum_8h.html#a5c1523714febde9900f71263525bd61d">   18</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DHT11_OUT_LOW       GPIO_OUTPUT_SET(GPIO_ID_PIN(DHT11_GPIO_PIN), 0)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="hal__temp__hum_8h.html#a1ce5c9482e2dbb00fc2404198e429e90">   20</a></span>&#160;<span class="preprocessor">#define DHT11_IN            GPIO_INPUT_GET(GPIO_ID_PIN(DHT11_GPIO_PIN))</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="hal__temp__hum_8h.html#acc8898493794995b8a54b6e73c180645">   23</a></span>&#160;<span class="preprocessor">#define MEAN_NUM            10</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structth__typedef__t.html">   25</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structth__typedef__t.html#acb41d601497bc417c8e971e0850f179c">   27</a></span>&#160;    <a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="structth__typedef__t.html#acb41d601497bc417c8e971e0850f179c">th_num</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structth__typedef__t.html#a793197d8b3201f543825f32243d22738">   28</a></span>&#160;    <a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="structth__typedef__t.html#a793197d8b3201f543825f32243d22738">th_amount</a>; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structth__typedef__t.html#a099a4fbf9827925ac8744493a050008a">   29</a></span>&#160;    <a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> th_bufs[10][2];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}<a class="code" href="structth__typedef__t.html">th_typedef_t</a>; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/* Function declaration */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="hal__temp__hum_8h.html#ade0018dd7cf1351a5292bc6be68cb67c">dh11Read</a>(<a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> * temperature, <a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> * humidity); </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code" href="hal__temp__hum_8h.html#a40254d9e0090e4e7978d4575244f1b49">dh11Init</a>(<span class="keywordtype">void</span>); <span class="comment">//Init DHT11</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="hal__temp__hum_8h.html#a129c61e3699c0807bc39b938a841f7a4">dh11SensorTest</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*_HAL_HEMP_HUM_H*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"></span></div>
+<div class="ttc" id="hal__temp__hum_8h_html_ade0018dd7cf1351a5292bc6be68cb67c"><div class="ttname"><a href="hal__temp__hum_8h.html#ade0018dd7cf1351a5292bc6be68cb67c">dh11Read</a></div><div class="ttdeci">uint8_t dh11Read(uint8_t *temperature, uint8_t *humidity)</div><div class="ttdef"><b>Definition:</b> hal_temp_hum.c:122</div></div>
+<div class="ttc" id="hal__temp__hum_8h_html_a40254d9e0090e4e7978d4575244f1b49"><div class="ttname"><a href="hal__temp__hum_8h.html#a40254d9e0090e4e7978d4575244f1b49">dh11Init</a></div><div class="ttdeci">uint8_t dh11Init(void)</div><div class="ttdef"><b>Definition:</b> hal_temp_hum.c:197</div></div>
+<div class="ttc" id="c__types_8h_html"><div class="ttname"><a href="c__types_8h.html">c_types.h</a></div></div>
+<div class="ttc" id="eagle__soc_8h_html"><div class="ttname"><a href="eagle__soc_8h.html">eagle_soc.h</a></div></div>
+<div class="ttc" id="gpio_8h_html"><div class="ttname"><a href="gpio_8h.html">gpio.h</a></div></div>
+<div class="ttc" id="hal__temp__hum_8h_html_a129c61e3699c0807bc39b938a841f7a4"><div class="ttname"><a href="hal__temp__hum_8h.html#a129c61e3699c0807bc39b938a841f7a4">dh11SensorTest</a></div><div class="ttdeci">void dh11SensorTest(void)</div><div class="ttdef"><b>Definition:</b> hal_temp_hum.c:211</div></div>
+<div class="ttc" id="c__types_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> c_types.h:28</div></div>
+<div class="ttc" id="structth__typedef__t_html_acb41d601497bc417c8e971e0850f179c"><div class="ttname"><a href="structth__typedef__t.html#acb41d601497bc417c8e971e0850f179c">th_typedef_t::th_num</a></div><div class="ttdeci">uint8_t th_num</div><div class="ttdef"><b>Definition:</b> hal_temp_hum.h:27</div></div>
+<div class="ttc" id="structth__typedef__t_html_a793197d8b3201f543825f32243d22738"><div class="ttname"><a href="structth__typedef__t.html#a793197d8b3201f543825f32243d22738">th_typedef_t::th_amount</a></div><div class="ttdeci">uint8_t th_amount</div><div class="ttdef"><b>Definition:</b> hal_temp_hum.h:28</div></div>
+<div class="ttc" id="structth__typedef__t_html"><div class="ttname"><a href="structth__typedef__t.html">th_typedef_t</a></div><div class="ttdef"><b>Definition:</b> hal_temp_hum.h:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:13 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

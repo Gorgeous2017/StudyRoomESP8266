@@ -1,0 +1,5 @@
+<map id="dh11Read" name="dh11Read">
+<area shape="rect" id="node2" href="$room__info_8c.html#a424ab1af43382c79b75c85e9118af0ce" title="get_humi_temp" alt="" coords="133,5,244,32"/>
+<area shape="rect" id="node3" href="$room__info_8c.html#a257a96b7f4ec268562d84591539fade7" title="get_room_data" alt="" coords="292,5,400,32"/>
+<area shape="rect" id="node4" href="$room__info_8c.html#a713be88dd24941b9fc21d2217305b798" title="get_room_buf" alt="" coords="448,5,548,32"/>
+</map>

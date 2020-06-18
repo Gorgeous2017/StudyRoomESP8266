@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: user_json.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_69f7b3b0f987cc31a767c691a7147b70.html">user</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">user_json.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ets__sys_8h_source.html">ets_sys.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="osapi_8h_source.html">osapi.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="os__type_8h_source.html">os_type.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="mem_8h_source.html">mem.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="user__json_8h_source.html">user_json.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+user_json.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__json_8c__incl.png" border="0" usemap="#user__json_8c" alt=""/></div>
+<map name="user__json_8c" id="user__json_8c">
+<area shape="rect" id="node2" href="ets__sys_8h.html" title="ets_sys.h" alt="" coords="12,155,91,181"/><area shape="rect" id="node5" href="osapi_8h.html" title="osapi.h" alt="" coords="397,80,461,107"/><area shape="rect" id="node8" href="os__type_8h.html" title="os_type.h" alt="" coords="20,80,99,107"/><area shape="rect" id="node9" href="mem_8h.html" title="mem.h" alt="" coords="485,80,548,107"/><area shape="rect" id="node10" href="user__json_8h.html" title="user_json.h" alt="" coords="221,80,311,107"/><area shape="rect" id="node3" href="c__types_8h.html" title="c_types.h" alt="" coords="135,229,213,256"/><area shape="rect" id="node4" href="eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="5,229,97,256"/><area shape="rect" id="node11" href="esp8266__centre___n_b_2include_2json_2jsonparse_8h.html" title="json/jsonparse.h" alt="" coords="115,155,233,181"/><area shape="rect" id="node13" href="esp8266__centre___n_b_2include_2json_2jsontree_8h.html" title="json/jsontree.h" alt="" coords="257,155,363,181"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a953b42db54f2442958d42d11831f9cbd"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structjsontree__value.html">jsontree_value</a> <br class="typebreak"/>
+*<a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__json_8c.html#a953b42db54f2442958d42d11831f9cbd">find_json_path</a> (struct <a class="el" href="structjsontree__context.html">jsontree_context</a> *json, const char *path)</td></tr>
+<tr class="separator:a953b42db54f2442958d42d11831f9cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ffe2a0759bac0dc826160b478306a9"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__json_8c.html#ae0ffe2a0759bac0dc826160b478306a9">json_putchar</a> (int c)</td></tr>
+<tr class="separator:ae0ffe2a0759bac0dc826160b478306a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cfcd4aab5c423a95491d3e37f92113"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__json_8c.html#a81cfcd4aab5c423a95491d3e37f92113">json_ws_send</a> (struct <a class="el" href="structjsontree__value.html">jsontree_value</a> *tree, const char *path, char *pbuf)</td></tr>
+<tr class="separator:a81cfcd4aab5c423a95491d3e37f92113"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe1c82cf680000a06a3490ed48451d6"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__json_8c.html#abbe1c82cf680000a06a3490ed48451d6">json_parse</a> (struct <a class="el" href="structjsontree__context.html">jsontree_context</a> *json, char *ptrJSONMessage)</td></tr>
+<tr class="separator:abbe1c82cf680000a06a3490ed48451d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71adb3eb5cf17fe2eaed46cf2d7958c"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__json_8c.html#ac71adb3eb5cf17fe2eaed46cf2d7958c">jsonArray_set</a> (struct <a class="el" href="structjsontree__context.html">jsontree_context</a> *js_ctx, struct <a class="el" href="structjsonparse__state.html">jsonparse_state</a> *parser)</td></tr>
+<tr class="separator:ac71adb3eb5cf17fe2eaed46cf2d7958c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a3308aa7b6b41eb67cf9266b4d434b394"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a3758dd5d300a594312c95bc393378df0">LOCAL</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__json_8c.html#a3308aa7b6b41eb67cf9266b4d434b394">json_buf</a></td></tr>
+<tr class="separator:a3308aa7b6b41eb67cf9266b4d434b394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa311b2ee5310616354a2de6bfafe7ed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a3758dd5d300a594312c95bc393378df0">LOCAL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__json_8c.html#aa311b2ee5310616354a2de6bfafe7ed8">pos</a></td></tr>
+<tr class="separator:aa311b2ee5310616354a2de6bfafe7ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa56153054f63c15efaa7c9a2326a701c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a3758dd5d300a594312c95bc393378df0">LOCAL</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__json_8c.html#aa56153054f63c15efaa7c9a2326a701c">size</a></td></tr>
+<tr class="separator:aa56153054f63c15efaa7c9a2326a701c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a953b42db54f2442958d42d11831f9cbd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structjsontree__value.html">jsontree_value</a>* <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> find_json_path </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structjsontree__context.html">jsontree_context</a> *&#160;</td>
+          <td class="paramname"><em>json</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                                                {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">struct </span><a class="code" href="structjsontree__value.html">jsontree_value</a> *v;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *start;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *end;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> len;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    v = json-&gt;<a class="code" href="structjsontree__context.html#a39fb63ffbee3c4d23f5f14ba6eb8e8ed">values</a>[0];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    start = path;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        end = (<span class="keyword">const</span> <span class="keywordtype">char</span> *) <a class="code" href="osapi_8h.html#a51bc56747f146b58e4bbbef0f4b62230">os_strstr</a>(start, <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span> (end == start) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (end != <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            len = end - start;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            end++;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            len = <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(start);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (v-&gt;<a class="code" href="structjsontree__value.html#ac2d6924b2e19dc0b7678f679b5f614cc">type</a> != <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#a71c28a730363ae509d704e85f0d42268">JSON_TYPE_OBJECT</a>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            v = <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keyword">struct </span><a class="code" href="structjsontree__object.html">jsontree_object</a> *o;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            o = (<span class="keyword">struct </span><a class="code" href="structjsontree__object.html">jsontree_object</a> *) v;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            v = <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">for</span> (i = 0; i &lt; o-&gt;<a class="code" href="structjsontree__object.html#ae776117e2f992cdc8d9dac1efc379672">count</a>; i++) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="osapi_8h.html#af5567490f4ca060aa27400faea1ddb7a">os_strncmp</a>(start, o-&gt;<a class="code" href="structjsontree__object.html#ab42f087006a3c745f649beab091df708">pairs</a>[i].<a class="code" href="structjsontree__pair.html#aee67d8e7f805358094595402e146980f">name</a>, len) == 0) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    v = o-&gt;<a class="code" href="structjsontree__object.html#ab42f087006a3c745f649beab091df708">pairs</a>[i].<a class="code" href="structjsontree__pair.html#a490e68f737140584bf1fddee9602f0bf">value</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    json-&gt;<a class="code" href="structjsontree__context.html#a58a598b2a0ab66a2ce85e2661add4b3c">index</a>[json-&gt;<a class="code" href="structjsontree__context.html#ab3c68aa60f973906eb0e1ba41c28750a">depth</a>] = i;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    json-&gt;<a class="code" href="structjsontree__context.html#ab3c68aa60f973906eb0e1ba41c28750a">depth</a>++;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    json-&gt;<a class="code" href="structjsontree__context.html#a39fb63ffbee3c4d23f5f14ba6eb8e8ed">values</a>[json-&gt;<a class="code" href="structjsontree__context.html#ab3c68aa60f973906eb0e1ba41c28750a">depth</a>] = v;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    json-&gt;<a class="code" href="structjsontree__context.html#a58a598b2a0ab66a2ce85e2661add4b3c">index</a>[json-&gt;<a class="code" href="structjsontree__context.html#ab3c68aa60f973906eb0e1ba41c28750a">depth</a>] = 0;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        start = end;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    } <span class="keywordflow">while</span> (end != <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> &amp;&amp; *end != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; v != <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    json-&gt;<a class="code" href="structjsontree__context.html#a1c2afd4fbce586b56ea0ba1be9ef62a3">callback_state</a> = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="ttc" id="osapi_8h_html_af5567490f4ca060aa27400faea1ddb7a"><div class="ttname"><a href="osapi_8h.html#af5567490f4ca060aa27400faea1ddb7a">os_strncmp</a></div><div class="ttdeci">#define os_strncmp</div><div class="ttdef"><b>Definition:</b> osapi.h:44</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2json_8h_html_a71c28a730363ae509d704e85f0d42268"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#a71c28a730363ae509d704e85f0d42268">JSON_TYPE_OBJECT</a></div><div class="ttdeci">#define JSON_TYPE_OBJECT</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/json.h:44</div></div>
+<div class="ttc" id="structjsontree__context_html_a39fb63ffbee3c4d23f5f14ba6eb8e8ed"><div class="ttname"><a href="structjsontree__context.html#a39fb63ffbee3c4d23f5f14ba6eb8e8ed">jsontree_context::values</a></div><div class="ttdeci">struct jsontree_value * values[JSONTREE_MAX_DEPTH]</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:53</div></div>
+<div class="ttc" id="structjsontree__context_html_a1c2afd4fbce586b56ea0ba1be9ef62a3"><div class="ttname"><a href="structjsontree__context.html#a1c2afd4fbce586b56ea0ba1be9ef62a3">jsontree_context::callback_state</a></div><div class="ttdeci">int callback_state</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:58</div></div>
+<div class="ttc" id="structjsontree__pair_html_a490e68f737140584bf1fddee9602f0bf"><div class="ttname"><a href="structjsontree__pair.html#a490e68f737140584bf1fddee9602f0bf">jsontree_pair::value</a></div><div class="ttdeci">struct jsontree_value * value</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:86</div></div>
+<div class="ttc" id="structjsontree__value_html_ac2d6924b2e19dc0b7678f679b5f614cc"><div class="ttname"><a href="structjsontree__value.html#ac2d6924b2e19dc0b7678f679b5f614cc">jsontree_value::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:62</div></div>
+<div class="ttc" id="osapi_8h_html_a07564f20970de543cfa55b055d1f6dfe"><div class="ttname"><a href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a></div><div class="ttdeci">#define os_strlen</div><div class="ttdef"><b>Definition:</b> osapi.h:43</div></div>
+<div class="ttc" id="structjsontree__value_html"><div class="ttname"><a href="structjsontree__value.html">jsontree_value</a></div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:61</div></div>
+<div class="ttc" id="structjsontree__object_html"><div class="ttname"><a href="structjsontree__object.html">jsontree_object</a></div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:89</div></div>
+<div class="ttc" id="structjsontree__context_html_a58a598b2a0ab66a2ce85e2661add4b3c"><div class="ttname"><a href="structjsontree__context.html#a58a598b2a0ab66a2ce85e2661add4b3c">jsontree_context::index</a></div><div class="ttdeci">uint16_t index[JSONTREE_MAX_DEPTH]</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:54</div></div>
+<div class="ttc" id="osapi_8h_html_a51bc56747f146b58e4bbbef0f4b62230"><div class="ttname"><a href="osapi_8h.html#a51bc56747f146b58e4bbbef0f4b62230">os_strstr</a></div><div class="ttdeci">#define os_strstr</div><div class="ttdef"><b>Definition:</b> osapi.h:46</div></div>
+<div class="ttc" id="structjsontree__context_html_ab3c68aa60f973906eb0e1ba41c28750a"><div class="ttname"><a href="structjsontree__context.html#ab3c68aa60f973906eb0e1ba41c28750a">jsontree_context::depth</a></div><div class="ttdeci">uint8_t depth</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:56</div></div>
+<div class="ttc" id="c__types_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> c_types.h:73</div></div>
+<div class="ttc" id="structjsontree__object_html_ab42f087006a3c745f649beab091df708"><div class="ttname"><a href="structjsontree__object.html#ab42f087006a3c745f649beab091df708">jsontree_object::pairs</a></div><div class="ttdeci">struct jsontree_pair * pairs</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:92</div></div>
+<div class="ttc" id="structjsontree__object_html_ae776117e2f992cdc8d9dac1efc379672"><div class="ttname"><a href="structjsontree__object.html#ae776117e2f992cdc8d9dac1efc379672">jsontree_object::count</a></div><div class="ttdeci">uint8_t count</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:91</div></div>
+<div class="ttc" id="structjsontree__pair_html_aee67d8e7f805358094595402e146980f"><div class="ttname"><a href="structjsontree__pair.html#aee67d8e7f805358094595402e146980f">jsontree_pair::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:85</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__json_8c_a953b42db54f2442958d42d11831f9cbd_icgraph.png" border="0" usemap="#user__json_8c_a953b42db54f2442958d42d11831f9cbd_icgraph" alt=""/></div>
+<map name="user__json_8c_a953b42db54f2442958d42d11831f9cbd_icgraph" id="user__json_8c_a953b42db54f2442958d42d11831f9cbd_icgraph">
+<area shape="rect" id="node2" href="user__json_8c.html#a81cfcd4aab5c423a95491d3e37f92113" title="json_ws_send" alt="" coords="159,5,263,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0ffe2a0759bac0dc826160b478306a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> json_putchar </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="user__json_8c.html#a3308aa7b6b41eb67cf9266b4d434b394">json_buf</a> != <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> &amp;&amp; <a class="code" href="user__json_8c.html#aa311b2ee5310616354a2de6bfafe7ed8">pos</a> &lt;= <a class="code" href="user__json_8c.html#aa56153054f63c15efaa7c9a2326a701c">size</a>) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="user__json_8c.html#a3308aa7b6b41eb67cf9266b4d434b394">json_buf</a>[<a class="code" href="user__json_8c.html#aa311b2ee5310616354a2de6bfafe7ed8">pos</a>++] = c;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="ttc" id="user__json_8c_html_a3308aa7b6b41eb67cf9266b4d434b394"><div class="ttname"><a href="user__json_8c.html#a3308aa7b6b41eb67cf9266b4d434b394">json_buf</a></div><div class="ttdeci">LOCAL char * json_buf</div><div class="ttdef"><b>Definition:</b> user_json.c:32</div></div>
+<div class="ttc" id="c__types_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> c_types.h:73</div></div>
+<div class="ttc" id="user__json_8c_html_aa311b2ee5310616354a2de6bfafe7ed8"><div class="ttname"><a href="user__json_8c.html#aa311b2ee5310616354a2de6bfafe7ed8">pos</a></div><div class="ttdeci">LOCAL int pos</div><div class="ttdef"><b>Definition:</b> user_json.c:33</div></div>
+<div class="ttc" id="user__json_8c_html_aa56153054f63c15efaa7c9a2326a701c"><div class="ttname"><a href="user__json_8c.html#aa56153054f63c15efaa7c9a2326a701c">size</a></div><div class="ttdeci">LOCAL int size</div><div class="ttdef"><b>Definition:</b> user_json.c:34</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__json_8c_ae0ffe2a0759bac0dc826160b478306a9_icgraph.png" border="0" usemap="#user__json_8c_ae0ffe2a0759bac0dc826160b478306a9_icgraph" alt=""/></div>
+<map name="user__json_8c_ae0ffe2a0759bac0dc826160b478306a9_icgraph" id="user__json_8c_ae0ffe2a0759bac0dc826160b478306a9_icgraph">
+<area shape="rect" id="node2" href="user__json_8c.html#a81cfcd4aab5c423a95491d3e37f92113" title="json_ws_send" alt="" coords="149,5,253,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a81cfcd4aab5c423a95491d3e37f92113"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> json_ws_send </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structjsontree__value.html">jsontree_value</a> *&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pbuf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                                                        {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">struct </span><a class="code" href="structjsontree__context.html">jsontree_context</a> json;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">/* maxsize = 128 bytes */</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="user__json_8c.html#a3308aa7b6b41eb67cf9266b4d434b394">json_buf</a> = (<span class="keywordtype">char</span> *) <a class="code" href="mem_8h.html#afa95f69fc3b09bf0f40b7b2ed045be8b">os_malloc</a>(<a class="code" href="user__json_8h.html#aa35f093767fd552f233f80f28adf1e8a">jsonSize</a>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="comment">/* reset state and set max-size */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">/* NOTE: packet will be truncated at 512 bytes */</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="user__json_8c.html#aa311b2ee5310616354a2de6bfafe7ed8">pos</a> = 0;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="user__json_8c.html#aa56153054f63c15efaa7c9a2326a701c">size</a> = <a class="code" href="user__json_8h.html#aa35f093767fd552f233f80f28adf1e8a">jsonSize</a>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    json.values[0] = (<span class="keyword">struct </span><a class="code" href="structjsontree__value.html">jsontree_value</a> *) tree;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h.html#aa90bf1dbae12c7d5274f26d6d0141c6c">jsontree_reset</a>(&amp;json);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="user__json_8c.html#a953b42db54f2442958d42d11831f9cbd">find_json_path</a>(&amp;json, path);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    json.path = json.depth;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    json.putchar = <a class="code" href="user__json_8c.html#ae0ffe2a0759bac0dc826160b478306a9">json_putchar</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h.html#ae146224603bbbbd04bda0f01d3cac413">jsontree_print_next</a>(&amp;json) &amp;&amp; json.path &lt;= json.depth)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        ;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    json_buf[<a class="code" href="user__json_8c.html#aa311b2ee5310616354a2de6bfafe7ed8">pos</a>] = 0;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>(pbuf, json_buf, <a class="code" href="user__json_8c.html#aa311b2ee5310616354a2de6bfafe7ed8">pos</a>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="mem_8h.html#aeca859cafb7f4c2eed341334a2c2e97c">os_free</a>(json_buf);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="ttc" id="user__json_8c_html_ae0ffe2a0759bac0dc826160b478306a9"><div class="ttname"><a href="user__json_8c.html#ae0ffe2a0759bac0dc826160b478306a9">json_putchar</a></div><div class="ttdeci">int ICACHE_FLASH_ATTR json_putchar(int c)</div><div class="ttdef"><b>Definition:</b> user_json.c:102</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h_html_ae146224603bbbbd04bda0f01d3cac413"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h.html#ae146224603bbbbd04bda0f01d3cac413">jsontree_print_next</a></div><div class="ttdeci">int jsontree_print_next(struct jsontree_context *js_ctx)</div></div>
+<div class="ttc" id="osapi_8h_html_ac5c79bf463c8eba708ea34fccc8ec7c1"><div class="ttname"><a href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a></div><div class="ttdeci">#define os_memcpy</div><div class="ttdef"><b>Definition:</b> osapi.h:36</div></div>
+<div class="ttc" id="user__json_8h_html_aa35f093767fd552f233f80f28adf1e8a"><div class="ttname"><a href="user__json_8h.html#aa35f093767fd552f233f80f28adf1e8a">jsonSize</a></div><div class="ttdeci">#define jsonSize</div><div class="ttdef"><b>Definition:</b> user_json.h:31</div></div>
+<div class="ttc" id="user__json_8c_html_a3308aa7b6b41eb67cf9266b4d434b394"><div class="ttname"><a href="user__json_8c.html#a3308aa7b6b41eb67cf9266b4d434b394">json_buf</a></div><div class="ttdeci">LOCAL char * json_buf</div><div class="ttdef"><b>Definition:</b> user_json.c:32</div></div>
+<div class="ttc" id="structjsontree__value_html"><div class="ttname"><a href="structjsontree__value.html">jsontree_value</a></div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:61</div></div>
+<div class="ttc" id="user__json_8c_html_a953b42db54f2442958d42d11831f9cbd"><div class="ttname"><a href="user__json_8c.html#a953b42db54f2442958d42d11831f9cbd">find_json_path</a></div><div class="ttdeci">struct jsontree_value *ICACHE_FLASH_ATTR find_json_path(struct jsontree_context *json, const char *path)</div><div class="ttdef"><b>Definition:</b> user_json.c:44</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h_html_aa90bf1dbae12c7d5274f26d6d0141c6c"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h.html#aa90bf1dbae12c7d5274f26d6d0141c6c">jsontree_reset</a></div><div class="ttdeci">void jsontree_reset(struct jsontree_context *js_ctx)</div></div>
+<div class="ttc" id="mem_8h_html_afa95f69fc3b09bf0f40b7b2ed045be8b"><div class="ttname"><a href="mem_8h.html#afa95f69fc3b09bf0f40b7b2ed045be8b">os_malloc</a></div><div class="ttdeci">#define os_malloc(s)</div><div class="ttdef"><b>Definition:</b> mem.h:41</div></div>
+<div class="ttc" id="mem_8h_html_aeca859cafb7f4c2eed341334a2c2e97c"><div class="ttname"><a href="mem_8h.html#aeca859cafb7f4c2eed341334a2c2e97c">os_free</a></div><div class="ttdeci">#define os_free(s)</div><div class="ttdef"><b>Definition:</b> mem.h:40</div></div>
+<div class="ttc" id="user__json_8c_html_aa311b2ee5310616354a2de6bfafe7ed8"><div class="ttname"><a href="user__json_8c.html#aa311b2ee5310616354a2de6bfafe7ed8">pos</a></div><div class="ttdeci">LOCAL int pos</div><div class="ttdef"><b>Definition:</b> user_json.c:33</div></div>
+<div class="ttc" id="user__json_8c_html_aa56153054f63c15efaa7c9a2326a701c"><div class="ttname"><a href="user__json_8c.html#aa56153054f63c15efaa7c9a2326a701c">size</a></div><div class="ttdeci">LOCAL int size</div><div class="ttdef"><b>Definition:</b> user_json.c:34</div></div>
+<div class="ttc" id="structjsontree__context_html"><div class="ttname"><a href="structjsontree__context.html">jsontree_context</a></div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:52</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__json_8c_a81cfcd4aab5c423a95491d3e37f92113_cgraph.png" border="0" usemap="#user__json_8c_a81cfcd4aab5c423a95491d3e37f92113_cgraph" alt=""/></div>
+<map name="user__json_8c_a81cfcd4aab5c423a95491d3e37f92113_cgraph" id="user__json_8c_a81cfcd4aab5c423a95491d3e37f92113_cgraph">
+<area shape="rect" id="node2" href="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h.html#aa90bf1dbae12c7d5274f26d6d0141c6c" title="jsontree_reset" alt="" coords="171,5,275,32"/><area shape="rect" id="node3" href="user__json_8c.html#a953b42db54f2442958d42d11831f9cbd" title="find_json_path" alt="" coords="171,56,276,83"/><area shape="rect" id="node4" href="user__json_8c.html#ae0ffe2a0759bac0dc826160b478306a9" title="json_putchar" alt="" coords="175,107,271,133"/><area shape="rect" id="node5" href="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h.html#ae146224603bbbbd04bda0f01d3cac413" title="jsontree_print_next" alt="" coords="157,157,289,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abbe1c82cf680000a06a3490ed48451d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> json_parse </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structjsontree__context.html">jsontree_context</a> *&#160;</td>
+          <td class="paramname"><em>json</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>ptrJSONMessage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                                                                {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">/* Set value */</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keyword">struct </span><a class="code" href="structjsontree__value.html">jsontree_value</a> *v;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keyword">struct </span><a class="code" href="structjsontree__callback.html">jsontree_callback</a> *c;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">struct </span><a class="code" href="structjsontree__callback.html">jsontree_callback</a> *c_bak = <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">while</span> ((v = <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h.html#a8cf51201c15dbfd4a357fddd34a14a3d">jsontree_find_next</a>(json, <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#a610b0daf86840249ad7d31572d4a5c6c">JSON_TYPE_CALLBACK</a>)) != <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        c = (<span class="keyword">struct </span><a class="code" href="structjsontree__callback.html">jsontree_callback</a> *) v;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">if</span> (c == c_bak) {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        c_bak = c;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">if</span> (c-&gt;<a class="code" href="structjsontree__callback.html#adaee587b515e8cbef22cc8ea7c6bb0a6">set</a> != <a class="code" href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keyword">struct </span><a class="code" href="structjsonparse__state.html">jsonparse_state</a> js;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#afc4b030a890d41b1d7c8896fe964cc1c">jsonparse_setup</a>(&amp;js, ptrJSONMessage, <a class="code" href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a>(ptrJSONMessage));</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            c-&gt;<a class="code" href="structjsontree__callback.html#adaee587b515e8cbef22cc8ea7c6bb0a6">set</a>(json, &amp;js);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;}</div>
+<div class="ttc" id="structjsontree__callback_html_adaee587b515e8cbef22cc8ea7c6bb0a6"><div class="ttname"><a href="structjsontree__callback.html#adaee587b515e8cbef22cc8ea7c6bb0a6">jsontree_callback::set</a></div><div class="ttdeci">int(* set)(struct jsontree_context *js_ctx, struct jsonparse_state *parser)</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:81</div></div>
+<div class="ttc" id="structjsonparse__state_html"><div class="ttname"><a href="structjsonparse__state.html">jsonparse_state</a></div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsonparse.h:44</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h_html_afc4b030a890d41b1d7c8896fe964cc1c"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#afc4b030a890d41b1d7c8896fe964cc1c">jsonparse_setup</a></div><div class="ttdeci">void jsonparse_setup(struct jsonparse_state *state, const char *json, int len)</div><div class="ttdoc">Initialize a JSON parser state. </div></div>
+<div class="ttc" id="osapi_8h_html_a07564f20970de543cfa55b055d1f6dfe"><div class="ttname"><a href="osapi_8h.html#a07564f20970de543cfa55b055d1f6dfe">os_strlen</a></div><div class="ttdeci">#define os_strlen</div><div class="ttdef"><b>Definition:</b> osapi.h:43</div></div>
+<div class="ttc" id="structjsontree__value_html"><div class="ttname"><a href="structjsontree__value.html">jsontree_value</a></div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:61</div></div>
+<div class="ttc" id="c__types_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="c__types_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> c_types.h:73</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2json_8h_html_a610b0daf86840249ad7d31572d4a5c6c"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#a610b0daf86840249ad7d31572d4a5c6c">JSON_TYPE_CALLBACK</a></div><div class="ttdeci">#define JSON_TYPE_CALLBACK</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/json.h:57</div></div>
+<div class="ttc" id="structjsontree__callback_html"><div class="ttname"><a href="structjsontree__callback.html">jsontree_callback</a></div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/jsontree.h:78</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h_html_a8cf51201c15dbfd4a357fddd34a14a3d"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h.html#a8cf51201c15dbfd4a357fddd34a14a3d">jsontree_find_next</a></div><div class="ttdeci">struct jsontree_value * jsontree_find_next(struct jsontree_context *js_ctx, int type)</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__json_8c_abbe1c82cf680000a06a3490ed48451d6_cgraph.png" border="0" usemap="#user__json_8c_abbe1c82cf680000a06a3490ed48451d6_cgraph" alt=""/></div>
+<map name="user__json_8c_abbe1c82cf680000a06a3490ed48451d6_cgraph" id="user__json_8c_abbe1c82cf680000a06a3490ed48451d6_cgraph">
+<area shape="rect" id="node2" href="esp8266__centre___n_b_2include_2include_2json_2jsontree_8h.html#a8cf51201c15dbfd4a357fddd34a14a3d" title="jsontree_find_next" alt="" coords="139,5,265,32"/><area shape="rect" id="node3" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#afc4b030a890d41b1d7c8896fe964cc1c" title="Initialize a JSON parser state. " alt="" coords="143,56,261,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac71adb3eb5cf17fe2eaed46cf2d7958c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> jsonArray_set </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structjsontree__context.html">jsontree_context</a> *&#160;</td>
+          <td class="paramname"><em>js_ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structjsonparse__state.html">jsonparse_state</a> *&#160;</td>
+          <td class="paramname"><em>parser</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                                                               {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordtype">int</span> type;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">while</span> ((type = <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#ac2bf3620113d4286586508c09aa64ba6">jsonparse_next</a>(parser)) == 0) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="comment">//如果是KEY类型</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">if</span> (type == <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#ac0634d0064380439e975068a742fc26e">JSON_TYPE_PAIR_NAME</a>) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="keywordtype">char</span> buffer[64];</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="osapi_8h.html#a784a9a17499714623002d4aaeb33c8d1">os_bzero</a>(buffer, 64);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#af8eee874889f27f60ceeb1269f4cb447">jsonparse_strcmp_value</a>(parser, <span class="stringliteral">&quot;K1&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#a55a3312202d52df9057a535f327f2b5e">JSON_TYPE_STRING</a> == type) { <span class="comment">//#define JSON_TYPE_STRING &#39;&quot;&#39;</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#a40d9c3e272d1809f9a0b87132b7c440e">jsonparse_copy_value</a>(parser, buffer, <span class="keyword">sizeof</span>(buffer));</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;K1 Value = %s\n&quot;</span>, buffer);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#af8eee874889f27f60ceeb1269f4cb447">jsonparse_strcmp_value</a>(parser, <span class="stringliteral">&quot;K2&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#a55a3312202d52df9057a535f327f2b5e">JSON_TYPE_STRING</a> == type) { <span class="comment">//#define JSON_TYPE_STRING &#39;&quot;&#39;</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                    <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#a40d9c3e272d1809f9a0b87132b7c440e">jsonparse_copy_value</a>(parser, buffer, <span class="keyword">sizeof</span>(buffer));</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;K2 Value = %s\n&quot;</span>, buffer);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#af8eee874889f27f60ceeb1269f4cb447">jsonparse_strcmp_value</a>(parser, <span class="stringliteral">&quot;K3&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#a55a3312202d52df9057a535f327f2b5e">JSON_TYPE_STRING</a> == type) { <span class="comment">//#define JSON_TYPE_STRING &#39;&quot;&#39;</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    <a class="code" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#a40d9c3e272d1809f9a0b87132b7c440e">jsonparse_copy_value</a>(parser, buffer, <span class="keyword">sizeof</span>(buffer));</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;K3 Value = %s\n&quot;</span>, buffer);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2json_8h_html_a55a3312202d52df9057a535f327f2b5e"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#a55a3312202d52df9057a535f327f2b5e">JSON_TYPE_STRING</a></div><div class="ttdeci">#define JSON_TYPE_STRING</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/json.h:47</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h_html_a40d9c3e272d1809f9a0b87132b7c440e"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#a40d9c3e272d1809f9a0b87132b7c440e">jsonparse_copy_value</a></div><div class="ttdeci">int jsonparse_copy_value(struct jsonparse_state *state, char *buf, int buf_size)</div></div>
+<div class="ttc" id="osapi_8h_html_a751d204d0c7e166a527475d79e803454"><div class="ttname"><a href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a></div><div class="ttdeci">#define os_printf</div><div class="ttdef"><b>Definition:</b> osapi.h:62</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2json_8h_html_ac0634d0064380439e975068a742fc26e"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2json_8h.html#ac0634d0064380439e975068a742fc26e">JSON_TYPE_PAIR_NAME</a></div><div class="ttdeci">#define JSON_TYPE_PAIR_NAME</div><div class="ttdef"><b>Definition:</b> esp8266_centre_NB/include/include/json/json.h:46</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h_html_af8eee874889f27f60ceeb1269f4cb447"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#af8eee874889f27f60ceeb1269f4cb447">jsonparse_strcmp_value</a></div><div class="ttdeci">int jsonparse_strcmp_value(struct jsonparse_state *state, const char *str)</div></div>
+<div class="ttc" id="osapi_8h_html_a784a9a17499714623002d4aaeb33c8d1"><div class="ttname"><a href="osapi_8h.html#a784a9a17499714623002d4aaeb33c8d1">os_bzero</a></div><div class="ttdeci">#define os_bzero</div><div class="ttdef"><b>Definition:</b> osapi.h:31</div></div>
+<div class="ttc" id="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h_html_ac2bf3620113d4286586508c09aa64ba6"><div class="ttname"><a href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#ac2bf3620113d4286586508c09aa64ba6">jsonparse_next</a></div><div class="ttdeci">int jsonparse_next(struct jsonparse_state *state)</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__json_8c_ac71adb3eb5cf17fe2eaed46cf2d7958c_cgraph.png" border="0" usemap="#user__json_8c_ac71adb3eb5cf17fe2eaed46cf2d7958c_cgraph" alt=""/></div>
+<map name="user__json_8c_ac71adb3eb5cf17fe2eaed46cf2d7958c_cgraph" id="user__json_8c_ac71adb3eb5cf17fe2eaed46cf2d7958c_cgraph">
+<area shape="rect" id="node2" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#ac2bf3620113d4286586508c09aa64ba6" title="jsonparse_next" alt="" coords="181,5,292,32"/><area shape="rect" id="node3" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#af8eee874889f27f60ceeb1269f4cb447" title="jsonparse_strcmp_value" alt="" coords="156,56,317,83"/><area shape="rect" id="node4" href="esp8266__centre___n_b_2include_2include_2json_2jsonparse_8h.html#a40d9c3e272d1809f9a0b87132b7c440e" title="jsonparse_copy_value" alt="" coords="162,107,311,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a class="anchor" id="a3308aa7b6b41eb67cf9266b4d434b394"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a3758dd5d300a594312c95bc393378df0">LOCAL</a> char* json_buf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa311b2ee5310616354a2de6bfafe7ed8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a3758dd5d300a594312c95bc393378df0">LOCAL</a> int pos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa56153054f63c15efaa7c9a2326a701c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a3758dd5d300a594312c95bc393378df0">LOCAL</a> int size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:18 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

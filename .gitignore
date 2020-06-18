@@ -8,4 +8,7 @@ ESP8266_NONOS_SDK/
 !*/driver/
 !*/include/
 !*/LiteOS SDK/
+!*/doxygen/
+!*Makefile
+!*.md
 */user/.output

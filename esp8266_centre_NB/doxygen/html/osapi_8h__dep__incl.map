@@ -1,0 +1,17 @@
+<map id="osapi.h" name="osapi.h">
+<area shape="rect" id="node2" href="$app__study__room_8h.html" title="app_study_room.h" alt="" coords="5,80,135,107"/>
+<area shape="rect" id="node4" href="$include_2room__info_8h.html" title="room_info.h" alt="" coords="159,80,248,107"/>
+<area shape="rect" id="node5" href="$nb__bc35_8h.html" title="nb_bc35.h" alt="" coords="273,80,355,107"/>
+<area shape="rect" id="node7" href="$user__main_8c.html" title="user_main.c" alt="" coords="273,155,366,181"/>
+<area shape="rect" id="node8" href="$room__info_8h.html" title="room_info.h" alt="" coords="481,80,571,107"/>
+<area shape="rect" id="node10" href="$tcp__server_8c.html" title="tcp_server.c" alt="" coords="391,155,483,181"/>
+<area shape="rect" id="node11" href="$uart_8c.html" title="uart.c" alt="" coords="620,155,675,181"/>
+<area shape="rect" id="node12" href="$gpio16_8c.html" title="gpio16.c" alt="" coords="647,80,717,107"/>
+<area shape="rect" id="node13" href="$hal__temp__hum_8c.html" title="hal_temp_hum.c" alt="" coords="741,80,860,107"/>
+<area shape="rect" id="node14" href="$http__client_8c.html" title="http_client.c" alt="" coords="885,80,978,107"/>
+<area shape="rect" id="node15" href="$user__json_8c.html" title="user_json.c" alt="" coords="1003,80,1092,107"/>
+<area shape="rect" id="node16" href="$user__wifi_8c.html" title="user_wifi.c" alt="" coords="1117,80,1199,107"/>
+<area shape="rect" id="node3" href="$app__study__room_8c.html" title="app_study_room.c" alt="" coords="12,155,141,181"/>
+<area shape="rect" id="node6" href="$nb__bc35_8c.html" title="nb_bc35.c" alt="" coords="166,155,249,181"/>
+<area shape="rect" id="node9" href="$room__info_8c.html" title="room_info.c" alt="" coords="507,155,596,181"/>
+</map>

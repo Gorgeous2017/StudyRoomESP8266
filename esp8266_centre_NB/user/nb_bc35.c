@@ -12,34 +12,18 @@
  * ******************************************************************************
  */
 
+/* Includes ------------------------------------------------------------------*/
 #include "nb_bc35.h"
 
-os_timer_t nb_response_timer;
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+uint8 response_flag = 0; /*!< 响应消息接收标志 */
+uint8 response_msg[128]; /*!< 期望接收到的响应消息 */
 
-void ICACHE_FLASH_ATTR
-NB_ResponseTimerCb(void *arg) {
-
-	// uint8 *response_msg = (uint8 *)arg;
-
-	// //if (0 != os_strcmp(uart_buff, response_msg)) {
-	// if (0 != os_strstr(uart_buff, response_msg)) {
-
-	// 	ESP_DEBUG("OK! response message parse!");
-
-	// 	os_timer_disarm(&nb_response_timer);
-	// 	os_memset(uart_buff,0,sizeof(uart_buff))
-	// 	NB_Init();
-
-	// 	return;
-
-	// } else {
-
-	// 	ESP_DEBUG("ERROR! response message parse failed");
-
-	// 	return;
-	// }
-}
-
+/* Private function prototypes -----------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
 
 /**
  * @brief 上报数据到云端
@@ -47,31 +31,24 @@ NB_ResponseTimerCb(void *arg) {
  * @par AT Command
  * 	AT+NMGS=数据长度,内容
  * 
- * 	例如：
- * 
- * 	发送0、1两个数据：AT+NMGS=02,0001
- * 
- * 	发送9、10、11、16、17、32、33七个数据：AT+NMGS=07,090A0B10112021
+ * 	例如：当编解码插件中的messageId为0x11时，
+ * 	- 发送0、1两个数据：AT+NMGS=03,110001
+ * 	- 发送9、10、11、16、17、32、33七个数据：AT+NMGS=08,11090A0B10112021
  * 
  * @note 上报数据的格式需要与IoT平台的“编解码插件”的解码顺序一致，不然上报的数据无法正确解析
  * 
  * @param[in] data_str 需要上报的十六进制数据字符串
  */
-void NB_ReportData(uint8 *data_str) {
+void NB_ReportData(uint8 mid, uint8 *data_str) {
 	
 	uint8 report_buf[128];
 
 	/* 因为数据字符串是十六进制的，两个字符表示一个十六进制数，故数据长度为os_strlen(data_str)/2 */
-	os_sprintf(report_buf, AT_NB_REPORT_PREFIX "%02d,%s" , os_strlen(data_str)/2, data_str );
+	os_sprintf(report_buf, AT_NB_REPORT_PREFIX "%02d,%02X%s" , os_strlen(data_str)/2 + 1, mid, data_str );
 
 	NB_SendCmd(report_buf, os_strlen(report_buf), NULL);
 
 }
-
-
-
-uint8 response_flag = 0; /*!< 响应消息接收标志 */
-uint8 response_msg[128]; /*!< 期望接收到的响应消息 */
 
 /**
  * @brief 向NB模组发送指令
@@ -93,7 +70,6 @@ uint8 response_msg[128]; /*!< 期望接收到的响应消息 */
 void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg) {
 
 	uint8 at_cmd[128];
-	//os_memset(at_cmd,0,128);
 
 	os_printf("MCU >>>>>> NB : %s\n", cmd);
 
@@ -110,10 +86,6 @@ void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *res_msg) {
 		os_printf("response_msg is %s\n", response_msg);
 		response_flag = 1;
 	}
-
-	// os_timer_disarm(&nb_response_timer);
-	// os_timer_setfn(&nb_response_timer, (os_timer_func_t *) NB_ResponseTimerCb, (void *)response_msg);
-	// os_timer_arm(&nb_response_timer, response_time_ms, 1);
 
 }
 
@@ -147,14 +119,12 @@ void NB_RxMsgHandler(uint8 *nb_msg ) {
 			NB_Init();
 
 			return;
-
 		} else {
 
 			ESP_DEBUG("ERROR! response message parse failed");
 
 			return;
 		}
-
 	} else {
 
 		ESP_DEBUG("response_flag = 0");

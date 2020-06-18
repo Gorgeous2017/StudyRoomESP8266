@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: ip_addr.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3f3aa03da80a6f543b7f052367a441a.html">ESP8266_NONOS_SDK</a></li><li class="navelem"><a class="el" href="dir_9cb0e4b91a56b7f682c398f4eec1db93.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ip_addr.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ip__addr_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * ESPRSSIF MIT License</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2016 &lt;ESPRESSIF SYSTEMS (SHANGHAI) PTE LTD&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Permission is hereby granted for use on ESPRESSIF SYSTEMS ESP8266 only, in which case,</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * it is free of charge, to any person obtaining a copy of this software and associated</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * and/or sell copies of the Software, and to permit persons to whom the Software is furnished</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * The above copyright notice and this permission notice shall be included in all copies or</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * substantial portions of the Software.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef __IP_ADDR_H__</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __IP_ADDR_H__</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="c__types_8h.html">c_types.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structip__addr.html">   30</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structip__addr.html">ip_addr</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structip__addr.html#aaeb058ae88224de019d367a879adc201">   31</a></span>&#160;    <a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="structip__addr.html#aaeb058ae88224de019d367a879adc201">addr</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#a335a8c9df66319e88a1a529047ce0a1e">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structip__addr.html">ip_addr</a> <a class="code" href="structip__addr.html">ip_addr_t</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structip__info.html">   36</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structip__info.html">ip_info</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structip__info.html#a4936657e519be54caf19352b23846913">   37</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structip__addr.html">ip_addr</a> <a class="code" href="structip__info.html#a4936657e519be54caf19352b23846913">ip</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structip__info.html#a3f9e6d30f4ec10eefa7b51653e5c3da4">   38</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structip__addr.html">ip_addr</a> <a class="code" href="structip__info.html#a3f9e6d30f4ec10eefa7b51653e5c3da4">netmask</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structip__info.html#a688311148a7415577157c439ee77ee0b">   39</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structip__addr.html">ip_addr</a> <a class="code" href="structip__info.html#a688311148a7415577157c439ee77ee0b">gw</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#a3a2123f0bbf6fe843c8542e349c680eb">   50</a></span>&#160;<span class="preprocessor">#define ip_addr_netcmp(addr1, addr2, mask) (((addr1)-&gt;addr &amp; \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">        (mask)-&gt;addr) == \</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">        ((addr2)-&gt;addr &amp; \</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">         (mask)-&gt;addr))</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#a58aee4166c466f9ac7035bf5cc9f9974">   57</a></span>&#160;<span class="preprocessor">#define IP4_ADDR(ipaddr, a,b,c,d) \</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">        (ipaddr)-&gt;addr = ((uint32)((d) &amp; 0xff) &lt;&lt; 24) | \</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">                         ((uint32)((c) &amp; 0xff) &lt;&lt; 16) | \</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">                         ((uint32)((b) &amp; 0xff) &lt;&lt; 8)  | \</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">                          (uint32)((a) &amp; 0xff)</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#a32caf20405b8659c07758352746c4331">   63</a></span>&#160;<span class="preprocessor">#define ip4_addr1(ipaddr) (((uint8*)(ipaddr))[0])</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#aee091caef24dd1705876bb8dbe28035c">   64</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ip4_addr2(ipaddr) (((uint8*)(ipaddr))[1])</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#aead691bee580ea8111b70e67cf971c40">   65</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ip4_addr3(ipaddr) (((uint8*)(ipaddr))[2])</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#a78cbf5c1fd832f909f755c4cc9036f02">   66</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ip4_addr4(ipaddr) (((uint8*)(ipaddr))[3])</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#a15d6d219310ffb5a225cdc13404072dc">   68</a></span>&#160;<span class="preprocessor">#define ip4_addr1_16(ipaddr) ((uint16)ip4_addr1(ipaddr))</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#a3d0584d6d81c59b05824d65b95fedb63">   69</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ip4_addr2_16(ipaddr) ((uint16)ip4_addr2(ipaddr))</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#aab3a41c7d715de7fa8de42600be7c189">   70</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ip4_addr3_16(ipaddr) ((uint16)ip4_addr3(ipaddr))</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#ad063f9120ca605616531abe3e4860dc9">   71</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ip4_addr4_16(ipaddr) ((uint16)ip4_addr4(ipaddr))</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#abc4b2e3531c4992f2ae4b8c0f9751544">   75</a></span>&#160;<span class="preprocessor">#define IPADDR_NONE         ((uint32)0xffffffffUL)</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#ad6ed0d622d61ecd6edd606e3b564f0a2">   77</a></span>&#160;<span class="preprocessor">#define IPADDR_ANY          ((uint32)0x00000000UL)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor"></span><a class="code" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> <a class="code" href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0">ipaddr_addr</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *cp);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#af488ccb181cdd5905e55ffb8bff92552">   80</a></span>&#160;<span class="preprocessor">#define IP2STR(ipaddr) ip4_addr1_16(ipaddr), \</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">    ip4_addr2_16(ipaddr), \</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">    ip4_addr3_16(ipaddr), \</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">    ip4_addr4_16(ipaddr)</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="ip__addr_8h.html#ac88858dbe588b82edadb33513aed16d4">   85</a></span>&#160;<span class="preprocessor">#define IPSTR &quot;%d.%d.%d.%d&quot;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __IP_ADDR_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="structip__info_html"><div class="ttname"><a href="structip__info.html">ip_info</a></div><div class="ttdef"><b>Definition:</b> ip_addr.h:36</div></div>
+<div class="ttc" id="structip__info_html_a4936657e519be54caf19352b23846913"><div class="ttname"><a href="structip__info.html#a4936657e519be54caf19352b23846913">ip_info::ip</a></div><div class="ttdeci">struct ip_addr ip</div><div class="ttdef"><b>Definition:</b> ip_addr.h:37</div></div>
+<div class="ttc" id="c__types_8h_html"><div class="ttname"><a href="c__types_8h.html">c_types.h</a></div></div>
+<div class="ttc" id="structip__addr_html"><div class="ttname"><a href="structip__addr.html">ip_addr</a></div><div class="ttdef"><b>Definition:</b> ip_addr.h:30</div></div>
+<div class="ttc" id="structip__info_html_a688311148a7415577157c439ee77ee0b"><div class="ttname"><a href="structip__info.html#a688311148a7415577157c439ee77ee0b">ip_info::gw</a></div><div class="ttdeci">struct ip_addr gw</div><div class="ttdef"><b>Definition:</b> ip_addr.h:39</div></div>
+<div class="ttc" id="structip__addr_html_aaeb058ae88224de019d367a879adc201"><div class="ttname"><a href="structip__addr.html#aaeb058ae88224de019d367a879adc201">ip_addr::addr</a></div><div class="ttdeci">uint32 addr</div><div class="ttdef"><b>Definition:</b> ip_addr.h:31</div></div>
+<div class="ttc" id="c__types_8h_html_a1134b580f8da4de94ca6b1de4d37975e"><div class="ttname"><a href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a></div><div class="ttdeci">unsigned int uint32</div><div class="ttdef"><b>Definition:</b> c_types.h:52</div></div>
+<div class="ttc" id="structip__info_html_a3f9e6d30f4ec10eefa7b51653e5c3da4"><div class="ttname"><a href="structip__info.html#a3f9e6d30f4ec10eefa7b51653e5c3da4">ip_info::netmask</a></div><div class="ttdeci">struct ip_addr netmask</div><div class="ttdef"><b>Definition:</b> ip_addr.h:38</div></div>
+<div class="ttc" id="ip__addr_8h_html_a13ddd6661ca792f864762dbda88585f0"><div class="ttname"><a href="ip__addr_8h.html#a13ddd6661ca792f864762dbda88585f0">ipaddr_addr</a></div><div class="ttdeci">uint32 ipaddr_addr(const char *cp)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:13 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

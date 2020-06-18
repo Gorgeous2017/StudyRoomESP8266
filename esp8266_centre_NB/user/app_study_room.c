@@ -14,6 +14,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "app_study_room.h"
+#include "nb_bc35.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -25,9 +26,37 @@
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 
-/*! 四个房间的环境信息 */
-/*! 用messageId来区分不同房间的上报数据，由华为IoT平台中产品的编解码插件所决定 */
-RoomMessage room_message[4] = {{0x11}, {0x12}, {0x13}, {0x14}}; 
+/**
+ * @brief 四个房间的环境信息
+ * 
+ * @details 
+ * 	ROOM_NO 取值范围为 [1, 4], 对应四个房间
+ * 
+ * 	- room_message[ROOM_NO - 1] = ROOM_NO对应房间的环境信息
+ * 
+ * @note
+ * 	由RoomMessage中的messageId成员来区分不同房间的上报数据，与华为IoT平台中产品的编解
+ * 码插件保持一致
+ * 
+ * @par 信息指令串
+ * 	各个子节点传输信息到主节点的通讯信息格式
+ * 
+ * 	室内环境信息指令串的信息标志位为 0xFF
+	@verbatim
+ 	------------------------------------------------------------------------------------
+ 	|        |                          BODY                                 |         |
+ 	| HEADER | ------------------------------------------------------------- | TRAILER |
+ 	|        | ROOM_NO | ENV_CROWD_DENSITY | ENV_TEMP | ENV_HUMI | ENV_NOISE |         |
+ 	------------------------------------------------------------------------------------
+ 	|  0xFF  | 1,2,3,4 |      [0,100]      |  [0,50]  |  [0,100] | [30,130]  |   0xFF  |
+	|        |         |         %         |    ℃    |    %RH   |    db     |         |
+ 	------------------------------------------------------------------------------------
+ 	@endverbatim
+ * 
+ * @see RoomMessage
+ * 
+ */
+RoomMessage room_message[4] = {{0x11}, {0x12}, {0x13}, {0x14}}; /* 赋值 */
 
 /**
  * @brief 四个房间的用电器状态信息
@@ -103,6 +132,9 @@ uint32 room_status[4];
  * @param[in] msg_string 信息指令串
  * @arg @c 0xFF 作为标志位：室内环境信息
  * @arg @c 0xFE 作为标志位：用电器状态信息
+ * 
+ * @see room_status
+ * @see room_message
  */
 void StudyRoom_UpdataData(uint8 *msg_string) {
 
@@ -116,16 +148,15 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 	} 
 	else if (msg_string[0] == 0xFE)
 	{
-		ESP_DEBUG("msg_string: %02X %02X %02X %02X %02X %02X",msg_string[0],msg_string[1],msg_string[2],msg_string[3],msg_string[4],msg_string[5]);
+		// StudyRoom_GetStatusHex(msg_string[1], hexstr);
+		// ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
 
-		StudyRoom_StatusToHex(msg_string[1], hexstr);
-		ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
-
+		/* 位运算 先将目标用电器位置零，再将指令赋值给目标用电器位 */
 		*(room_status + (msg_string[1] - 1)) &= ~(0x01 << (8 * msg_string[2] + msg_string[3]));
 		*(room_status + (msg_string[1] - 1)) |= ((uint32)msg_string[4] << (8 * msg_string[2] + msg_string[3]));
 
-		StudyRoom_StatusToHex(msg_string[1], hexstr);
-		ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
+		// StudyRoom_GetStatusHex(msg_string[1], hexstr);
+		// ESP_DEBUG("status str now is: %s, num is %d", hexstr, room_status[0]);
 	}
 	
 }
@@ -133,19 +164,23 @@ void StudyRoom_UpdataData(uint8 *msg_string) {
 /**
  * @brief 将一个房间所有用电器的状态转成 Hex 字符串
  * 
+ * @note 数据格式与IoT平台的编解码插件保持一致
+ * 
  * @param[in] room_no 需要转换的房间编号
- * @param[out] out_hexstr 转换后的字符串
+ * @return uint8* 转换后的字符串
  * 
  * @see room_status
  */
-void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr ) {
+uint8 * StudyRoom_GetStatusHex(uint8 room_no) {
 
 	uint8 i,j;
 	bool one_status; /* 一个用电器的状态, 只用一个数据位表示开关即可 */
+	static uint8 out_hexstr[128]; /* 转换后的字符串，必须指定成static类型才能return */
 	uint8 *current_pos = out_hexstr; /* 指向当前 out_hexstr 位置的指针 */
 
 	for (i = DEVICE_FAN; i <= DEVICE_AC; i++) {
 
+		/* 在每类用电器前面加上该类用电器的数量 */
 		os_sprintf(current_pos, "%02X", DEVICE_QAUNTITY);
 		current_pos += 2;
 
@@ -154,67 +189,12 @@ void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr ) {
 			/* 先定位某个房间某一类用电器的状态，再定位具体的单个用电器状态 */
 			/* 可以结合用电器状态的“数组数据分布”来理解，参阅 room_status[] 的注释 */
 			one_status = (((*(room_status + room_no - 1) >> (8 * i)) & 0x000000ff) >> j) & 0x01;
-
-			//ESP_DEBUG("one_status = %02X ", one_status);
-
-			os_sprintf(current_pos, "%02X", one_status); /* 不知道这里类型转换会不会有问题 */
+			os_sprintf(current_pos, "%02X", one_status); 
 		}
 
 		ESP_DEBUG("out_hexstr = %s", out_hexstr);
-
 	}
 
-	//ESP_DEBUG("out_hexstr = %s", out_hexstr);
-	
+	return out_hexstr;	
 }
 
-// int sensor_controll_handler()
-// {
-// // Define data report struct, all members come from devicemodel file
-
-
-// 	// if (semp_pend(s_rcv_sync, 0x7fffffff))
-// 	// {
-// 	// 	uint8_t msgid = s_rcv_buffer[0];
-// 	// 	switch (msgid)
-// 	// 	{
-
-// 	// 	default:
-// 	// 		break;
-// 	// 	}
-// 	// }
-// }
-
-// int report_data_handler()
-// {
-// 	DeviceController SET_LIGHT;
-// 	DeviceController SET_CURTAIN;
-// 	DeviceController SET_FAN;
-// 	DeviceController SET_AC;
-// 	RoomMessage report_room_one_message;
-// 	RoomStatus report_room_one_status;
-
-// /********** code area for report data to IoT cloud  **********/
-
-// /********** code area end  **********/
-
-// // virtual sensor data example
-// 	report_room_one_message.messageId = MID_report_room_one_message;
-// 	report_room_one_message.peopleFlowrate = 0x1;
-// 	report_room_one_message.temp = 0x1;
-// 	report_room_one_message.humi = 0x1;
-// 	report_room_one_message.noise = 0x1;
-// 	oc_lwm2m_report((uint8_t *)&report_room_one_message, sizeof(report_room_one_message), 1000);
-
-// 	report_room_one_status.messageId = MID_report_room_one_status;
-// 	report_room_one_status.fanNum = 0x1;
-// 	report_room_one_status.fanStatus[0] = 9;
-// 	report_room_one_status.lightNum = 0x1;
-// 	report_room_one_status.lightStatus[0] = 9;
-// 	report_room_one_status.curtainNum = 0x1;
-// 	report_room_one_status.curtainStatus[0] = 9;
-// 	report_room_one_status.acNum = 0x1;
-// 	report_room_one_status.acStatus[0] = 9;
-// 	oc_lwm2m_report((uint8_t *)&report_room_one_status, sizeof(report_room_one_status), 1000);
-
-// }

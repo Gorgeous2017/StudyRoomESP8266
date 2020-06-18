@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: smartconfig.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3f3aa03da80a6f543b7f052367a441a.html">ESP8266_NONOS_SDK</a></li><li class="navelem"><a class="el" href="dir_9cb0e4b91a56b7f682c398f4eec1db93.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">smartconfig.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="smartconfig_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:af2d693800ac4c0f508d0d6cc1b77e806"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="smartconfig_8h.html#af2d693800ac4c0f508d0d6cc1b77e806">sc_callback_t</a> )(<a class="el" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3">sc_status</a> status, void *pdata)</td></tr>
+<tr class="separator:af2d693800ac4c0f508d0d6cc1b77e806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:afec33e52eaa14ed795ab28ce69c685e3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3">sc_status</a> { <br/>
+&#160;&#160;<a class="el" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3a3de75e54ab5d15e0aa697d2d35adc363">SC_STATUS_WAIT</a> = 0, 
+<a class="el" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3a30fee0de55f059ac14821f8e2b22ac03">SC_STATUS_FIND_CHANNEL</a>, 
+<a class="el" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3aefc9b644b16531defe122b7316cea0c0">SC_STATUS_GETTING_SSID_PSWD</a>, 
+<a class="el" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3aae1dcaae9b8358bd43499bbca2e0bf95">SC_STATUS_LINK</a>, 
+<br/>
+&#160;&#160;<a class="el" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3a1ae1253a12888c150c36cd30f56394dc">SC_STATUS_LINK_OVER</a>
+<br/>
+ }</td></tr>
+<tr class="separator:afec33e52eaa14ed795ab28ce69c685e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533261c0af94cdbb04fe90f452af9b9d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9d">sc_type</a> { <a class="el" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9dabae45491cc05b00bd1b069bb61e37b01">SC_TYPE_ESPTOUCH</a> = 0, 
+<a class="el" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9da6254d899f4bf164fdb0f3dd778c206e9">SC_TYPE_AIRKISS</a>, 
+<a class="el" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9da50e8065c00b088cdb87b8b0ded4a853c">SC_TYPE_ESPTOUCH_AIRKISS</a>
+ }</td></tr>
+<tr class="separator:a533261c0af94cdbb04fe90f452af9b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a9537246ce540bc1e1a294de687d488bf"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="smartconfig_8h.html#a9537246ce540bc1e1a294de687d488bf">smartconfig_get_version</a> (void)</td></tr>
+<tr class="separator:a9537246ce540bc1e1a294de687d488bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390ec2c5af28b29044899c8ffd016b04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="smartconfig_8h.html#a390ec2c5af28b29044899c8ffd016b04">smartconfig_start</a> (<a class="el" href="smartconfig_8h.html#af2d693800ac4c0f508d0d6cc1b77e806">sc_callback_t</a> cb,...)</td></tr>
+<tr class="separator:a390ec2c5af28b29044899c8ffd016b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85819fc5109441eae24e4262ca34bd48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="smartconfig_8h.html#a85819fc5109441eae24e4262ca34bd48">smartconfig_stop</a> (void)</td></tr>
+<tr class="separator:a85819fc5109441eae24e4262ca34bd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a068b054aecdba51c0ea5219089d5b3c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="smartconfig_8h.html#a068b054aecdba51c0ea5219089d5b3c0">esptouch_set_timeout</a> (<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> time_s)</td></tr>
+<tr class="separator:a068b054aecdba51c0ea5219089d5b3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d5f55176a12436d58014272f6df156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="smartconfig_8h.html#a14d5f55176a12436d58014272f6df156">smartconfig_set_type</a> (<a class="el" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9d">sc_type</a> type)</td></tr>
+<tr class="separator:a14d5f55176a12436d58014272f6df156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a class="anchor" id="af2d693800ac4c0f508d0d6cc1b77e806"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* sc_callback_t)(<a class="el" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3">sc_status</a> status, void *pdata)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="afec33e52eaa14ed795ab28ce69c685e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3">sc_status</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="afec33e52eaa14ed795ab28ce69c685e3a3de75e54ab5d15e0aa697d2d35adc363"></a>SC_STATUS_WAIT</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="afec33e52eaa14ed795ab28ce69c685e3a30fee0de55f059ac14821f8e2b22ac03"></a>SC_STATUS_FIND_CHANNEL</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="afec33e52eaa14ed795ab28ce69c685e3aefc9b644b16531defe122b7316cea0c0"></a>SC_STATUS_GETTING_SSID_PSWD</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="afec33e52eaa14ed795ab28ce69c685e3aae1dcaae9b8358bd43499bbca2e0bf95"></a>SC_STATUS_LINK</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="afec33e52eaa14ed795ab28ce69c685e3a1ae1253a12888c150c36cd30f56394dc"></a>SC_STATUS_LINK_OVER</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;             {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3a3de75e54ab5d15e0aa697d2d35adc363">SC_STATUS_WAIT</a> = 0,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3a30fee0de55f059ac14821f8e2b22ac03">SC_STATUS_FIND_CHANNEL</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3aefc9b644b16531defe122b7316cea0c0">SC_STATUS_GETTING_SSID_PSWD</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3aae1dcaae9b8358bd43499bbca2e0bf95">SC_STATUS_LINK</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3a1ae1253a12888c150c36cd30f56394dc">SC_STATUS_LINK_OVER</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <a class="code" href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3">sc_status</a>;</div>
+<div class="ttc" id="smartconfig_8h_html_afec33e52eaa14ed795ab28ce69c685e3aae1dcaae9b8358bd43499bbca2e0bf95"><div class="ttname"><a href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3aae1dcaae9b8358bd43499bbca2e0bf95">SC_STATUS_LINK</a></div><div class="ttdef"><b>Definition:</b> smartconfig.h:32</div></div>
+<div class="ttc" id="smartconfig_8h_html_afec33e52eaa14ed795ab28ce69c685e3"><div class="ttname"><a href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3">sc_status</a></div><div class="ttdeci">sc_status</div><div class="ttdef"><b>Definition:</b> smartconfig.h:28</div></div>
+<div class="ttc" id="smartconfig_8h_html_afec33e52eaa14ed795ab28ce69c685e3aefc9b644b16531defe122b7316cea0c0"><div class="ttname"><a href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3aefc9b644b16531defe122b7316cea0c0">SC_STATUS_GETTING_SSID_PSWD</a></div><div class="ttdef"><b>Definition:</b> smartconfig.h:31</div></div>
+<div class="ttc" id="smartconfig_8h_html_afec33e52eaa14ed795ab28ce69c685e3a3de75e54ab5d15e0aa697d2d35adc363"><div class="ttname"><a href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3a3de75e54ab5d15e0aa697d2d35adc363">SC_STATUS_WAIT</a></div><div class="ttdef"><b>Definition:</b> smartconfig.h:29</div></div>
+<div class="ttc" id="smartconfig_8h_html_afec33e52eaa14ed795ab28ce69c685e3a1ae1253a12888c150c36cd30f56394dc"><div class="ttname"><a href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3a1ae1253a12888c150c36cd30f56394dc">SC_STATUS_LINK_OVER</a></div><div class="ttdef"><b>Definition:</b> smartconfig.h:33</div></div>
+<div class="ttc" id="smartconfig_8h_html_afec33e52eaa14ed795ab28ce69c685e3a30fee0de55f059ac14821f8e2b22ac03"><div class="ttname"><a href="smartconfig_8h.html#afec33e52eaa14ed795ab28ce69c685e3a30fee0de55f059ac14821f8e2b22ac03">SC_STATUS_FIND_CHANNEL</a></div><div class="ttdef"><b>Definition:</b> smartconfig.h:30</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a533261c0af94cdbb04fe90f452af9b9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9d">sc_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a533261c0af94cdbb04fe90f452af9b9dabae45491cc05b00bd1b069bb61e37b01"></a>SC_TYPE_ESPTOUCH</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a533261c0af94cdbb04fe90f452af9b9da6254d899f4bf164fdb0f3dd778c206e9"></a>SC_TYPE_AIRKISS</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a533261c0af94cdbb04fe90f452af9b9da50e8065c00b088cdb87b8b0ded4a853c"></a>SC_TYPE_ESPTOUCH_AIRKISS</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;             {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9dabae45491cc05b00bd1b069bb61e37b01">SC_TYPE_ESPTOUCH</a> = 0,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9da6254d899f4bf164fdb0f3dd778c206e9">SC_TYPE_AIRKISS</a>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9da50e8065c00b088cdb87b8b0ded4a853c">SC_TYPE_ESPTOUCH_AIRKISS</a>,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <a class="code" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9d">sc_type</a>;</div>
+<div class="ttc" id="smartconfig_8h_html_a533261c0af94cdbb04fe90f452af9b9d"><div class="ttname"><a href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9d">sc_type</a></div><div class="ttdeci">sc_type</div><div class="ttdef"><b>Definition:</b> smartconfig.h:36</div></div>
+<div class="ttc" id="smartconfig_8h_html_a533261c0af94cdbb04fe90f452af9b9dabae45491cc05b00bd1b069bb61e37b01"><div class="ttname"><a href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9dabae45491cc05b00bd1b069bb61e37b01">SC_TYPE_ESPTOUCH</a></div><div class="ttdef"><b>Definition:</b> smartconfig.h:37</div></div>
+<div class="ttc" id="smartconfig_8h_html_a533261c0af94cdbb04fe90f452af9b9da6254d899f4bf164fdb0f3dd778c206e9"><div class="ttname"><a href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9da6254d899f4bf164fdb0f3dd778c206e9">SC_TYPE_AIRKISS</a></div><div class="ttdef"><b>Definition:</b> smartconfig.h:38</div></div>
+<div class="ttc" id="smartconfig_8h_html_a533261c0af94cdbb04fe90f452af9b9da50e8065c00b088cdb87b8b0ded4a853c"><div class="ttname"><a href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9da50e8065c00b088cdb87b8b0ded4a853c">SC_TYPE_ESPTOUCH_AIRKISS</a></div><div class="ttdef"><b>Definition:</b> smartconfig.h:39</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a9537246ce540bc1e1a294de687d488bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* smartconfig_get_version </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a390ec2c5af28b29044899c8ffd016b04"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a> smartconfig_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="smartconfig_8h.html#af2d693800ac4c0f508d0d6cc1b77e806">sc_callback_t</a>&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a85819fc5109441eae24e4262ca34bd48"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a> smartconfig_stop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a068b054aecdba51c0ea5219089d5b3c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a> esptouch_set_timeout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td>
+          <td class="paramname"><em>time_s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a14d5f55176a12436d58014272f6df156"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a> smartconfig_set_type </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="smartconfig_8h.html#a533261c0af94cdbb04fe90f452af9b9d">sc_type</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:16 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

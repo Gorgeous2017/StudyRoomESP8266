@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: ets_sys.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3f3aa03da80a6f543b7f052367a441a.html">ESP8266_NONOS_SDK</a></li><li class="navelem"><a class="el" href="dir_9cb0e4b91a56b7f682c398f4eec1db93.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle">
+<div class="title">ets_sys.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="c__types_8h_source.html">c_types.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="eagle__soc_8h_source.html">eagle_soc.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+ets_sys.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="ets__sys_8h__incl.png" border="0" usemap="#ets__sys_8h" alt=""/></div>
+<map name="ets__sys_8h" id="ets__sys_8h">
+<area shape="rect" id="node2" href="c__types_8h.html" title="c_types.h" alt="" coords="5,80,84,107"/><area shape="rect" id="node3" href="eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="108,80,200,107"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="ets__sys_8h__dep__incl.png" border="0" usemap="#ets__sys_8hdep" alt=""/></div>
+<map name="ets__sys_8hdep" id="ets__sys_8hdep">
+<area shape="rect" id="node2" href="app__study__room_8h.html" title="app_study_room.h" alt="" coords="39,155,168,181"/><area shape="rect" id="node4" href="http__client_8h.html" title="http_client.h" alt="" coords="825,155,918,181"/><area shape="rect" id="node5" href="http__client_8c.html" title="http_client.c" alt="" coords="837,229,930,256"/><area shape="rect" id="node6" href="user__wifi_8c.html" title="user_wifi.c" alt="" coords="954,229,1037,256"/><area shape="rect" id="node7" href="include_2room__info_8h.html" title="room_info.h" alt="" coords="417,229,507,256"/><area shape="rect" id="node8" href="nb__bc35_8h.html" title="nb_bc35.h" alt="" coords="193,155,275,181"/><area shape="rect" id="node10" href="user__main_8c.html" title="user_main.c" alt="" coords="299,229,393,256"/><area shape="rect" id="node11" href="room__info_8h.html" title="room_info.h" alt="" coords="583,229,672,256"/><area shape="rect" id="node13" href="tcp__server_8c.html" title="tcp_server.c" alt="" coords="753,304,845,331"/><area shape="rect" id="node14" href="uart_8c.html" title="uart.c" alt="" coords="511,304,565,331"/><area shape="rect" id="node15" href="gpio16_8c.html" title="gpio16.c" alt="" coords="927,80,997,107"/><area shape="rect" id="node16" href="user__json_8c.html" title="user_json.c" alt="" coords="943,155,1032,181"/><area shape="rect" id="node17" href="os__type_8h.html" title="os_type.h" alt="" coords="555,80,633,107"/><area shape="rect" id="node3" href="app__study__room_8c.html" title="app_study_room.c" alt="" coords="39,229,168,256"/><area shape="rect" id="node9" href="nb__bc35_8c.html" title="nb_bc35.c" alt="" coords="193,229,275,256"/><area shape="rect" id="node12" href="room__info_8c.html" title="room_info.c" alt="" coords="589,304,679,331"/><area shape="rect" id="node18" href="user__interface_8h.html" title="user_interface.h" alt="" coords="585,155,699,181"/><area shape="rect" id="node20" href="sntp_8h.html" title="sntp.h" alt="" coords="451,155,510,181"/><area shape="rect" id="node19" href="mesh_8h.html" title="mesh.h" alt="" coords="696,229,761,256"/></map>
+</div>
+</div>
+<p><a href="ets__sys_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_t_s_event_tag.html">ETSEventTag</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct___e_t_s_t_i_m_e_r__.html">_ETSTIMER_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a5ad104dedeec991c2be877c9ed3a1c86"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a5ad104dedeec991c2be877c9ed3a1c86">ETS_SDIO_INUM</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5ad104dedeec991c2be877c9ed3a1c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23f1ea4b5db3611dcb6d44db77095e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#af23f1ea4b5db3611dcb6d44db77095e6">ETS_SPI_INUM</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:af23f1ea4b5db3611dcb6d44db77095e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b84b7fb8ed01740d1df3816d6d7807e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a0b84b7fb8ed01740d1df3816d6d7807e">ETS_GPIO_INUM</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a0b84b7fb8ed01740d1df3816d6d7807e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6dd94848925060dc450785c7783734"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#acb6dd94848925060dc450785c7783734">ETS_UART_INUM</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:acb6dd94848925060dc450785c7783734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774d674c8201b2707afbdc639d945c76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a774d674c8201b2707afbdc639d945c76">ETS_UART1_INUM</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:a774d674c8201b2707afbdc639d945c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6c614dcf22877c7395b8840c03eec06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#ae6c614dcf22877c7395b8840c03eec06">ETS_FRC_TIMER1_INUM</a>&#160;&#160;&#160;9  /* use edge*/</td></tr>
+<tr class="separator:ae6c614dcf22877c7395b8840c03eec06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34df42e44d5d8c38f76b430907836201"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a34df42e44d5d8c38f76b430907836201">ETS_INTR_LOCK</a>()&#160;&#160;&#160;ets_intr_lock()</td></tr>
+<tr class="separator:a34df42e44d5d8c38f76b430907836201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a450cc35405a1fd8418467f6916e95f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a7a450cc35405a1fd8418467f6916e95f">ETS_INTR_UNLOCK</a>()&#160;&#160;&#160;ets_intr_unlock()</td></tr>
+<tr class="separator:a7a450cc35405a1fd8418467f6916e95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f3eb0bdf2d531afd9453e2a65ee9c30"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a7f3eb0bdf2d531afd9453e2a65ee9c30">ETS_FRC_TIMER1_INTR_ATTACH</a>(func, arg)&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#ae6c614dcf22877c7395b8840c03eec06">ETS_FRC_TIMER1_INUM</a>, (func), (void *)(arg))</td></tr>
+<tr class="separator:a7f3eb0bdf2d531afd9453e2a65ee9c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d9a34fcaa9014b9ccb67b377340c37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#ad9d9a34fcaa9014b9ccb67b377340c37">ETS_FRC_TIMER1_NMI_INTR_ATTACH</a>(func)&#160;&#160;&#160;NmiTimSetFunc(func)</td></tr>
+<tr class="separator:ad9d9a34fcaa9014b9ccb67b377340c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21336df3a78e0322c7118fc652d42b7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a21336df3a78e0322c7118fc652d42b7f">ETS_SDIO_INTR_ATTACH</a>(func, arg)&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#a5ad104dedeec991c2be877c9ed3a1c86">ETS_SDIO_INUM</a>, (func), (void *)(arg))</td></tr>
+<tr class="separator:a21336df3a78e0322c7118fc652d42b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7131effc447b874d53608df1093c9d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a3b7131effc447b874d53608df1093c9d">ETS_GPIO_INTR_ATTACH</a>(func, arg)&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#a0b84b7fb8ed01740d1df3816d6d7807e">ETS_GPIO_INUM</a>, (func), (void *)(arg))</td></tr>
+<tr class="separator:a3b7131effc447b874d53608df1093c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae05cdf8bb2481e44ebf01440070f0c38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#ae05cdf8bb2481e44ebf01440070f0c38">ETS_UART_INTR_ATTACH</a>(func, arg)&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#acb6dd94848925060dc450785c7783734">ETS_UART_INUM</a>, (func), (void *)(arg))</td></tr>
+<tr class="separator:ae05cdf8bb2481e44ebf01440070f0c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef9df60b42c85b9690dd82ec71051582"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#aef9df60b42c85b9690dd82ec71051582">ETS_SPI_INTR_ATTACH</a>(func, arg)&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#af23f1ea4b5db3611dcb6d44db77095e6">ETS_SPI_INUM</a>, (func), (void *)(arg))</td></tr>
+<tr class="separator:aef9df60b42c85b9690dd82ec71051582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28dbb5877358e87bfb900d231ba4ec0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(inum)&#160;&#160;&#160;ets_isr_unmask((1&lt;&lt;inum))</td></tr>
+<tr class="separator:ae28dbb5877358e87bfb900d231ba4ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c357aefadea3024b1051be4df9e81a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(inum)&#160;&#160;&#160;ets_isr_mask((1&lt;&lt;inum))</td></tr>
+<tr class="separator:aa4c357aefadea3024b1051be4df9e81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcb1c98e19fde806010cbbc84880407a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#adcb1c98e19fde806010cbbc84880407a">ETS_UART_INTR_ENABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#acb6dd94848925060dc450785c7783734">ETS_UART_INUM</a>)</td></tr>
+<tr class="separator:adcb1c98e19fde806010cbbc84880407a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80b2e325a24f9a4003261c152657eca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#ae80b2e325a24f9a4003261c152657eca">ETS_UART_INTR_DISABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#acb6dd94848925060dc450785c7783734">ETS_UART_INUM</a>)</td></tr>
+<tr class="separator:ae80b2e325a24f9a4003261c152657eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9660e32507afcd3e1717bb45aa8b2a23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a9660e32507afcd3e1717bb45aa8b2a23">ETS_FRC1_INTR_ENABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#ae6c614dcf22877c7395b8840c03eec06">ETS_FRC_TIMER1_INUM</a>)</td></tr>
+<tr class="separator:a9660e32507afcd3e1717bb45aa8b2a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c9700f8a00b22d6989a0d3663083dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a91c9700f8a00b22d6989a0d3663083dc">ETS_FRC1_INTR_DISABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#ae6c614dcf22877c7395b8840c03eec06">ETS_FRC_TIMER1_INUM</a>)</td></tr>
+<tr class="separator:a91c9700f8a00b22d6989a0d3663083dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e36bac2666a375c6ce428a88625b4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#aa8e36bac2666a375c6ce428a88625b4a">ETS_GPIO_INTR_ENABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#a0b84b7fb8ed01740d1df3816d6d7807e">ETS_GPIO_INUM</a>)</td></tr>
+<tr class="separator:aa8e36bac2666a375c6ce428a88625b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62691fdcf18b2e5e6cc41b1417a49973"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a62691fdcf18b2e5e6cc41b1417a49973">ETS_GPIO_INTR_DISABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#a0b84b7fb8ed01740d1df3816d6d7807e">ETS_GPIO_INUM</a>)</td></tr>
+<tr class="separator:a62691fdcf18b2e5e6cc41b1417a49973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb90a187a245417698672dc7cc1a9128"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#afb90a187a245417698672dc7cc1a9128">ETS_SPI_INTR_ENABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#af23f1ea4b5db3611dcb6d44db77095e6">ETS_SPI_INUM</a>)</td></tr>
+<tr class="separator:afb90a187a245417698672dc7cc1a9128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d3c0a049dfc7d75486935da78b4b73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#ae4d3c0a049dfc7d75486935da78b4b73">ETS_SPI_INTR_DISABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#af23f1ea4b5db3611dcb6d44db77095e6">ETS_SPI_INUM</a>)</td></tr>
+<tr class="separator:ae4d3c0a049dfc7d75486935da78b4b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf1bf232e193c6dfb424fc066ed2902a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#abf1bf232e193c6dfb424fc066ed2902a">ETS_SDIO_INTR_ENABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#a5ad104dedeec991c2be877c9ed3a1c86">ETS_SDIO_INUM</a>)</td></tr>
+<tr class="separator:abf1bf232e193c6dfb424fc066ed2902a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b11882ae73cd3ecac2be6a448fc163"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a91b11882ae73cd3ecac2be6a448fc163">ETS_SDIO_INTR_DISABLE</a>()&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#a5ad104dedeec991c2be877c9ed3a1c86">ETS_SDIO_INUM</a>)</td></tr>
+<tr class="separator:a91b11882ae73cd3ecac2be6a448fc163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a5ca6a2be825d5fb421c6e97e8d65d5ca"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="c__types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a5ca6a2be825d5fb421c6e97e8d65d5ca">ETSSignal</a></td></tr>
+<tr class="separator:a5ca6a2be825d5fb421c6e97e8d65d5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af69975ab315b652862825f9929e436c0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="c__types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#af69975ab315b652862825f9929e436c0">ETSParam</a></td></tr>
+<tr class="separator:af69975ab315b652862825f9929e436c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e26cd777a971dd390bfbc2565241bc"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_e_t_s_event_tag.html">ETSEventTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a88e26cd777a971dd390bfbc2565241bc">ETSEvent</a></td></tr>
+<tr class="separator:a88e26cd777a971dd390bfbc2565241bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab29ee9d470b42a2c9a8273bc5047255a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#ab29ee9d470b42a2c9a8273bc5047255a">ETSTask</a> )(<a class="el" href="ets__sys_8h.html#a88e26cd777a971dd390bfbc2565241bc">ETSEvent</a> *e)</td></tr>
+<tr class="separator:ab29ee9d470b42a2c9a8273bc5047255a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85c8bbaf040864c7e182a24a10ef3ac4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="c__types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a85c8bbaf040864c7e182a24a10ef3ac4">ETSHandle</a></td></tr>
+<tr class="separator:a85c8bbaf040864c7e182a24a10ef3ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b98fc011315c1e79ebaf55e92265afa"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#a9b98fc011315c1e79ebaf55e92265afa">ETSTimerFunc</a> (void *timer_arg)</td></tr>
+<tr class="separator:a9b98fc011315c1e79ebaf55e92265afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab895f72aa58b986445e6661c4eacaa86"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct___e_t_s_t_i_m_e_r__.html">_ETSTIMER_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ets__sys_8h.html#ab895f72aa58b986445e6661c4eacaa86">ETSTimer</a></td></tr>
+<tr class="separator:ab895f72aa58b986445e6661c4eacaa86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a class="anchor" id="a5ad104dedeec991c2be877c9ed3a1c86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_SDIO_INUM&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af23f1ea4b5db3611dcb6d44db77095e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_SPI_INUM&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0b84b7fb8ed01740d1df3816d6d7807e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_GPIO_INUM&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acb6dd94848925060dc450785c7783734"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_UART_INUM&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a774d674c8201b2707afbdc639d945c76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_UART1_INUM&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6c614dcf22877c7395b8840c03eec06"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_FRC_TIMER1_INUM&#160;&#160;&#160;9  /* use edge*/</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a34df42e44d5d8c38f76b430907836201"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_INTR_LOCK</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;ets_intr_lock()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a450cc35405a1fd8418467f6916e95f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_INTR_UNLOCK</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;ets_intr_unlock()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7f3eb0bdf2d531afd9453e2a65ee9c30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_FRC_TIMER1_INTR_ATTACH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#ae6c614dcf22877c7395b8840c03eec06">ETS_FRC_TIMER1_INUM</a>, (func), (void *)(arg))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad9d9a34fcaa9014b9ccb67b377340c37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_FRC_TIMER1_NMI_INTR_ATTACH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func</td><td>)</td>
+          <td>&#160;&#160;&#160;NmiTimSetFunc(func)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a21336df3a78e0322c7118fc652d42b7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_SDIO_INTR_ATTACH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#a5ad104dedeec991c2be877c9ed3a1c86">ETS_SDIO_INUM</a>, (func), (void *)(arg))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3b7131effc447b874d53608df1093c9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_GPIO_INTR_ATTACH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#a0b84b7fb8ed01740d1df3816d6d7807e">ETS_GPIO_INUM</a>, (func), (void *)(arg))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae05cdf8bb2481e44ebf01440070f0c38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_UART_INTR_ATTACH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#acb6dd94848925060dc450785c7783734">ETS_UART_INUM</a>, (func), (void *)(arg))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef9df60b42c85b9690dd82ec71051582"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_SPI_INTR_ATTACH</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;ets_isr_attach(<a class="el" href="ets__sys_8h.html#af23f1ea4b5db3611dcb6d44db77095e6">ETS_SPI_INUM</a>, (func), (void *)(arg))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae28dbb5877358e87bfb900d231ba4ec0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_INTR_ENABLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">inum</td><td>)</td>
+          <td>&#160;&#160;&#160;ets_isr_unmask((1&lt;&lt;inum))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa4c357aefadea3024b1051be4df9e81a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_INTR_DISABLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">inum</td><td>)</td>
+          <td>&#160;&#160;&#160;ets_isr_mask((1&lt;&lt;inum))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adcb1c98e19fde806010cbbc84880407a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_UART_INTR_ENABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#acb6dd94848925060dc450785c7783734">ETS_UART_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae80b2e325a24f9a4003261c152657eca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_UART_INTR_DISABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#acb6dd94848925060dc450785c7783734">ETS_UART_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9660e32507afcd3e1717bb45aa8b2a23"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_FRC1_INTR_ENABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#ae6c614dcf22877c7395b8840c03eec06">ETS_FRC_TIMER1_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a91c9700f8a00b22d6989a0d3663083dc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_FRC1_INTR_DISABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#ae6c614dcf22877c7395b8840c03eec06">ETS_FRC_TIMER1_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa8e36bac2666a375c6ce428a88625b4a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_GPIO_INTR_ENABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#a0b84b7fb8ed01740d1df3816d6d7807e">ETS_GPIO_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a62691fdcf18b2e5e6cc41b1417a49973"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_GPIO_INTR_DISABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#a0b84b7fb8ed01740d1df3816d6d7807e">ETS_GPIO_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afb90a187a245417698672dc7cc1a9128"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_SPI_INTR_ENABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#af23f1ea4b5db3611dcb6d44db77095e6">ETS_SPI_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae4d3c0a049dfc7d75486935da78b4b73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_SPI_INTR_DISABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#af23f1ea4b5db3611dcb6d44db77095e6">ETS_SPI_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abf1bf232e193c6dfb424fc066ed2902a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_SDIO_INTR_ENABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#ae28dbb5877358e87bfb900d231ba4ec0">ETS_INTR_ENABLE</a>(<a class="el" href="ets__sys_8h.html#a5ad104dedeec991c2be877c9ed3a1c86">ETS_SDIO_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a91b11882ae73cd3ecac2be6a448fc163"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ETS_SDIO_INTR_DISABLE</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="ets__sys_8h.html#aa4c357aefadea3024b1051be4df9e81a">ETS_INTR_DISABLE</a>(<a class="el" href="ets__sys_8h.html#a5ad104dedeec991c2be877c9ed3a1c86">ETS_SDIO_INUM</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a class="anchor" id="a5ca6a2be825d5fb421c6e97e8d65d5ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="c__types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="ets__sys_8h.html#a5ca6a2be825d5fb421c6e97e8d65d5ca">ETSSignal</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af69975ab315b652862825f9929e436c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="c__types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="ets__sys_8h.html#af69975ab315b652862825f9929e436c0">ETSParam</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a88e26cd777a971dd390bfbc2565241bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_e_t_s_event_tag.html">ETSEventTag</a> <a class="el" href="ets__sys_8h.html#a88e26cd777a971dd390bfbc2565241bc">ETSEvent</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab29ee9d470b42a2c9a8273bc5047255a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* ETSTask)(<a class="el" href="ets__sys_8h.html#a88e26cd777a971dd390bfbc2565241bc">ETSEvent</a> *e)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a85c8bbaf040864c7e182a24a10ef3ac4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="c__types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="el" href="ets__sys_8h.html#a85c8bbaf040864c7e182a24a10ef3ac4">ETSHandle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9b98fc011315c1e79ebaf55e92265afa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void ETSTimerFunc(void *timer_arg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab895f72aa58b986445e6661c4eacaa86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct___e_t_s_t_i_m_e_r__.html">_ETSTIMER_</a>  <a class="el" href="ets__sys_8h.html#ab895f72aa58b986445e6661c4eacaa86">ETSTimer</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:15 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,773 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: at_custom.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3f3aa03da80a6f543b7f052367a441a.html">ESP8266_NONOS_SDK</a></li><li class="navelem"><a class="el" href="dir_9cb0e4b91a56b7f682c398f4eec1db93.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle">
+<div class="title">at_custom.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="c__types_8h_source.html">c_types.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+at_custom.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="at__custom_8h__incl.png" border="0" usemap="#at__custom_8h" alt=""/></div>
+<map name="at__custom_8h" id="at__custom_8h">
+<area shape="rect" id="node2" href="c__types_8h.html" title="c_types.h" alt="" coords="13,80,92,107"/></map>
+</div>
+</div>
+<p><a href="at__custom_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structat__funcation_type.html">at_funcationType</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:aa284af05c7f8de94bb410ed25052d7ca"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#aa284af05c7f8de94bb410ed25052d7ca">at_custom_uart_rx_intr</a> )(<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *data, <a class="el" href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> len)</td></tr>
+<tr class="separator:aa284af05c7f8de94bb410ed25052d7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6740b08b9f62484a9b936ea0b35af5e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#af6740b08b9f62484a9b936ea0b35af5e">at_custom_response_func_type</a> )(const char *str)</td></tr>
+<tr class="separator:af6740b08b9f62484a9b936ea0b35af5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e9d5f7c03239ca5829b25bf033b77b"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#ac5e9d5f7c03239ca5829b25bf033b77b">at_fake_uart_tx_func_type</a> )(const <a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *data, <a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> length)</td></tr>
+<tr class="separator:ac5e9d5f7c03239ca5829b25bf033b77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a056246bcb78a47632ad1ff07f6169121"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a056246bcb78a47632ad1ff07f6169121">at_response_ok</a> (void)</td></tr>
+<tr class="memdesc:a056246bcb78a47632ad1ff07f6169121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response "OK" to uart.  <a href="#a056246bcb78a47632ad1ff07f6169121">更多...</a><br/></td></tr>
+<tr class="separator:a056246bcb78a47632ad1ff07f6169121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88f57dd8471be070be3ff82cd81af77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#ac88f57dd8471be070be3ff82cd81af77">at_response_error</a> (void)</td></tr>
+<tr class="memdesc:ac88f57dd8471be070be3ff82cd81af77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response "ERROR" to uart.  <a href="#ac88f57dd8471be070be3ff82cd81af77">更多...</a><br/></td></tr>
+<tr class="separator:ac88f57dd8471be070be3ff82cd81af77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7788387d803e35d406af6f744e0f20b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#af7788387d803e35d406af6f744e0f20b">at_response</a> (const char *str)</td></tr>
+<tr class="memdesc:af7788387d803e35d406af6f744e0f20b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response string. It is equivalent to at_port_print,if not call at_register_response_func or call at_register_response_func(NULL); It will run custom response function,if call at_register_response_func and parameter is not NULL.  <a href="#af7788387d803e35d406af6f744e0f20b">更多...</a><br/></td></tr>
+<tr class="separator:af7788387d803e35d406af6f744e0f20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66b168697ab5bf73e57085dcfb31a72e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a66b168697ab5bf73e57085dcfb31a72e">at_register_response_func</a> (<a class="el" href="at__custom_8h.html#af6740b08b9f62484a9b936ea0b35af5e">at_custom_response_func_type</a> response_func)</td></tr>
+<tr class="memdesc:a66b168697ab5bf73e57085dcfb31a72e"><td class="mdescLeft">&#160;</td><td class="mdescRight">register custom response function.  <a href="#a66b168697ab5bf73e57085dcfb31a72e">更多...</a><br/></td></tr>
+<tr class="separator:a66b168697ab5bf73e57085dcfb31a72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99bec7a088baa5a8c4e043ab09fb6a3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a99bec7a088baa5a8c4e043ab09fb6a3f">at_cmd_array_regist</a> (<a class="el" href="structat__funcation_type.html">at_funcationType</a> *custom_at_cmd_array, <a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> cmd_num)</td></tr>
+<tr class="memdesc:a99bec7a088baa5a8c4e043ab09fb6a3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task of process command or txdata.  <a href="#a99bec7a088baa5a8c4e043ab09fb6a3f">更多...</a><br/></td></tr>
+<tr class="separator:a99bec7a088baa5a8c4e043ab09fb6a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f377a24af0617b0c104049b7ad6121c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a3f377a24af0617b0c104049b7ad6121c">at_get_next_int_dec</a> (char **p_src, int *result, int *err)</td></tr>
+<tr class="memdesc:a3f377a24af0617b0c104049b7ad6121c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get digit form at cmd line.the maybe alter pSrc  <a href="#a3f377a24af0617b0c104049b7ad6121c">更多...</a><br/></td></tr>
+<tr class="separator:a3f377a24af0617b0c104049b7ad6121c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa827abf503e8d9d01e53180591bceb0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#aa827abf503e8d9d01e53180591bceb0f">at_data_str_copy</a> (char *p_dest, char **p_src, <a class="el" href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> max_len)</td></tr>
+<tr class="memdesc:aa827abf503e8d9d01e53180591bceb0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get string form at cmd line.the maybe alter pSrc  <a href="#aa827abf503e8d9d01e53180591bceb0f">更多...</a><br/></td></tr>
+<tr class="separator:aa827abf503e8d9d01e53180591bceb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe2dda700e731cb5033f2dd87ade79a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#afe2dda700e731cb5033f2dd87ade79a8">at_init</a> (void)</td></tr>
+<tr class="memdesc:afe2dda700e731cb5033f2dd87ade79a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize at module  <a href="#afe2dda700e731cb5033f2dd87ade79a8">更多...</a><br/></td></tr>
+<tr class="separator:afe2dda700e731cb5033f2dd87ade79a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac68219cc0b5d3b9cdc03afbe948efda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#aac68219cc0b5d3b9cdc03afbe948efda">at_port_print</a> (const char *str)</td></tr>
+<tr class="memdesc:aac68219cc0b5d3b9cdc03afbe948efda"><td class="mdescLeft">&#160;</td><td class="mdescRight">print string to at port  <a href="#aac68219cc0b5d3b9cdc03afbe948efda">更多...</a><br/></td></tr>
+<tr class="separator:aac68219cc0b5d3b9cdc03afbe948efda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5251670ab92a8af7b4cae5a9b28e3a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#ab5251670ab92a8af7b4cae5a9b28e3a7">at_set_custom_info</a> (char *info)</td></tr>
+<tr class="memdesc:ab5251670ab92a8af7b4cae5a9b28e3a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">print custom information when AT+GMR  <a href="#ab5251670ab92a8af7b4cae5a9b28e3a7">更多...</a><br/></td></tr>
+<tr class="separator:ab5251670ab92a8af7b4cae5a9b28e3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7b743e94816dae4bb8d1ff1b22bd27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a0d7b743e94816dae4bb8d1ff1b22bd27">at_enter_special_state</a> (void)</td></tr>
+<tr class="memdesc:a0d7b743e94816dae4bb8d1ff1b22bd27"><td class="mdescLeft">&#160;</td><td class="mdescRight">if current at command is processing,you can call at_enter_special_state, then if other comamnd coming,it will return busy.  <a href="#a0d7b743e94816dae4bb8d1ff1b22bd27">更多...</a><br/></td></tr>
+<tr class="separator:a0d7b743e94816dae4bb8d1ff1b22bd27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f26f95be122182b6e35000a000e408"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a79f26f95be122182b6e35000a000e408">at_leave_special_state</a> (void)</td></tr>
+<tr class="separator:a79f26f95be122182b6e35000a000e408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ea9ebdad3911ff14bb7ea64c4e7f4a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a5ea9ebdad3911ff14bb7ea64c4e7f4a6">at_get_version</a> (void)</td></tr>
+<tr class="memdesc:a5ea9ebdad3911ff14bb7ea64c4e7f4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get at version  <a href="#a5ea9ebdad3911ff14bb7ea64c4e7f4a6">更多...</a><br/></td></tr>
+<tr class="separator:a5ea9ebdad3911ff14bb7ea64c4e7f4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58feed3b07f4257bfc527ce518d2e898"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a58feed3b07f4257bfc527ce518d2e898">at_register_uart_rx_intr</a> (<a class="el" href="at__custom_8h.html#aa284af05c7f8de94bb410ed25052d7ca">at_custom_uart_rx_intr</a> rx_func)</td></tr>
+<tr class="memdesc:a58feed3b07f4257bfc527ce518d2e898"><td class="mdescLeft">&#160;</td><td class="mdescRight">register custom uart rx interrupt function  <a href="#a58feed3b07f4257bfc527ce518d2e898">更多...</a><br/></td></tr>
+<tr class="separator:a58feed3b07f4257bfc527ce518d2e898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9149a8dd0ad843bc16b53c9f2fd24b9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a9149a8dd0ad843bc16b53c9f2fd24b9a">at_fake_uart_rx</a> (<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *data, <a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> length)</td></tr>
+<tr class="memdesc:a9149a8dd0ad843bc16b53c9f2fd24b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">notify at module that has receive data  <a href="#a9149a8dd0ad843bc16b53c9f2fd24b9a">更多...</a><br/></td></tr>
+<tr class="separator:a9149a8dd0ad843bc16b53c9f2fd24b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e0357c426c3bbaf49877ba1b4690e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a17e0357c426c3bbaf49877ba1b4690e0">at_fake_uart_enable</a> (<a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a> enable, <a class="el" href="at__custom_8h.html#ac5e9d5f7c03239ca5829b25bf033b77b">at_fake_uart_tx_func_type</a> at_fake_uart_tx_func)</td></tr>
+<tr class="memdesc:a17e0357c426c3bbaf49877ba1b4690e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable fake uart,and register fake uart tx  <a href="#a17e0357c426c3bbaf49877ba1b4690e0">更多...</a><br/></td></tr>
+<tr class="separator:a17e0357c426c3bbaf49877ba1b4690e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b779a6656f60d5e66af34c0c002bd40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a2b779a6656f60d5e66af34c0c002bd40">at_set_escape_character</a> (<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> ch)</td></tr>
+<tr class="memdesc:a2b779a6656f60d5e66af34c0c002bd40"><td class="mdescLeft">&#160;</td><td class="mdescRight">set at escape character  <a href="#a2b779a6656f60d5e66af34c0c002bd40">更多...</a><br/></td></tr>
+<tr class="separator:a2b779a6656f60d5e66af34c0c002bd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a287c4f678e0280bd81bae9e6c329fa5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="at__custom_8h.html#a287c4f678e0280bd81bae9e6c329fa5c">at_customLinkMax</a></td></tr>
+<tr class="separator:a287c4f678e0280bd81bae9e6c329fa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a class="anchor" id="aa284af05c7f8de94bb410ed25052d7ca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* at_custom_uart_rx_intr)(<a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *data, <a class="el" href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> len)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af6740b08b9f62484a9b936ea0b35af5e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* at_custom_response_func_type)(const char *str)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac5e9d5f7c03239ca5829b25bf033b77b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* at_fake_uart_tx_func_type)(const <a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *data, <a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> length)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a056246bcb78a47632ad1ff07f6169121"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_response_ok </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Response "OK" to uart. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac88f57dd8471be070be3ff82cd81af77"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_response_error </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Response "ERROR" to uart. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af7788387d803e35d406af6f744e0f20b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_response </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Response string. It is equivalent to at_port_print,if not call at_register_response_func or call at_register_response_func(NULL); It will run custom response function,if call at_register_response_func and parameter is not NULL. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a66b168697ab5bf73e57085dcfb31a72e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_register_response_func </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="at__custom_8h.html#af6740b08b9f62484a9b936ea0b35af5e">at_custom_response_func_type</a>&#160;</td>
+          <td class="paramname"><em>response_func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>register custom response function. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">response_func</td><td>the function that will run when call at_response </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a99bec7a088baa5a8c4e043ab09fb6a3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_cmd_array_regist </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structat__funcation_type.html">at_funcationType</a> *&#160;</td>
+          <td class="paramname"><em>custom_at_cmd_array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td>
+          <td class="paramname"><em>cmd_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Task of process command or txdata. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">custom_at_cmd_array</td><td>the array of at cmd that custom defined cmd_num : the num of at cmd that custom defined </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f377a24af0617b0c104049b7ad6121c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a> at_get_next_int_dec </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>p_src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get digit form at cmd line.the maybe alter pSrc </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_src</td><td>at cmd line string result:the buffer to be placed result err : err num </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>FALSE: </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa827abf503e8d9d01e53180591bceb0f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a> at_data_str_copy </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>p_dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>p_src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#a56f1a81c92849566ae864511088eb7e8">int32</a>&#160;</td>
+          <td class="paramname"><em>max_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get string form at cmd line.the maybe alter pSrc </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_dest</td><td>the buffer to be placed result p_src: at cmd line string max_len :max len of string excepted to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afe2dda700e731cb5033f2dd87ade79a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize at module </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aac68219cc0b5d3b9cdc03afbe948efda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_port_print </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>print string to at port </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab5251670ab92a8af7b4cae5a9b28e3a7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_set_custom_info </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>print custom information when AT+GMR </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d7b743e94816dae4bb8d1ff1b22bd27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_enter_special_state </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if current at command is processing,you can call at_enter_special_state, then if other comamnd coming,it will return busy. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a79f26f95be122182b6e35000a000e408"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_leave_special_state </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5ea9ebdad3911ff14bb7ea64c4e7f4a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> at_get_version </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get at version </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">at</td><td>version bit24~31: at main version bit23~16: at sub version bit15~8 : at test version bit7~0 : customized version </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a58feed3b07f4257bfc527ce518d2e898"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void at_register_uart_rx_intr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="at__custom_8h.html#aa284af05c7f8de94bb410ed25052d7ca">at_custom_uart_rx_intr</a>&#160;</td>
+          <td class="paramname"><em>rx_func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>register custom uart rx interrupt function </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rx_func</td><td>custom uart rx interrupt function. If rx_func is non-void,when rx interrupt comming,it will call rx_func(data,len), data is the buffer of data,len is the length of data.Otherwise,it will run AT rx function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9149a8dd0ad843bc16b53c9f2fd24b9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> at_fake_uart_rx </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>notify at module that has receive data </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>data buffer. </td></tr>
+    <tr><td class="paramname">length</td><td>data length </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">data</td><td>len,if ok len == length </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a17e0357c426c3bbaf49877ba1b4690e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a> at_fake_uart_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a>&#160;</td>
+          <td class="paramname"><em>enable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="at__custom_8h.html#ac5e9d5f7c03239ca5829b25bf033b77b">at_fake_uart_tx_func_type</a>&#160;</td>
+          <td class="paramname"><em>at_fake_uart_tx_func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enable fake uart,and register fake uart tx </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>enable fake uart. </td></tr>
+    <tr><td class="paramname">at_fake_uart_tx_func</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">data</td><td>len,if ok len == length </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b779a6656f60d5e66af34c0c002bd40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#a97a80ca1602ebf2303258971a2c938e2">bool</a> at_set_escape_character </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set at escape character </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>escape character. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE,if</td><td>set ok,otherwize FALSE. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a class="anchor" id="a287c4f678e0280bd81bae9e6c329fa5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> at_customLinkMax</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:14 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

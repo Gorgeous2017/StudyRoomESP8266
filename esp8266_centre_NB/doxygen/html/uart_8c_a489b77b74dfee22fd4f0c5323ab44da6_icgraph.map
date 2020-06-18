@@ -1,0 +1,6 @@
+<map id="uart_config" name="uart_config">
+<area shape="rect" id="node2" href="$uart_8c.html#af4416966da7cba189e7998334e2a0bee" title="uart_init" alt="" coords="146,31,214,57"/>
+<area shape="rect" id="node5" href="$uart_8c.html#a04be0eb8c6c4685b81b32b20bb1cfa72" title="uart_init_2" alt="" coords="139,81,221,108"/>
+<area shape="rect" id="node3" href="$uart_8c.html#a15a9e8dca40ebbeea858ce8f081c06cf" title="uart_reattach" alt="" coords="269,5,368,32"/>
+<area shape="rect" id="node4" href="$user__main_8c.html#a277ffa60e88142c231a14272962e902c" title="user_init" alt="" coords="283,56,354,83"/>
+</map>

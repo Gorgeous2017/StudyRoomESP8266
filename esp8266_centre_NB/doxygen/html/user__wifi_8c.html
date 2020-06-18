@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: user_wifi.c 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_69f7b3b0f987cc31a767c691a7147b70.html">user</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">user_wifi.c 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;driver/uart.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="ets__sys_8h_source.html">ets_sys.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="osapi_8h_source.html">osapi.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="user__interface_8h_source.html">user_interface.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="http__client_8h_source.html">http_client.h</a>&quot;</code><br/>
+<code>#include &quot;user_config.h&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+user_wifi.c 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__wifi_8c__incl.png" border="0" usemap="#user__wifi_8c" alt=""/></div>
+<map name="user__wifi_8c" id="user__wifi_8c">
+<area shape="rect" id="node3" href="ets__sys_8h.html" title="ets_sys.h" alt="" coords="596,229,675,256"/><area shape="rect" id="node6" href="osapi_8h.html" title="osapi.h" alt="" coords="119,80,183,107"/><area shape="rect" id="node9" href="user__interface_8h.html" title="user_interface.h" alt="" coords="258,80,373,107"/><area shape="rect" id="node15" href="http__client_8h.html" title="http_client.h" alt="" coords="550,80,643,107"/><area shape="rect" id="node4" href="c__types_8h.html" title="c_types.h" alt="" coords="363,304,441,331"/><area shape="rect" id="node5" href="eagle__soc_8h.html" title="eagle_soc.h" alt="" coords="589,304,681,331"/><area shape="rect" id="node10" href="os__type_8h.html" title="os_type.h" alt="" coords="557,155,636,181"/><area shape="rect" id="node11" href="ip__addr_8h.html" title="ip_addr.h" alt="" coords="263,229,338,256"/><area shape="rect" id="node12" href="queue_8h.html" title="queue.h" alt="" coords="276,155,344,181"/><area shape="rect" id="node13" href="spi__flash_8h.html" title="spi_flash.h" alt="" coords="368,155,452,181"/><area shape="rect" id="node14" href="gpio_8h.html" title="gpio.h" alt="" coords="476,155,533,181"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a1a5a1e50fa971840da026bd002476aaf"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__wifi_8c.html#a1a5a1e50fa971840da026bd002476aaf">user_set_station_config</a> (<a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *ssid, <a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *password)</td></tr>
+<tr class="separator:a1a5a1e50fa971840da026bd002476aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb8f27992e1c21e692486725cfff3930"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__wifi_8c.html#adb8f27992e1c21e692486725cfff3930">wifi_handle_event_cb</a> (<a class="el" href="user__interface_8h.html#af5d33582fdead8093f973114ba65aef5">System_Event_t</a> *evt)</td></tr>
+<tr class="separator:adb8f27992e1c21e692486725cfff3930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecdae6c972749b9141db67821f35cfd9"><td class="memItemLeft" align="right" valign="top">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="user__wifi_8c.html#aecdae6c972749b9141db67821f35cfd9">user_wifi_init</a> (void)</td></tr>
+<tr class="separator:aecdae6c972749b9141db67821f35cfd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a1a5a1e50fa971840da026bd002476aaf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> user_set_station_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
+          <td class="paramname"><em>ssid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="c__types_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                                                {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">struct </span><a class="code" href="structstation__config.html">station_config</a> stationConf;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    stationConf.<a class="code" href="structstation__config.html#a0b6385cddba200062d6bc2adab97a184">bssid_set</a> = 0;      <span class="comment">//need  not check   MAC address of  AP</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>(&amp;stationConf.ssid, <a class="code" href="structstation__config.html#a8c7baa76a98697ca48f309f52b4c37ba">ssid</a>, 32);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a>(&amp;stationConf.password, <a class="code" href="structstation__config.html#a39cc75d32aa1fb019f0be77cc20a1f8a">password</a>, 64);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="user__interface_8h.html#ab3699b2e258bf21ad6e85e4b1ec1c271">wifi_station_set_config</a>(&amp;stationConf);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="ttc" id="structstation__config_html_a8c7baa76a98697ca48f309f52b4c37ba"><div class="ttname"><a href="structstation__config.html#a8c7baa76a98697ca48f309f52b4c37ba">station_config::ssid</a></div><div class="ttdeci">uint8 ssid[32]</div><div class="ttdef"><b>Definition:</b> user_interface.h:216</div></div>
+<div class="ttc" id="structstation__config_html"><div class="ttname"><a href="structstation__config.html">station_config</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:215</div></div>
+<div class="ttc" id="user__interface_8h_html_ab3699b2e258bf21ad6e85e4b1ec1c271"><div class="ttname"><a href="user__interface_8h.html#ab3699b2e258bf21ad6e85e4b1ec1c271">wifi_station_set_config</a></div><div class="ttdeci">bool wifi_station_set_config(struct station_config *config)</div></div>
+<div class="ttc" id="osapi_8h_html_ac5c79bf463c8eba708ea34fccc8ec7c1"><div class="ttname"><a href="osapi_8h.html#ac5c79bf463c8eba708ea34fccc8ec7c1">os_memcpy</a></div><div class="ttdeci">#define os_memcpy</div><div class="ttdef"><b>Definition:</b> osapi.h:36</div></div>
+<div class="ttc" id="structstation__config_html_a39cc75d32aa1fb019f0be77cc20a1f8a"><div class="ttname"><a href="structstation__config.html#a39cc75d32aa1fb019f0be77cc20a1f8a">station_config::password</a></div><div class="ttdeci">uint8 password[64]</div><div class="ttdef"><b>Definition:</b> user_interface.h:217</div></div>
+<div class="ttc" id="structstation__config_html_a0b6385cddba200062d6bc2adab97a184"><div class="ttname"><a href="structstation__config.html#a0b6385cddba200062d6bc2adab97a184">station_config::bssid_set</a></div><div class="ttdeci">uint8 bssid_set</div><div class="ttdef"><b>Definition:</b> user_interface.h:218</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__wifi_8c_a1a5a1e50fa971840da026bd002476aaf_cgraph.png" border="0" usemap="#user__wifi_8c_a1a5a1e50fa971840da026bd002476aaf_cgraph" alt=""/></div>
+<map name="user__wifi_8c_a1a5a1e50fa971840da026bd002476aaf_cgraph" id="user__wifi_8c_a1a5a1e50fa971840da026bd002476aaf_cgraph">
+<area shape="rect" id="node2" href="user__interface_8h.html#ab3699b2e258bf21ad6e85e4b1ec1c271" title="wifi_station_set_config" alt="" coords="212,5,364,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__wifi_8c_a1a5a1e50fa971840da026bd002476aaf_icgraph.png" border="0" usemap="#user__wifi_8c_a1a5a1e50fa971840da026bd002476aaf_icgraph" alt=""/></div>
+<map name="user__wifi_8c_a1a5a1e50fa971840da026bd002476aaf_icgraph" id="user__wifi_8c_a1a5a1e50fa971840da026bd002476aaf_icgraph">
+<area shape="rect" id="node2" href="user__wifi_8c.html#aecdae6c972749b9141db67821f35cfd9" title="user_wifi_init" alt="" coords="212,5,308,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adb8f27992e1c21e692486725cfff3930"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> wifi_handle_event_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="user__interface_8h.html#af5d33582fdead8093f973114ba65aef5">System_Event_t</a> *&#160;</td>
+          <td class="paramname"><em>evt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                          {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;event %x\n&quot;</span>, evt-&gt;<a class="code" href="struct__esp__event.html#a296c57751e4931d407bf8ef20ec06b90">event</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">switch</span> (evt-&gt;<a class="code" href="struct__esp__event.html#a296c57751e4931d407bf8ef20ec06b90">event</a>) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daa9d9acf861ff464e516aa92c8179a9f5">EVENT_STAMODE_CONNECTED</a>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;connect to ssid %s, channel %d\n&quot;</span>,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#ac2cb05a482d611412edcece9e2b8110f">connected</a>.<a class="code" href="struct_event___sta_mode___connected__t.html#aad3e4ca368eb8dec9cd206f09bdcc51c">ssid</a>,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#ac2cb05a482d611412edcece9e2b8110f">connected</a>.<a class="code" href="struct_event___sta_mode___connected__t.html#ac7e58a8a21a991b75a9a2f47dbd46938">channel</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da3e65821c77d0a3fe3e48d70f51412775">EVENT_STAMODE_DISCONNECTED</a>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;disconnect from ssid %s, reason %d\n&quot;</span>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#aee72c9be4486d5f711c914d1e0d7421e">disconnected</a>.<a class="code" href="struct_event___sta_mode___disconnected__t.html#a60d3d57167e6678b13698ee885cbe3f2">ssid</a>,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#aee72c9be4486d5f711c914d1e0d7421e">disconnected</a>.<a class="code" href="struct_event___sta_mode___disconnected__t.html#a658d8491bb1697c600e61972538c305e">reason</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dae6c201c8b490470cb65b166f0081c181">EVENT_STAMODE_AUTHMODE_CHANGE</a>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;mode: %d -&gt; %d\n&quot;</span>, evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#a3e6fef531216adc1c73180bf9f463e6c">auth_change</a>.<a class="code" href="struct_event___sta_mode___auth_mode___change__t.html#a46335845fc3750b37ad254bf6879f733">old_mode</a>,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#a3e6fef531216adc1c73180bf9f463e6c">auth_change</a>.<a class="code" href="struct_event___sta_mode___auth_mode___change__t.html#ac49c13dd869f2247eb8b9c2016b6fda7">new_mode</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da7b92b134071315f5d10222e00b756620">EVENT_STAMODE_GOT_IP</a>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;ip:&quot;</span> <a class="code" href="ip__addr_8h.html#ac88858dbe588b82edadb33513aed16d4">IPSTR</a> <span class="stringliteral">&quot;,mask:&quot;</span> <a class="code" href="ip__addr_8h.html#ac88858dbe588b82edadb33513aed16d4">IPSTR</a> <span class="stringliteral">&quot;,gw:&quot;</span> <a class="code" href="ip__addr_8h.html#ac88858dbe588b82edadb33513aed16d4">IPSTR</a>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <a class="code" href="ip__addr_8h.html#af488ccb181cdd5905e55ffb8bff92552">IP2STR</a>(&amp;evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#a816dbab0524f16f9af337b4272fb129b">got_ip</a>.<a class="code" href="struct_event___sta_mode___got___i_p__t.html#aa0e8e19b222f6aaaae9d8505164c4523">ip</a>),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="ip__addr_8h.html#af488ccb181cdd5905e55ffb8bff92552">IP2STR</a>(&amp;evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#a816dbab0524f16f9af337b4272fb129b">got_ip</a>.<a class="code" href="struct_event___sta_mode___got___i_p__t.html#a350145f4e6edb1820ff775462f46b09f">mask</a>),</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <a class="code" href="ip__addr_8h.html#af488ccb181cdd5905e55ffb8bff92552">IP2STR</a>(&amp;evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#a816dbab0524f16f9af337b4272fb129b">got_ip</a>.<a class="code" href="struct_event___sta_mode___got___i_p__t.html#a6d8c881e1c268a0b066299e8a33e1736">gw</a>));</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dadcf5be1211c8c8348981847ff00b9381">EVENT_SOFTAPMODE_STACONNECTED</a>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;station: &quot;</span> <a class="code" href="user__interface_8h.html#ad6e69a2870c8f219cc679677af110849">MACSTR</a> <span class="stringliteral">&quot;join, AID = %d\n&quot;</span>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <a class="code" href="user__interface_8h.html#a40bc1cdca057b24c8083b35a5fd67cd9">MAC2STR</a>(evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#aa7ff1578ff1a6b869de3ecc1fc8cf471">sta_connected</a>.<a class="code" href="struct_event___soft_a_p_mode___sta_connected__t.html#a9ecfda28ec551593c4576197266549f6">mac</a>),</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#aa7ff1578ff1a6b869de3ecc1fc8cf471">sta_connected</a>.<a class="code" href="struct_event___soft_a_p_mode___sta_connected__t.html#a75603e561af40a5334c4cbc43cc7c457">aid</a>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da5ba176bb1121e6a273c6400fd0bb2da8">EVENT_SOFTAPMODE_STADISCONNECTED</a>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a>(<span class="stringliteral">&quot;station: &quot;</span> <a class="code" href="user__interface_8h.html#ad6e69a2870c8f219cc679677af110849">MACSTR</a> <span class="stringliteral">&quot;leave, AID = %d\n&quot;</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <a class="code" href="user__interface_8h.html#a40bc1cdca057b24c8083b35a5fd67cd9">MAC2STR</a>(evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#a882d1f7772e3b0cbc92ac46127759e7a">sta_disconnected</a>.<a class="code" href="struct_event___soft_a_p_mode___sta_disconnected__t.html#a6543ba5cba82fab214f97be8bdb31961">mac</a>),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                evt-&gt;<a class="code" href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">event_info</a>.<a class="code" href="union_event___info__u.html#a882d1f7772e3b0cbc92ac46127759e7a">sta_disconnected</a>.<a class="code" href="struct_event___soft_a_p_mode___sta_disconnected__t.html#af0b7f5493540515f203d2524e65c5afa">aid</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="ttc" id="struct__esp__event_html_a296c57751e4931d407bf8ef20ec06b90"><div class="ttname"><a href="struct__esp__event.html#a296c57751e4931d407bf8ef20ec06b90">_esp_event::event</a></div><div class="ttdeci">uint32 event</div><div class="ttdef"><b>Definition:</b> user_interface.h:485</div></div>
+<div class="ttc" id="user__interface_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2da3e65821c77d0a3fe3e48d70f51412775"><div class="ttname"><a href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da3e65821c77d0a3fe3e48d70f51412775">EVENT_STAMODE_DISCONNECTED</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:392</div></div>
+<div class="ttc" id="struct_event___soft_a_p_mode___sta_connected__t_html_a9ecfda28ec551593c4576197266549f6"><div class="ttname"><a href="struct_event___soft_a_p_mode___sta_connected__t.html#a9ecfda28ec551593c4576197266549f6">Event_SoftAPMode_StaConnected_t::mac</a></div><div class="ttdeci">uint8 mac[6]</div><div class="ttdef"><b>Definition:</b> user_interface.h:460</div></div>
+<div class="ttc" id="union_event___info__u_html_a882d1f7772e3b0cbc92ac46127759e7a"><div class="ttname"><a href="union_event___info__u.html#a882d1f7772e3b0cbc92ac46127759e7a">Event_Info_u::sta_disconnected</a></div><div class="ttdeci">Event_SoftAPMode_StaDisconnected_t sta_disconnected</div><div class="ttdef"><b>Definition:</b> user_interface.h:480</div></div>
+<div class="ttc" id="user__interface_8h_html_a40bc1cdca057b24c8083b35a5fd67cd9"><div class="ttname"><a href="user__interface_8h.html#a40bc1cdca057b24c8083b35a5fd67cd9">MAC2STR</a></div><div class="ttdeci">#define MAC2STR(a)</div><div class="ttdef"><b>Definition:</b> user_interface.h:41</div></div>
+<div class="ttc" id="struct_event___sta_mode___connected__t_html_ac7e58a8a21a991b75a9a2f47dbd46938"><div class="ttname"><a href="struct_event___sta_mode___connected__t.html#ac7e58a8a21a991b75a9a2f47dbd46938">Event_StaMode_Connected_t::channel</a></div><div class="ttdeci">uint8 channel</div><div class="ttdef"><b>Definition:</b> user_interface.h:438</div></div>
+<div class="ttc" id="struct_event___sta_mode___auth_mode___change__t_html_a46335845fc3750b37ad254bf6879f733"><div class="ttname"><a href="struct_event___sta_mode___auth_mode___change__t.html#a46335845fc3750b37ad254bf6879f733">Event_StaMode_AuthMode_Change_t::old_mode</a></div><div class="ttdeci">uint8 old_mode</div><div class="ttdef"><b>Definition:</b> user_interface.h:449</div></div>
+<div class="ttc" id="struct_event___sta_mode___got___i_p__t_html_a6d8c881e1c268a0b066299e8a33e1736"><div class="ttname"><a href="struct_event___sta_mode___got___i_p__t.html#a6d8c881e1c268a0b066299e8a33e1736">Event_StaMode_Got_IP_t::gw</a></div><div class="ttdeci">struct ip_addr gw</div><div class="ttdef"><b>Definition:</b> user_interface.h:456</div></div>
+<div class="ttc" id="struct__esp__event_html_a21cd38cb45eed7ee5d14494a8831bfe5"><div class="ttname"><a href="struct__esp__event.html#a21cd38cb45eed7ee5d14494a8831bfe5">_esp_event::event_info</a></div><div class="ttdeci">Event_Info_u event_info</div><div class="ttdef"><b>Definition:</b> user_interface.h:486</div></div>
+<div class="ttc" id="union_event___info__u_html_aa7ff1578ff1a6b869de3ecc1fc8cf471"><div class="ttname"><a href="union_event___info__u.html#aa7ff1578ff1a6b869de3ecc1fc8cf471">Event_Info_u::sta_connected</a></div><div class="ttdeci">Event_SoftAPMode_StaConnected_t sta_connected</div><div class="ttdef"><b>Definition:</b> user_interface.h:479</div></div>
+<div class="ttc" id="struct_event___sta_mode___got___i_p__t_html_aa0e8e19b222f6aaaae9d8505164c4523"><div class="ttname"><a href="struct_event___sta_mode___got___i_p__t.html#aa0e8e19b222f6aaaae9d8505164c4523">Event_StaMode_Got_IP_t::ip</a></div><div class="ttdeci">struct ip_addr ip</div><div class="ttdef"><b>Definition:</b> user_interface.h:454</div></div>
+<div class="ttc" id="struct_event___sta_mode___disconnected__t_html_a60d3d57167e6678b13698ee885cbe3f2"><div class="ttname"><a href="struct_event___sta_mode___disconnected__t.html#a60d3d57167e6678b13698ee885cbe3f2">Event_StaMode_Disconnected_t::ssid</a></div><div class="ttdeci">uint8 ssid[32]</div><div class="ttdef"><b>Definition:</b> user_interface.h:442</div></div>
+<div class="ttc" id="osapi_8h_html_a751d204d0c7e166a527475d79e803454"><div class="ttname"><a href="osapi_8h.html#a751d204d0c7e166a527475d79e803454">os_printf</a></div><div class="ttdeci">#define os_printf</div><div class="ttdef"><b>Definition:</b> osapi.h:62</div></div>
+<div class="ttc" id="struct_event___sta_mode___auth_mode___change__t_html_ac49c13dd869f2247eb8b9c2016b6fda7"><div class="ttname"><a href="struct_event___sta_mode___auth_mode___change__t.html#ac49c13dd869f2247eb8b9c2016b6fda7">Event_StaMode_AuthMode_Change_t::new_mode</a></div><div class="ttdeci">uint8 new_mode</div><div class="ttdef"><b>Definition:</b> user_interface.h:450</div></div>
+<div class="ttc" id="struct_event___soft_a_p_mode___sta_disconnected__t_html_af0b7f5493540515f203d2524e65c5afa"><div class="ttname"><a href="struct_event___soft_a_p_mode___sta_disconnected__t.html#af0b7f5493540515f203d2524e65c5afa">Event_SoftAPMode_StaDisconnected_t::aid</a></div><div class="ttdeci">uint8 aid</div><div class="ttdef"><b>Definition:</b> user_interface.h:466</div></div>
+<div class="ttc" id="user__interface_8h_html_ad6e69a2870c8f219cc679677af110849"><div class="ttname"><a href="user__interface_8h.html#ad6e69a2870c8f219cc679677af110849">MACSTR</a></div><div class="ttdeci">#define MACSTR</div><div class="ttdef"><b>Definition:</b> user_interface.h:42</div></div>
+<div class="ttc" id="struct_event___sta_mode___connected__t_html_aad3e4ca368eb8dec9cd206f09bdcc51c"><div class="ttname"><a href="struct_event___sta_mode___connected__t.html#aad3e4ca368eb8dec9cd206f09bdcc51c">Event_StaMode_Connected_t::ssid</a></div><div class="ttdeci">uint8 ssid[32]</div><div class="ttdef"><b>Definition:</b> user_interface.h:435</div></div>
+<div class="ttc" id="union_event___info__u_html_a3e6fef531216adc1c73180bf9f463e6c"><div class="ttname"><a href="union_event___info__u.html#a3e6fef531216adc1c73180bf9f463e6c">Event_Info_u::auth_change</a></div><div class="ttdeci">Event_StaMode_AuthMode_Change_t auth_change</div><div class="ttdef"><b>Definition:</b> user_interface.h:477</div></div>
+<div class="ttc" id="struct_event___soft_a_p_mode___sta_disconnected__t_html_a6543ba5cba82fab214f97be8bdb31961"><div class="ttname"><a href="struct_event___soft_a_p_mode___sta_disconnected__t.html#a6543ba5cba82fab214f97be8bdb31961">Event_SoftAPMode_StaDisconnected_t::mac</a></div><div class="ttdeci">uint8 mac[6]</div><div class="ttdef"><b>Definition:</b> user_interface.h:465</div></div>
+<div class="ttc" id="struct_event___soft_a_p_mode___sta_connected__t_html_a75603e561af40a5334c4cbc43cc7c457"><div class="ttname"><a href="struct_event___soft_a_p_mode___sta_connected__t.html#a75603e561af40a5334c4cbc43cc7c457">Event_SoftAPMode_StaConnected_t::aid</a></div><div class="ttdeci">uint8 aid</div><div class="ttdef"><b>Definition:</b> user_interface.h:461</div></div>
+<div class="ttc" id="ip__addr_8h_html_ac88858dbe588b82edadb33513aed16d4"><div class="ttname"><a href="ip__addr_8h.html#ac88858dbe588b82edadb33513aed16d4">IPSTR</a></div><div class="ttdeci">#define IPSTR</div><div class="ttdef"><b>Definition:</b> ip_addr.h:85</div></div>
+<div class="ttc" id="struct_event___sta_mode___got___i_p__t_html_a350145f4e6edb1820ff775462f46b09f"><div class="ttname"><a href="struct_event___sta_mode___got___i_p__t.html#a350145f4e6edb1820ff775462f46b09f">Event_StaMode_Got_IP_t::mask</a></div><div class="ttdeci">struct ip_addr mask</div><div class="ttdef"><b>Definition:</b> user_interface.h:455</div></div>
+<div class="ttc" id="user__interface_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2daa9d9acf861ff464e516aa92c8179a9f5"><div class="ttname"><a href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2daa9d9acf861ff464e516aa92c8179a9f5">EVENT_STAMODE_CONNECTED</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:391</div></div>
+<div class="ttc" id="ip__addr_8h_html_af488ccb181cdd5905e55ffb8bff92552"><div class="ttname"><a href="ip__addr_8h.html#af488ccb181cdd5905e55ffb8bff92552">IP2STR</a></div><div class="ttdeci">#define IP2STR(ipaddr)</div><div class="ttdef"><b>Definition:</b> ip_addr.h:80</div></div>
+<div class="ttc" id="user__interface_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2da7b92b134071315f5d10222e00b756620"><div class="ttname"><a href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da7b92b134071315f5d10222e00b756620">EVENT_STAMODE_GOT_IP</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:394</div></div>
+<div class="ttc" id="union_event___info__u_html_aee72c9be4486d5f711c914d1e0d7421e"><div class="ttname"><a href="union_event___info__u.html#aee72c9be4486d5f711c914d1e0d7421e">Event_Info_u::disconnected</a></div><div class="ttdeci">Event_StaMode_Disconnected_t disconnected</div><div class="ttdef"><b>Definition:</b> user_interface.h:476</div></div>
+<div class="ttc" id="user__interface_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2da5ba176bb1121e6a273c6400fd0bb2da8"><div class="ttname"><a href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da5ba176bb1121e6a273c6400fd0bb2da8">EVENT_SOFTAPMODE_STADISCONNECTED</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:397</div></div>
+<div class="ttc" id="user__interface_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2dae6c201c8b490470cb65b166f0081c181"><div class="ttname"><a href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dae6c201c8b490470cb65b166f0081c181">EVENT_STAMODE_AUTHMODE_CHANGE</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:393</div></div>
+<div class="ttc" id="struct_event___sta_mode___disconnected__t_html_a658d8491bb1697c600e61972538c305e"><div class="ttname"><a href="struct_event___sta_mode___disconnected__t.html#a658d8491bb1697c600e61972538c305e">Event_StaMode_Disconnected_t::reason</a></div><div class="ttdeci">uint8 reason</div><div class="ttdef"><b>Definition:</b> user_interface.h:445</div></div>
+<div class="ttc" id="user__interface_8h_html_a0411cd49bb5b71852cecd93bcbf0ca2dadcf5be1211c8c8348981847ff00b9381"><div class="ttname"><a href="user__interface_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dadcf5be1211c8c8348981847ff00b9381">EVENT_SOFTAPMODE_STACONNECTED</a></div><div class="ttdef"><b>Definition:</b> user_interface.h:396</div></div>
+<div class="ttc" id="union_event___info__u_html_ac2cb05a482d611412edcece9e2b8110f"><div class="ttname"><a href="union_event___info__u.html#ac2cb05a482d611412edcece9e2b8110f">Event_Info_u::connected</a></div><div class="ttdeci">Event_StaMode_Connected_t connected</div><div class="ttdef"><b>Definition:</b> user_interface.h:475</div></div>
+<div class="ttc" id="union_event___info__u_html_a816dbab0524f16f9af337b4272fb129b"><div class="ttname"><a href="union_event___info__u.html#a816dbab0524f16f9af337b4272fb129b">Event_Info_u::got_ip</a></div><div class="ttdeci">Event_StaMode_Got_IP_t got_ip</div><div class="ttdef"><b>Definition:</b> user_interface.h:478</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__wifi_8c_adb8f27992e1c21e692486725cfff3930_icgraph.png" border="0" usemap="#user__wifi_8c_adb8f27992e1c21e692486725cfff3930_icgraph" alt=""/></div>
+<map name="user__wifi_8c_adb8f27992e1c21e692486725cfff3930_icgraph" id="user__wifi_8c_adb8f27992e1c21e692486725cfff3930_icgraph">
+<area shape="rect" id="node2" href="user__wifi_8c.html#aecdae6c972749b9141db67821f35cfd9" title="user_wifi_init" alt="" coords="196,5,292,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aecdae6c972749b9141db67821f35cfd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="c__types_8h.html#afebd45c0d36db732504450393777ce5c">ICACHE_FLASH_ATTR</a> user_wifi_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                     {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb">wifi_set_opmode</a>(<a class="code" href="user__interface_8h.html#af693eedc584e9fe0590accb170d498da">STATION_MODE</a>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="user__wifi_8c.html#a1a5a1e50fa971840da026bd002476aaf">user_set_station_config</a>(<a class="code" href="include_2user__config_8h.html#a586542b79d00e4db7e1d5a667ae83a2b">WIFI_SSID</a>, <a class="code" href="include_2user__config_8h.html#a8685d8aff7e570048090a3a51afceb07">WIFI_PASSWORD</a>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="user__interface_8h.html#a0c1a4454b8ef8015a3ac8d8d13e9f3f6">wifi_set_event_handler_cb</a>(<a class="code" href="user__wifi_8c.html#adb8f27992e1c21e692486725cfff3930">wifi_handle_event_cb</a>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="ttc" id="user__wifi_8c_html_a1a5a1e50fa971840da026bd002476aaf"><div class="ttname"><a href="user__wifi_8c.html#a1a5a1e50fa971840da026bd002476aaf">user_set_station_config</a></div><div class="ttdeci">void ICACHE_FLASH_ATTR user_set_station_config(u8 *ssid, u8 *password)</div><div class="ttdef"><b>Definition:</b> user_wifi.c:20</div></div>
+<div class="ttc" id="user__wifi_8c_html_adb8f27992e1c21e692486725cfff3930"><div class="ttname"><a href="user__wifi_8c.html#adb8f27992e1c21e692486725cfff3930">wifi_handle_event_cb</a></div><div class="ttdeci">void ICACHE_FLASH_ATTR wifi_handle_event_cb(System_Event_t *evt)</div><div class="ttdef"><b>Definition:</b> user_wifi.c:33</div></div>
+<div class="ttc" id="user__interface_8h_html_a0c1a4454b8ef8015a3ac8d8d13e9f3f6"><div class="ttname"><a href="user__interface_8h.html#a0c1a4454b8ef8015a3ac8d8d13e9f3f6">wifi_set_event_handler_cb</a></div><div class="ttdeci">void wifi_set_event_handler_cb(wifi_event_handler_cb_t cb)</div></div>
+<div class="ttc" id="include_2user__config_8h_html_a586542b79d00e4db7e1d5a667ae83a2b"><div class="ttname"><a href="include_2user__config_8h.html#a586542b79d00e4db7e1d5a667ae83a2b">WIFI_SSID</a></div><div class="ttdeci">#define WIFI_SSID</div><div class="ttdef"><b>Definition:</b> include/user_config.h:35</div></div>
+<div class="ttc" id="user__interface_8h_html_af693eedc584e9fe0590accb170d498da"><div class="ttname"><a href="user__interface_8h.html#af693eedc584e9fe0590accb170d498da">STATION_MODE</a></div><div class="ttdeci">#define STATION_MODE</div><div class="ttdef"><b>Definition:</b> user_interface.h:168</div></div>
+<div class="ttc" id="include_2user__config_8h_html_a8685d8aff7e570048090a3a51afceb07"><div class="ttname"><a href="include_2user__config_8h.html#a8685d8aff7e570048090a3a51afceb07">WIFI_PASSWORD</a></div><div class="ttdeci">#define WIFI_PASSWORD</div><div class="ttdef"><b>Definition:</b> include/user_config.h:36</div></div>
+<div class="ttc" id="user__interface_8h_html_a0c11c2ac27f7902a4729d3ec6a9365bb"><div class="ttname"><a href="user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb">wifi_set_opmode</a></div><div class="ttdeci">bool wifi_set_opmode(uint8 opmode)</div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="user__wifi_8c_aecdae6c972749b9141db67821f35cfd9_cgraph.png" border="0" usemap="#user__wifi_8c_aecdae6c972749b9141db67821f35cfd9_cgraph" alt=""/></div>
+<map name="user__wifi_8c_aecdae6c972749b9141db67821f35cfd9_cgraph" id="user__wifi_8c_aecdae6c972749b9141db67821f35cfd9_cgraph">
+<area shape="rect" id="node2" href="user__interface_8h.html#a0c11c2ac27f7902a4729d3ec6a9365bb" title="wifi_set_opmode" alt="" coords="176,5,295,32"/><area shape="rect" id="node3" href="user__wifi_8c.html#a1a5a1e50fa971840da026bd002476aaf" title="user_set_station_config" alt="" coords="156,56,315,83"/><area shape="rect" id="node5" href="user__interface_8h.html#a0c1a4454b8ef8015a3ac8d8d13e9f3f6" title="wifi_set_event_handler_cb" alt="" coords="149,107,321,133"/><area shape="rect" id="node6" href="user__wifi_8c.html#adb8f27992e1c21e692486725cfff3930" title="wifi_handle_event_cb" alt="" coords="164,157,307,184"/><area shape="rect" id="node4" href="user__interface_8h.html#ab3699b2e258bf21ad6e85e4b1ec1c271" title="wifi_station_set_config" alt="" coords="369,56,521,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:18 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

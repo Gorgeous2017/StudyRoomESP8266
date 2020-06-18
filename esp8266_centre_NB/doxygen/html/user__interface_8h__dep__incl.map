@@ -1,0 +1,11 @@
+<map id="user_interface.h" name="user_interface.h">
+<area shape="rect" id="node2" href="$include_2room__info_8h.html" title="room_info.h" alt="" coords="5,80,95,107"/>
+<area shape="rect" id="node3" href="$room__info_8h.html" title="room_info.h" alt="" coords="119,80,208,107"/>
+<area shape="rect" id="node5" href="$tcp__server_8c.html" title="tcp_server.c" alt="" coords="207,155,299,181"/>
+<area shape="rect" id="node7" href="$http__client_8c.html" title="http_client.c" alt="" coords="283,80,377,107"/>
+<area shape="rect" id="node8" href="$user__main_8c.html" title="user_main.c" alt="" coords="401,80,494,107"/>
+<area shape="rect" id="node9" href="$user__wifi_8c.html" title="user_wifi.c" alt="" coords="518,80,601,107"/>
+<area shape="rect" id="node10" href="$mesh_8h.html" title="mesh.h" alt="" coords="625,80,691,107"/>
+<area shape="rect" id="node4" href="$room__info_8c.html" title="room_info.c" alt="" coords="15,155,104,181"/>
+<area shape="rect" id="node6" href="$uart_8c.html" title="uart.c" alt="" coords="128,155,183,181"/>
+</map>

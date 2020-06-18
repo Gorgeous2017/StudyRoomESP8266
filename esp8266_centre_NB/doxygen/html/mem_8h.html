@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: mem.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3f3aa03da80a6f543b7f052367a441a.html">ESP8266_NONOS_SDK</a></li><li class="navelem"><a class="el" href="dir_9cb0e4b91a56b7f682c398f4eec1db93.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle">
+<div class="title">mem.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="mem_8h__dep__incl.png" border="0" usemap="#mem_8hdep" alt=""/></div>
+<map name="mem_8hdep" id="mem_8hdep">
+<area shape="rect" id="node2" href="http__client_8c.html" title="http_client.c" alt="" coords="5,80,99,107"/><area shape="rect" id="node3" href="tcp__server_8c.html" title="tcp_server.c" alt="" coords="123,80,215,107"/><area shape="rect" id="node4" href="uart_8c.html" title="uart.c" alt="" coords="239,80,294,107"/><area shape="rect" id="node5" href="user__json_8c.html" title="user_json.c" alt="" coords="318,80,407,107"/></map>
+</div>
+</div>
+<p><a href="mem_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:af5942172d7febcc24827c096237591e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8h.html#af5942172d7febcc24827c096237591e6">MEMLEAK_DEBUG_ENABLE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:af5942172d7febcc24827c096237591e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca859cafb7f4c2eed341334a2c2e97c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8h.html#aeca859cafb7f4c2eed341334a2c2e97c">os_free</a>(s)&#160;&#160;&#160;vPortFree(s, &quot;&quot;, 0)</td></tr>
+<tr class="separator:aeca859cafb7f4c2eed341334a2c2e97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa95f69fc3b09bf0f40b7b2ed045be8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8h.html#afa95f69fc3b09bf0f40b7b2ed045be8b">os_malloc</a>(s)&#160;&#160;&#160;pvPortMalloc(s, &quot;&quot;, 0)</td></tr>
+<tr class="separator:afa95f69fc3b09bf0f40b7b2ed045be8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8033f95f1062f23004a6945db5bc4206"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8h.html#a8033f95f1062f23004a6945db5bc4206">os_calloc</a>(s)&#160;&#160;&#160;pvPortCalloc(s, &quot;&quot;, 0);</td></tr>
+<tr class="separator:a8033f95f1062f23004a6945db5bc4206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e9006fdbae72fb403c6f2190eb747d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8h.html#a56e9006fdbae72fb403c6f2190eb747d">os_realloc</a>(p, s)&#160;&#160;&#160;pvPortRealloc(p, s, &quot;&quot;, 0)</td></tr>
+<tr class="separator:a56e9006fdbae72fb403c6f2190eb747d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33cbdf09d99fabcf35169c3759f9b95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mem_8h.html#ab33cbdf09d99fabcf35169c3759f9b95">os_zalloc</a>(s)&#160;&#160;&#160;pvPortZalloc(s, &quot;&quot;, 0)</td></tr>
+<tr class="separator:ab33cbdf09d99fabcf35169c3759f9b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a class="anchor" id="af5942172d7febcc24827c096237591e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MEMLEAK_DEBUG_ENABLE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aeca859cafb7f4c2eed341334a2c2e97c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_free</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s</td><td>)</td>
+          <td>&#160;&#160;&#160;vPortFree(s, &quot;&quot;, 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa95f69fc3b09bf0f40b7b2ed045be8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_malloc</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s</td><td>)</td>
+          <td>&#160;&#160;&#160;pvPortMalloc(s, &quot;&quot;, 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8033f95f1062f23004a6945db5bc4206"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_calloc</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s</td><td>)</td>
+          <td>&#160;&#160;&#160;pvPortCalloc(s, &quot;&quot;, 0);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a56e9006fdbae72fb403c6f2190eb747d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_realloc</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">p, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;pvPortRealloc(p, s, &quot;&quot;, 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab33cbdf09d99fabcf35169c3759f9b95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define os_zalloc</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s</td><td>)</td>
+          <td>&#160;&#160;&#160;pvPortZalloc(s, &quot;&quot;, 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:15 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

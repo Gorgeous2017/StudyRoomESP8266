@@ -26,10 +26,8 @@
 #include "driver/uart.h" /* 需要用到ESP_DEBUG */
 
 /* Exported typedef -----------------------------------------------------------*/
-/**
- * @brief 用电器类型枚举体
- * 
- */
+
+/*! @brief 用电器类型枚举体 */
 typedef enum 
 {
 	DEVICE_FAN = 0x00,	   /*!< 风扇用电器 */
@@ -38,10 +36,26 @@ typedef enum
 	DEVICE_AC = 0x03	   /*!< 空调用电器 */
 } Device;
 
-/**
- * @brief 云端下发的用电器控制信息
- * 
- */
+/*! @brief 编解码插件messageId枚举体 */
+typedef enum
+{
+	MID_SET_FAN                   = 0x0,   /*!< 风扇控制指令 */
+	MID_SET_LIGHT                 = 0x1,   /*!< 电灯控制指令 */
+	MID_SET_CURTAIN               = 0x2,   /*!< 窗帘控制指令 */
+	MID_SET_AC                    = 0x3,   /*!< 空调控制指令 */
+
+	MID_report_room_one_message   = 0x11,  /*!< 房间一的环境信息 */
+	MID_report_room_two_message   = 0x12,  /*!< 房间二的环境信息 */
+	MID_report_room_three_message = 0x13,  /*!< 房间三的环境信息 */
+	MID_report_room_four_message  = 0x14,  /*!< 房间四的环境信息 */
+
+	MID_report_room_one_status    = 0x21,  /*!< 房间一的用电器状态信息 */
+	MID_report_room_two_status    = 0x22,  /*!< 房间二的用电器状态信息 */
+	MID_report_room_three_status  = 0x23,  /*!< 房间三的用电器状态信息 */
+	MID_report_room_four_status   = 0x24  /*!< 房间四的用电器状态信息 */
+} DecodeMessageId;
+
+/*! @brief 云端下发的用电器控制信息  */
 typedef struct
 {
 	uint8 deviceType; 	/*!< 根据messageId来区分用电器类型 */
@@ -50,23 +64,17 @@ typedef struct
 	uint8 deviceSwitch; /*!< 用电器的目标状态 */
 } DeviceController;
 
-/**
- * @brief 室内环境信息结构体
- * 
- */
+/*! @brief 室内环境信息结构体  */
 typedef struct
 {
 	uint8 messageId;		/*!< 根据messageId来区分房间号 */
-	uint8 peopleFlowrate; 	/*!< 人群密度 */
+	uint8 crowdDensity; 	/*!< 人群密度 */
 	uint8 temp;				/*!< 环境温度 */
 	uint8 humi;				/*!< 环境湿度 */
 	uint8 noise;			/*!< 环境噪音 */
 } RoomMessage;
 
-/**
- * @brief 室内用电器状态信息结构体
- * 
- */
+/*! @brief 室内用电器状态信息结构体  */
 typedef struct
 {
 	uint8 messageId;		/*!< 用电器状态信息标识符 */
@@ -89,29 +97,10 @@ typedef struct
 #define HUAWEI_IOT_SERVER "49.4.85.232" /*!< 华为IoT平台服务器地址 */
 #define HUAWEI_IOT_PORT "5683" /*!< LWM2M(CoAP) 无DTLS形式接入平台的端口 */
 
-/**
- * @addtogroup DecodeMessageId
- * @brief 华为IoT平台|编解码插件所用的唯一messageId，用以区分不同的平台消息
- * @{
- * 
- */
-#define MID_SET_FAN 0x0					/*!< 风扇控制指令 */
-#define MID_SET_LIGHT 0x1				/*!< 电灯控制指令 */
-#define MID_SET_CURTAIN 0x2				/*!< 窗帘控制指令 */
-#define MID_SET_AC 0x3					/*!< 空调控制指令 */
-#define MID_report_room_one_message 0x4 /*!< 房间一的环境信息 */
-#define MID_report_room_one_status 0x5  /*!< 房间一的用电器状态信息 */
-
-/**
- * @}
- * 
- */
-
 
 /* Exported function -----------------------------------------------*/
 void StudyRoom_UpdataData(uint8 *msg_string);
-void StudyRoom_StatusToHex(uint8 room_no, uint8 *out_hexstr );
-
+uint8 * StudyRoom_GetStatusHex(uint8 room_no);
 
 #endif /* __APP_STUDY_ROOM_H__ */ 
 /********************************** END OF FILE *******************************/

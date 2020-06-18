@@ -1,0 +1,7 @@
+<map id="get_room_buf" name="get_room_buf">
+<area shape="rect" id="node2" href="$room__info_8c.html#a257a96b7f4ec268562d84591539fade7" title="get_room_data" alt="" coords="153,31,261,57"/>
+<area shape="rect" id="node3" href="$room__info_8c.html#a84ea5b1915e153434d5758aacb1dd9a8" title="get_noise" alt="" coords="325,5,404,32"/>
+<area shape="rect" id="node5" href="$room__info_8c.html#a424ab1af43382c79b75c85e9118af0ce" title="get_humi_temp" alt="" coords="309,56,420,83"/>
+<area shape="rect" id="node4" href="$user__interface_8h.html#a3b49ed94048da366d384364482c5ae43" title="system_adc_read" alt="" coords="468,5,593,32"/>
+<area shape="rect" id="node6" href="$hal__temp__hum_8h.html#ade0018dd7cf1351a5292bc6be68cb67c" title="dh11Read" alt="" coords="491,56,571,83"/>
+</map>

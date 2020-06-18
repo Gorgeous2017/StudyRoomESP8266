@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>ESP8266 Centre + NB: nb_bc35.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">ESP8266 Centre + NB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.6 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e3cfce0f2579b93466aa86ecffbb9b24.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">nb_bc35.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="nb__bc35_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/* Define to prevent recursive inclusion -------------------------------------*/</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef __NB_BC35_H__</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __NB_BC35_H__ </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ets__sys_8h.html">ets_sys.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="os__type_8h.html">os_type.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="osapi_8h.html">osapi.h</a>&quot;</span> <span class="comment">/* 需要用到字符串匹配和定时器函数 */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;driver/uart.h&quot;</span> <span class="comment">/* 需要用到串口接收的NB响应消息和平台下发的命令 */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* Exported typedef -----------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/* Exported constants --------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a8d1152fd5720304d3e44fa2101541f03">   28</a></span>&#160;<span class="preprocessor">#define AT_MODU_NAME            &quot;nb_neul95&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#af0651b26f59b22f014ef8b9b42b2ed05">   30</a></span>&#160;<span class="preprocessor">#define AT_NB_OPEN_RF           &quot;AT+CFUN=1\r&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#ac5d2ee5af7efada9c1703451ef038790">   31</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_NB_CLOSE_PSM         &quot;AT+CPSMS=0\r&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#aa687010bde7f90377faee82786b2395b">   32</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_NB_CLOSE_EDRX        &quot;AT+CEDRXS=0,5\r&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a53b06833e6fc79828555ea7bbeb2278f">   33</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_NB_CGATT_ATTACH      &quot;AT+CGATT=1\r&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#aa55fd8c8f8e1e5f62839e8f9f8ed2458">   34</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_NB_REPORT_PREFIX     &quot;AT+NMGS=&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a2d324ffefa260f926d5eec6c15923869">   37</a></span>&#160;<span class="preprocessor">#define AT_NB_LINE_END          &quot;\r\n&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a114f0dbbfbfe9ce363fb1e8d4abfdbb6">   38</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_NB_reboot            &quot;AT+NRB\r&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a94e318a85aa13f91043ab5ad676ac9fe">   39</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_NB_hw_detect         &quot;AT+CFUN?\r&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#ad3c390c89eba62a1d3444ab5ebbfcc4d">   40</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_NB_get_auto_connect  &quot;AT+NCONFIG?\r&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a5250a1012848aa5fd350a61cd3d7f7e8">   41</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_CMD_PREFIX           &quot;\r\n+NNMI:&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a3477930792c6a3ef6157f54c7974e9ce">   42</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_DATAF_PREFIX         &quot;+NSONMI:&quot;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a9a2068bff818d36fedd0be3b4dc67a82">   43</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CGATT                   &quot;AT+CGATT?\r&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#af698941e62444eae3d3af0c726cb8440">   44</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CGATT_DEATTACH          &quot;AT+CGATT=0\r&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#aa32caeb8581192d1d076801cf45ad2f5">   46</a></span>&#160;<span class="preprocessor">#define AT_LINE_END             &quot;\r\n&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a1aa9f916961c8547818a6354f61b4b15">   47</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_CMD_BEGIN            &quot;\r\n&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a0586e510899fa54a3a28a1b57f179b11">   49</a></span>&#160;<span class="preprocessor">#define AT_USART_PORT       3</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#ac76bbf7ac0cf5291c14a52a08bceaa26">   50</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_BUARDRATE        9600</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a28dd4caf253f1cce669ca8928dd8cf86">   51</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_CMD_TIMEOUT      10000    //ms</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#ad3413977381bf16a5b513cd8edf68bcf">   52</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AT_MAX_LINK_NUM     4</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#adf19a92cc94e73228b1a18451fff23a4">   54</a></span>&#160;<span class="preprocessor">#define NB_STAT_LOCALPORT   56</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#ae5a2e3b1eefb3a10a2485e28a4ccdb59">   56</a></span>&#160;<span class="preprocessor">#define MAX_SOCK_NUM        5</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a15b182d7930e0c3411c514860367d44b">   57</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define UDP_PROTO           17</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#if defined STM32F103xE</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MAX_AT_USERDATA_LEN (1024*2)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#aa8fcba07ec4b6d01f5b51330278f8760">   62</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MAX_AT_USERDATA_LEN (1024*5)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a9155cd445dc93d15e329ec911602b149">   65</a></span>&#160;<span class="preprocessor">#define AT_MAX_PAYLOADLEN     512</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="nb__bc35_8h.html#a0fe86551df906756e80b64b4b515c37d">   67</a></span>&#160;<span class="preprocessor">#define IP_LEN 16</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">/* Exported function -----------------------------------------------*/</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nb__bc35_8h.html#a400010e7ae3dbd0f364708d1cefb648f">NB_ReportData</a>(<a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> mid, <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *data_str);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nb__bc35_8h.html#a8692a2f7ec697730968b4bc50e99332d">NB_SendCmd</a>(<a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *cmd, <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> cmd_len, <a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *<a class="code" href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nb__bc35_8h.html#a0b72979919e235285d99b57f831046f5">NB_ResponseTimerCb</a>(<span class="keywordtype">void</span> *arg);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nb__bc35_8h.html#a2cf1c3f67e168aee4fe9c184c9809307">NB_Init</a>(<span class="keywordtype">void</span>); </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/* Handle message form NB module, call by uart rx function */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; <span class="keywordtype">void</span> <a class="code" href="nb__bc35_8h.html#aeb899bf88fe84dd61c113b850c2f0a2d">NB_RxMsgHandler</a>(<a class="code" href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> *nb_msg );</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">int</span> <a class="code" href="nb__bc35_8h.html#a939b06c46f4df8afd26146bd0ab3b52e">str_to_hex</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *bufin, <span class="keywordtype">int</span> len, <span class="keywordtype">char</span> *bufout);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#a92a5da3881361b82c28d238d0c1c4ef8">nb_set_cdpserver</a>(<span class="keywordtype">char</span>* host, <span class="keywordtype">char</span>* port);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#a40ebdfc0654e618ad5c9407b6aba1c7a">nb_hw_detect</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#ab2bd4578e4f75b4bf028d1945248d4da">nb_get_netstat</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">int</span> <a class="code" href="nb__bc35_8h.html#ae39b6f8a879d340bc39c40ad4d25707b">nb_query_ip</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#a61ba1701b4bd53844085cb3fac0d0e80">nb_send_payload</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#a362a7b27988f93c4d83dd7157f5ede9e">nb_check_csq</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#a920284c773a34a6633b0793831ca2381">nb_send_psk</a>(<span class="keywordtype">char</span>* pskid, <span class="keywordtype">char</span>* psk);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#a9317a11d05e8f5e091469e171bce604c">nb_set_no_encrypt</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#a3ea588900690c8c61ae4973f9f059e86">nb_reboot</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#af849b35d9b91f8484776997755da2112">nb_recv_timeout</a>(<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <span class="keywordtype">id</span> , <a class="code" href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>  *buf, <a class="code" href="c__types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> len,<span class="keywordtype">char</span>* ipaddr,<span class="keywordtype">int</span>* port, <a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> timeout);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<a class="code" href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code" href="nb__bc35_8h.html#a3431e1336cc80a89c10e8b66e9977e93">nb_cmd_match</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *buf, <span class="keywordtype">char</span>* featurestr,<span class="keywordtype">int</span> len);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nb__bc35_8h.html#a9ebe6c546f67a1846ca6b24ab9c5c460">nb_step</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> <a class="code" href="nb__bc35_8h.html#afb5085d087dbbc6df19f515afe5bc6bd">nb_reattach</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __NB_BC35_H__ */</span><span class="preprocessor"> </span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor"></span><span class="comment">/********************************** END OF FILE *******************************/</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="ttc" id="nb__bc35_8h_html_a3431e1336cc80a89c10e8b66e9977e93"><div class="ttname"><a href="nb__bc35_8h.html#a3431e1336cc80a89c10e8b66e9977e93">nb_cmd_match</a></div><div class="ttdeci">int32_t nb_cmd_match(const char *buf, char *featurestr, int len)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a400010e7ae3dbd0f364708d1cefb648f"><div class="ttname"><a href="nb__bc35_8h.html#a400010e7ae3dbd0f364708d1cefb648f">NB_ReportData</a></div><div class="ttdeci">void NB_ReportData(uint8 mid, uint8 *data_str)</div><div class="ttdoc">上报数据到云端 </div><div class="ttdef"><b>Definition:</b> nb_bc35.c:42</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a61ba1701b4bd53844085cb3fac0d0e80"><div class="ttname"><a href="nb__bc35_8h.html#a61ba1701b4bd53844085cb3fac0d0e80">nb_send_payload</a></div><div class="ttdeci">int32_t nb_send_payload(const char *buf, int len)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a2cf1c3f67e168aee4fe9c184c9809307"><div class="ttname"><a href="nb__bc35_8h.html#a2cf1c3f67e168aee4fe9c184c9809307">NB_Init</a></div><div class="ttdeci">void NB_Init(void)</div><div class="ttdef"><b>Definition:</b> nb_bc35.c:140</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a0b72979919e235285d99b57f831046f5"><div class="ttname"><a href="nb__bc35_8h.html#a0b72979919e235285d99b57f831046f5">NB_ResponseTimerCb</a></div><div class="ttdeci">void NB_ResponseTimerCb(void *arg)</div></div>
+<div class="ttc" id="nb__bc35_8c_html_a54bb5bc6dc3de1c3aced6e63dfa6b481"><div class="ttname"><a href="nb__bc35_8c.html#a54bb5bc6dc3de1c3aced6e63dfa6b481">response_msg</a></div><div class="ttdeci">uint8 response_msg[128]</div><div class="ttdef"><b>Definition:</b> nb_bc35.c:23</div></div>
+<div class="ttc" id="osapi_8h_html"><div class="ttname"><a href="osapi_8h.html">osapi.h</a></div></div>
+<div class="ttc" id="nb__bc35_8h_html_a362a7b27988f93c4d83dd7157f5ede9e"><div class="ttname"><a href="nb__bc35_8h.html#a362a7b27988f93c4d83dd7157f5ede9e">nb_check_csq</a></div><div class="ttdeci">int32_t nb_check_csq(void)</div></div>
+<div class="ttc" id="c__types_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="c__types_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition:</b> c_types.h:36</div></div>
+<div class="ttc" id="ets__sys_8h_html"><div class="ttname"><a href="ets__sys_8h.html">ets_sys.h</a></div></div>
+<div class="ttc" id="c__types_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="c__types_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition:</b> c_types.h:28</div></div>
+<div class="ttc" id="c__types_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="c__types_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition:</b> c_types.h:34</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a92a5da3881361b82c28d238d0c1c4ef8"><div class="ttname"><a href="nb__bc35_8h.html#a92a5da3881361b82c28d238d0c1c4ef8">nb_set_cdpserver</a></div><div class="ttdeci">int32_t nb_set_cdpserver(char *host, char *port)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a8692a2f7ec697730968b4bc50e99332d"><div class="ttname"><a href="nb__bc35_8h.html#a8692a2f7ec697730968b4bc50e99332d">NB_SendCmd</a></div><div class="ttdeci">void NB_SendCmd(uint8 *cmd, uint8 cmd_len, uint8 *response_msg)</div><div class="ttdoc">向NB模组发送指令 </div><div class="ttdef"><b>Definition:</b> nb_bc35.c:70</div></div>
+<div class="ttc" id="c__types_8h_html_adde6aaee8457bee49c2a92621fe22b79"><div class="ttname"><a href="c__types_8h.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition:</b> c_types.h:43</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a9317a11d05e8f5e091469e171bce604c"><div class="ttname"><a href="nb__bc35_8h.html#a9317a11d05e8f5e091469e171bce604c">nb_set_no_encrypt</a></div><div class="ttdeci">int32_t nb_set_no_encrypt(void)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_afb5085d087dbbc6df19f515afe5bc6bd"><div class="ttname"><a href="nb__bc35_8h.html#afb5085d087dbbc6df19f515afe5bc6bd">nb_reattach</a></div><div class="ttdeci">void nb_reattach(void)</div></div>
+<div class="ttc" id="os__type_8h_html"><div class="ttname"><a href="os__type_8h.html">os_type.h</a></div></div>
+<div class="ttc" id="nb__bc35_8h_html_ae39b6f8a879d340bc39c40ad4d25707b"><div class="ttname"><a href="nb__bc35_8h.html#ae39b6f8a879d340bc39c40ad4d25707b">nb_query_ip</a></div><div class="ttdeci">int nb_query_ip(void)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_ab2bd4578e4f75b4bf028d1945248d4da"><div class="ttname"><a href="nb__bc35_8h.html#ab2bd4578e4f75b4bf028d1945248d4da">nb_get_netstat</a></div><div class="ttdeci">int32_t nb_get_netstat(void)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a3ea588900690c8c61ae4973f9f059e86"><div class="ttname"><a href="nb__bc35_8h.html#a3ea588900690c8c61ae4973f9f059e86">nb_reboot</a></div><div class="ttdeci">int32_t nb_reboot(void)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a920284c773a34a6633b0793831ca2381"><div class="ttname"><a href="nb__bc35_8h.html#a920284c773a34a6633b0793831ca2381">nb_send_psk</a></div><div class="ttdeci">int32_t nb_send_psk(char *pskid, char *psk)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a939b06c46f4df8afd26146bd0ab3b52e"><div class="ttname"><a href="nb__bc35_8h.html#a939b06c46f4df8afd26146bd0ab3b52e">str_to_hex</a></div><div class="ttdeci">int str_to_hex(const char *bufin, int len, char *bufout)</div><div class="ttdoc">将十六进制码流转换为字符串形式 </div><div class="ttdef"><b>Definition:</b> nb_bc35.c:196</div></div>
+<div class="ttc" id="nb__bc35_8h_html_af849b35d9b91f8484776997755da2112"><div class="ttname"><a href="nb__bc35_8h.html#af849b35d9b91f8484776997755da2112">nb_recv_timeout</a></div><div class="ttdeci">int32_t nb_recv_timeout(int32_t id, uint8_t *buf, uint32_t len, char *ipaddr, int *port, int32_t timeout)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a9ebe6c546f67a1846ca6b24ab9c5c460"><div class="ttname"><a href="nb__bc35_8h.html#a9ebe6c546f67a1846ca6b24ab9c5c460">nb_step</a></div><div class="ttdeci">void nb_step(void)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_a40ebdfc0654e618ad5c9407b6aba1c7a"><div class="ttname"><a href="nb__bc35_8h.html#a40ebdfc0654e618ad5c9407b6aba1c7a">nb_hw_detect</a></div><div class="ttdeci">int32_t nb_hw_detect(void)</div></div>
+<div class="ttc" id="nb__bc35_8h_html_aeb899bf88fe84dd61c113b850c2f0a2d"><div class="ttname"><a href="nb__bc35_8h.html#aeb899bf88fe84dd61c113b850c2f0a2d">NB_RxMsgHandler</a></div><div class="ttdeci">void NB_RxMsgHandler(uint8 *nb_msg)</div><div class="ttdoc">NB消息处理函数 </div><div class="ttdef"><b>Definition:</b> nb_bc35.c:106</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 22日 星期六 16:45:14 , 为 ESP8266 Centre + NB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

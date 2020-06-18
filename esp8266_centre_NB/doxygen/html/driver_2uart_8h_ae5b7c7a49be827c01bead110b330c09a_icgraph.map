@@ -1,0 +1,5 @@
+<map id="Uart_Buf_Init" name="Uart_Buf_Init">
+<area shape="rect" id="node2" href="$uart_8c.html#af4416966da7cba189e7998334e2a0bee" title="uart_init" alt="" coords="149,31,217,57"/>
+<area shape="rect" id="node3" href="$uart_8c.html#a15a9e8dca40ebbeea858ce8f081c06cf" title="uart_reattach" alt="" coords="265,5,364,32"/>
+<area shape="rect" id="node4" href="$user__main_8c.html#a277ffa60e88142c231a14272962e902c" title="user_init" alt="" coords="279,56,350,83"/>
+</map>
