@@ -1,13 +1,14 @@
 @mainpage
 # ESP8266 project
+[项目说明文档主页](https://gorgeous2017.github.io/StudyRoomESP8266/)
 
 ## 说明文档
 [app_study_room.c](esp8266_centre_NB/doxygen/html/app__study__room_8c.html)   
 [app_study_room.h](esp8266_centre_NB/doxygen/html/app__study__room_8h.html)  
 [nb_bc35.c](esp8266_centre_NB/doxygen/html/nb__bc35_8c.html)   
 [nb_bc35.h](esp8266_centre_NB/doxygen/html/nb__bc35_8h.html)  
-[main.c](esp8266_centre_NB/doxygen/html/main_8c.html)  
-[main.h](esp8266_centre_NB/doxygen/html/main_8h.html)  
+[main.c](esp8266_centre_NB/doxygen/html/user__main_8c.html)  
+[main.h](esp8266_centre_NB/doxygen/html/user__main_8h.html)  
 
 
 ## Develop Log
